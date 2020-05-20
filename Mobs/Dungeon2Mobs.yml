@@ -8,6 +8,7 @@ Pharaoh:
   Display: '&ePharaoh'
   Health: 500
   Damage: 6.5
+  Faction: Mummy
   BossBar:
     Enabled: true
     Title: 'Pharaoh'
@@ -23,11 +24,10 @@ Pharaoh:
   - skill{s=PharaohPushBack} @self ~onDamaged =50%
   - skill{s=PharaohFin} @self =15%
   - skill{s=TeleportToSpawnOnDeath} ~onDeath
-
   Equipment:
-  - PharaohNemes HEAD
-  - MummyChestplate CHEST
-  - MummyLeggings LEGS
+  - MobGoldHelmet HEAD
+  - MobMummyChestplate CHEST
+  - MobMummyLeggings LEGS
   - DepthMummyBoots FEET
   - PharaohWeapon HAND
   Drops:
@@ -46,11 +46,11 @@ Illusion:
   Display: '&cIllusion'
   Health: 300
   Damage: 8
-  Armor: 0
+  Faction: Mummy
   Equipment:
   - SCP01:4
-  - iron_CHESTPLATE CHEST
-  - iron_LEGGINGS LEGS
+  - MobIronChestplate CHEST
+  - MobIronLeggings LEGS
   - DepthIronBoots FEET
   Options:
     AlwaysShowName: false
@@ -80,6 +80,7 @@ IllusionMob:
   Display: '&cEye'
   Health: 20
   Damage: 6
+  Faction: Mummy
   Equipment:
    - SCP02:4
   Options:
@@ -94,20 +95,19 @@ IllusionMob:
   Skills:
    - potion{t=INVISIBILITY;d=630720000;l=0} @self ~onSpawn
    - effect:sound{s=entity.phantom.hurt;v=1;p=0} @self ~onDamaged
-
-
 ##################################################REGULARS####################################################
 Mummy:
   Type: ZOMBIE
   Display: '&EMummy'
   Health: 45
   Damage: 0
+  Faction: Mummy
   Equipment:
-  - MummyHelmet HEAD
-  - MummyChestplate CHEST
-  - MummyLeggings LEGS
-  - DepthLeatherBoots FEET
-  - Iron_Sword HAND
+  - MobMummyHelmet HEAD
+  - MobMummyChestplate CHEST
+  - MobMummyLeggings LEGS
+  - DepthMummyBoots FEET
+  - MobIronSword HAND
   Drops:
   - Second_DungeonLootTable
   Options:
@@ -129,11 +129,12 @@ MummyArcher:
   Type: SKELETON
   Display: '&EMummy Archer'
   Health: 35
+  Faction: Mummy
   Equipment:
-  - MummyHelmet HEAD
-  - MummyChestplate CHEST
-  - MummyLeggings LEGS
-  - DepthLeatherBoots FEET
+  - MobMummyHelmet HEAD
+  - MobMummyChestplate CHEST
+  - MobMummyLeggings LEGS
+  - DepthMummyBoots FEET
   - MummyBow HAND
   Drops:
   - Second_DungeonLootTable
@@ -155,7 +156,7 @@ PyramidGuardian:
   Display: '&EPyramid Guardian'
   Health: 35
   Damage: 6
-  Equipment:
+  Faction: Mummy
   Drops:
   - Second_DungeonLootTable
   Options:
@@ -176,7 +177,7 @@ Scarab:
   Display: '&EScarab'
   Health: 15
   Damage: 6
-  Equipment:
+  Faction: Mummy
   Drops:
   - Second_DungeonLootTable
   Options:

@@ -95,9 +95,9 @@ NexusBoss:
   - skill{s=AzureFin} @self =15%
   - skill{s=TeleportToSpawnOnDeath} ~onDeath
   Equipment:
-  - Diamond_Helmet HEAD
-  - Diamond_Chestplate CHEST
-  - Diamond_Leggings LEGS
+  - MobDiamondHelmet HEAD
+  - MobDiamondChestplate CHEST
+  - MobDiamondLeggings LEGS
   - DepthDiamondBoots FEET
   Drops:
   - PirateCaptainLootTable
@@ -132,11 +132,11 @@ AzureBoss:
   - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
   - skill{s=AzureFin} @self =15%
   Equipment:
-  - Iron_Helmet HEAD
-  - Iron_Chestplate CHEST
-  - Iron_Leggings LEGS
-  - Diamond_Sword HAND
+  - MobIronHelmet HEAD
+  - MobIronChestplate CHEST
+  - MobIronLeggings LEGS
   - DepthDiamondBoots FEET
+  - MobDiamondSword HAND
   Drops:
   - PirateCaptainLootTable
   Options:
@@ -162,11 +162,11 @@ CarmineBoss:
     Color: RED
     Style: SOLID
   Equipment:
-  - Iron_Helmet HEAD
-  - Iron_Chestplate CHEST
-  - Iron_Leggings LEGS
-  - Iron_Boots FEET
-  - Diamond_Sword HAND
+  - MobIronHelmet HEAD
+  - MobIronChestplate CHEST
+  - MobIronLeggings LEGS
+  - DepthDiamondBoots FEET
+  - MobDiamondSword HAND
   Options:
     AlwaysShowName: false
     MovementSpeed: 0.275
@@ -237,6 +237,11 @@ CarmineMinion:
   Damage: 6
   Faction: Nexus
   Equipment:
+  - MobIronHelmet HEAD
+  - MobIronChestplate CHEST
+  - MobIronLeggings LEGS
+  - DepthDiamondBoots FEET
+  - MobDiamondSword HAND
   Options:
     AlwaysShowName: false
     MovementSpeed: 0.35
@@ -263,6 +268,10 @@ PetsMinion:
   Faction: Nexus
   Equipment:
   - KnockBackStick HAND
+  - MobIronHelmet HEAD
+  - MobIronChestplate CHEST
+  - MobIronLeggings LEGS
+  - DepthDiamondBoots FEET
   Options:
     AlwaysShowName: false
     MovementSpeed: 0.35
@@ -310,10 +319,10 @@ NexusArcher:
   Health: 90
   Faction: Nexus
   Equipment:
-  - Iron_Helmet HEAD
-  - Iron_Chestplate CHEST
-  - Iron_Leggings LEGS
-  - Iron_Boots FEET
+  - MobIronHelmet HEAD
+  - MobIronChestplate CHEST
+  - MobIronLeggings LEGS
+  - MobIronBoots FEET
   - NexusBow HAND
   Drops:
   - Third_DungeonLootDrop
@@ -340,10 +349,10 @@ NexusGuard:
   Damage: 12
   Faction: Nexus
   Equipment:
-  - Iron_Helmet HEAD
-  - Iron_Chestplate CHEST
-  - Iron_Leggings LEGS
-  - Iron_Boots FEET
+  - MobIronHelmet HEAD
+  - MobIronChestplate CHEST
+  - MobIronLeggings LEGS
+  - MobIronBoots FEET
   - Iron_Sword HAND
   Drops:
   - Third_DungeonLootDrop

@@ -22,7 +22,7 @@ SkeletonKing:
   - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
   - skill{s=TeleportToSpawnOnDeath} ~onDeath
   Equipment:
-  - KingsCrown HEAD
+  - MobGoldHelmet HEAD
   - MobIronAxe HAND
   Drops:
   - SkeletonKingLootTable
@@ -44,9 +44,9 @@ LostZombie:
   Modules:
     ThreatTable: true
   Equipment:
-  - IRON_HELMET HEAD
-  - LostZombieChestplate CHEST
-  - IRON_LEGGINGS LEGS
+  - MobIronHelmet HEAD
+  - MobIronChestplate CHEST
+  - MobIronLeggings LEGS
   - DepthIronBoots FEET
   - MobIronSword HAND
   - SHIELD OFFHAND
@@ -74,9 +74,9 @@ LostArcher:
   Modules:
     ThreatTable: true
   Equipment:
-  - IRON_HELMET HEAD
-  - IRON_CHESTPLATE CHEST
-  - IRON_LEGGINGS LEGS
+  - MobIronHelmet HEAD
+  - MobIronChestplate CHEST
+  - MobIronLeggings LEGS
   - DepthIronBoots FEET
   - LostArcherBow HAND
   Drops:

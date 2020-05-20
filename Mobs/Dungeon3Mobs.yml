@@ -11,6 +11,7 @@ PirateCaptain:
     Skin: Captain
   Health: 650
   Damage: 10
+  Faction: Pirate
   BossBar:
     Enabled: true
     Title: 'Pirate Captain'
@@ -27,10 +28,10 @@ PirateCaptain:
   - skill{s=CallPig} @self 0.1
   - skill{s=PharaohFin} @self =15%
   Equipment:
-  - PirateHelmet HEAD
-  - PirateChestplate CHEST
-  - PirateLeggings LEGS
-  - PirateBoots FEET
+  - MobIronHelmet HEAD
+  - MobIronChestplate CHEST
+  - MobIronLeggings LEGS
+  - MobIronBoots FEET
   - CaptainWeapon HAND
   Drops:
   - PirateCaptainLootTable
@@ -50,7 +51,7 @@ PirateGolding:
     Skin: Pirate
   Health: 500
   Damage: 8
-  Armor: 0
+  Faction: Pirate
   BossBar:
     Enabled: true
     Title: 'Golding'
@@ -58,11 +59,11 @@ PirateGolding:
     Color: RED
     Style: SOLID
   Equipment:
-  - PirateHelmet HEAD
-  - PirateChestplate CHEST
-  - PirateLeggings LEGS
-  - PirateBoots FEET
-  - Iron_Sword HAND
+  - MobIronHelmet HEAD
+  - MobIronChestplate CHEST
+  - MobIronLeggings LEGS
+  - MobIronBoots FEET
+  - MobIronSword HAND
   Options:
     AlwaysShowName: false
     MovementSpeed: 0.275
@@ -96,6 +97,7 @@ PirateParrotBoss:
   Display: '&cSquawk'
   Disguise:
     Type: parrot
+  Faction: Pirate
   Health: 500
   Damage: 14
   Armor: 0
@@ -106,10 +108,10 @@ PirateParrotBoss:
     Color: RED
     Style: SOLID
   Equipment:
-  - PirateHelmet HEAD
-  - PirateChestplate CHEST
-  - PirateLeggings LEGS
-  - PirateBoots FEET
+  - MobIronHelmet HEAD
+  - MobIronChestplate CHEST
+  - MobIronLeggings LEGS
+  - MobIronBoots FEET
   Options:
     AlwaysShowName: false
     MovementSpeed: 0.275
@@ -141,12 +143,13 @@ PirateJunkee:
   Display: '&cJunkee'
   Health: 35
   Damage: 6
+  Faction: Pirate
   Equipment:
-      - JunkeeHead HEAD
-      - PirateChestplate CHEST
-      - PirateLeggings LEGS
-      - PirateBoots FEET
-      - PirateWeapon HAND
+  - JunkeeHead HEAD
+  - MobIronChestplate CHEST
+  - MobIronLeggings LEGS
+  - MobIronBoots FEET
+  - MobIronSword HAND
   Options:
     AlwaysShowName: false
     MovementSpeed: 0.275
@@ -166,12 +169,13 @@ PirateParrot:
     Type: parrot
   Health: 35
   Damage: 6
+  Faction: Pirate
   Armor: 0
   Equipment:
-  - PirateHelmet HEAD
-  - PirateChestplate CHEST
-  - PirateLeggings LEGS
-  - PirateBoots FEET
+  - MobIronHelmet HEAD
+  - MobIronChestplate CHEST
+  - MobIronLeggings LEGS
+  - MobIronBoots FEET
   Options:
     AlwaysShowName: false
     MovementSpeed: 0.325
@@ -194,17 +198,15 @@ PirateParrot:
 Pirate:
   Type: Skeleton
   Display: '&cPirate'
-  # Disguise:
-  #   Type: Player
-  #   Skin: Pirate
   Health: 75
   Damage: 4
+  Faction: Pirate
   Equipment:
-  - PirateHelmet HEAD
-  - PirateChestplate CHEST
-  - PirateLeggings LEGS
-  - PirateBoots FEET
-  - Iron_Sword HAND
+  - MobIronHelmet HEAD
+  - MobIronChestplate CHEST
+  - MobIronLeggings LEGS
+  - MobIronBoots FEET
+  - MobIronSword HAND
   Drops:
   - Third_DungeonLootDrop
   Options:
@@ -230,15 +232,13 @@ Pirate:
 PirateArcher:
   Type: SKELETON
   Display: '&cPirate Archer'
-  # Disguise:
-  #   Type: Player
-  #   Skin: Pirate
   Health: 65
+  Faction: Pirate
   Equipment:
-  - PirateHelmet HEAD
-  - PirateChestplate CHEST
-  - PirateLeggings LEGS
-  - PirateBoots FEET
+  - MobIronHelmet HEAD
+  - MobIronChestplate CHEST
+  - MobIronLeggings LEGS
+  - MobIronBoots FEET
   - PirateBow HAND
   Drops:
   - Third_DungeonLootDrop
