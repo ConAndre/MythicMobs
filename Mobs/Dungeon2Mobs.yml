@@ -7,7 +7,8 @@ Pharaoh:
   Type: Skeleton
   Display: '&ePharaoh'
   Health: 500
-  Damage: 6.5
+  Damage: 9
+  Armor: 0
   Faction: Mummy
   BossBar:
     Enabled: true
@@ -45,13 +46,15 @@ Illusion:
   Type: ZOMBIE
   Display: '&cIllusion'
   Health: 300
-  Damage: 8
+  Damage: 9
+  Armor: 0
   Faction: Mummy
   Equipment:
   - SCP01:4
   - MobIronChestplate CHEST
   - MobIronLeggings LEGS
   - DepthIronBoots FEET
+  - MobGoldHoe HAND
   Options:
     AlwaysShowName: false
     MovementSpeed: 0.25
@@ -79,7 +82,8 @@ IllusionMob:
   Type: ZOMBIE
   Display: '&cEye'
   Health: 20
-  Damage: 6
+  Damage: 7
+  Armor: 0
   Faction: Mummy
   Equipment:
    - SCP02:4
@@ -100,7 +104,8 @@ Mummy:
   Type: ZOMBIE
   Display: '&EMummy'
   Health: 45
-  Damage: 0
+  Damage: 7
+  Armor: 0
   Faction: Mummy
   Equipment:
   - MobMummyHelmet HEAD
@@ -129,6 +134,7 @@ MummyArcher:
   Type: SKELETON
   Display: '&EMummy Archer'
   Health: 35
+  Armor: 0
   Faction: Mummy
   Equipment:
   - MobMummyHelmet HEAD
@@ -155,7 +161,8 @@ PyramidGuardian:
   Type: GUARDIAN
   Display: '&EPyramid Guardian'
   Health: 35
-  Damage: 6
+  Damage: 7
+  Armor: 0
   Faction: Mummy
   Drops:
   - Second_DungeonLootTable
@@ -176,7 +183,8 @@ Scarab:
   Type: SILVERFISH
   Display: '&EScarab'
   Health: 15
-  Damage: 6
+  Damage: 7
+  Armor: 0
   Faction: Mummy
   Drops:
   - Second_DungeonLootTable

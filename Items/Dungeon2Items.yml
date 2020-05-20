@@ -11,6 +11,8 @@ MummyBow:
   - ARROW_INFINITE:1
   Hide:
   - ENCHANTS
+
+
 PharaohWeapon:
   Id: golden_hoe
   Display: '&EThe Pharaoh Staff'
@@ -39,41 +41,6 @@ SCP02:
 
 ##LOOT
 
-Loot_PharaohWeapon:
-  Id: golden_hoe
-  Display: '&EThe Pharaoh Staff'
-  Lore:
-  - '&6A staff of'
-  - '&6great power.'
-  - ''
-  - '&L&cPharaoh'
-  - ''
-  - '&L&F&KO&R&L&9Uncommon Loot&F&KO'
-  Enchantments:
-  - DAMAGE_ALL:4
-  - DAMAGE_UNDEAD:3
-  - DAMAGE_ARTHROPODS:3
-  - FIRE_ASPECT:1
-Loot_PharaohNemes:
-  Id: GOLDEN_HELMET
-  Data: 0
-  Display: '&dNemes of the Pharaoh'
-  Lore:
-  - '&6An ancient crowl that grants'
-  - '&6the wearer unwavering power!'
-  - ''
-  - '&L&cPharaoh'
-  - ''
-  - '&L&F&KO&R&L&9Uncommon Loot&F&KO'
-  Enchantments:
-  - PROTECTION_ENVIRONMENTAL:3
-  - PROTECTION_PROJECTILE:3
-  - PROTECTION_FIRE:3
-  - PROTECTION_EXPLOSIONS:3
-  Attributes:
-    Head:
-      Health: 2
-      Armor: 2
 
 Loot_MummyHelmet:
   Id: LEATHER_HELMET
@@ -150,5 +117,87 @@ Loot_MummyBoots:
   Enchantments:
   - PROTECTION_ENVIRONMENTAL:1
   - PROTECTION_FIRE:1
+
+Loot_MummyWeapon:
+  Id: golden_hoe
+  Display: '&EMummy Weapon'
+  Lore:
+  - '&6A staff of'
+  - '&6great power.'
+  - ''
+  - '&L&cPharaoh'
+  - ''
+  - '&L&F&KO&R&L&9Uncommon Loot&F&KO'
+  Attributes:
+    MainHand:
+      Damage: 8
+#BOSS
+Loot_PharaohWeapon:
+  Id: golden_hoe
+  Display: '&EThe Pharaoh Staff'
+  Lore:
+  - '&6A staff of'
+  - '&6great power.'
+  - ''
+  - '&L&cPharaoh'
+  - ''
+  - '&L&F&KO&R&L&9Uncommon Loot&F&KO'
+  Enchantments:
+  - FIRE_ASPECT:1
+  Attributes:
+    MainHand:
+      Damage: 12.5
+Loot_PharaohNemes:
+  Id: GOLDEN_HELMET
+  Data: 0
+  Display: '&dNemes of the Pharaoh'
+  Lore:
+  - '&6An ancient crowl that grants'
+  - '&6the wearer unwavering power!'
+  - ''
+  - '&L&cPharaoh'
+  - ''
+  - '&L&F&KO&R&L&9Uncommon Loot&F&KO'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:3
+  - PROTECTION_PROJECTILE:3
+  - PROTECTION_FIRE:3
+  - PROTECTION_EXPLOSIONS:3
+  Attributes:
+    Head:
+      Health: 2
+      Armor: 2
+#DULLED
+Loot_PharaohWeapon_DULLED:
+  Id: golden_hoe
+  Display: '&EThe Pharaoh Staff'
+  Lore:
+  - '&6A staff of'
+  - '&6great power.'
+  - ''
+  - '&L&cPharaoh'
+  - ''
+  - '&L&F&KO&R&L&9Uncommon Loot&F&KO'
+  Enchantments:
+  - FIRE_ASPECT:1
+  Attributes:
+    MainHand:
+      Damage: 9
+Loot_PharaohNemes_DULLED:
+  Id: GOLDEN_HELMET
+  Data: 0
+  Display: '&dNemes of the Pharaoh'
+  Lore:
+  - '&6An ancient crowl that grants'
+  - '&6the wearer unwavering power!'
+  - ''
+  - '&L&cPharaoh'
+  - ''
+  - '&L&F&KO&R&L&9Uncommon Loot&F&KO'
+  Attributes:
+    Head:
+      Health: 2
+      Armor: 2
+
 
 

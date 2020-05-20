@@ -1,0 +1,17 @@
+Starter :
+Stone Sword > +5
+
+Dungeon 1:
+Lost Sword > +6
+Kings Axe Dulled > +7
+Kings Axe > +10
+
+Dungeon 2:
+Mummy Weapon > +8
+Pharaoh Scepter Dulled > +9
+Pharaoh Scepter > +12.5
+
+Dungeon 3:
+Pirate Sword > +10
+Captain Weapon Dulled > +11.5
+Captain Weapon > +14

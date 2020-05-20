@@ -14,7 +14,8 @@ PharaohItemDrops:
   Drops:
   - Loot_PharaohWeapon 1 0.12
   - Loot_PharaohNemes 0.12
-  - GOLDEN_APPLE 5 0.76
+  - Loot_PharaohWeapon_DULLED 0.38
+  - Loot_PharaohNemes_DULLED 0.38
 
 IllusionLootTable:
   Conditions:
@@ -40,8 +41,8 @@ Second_DungeonLootDrop:
   MinItems: 1
   MaxItems: 1
   Drops:
-  - Loot_MummyHelmet 1 0.01
-  - Loot_MummyChestplate 1 0.01
-  - Loot_MummyLeggings 1 0.01
-  - Loot_MummyBoots 1 0.01
-  - GOLDEN_APPLE 1 .96
+  - Loot_MummyHelmet 1 0.02
+  - Loot_MummyChestplate 1 0.02
+  - Loot_MummyLeggings 1 0.02
+  - Loot_MummyBoots 1 0.02
+  - GOLDEN_APPLE 1 .92

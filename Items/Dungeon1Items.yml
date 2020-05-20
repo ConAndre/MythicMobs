@@ -15,26 +15,6 @@ LostArcherBow:
 ##Lootables
 ##Helmet, Chestplate, Leggings, Boots, Bow, Axe, Sword
 
-Loot_KingsCrown:
-  Id: GOLDEN_HELMET
-  Data: 0
-  Display: '&3&LCrown of the &cKing'
-  Lore:
-  - '&6A kingly crowl that grants'
-  - '&6the wearer unwavering power!'
-  - ''
-  - '&L&cSkeleton King'
-  - ''
-  - '&L&F&KO&R&L&9Uncommon Loot&F&KO'
-  Enchantments:
-  - PROTECTION_ENVIRONMENTAL:2
-  - PROTECTION_PROJECTILE:2
-  - PROTECTION_FIRE:2
-  - PROTECTION_EXPLOSIONS:2
-  Attributes:
-    Head:
-      Health: 2
-      Armor: 2
 Loot_LostZombieChestplate:
   Id: iron_chestplate
   Data: 0
@@ -98,19 +78,7 @@ Loot_LostArcherBow:
   Attributes:
     MainHand:
       MovementSpeed: 0.01
-Loot_SkeletonKingAxe:
-  Id: iron_axe
-  Data: 0
-  Display: '&3&LGreataxe of the &cSkeleton King'
-  Lore:
-  - '&6A powerful axe used by'
-  - '&6the King of Skeletons.'
-  - ''
-  - '&L&cSkeleton King'
-  - ''
-  - '&L&F&KO&R&L&9Uncommon Loot&F&KO'
-  Enchantments:
-  - DAMAGE_ALL:1
+
 Loot_LostZombieSword:
   Id: iron_sword
   Data: 0
@@ -122,9 +90,75 @@ Loot_LostZombieSword:
   - '&L&cLost Zombie'
   - ''
   - '&L&F&KO&R&L&eCommon Loot&F&KO'
-  Enchantments:
-  - DAMAGE_ALL:1
+  Attributes:
+    MainHand:
+      Damage: 6
 
+#BOSS
+Loot_SkeletonKingAxe:
+  Id: iron_axe
+  Data: 0
+  Display: '&3&LGreataxe of the &cSkeleton King'
+  Lore:
+  - '&6A powerful axe used by'
+  - '&6the King of Skeletons.'
+  - ''
+  - '&L&cSkeleton King'
+  - ''
+  - '&L&F&KO&R&L&9Uncommon Loot&F&KO'
+  Attributes:
+    MainHand:
+      Damage: 10
+Loot_KingsCrown:
+  Id: GOLDEN_HELMET
+  Data: 0
+  Display: '&3&LCrown of the &cKing'
+  Lore:
+  - '&6A kingly crowl that grants'
+  - '&6the wearer unwavering power!'
+  - ''
+  - '&L&cSkeleton King'
+  - ''
+  - '&L&F&KO&R&L&9Uncommon Loot&F&KO'
+  Attributes:
+    Head:
+      Health: 2
+      Armor: 2
+#DULLED
+Loot_SkeletonKingAxe_DULLED:
+  Id: iron_axe
+  Data: 0
+  Display: '&3&LGreataxe of the &cSkeleton King'
+  Lore:
+  - '&6A powerful axe used by'
+  - '&6the King of Skeletons.'
+  - ''
+  - '&L&cSkeleton King'
+  - ''
+  - '&L&F&KO&R&L&9Uncommon Loot&F&KO'
+  Attributes:
+    MainHand:
+      Damage: 7
+Loot_KingsCrown_DULLED:
+  Id: GOLDEN_HELMET
+  Data: 0
+  Display: '&3&LCrown of the &cKing'
+  Lore:
+  - '&6A kingly crowl that grants'
+  - '&6the wearer unwavering power!'
+  - ''
+  - '&L&cSkeleton King'
+  - ''
+  - '&L&F&KO&R&L&9Uncommon Loot&F&KO'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:1
+  - PROTECTION_PROJECTILE:1
+  - PROTECTION_FIRE:1
+  - PROTECTION_EXPLOSIONS:1
+  Attributes:
+    Head:
+      Health: 1
+      Armor: 2
 
 
 

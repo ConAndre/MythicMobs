@@ -25,7 +25,6 @@ CaptainWeapon:
   - ENCHANTS
   - ATTRIBUTES
 
-
 JunkeeHead:
  Id: 397
  Data: 3
@@ -75,7 +74,7 @@ Loot_PirateChestplate:
   - '&L&F&KO&R&L&eCommon Loot&F&KO'
   Attributes:
     Chest:
-      Health: 2
+      Health: 1
       Armor: 6
   Enchantments:
   - PROTECTION_ENVIRONMENTAL:2
@@ -124,10 +123,10 @@ Loot_PirateWeapon:
   - '&L&cPirate'
   - ''
   - '&L&F&KO&R&L&eCommon Loot&F&KO'
-  Enchantments:
-  - DAMAGE_ALL:3
-  - DAMAGE_UNDEAD:2
-  - DAMAGE_ARTHROPODS:2
+  Attributes:
+    MainHand:
+      Damage: 10
+
 Loot_PirateBow:
   Id: bow
   Display: '&cPirate Bow'
@@ -140,6 +139,7 @@ Loot_PirateBow:
   Enchantments:
   - ARROW_DAMAGE:2
   - ARROW_INFINITE:1
+#Boss
 Loot_CaptainWeapon:
   Id: flint_and_steel
   Display: '&cCaptain<&sq>s hook'
@@ -151,10 +151,10 @@ Loot_CaptainWeapon:
   - ''
   - '&L&F&KO&R&L&1Rare Loot&F&KO'
   Enchantments:
-  - DAMAGE_ALL:8
-  - DAMAGE_UNDEAD:4
-  - DAMAGE_ARTHROPODS:4
   - FIRE_ASPECT:1
+  Attributes:
+    MainHand:
+      Damage: 14
 Loot_CaptainChestplate:
   Id: IRON_CHESTPLATE
   Data: 0
@@ -175,6 +175,44 @@ Loot_CaptainChestplate:
   - PROTECTION_PROJECTILE:4
   - PROTECTION_FIRE:4
   - PROTECTION_EXPLOSIONS:4
+
+
+#Dulled
+Loot_CaptainWeapon_DULLED:
+  Id: flint_and_steel
+  Display: '&cCaptain<&sq>s hook'
+  Lore:
+  - '&6The hook of a'
+  - '&6stinky pirate.'
+  - ''
+  - '&L&cCaptain'
+  - ''
+  - '&L&F&KO&R&L&1Rare Loot&F&KO'
+  Enchantments:
+  - FIRE_ASPECT:1
+  Attributes:
+    MainHand:
+      Damage: 11.5
+Loot_CaptainChestplate_DULLED:
+  Id: IRON_CHESTPLATE
+  Data: 0
+  Display: '&dCaptain<&sq>s Chestplate'
+  Lore:
+  - '&6This chestplate reeks of bile'
+  - '&6and saltwater...'
+  - ''
+  - '&L&cCaptain'
+  - ''
+  - '&L&F&KO&R&L&1Rare Loot&F&KO'
+  Attributes:
+    Chest:
+      Health: 2
+      Armor: 6
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:2
+  - PROTECTION_PROJECTILE:2
+  - PROTECTION_FIRE:2
+  - PROTECTION_EXPLOSIONS:2
 
 
 

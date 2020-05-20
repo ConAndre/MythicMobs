@@ -7,7 +7,8 @@ SkeletonKing:
   Type: WITHER_SKELETON
   Display: '&L&cSkeleton King'
   Health: 350
-  Damage: -2
+  Damage: 6
+  Armor: 0
   BossBar:
     Enabled: true
     Title: 'Skeleton King'
@@ -35,7 +36,8 @@ LostZombie:
   Type: ZOMBIE
   Display: '&L&cLost Zombie'
   Health: 100
-  Damage: 0
+  Damage: 6
+  Armor: 0
   Options:
     AlwaysShowName: false
     MovementSpeed: 0.275
@@ -62,10 +64,12 @@ LostZombie:
   DamageModifiers:
   Skills:
   - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
+  # - skill{s=NerfDamageSkeleton} @self ~onSpawn
 LostArcher:
   Type: Skeleton
   Display: '&L&cLost Archer'
   Health: 100
+  Armor: 0
   Options:
     AlwaysShowName: false
     MovementSpeed: 0.225
@@ -95,6 +99,7 @@ SkeletalMinion:
   Type: SKELETON
   Display: '&L&2Skeletal Minion'
   Health: 5
+  Armor: 0
   Options:
     AlwaysShowName: false
     MovementSpeed: 0.1
@@ -107,7 +112,8 @@ SkeletalKnight:
   Type: WITHER_SKELETON
   Display: '&cSkeletal Knight'
   Health: 30
-  Damage: 1
+  Damage: 4
+  Armor: 0
   Equipment:
   - MobIronSword HAND
   - SHIELD OFFHAND
@@ -132,6 +138,7 @@ AngrySludge:
   Display: '&L&cAngry Sludge'
   Health: 20
   Damage: 0
+  Armor: 0
   Options:
     Size: 1
     AlwaysShowName: false

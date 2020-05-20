@@ -10,7 +10,8 @@ PirateCaptain:
     Type: Player
     Skin: Captain
   Health: 650
-  Damage: 10
+  Damage: 13
+  Armor: 0
   Faction: Pirate
   BossBar:
     Enabled: true
@@ -50,7 +51,8 @@ PirateGolding:
     Type: Player
     Skin: Pirate
   Health: 500
-  Damage: 8
+  Damage: 13
+  Armor: 0
   Faction: Pirate
   BossBar:
     Enabled: true
@@ -99,7 +101,7 @@ PirateParrotBoss:
     Type: parrot
   Faction: Pirate
   Health: 500
-  Damage: 14
+  Damage: 13
   Armor: 0
   BossBar:
     Enabled: true
@@ -142,7 +144,8 @@ PirateJunkee:
   Type: BABY_ZOMBIE
   Display: '&cJunkee'
   Health: 35
-  Damage: 6
+  Damage: 10
+  Armor: 0
   Faction: Pirate
   Equipment:
   - JunkeeHead HEAD
@@ -168,7 +171,8 @@ PirateParrot:
   Disguise:
     Type: parrot
   Health: 35
-  Damage: 6
+  Damage: 10
+  Armor: 0
   Faction: Pirate
   Armor: 0
   Equipment:
@@ -194,12 +198,12 @@ PirateParrot:
   - 1 players
   Skills:
   - skill{s=ParrotLeapAttack} @self ~onTimer:80
-
 Pirate:
   Type: Skeleton
   Display: '&cPirate'
   Health: 75
-  Damage: 4
+  Damage: 10
+  Armor: 0
   Faction: Pirate
   Equipment:
   - MobIronHelmet HEAD
@@ -233,6 +237,7 @@ PirateArcher:
   Type: SKELETON
   Display: '&cPirate Archer'
   Health: 65
+  Armor: 0
   Faction: Pirate
   Equipment:
   - MobIronHelmet HEAD
