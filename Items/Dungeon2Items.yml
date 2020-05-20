@@ -1,0 +1,212 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#
+MummyHelmet:
+  Id: LEATHER_HELMET
+  Display: '&EMummy HELMET'
+  Lore:
+  - '&6Mummy Armor'
+  Options:
+    Color: 239,221,111
+  Hide:
+  - ENCHANTS
+MummyChestplate:
+  Id: LEATHER_CHESTPLATE
+  Display: '&EMummy Chestplate'
+  Lore:
+  - '&6Mummy Armor'
+  Options:
+    Color: 239,221,111
+  Hide:
+  - ENCHANTS
+MummyLeggings:
+  Id: LEATHER_LEGGINGS
+  Display: '&EMummy LEGGINGS'
+  Lore:
+  - '&6Mummy Armor'
+  Options:
+    Color: 239,221,111
+  Hide:
+  - ENCHANTS
+MummyBoots:
+  Id: LEATHER_BOOTS
+  Display: '&EMummy Boots'
+  Lore:
+  - '&6Mummy Armor'
+  Options:
+    Color: 239,221,111
+  Enchantments:
+  - DEPTH_STRIDER:3
+  Hide:
+  - ENCHANTS
+MummyWeapon:
+  Id: REDSTONE_TORCH_ON
+  Display: '&EMummy Weapon'
+  Lore:
+  - '&6Mummy Weapon'
+  Hide:
+  - ENCHANTS
+MummyBow:
+  Id: bow
+  Display: '&EMummy Bow'
+  Lore:
+  - '&6Mummy Bow'
+  Enchantments:
+  - ARROW_DAMAGE:2
+  - ARROW_INFINITE:1
+  Hide:
+  - ENCHANTS
+PharaohWeapon:
+  Id: golden_hoe
+  Display: '&EThe Pharaoh Staff'
+  Lore:
+  - '&6A staff of'
+  - '&6great power.'
+  Enchantments:
+  - DAMAGE_ALL:4
+  - DAMAGE_UNDEAD:3
+  - DAMAGE_ARTHROPODS:3
+  - FIRE_ASPECT:1
+  Hide:
+  - ENCHANTS
+PharaohNemes:
+  Id: GOLDEN_HELMET
+  Data: 0
+  Display: '&dNemes of the Pharaoh'
+  Lore:
+  - '&6An ancient crowl that grants'
+  - '&6the wearer unwavering power!'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:3
+  - PROTECTION_PROJECTILE:3
+  - PROTECTION_FIRE:3
+  - PROTECTION_EXPLOSIONS:3
+  Hide:
+  - ENCHANTS
+
+SCP01:
+ Id: 397
+ Data: 3
+ Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTQzMjgzYzBiM2ZiMmJmZDc1OWU3MTA1YzkyYWFhZDA1MjcxNjkwMWMyMWM1OTI1YjI3OTc1MTg1MWQ3NGM3OSJ9fX0=
+SCP02:
+ Id: 397
+ Data: 3
+ Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWRiMWE4MzMwYTU0MTBjMzIyMTAyM2Y3MmQ5Y2JmM2E5OGZiYjQ3OWQyMzllMTNmNWIyZTJmNTY4ODJjOTczNSJ9fX0=
+
+##LOOT
+
+Loot_PharaohWeapon:
+  Id: golden_hoe
+  Display: '&EThe Pharaoh Staff'
+  Lore:
+  - '&6A staff of'
+  - '&6great power.'
+  - ''
+  - '&L&cPharaoh'
+  - ''
+  - '&L&F&KO&R&L&9Uncommon Loot&F&KO'
+  Enchantments:
+  - DAMAGE_ALL:4
+  - DAMAGE_UNDEAD:3
+  - DAMAGE_ARTHROPODS:3
+  - FIRE_ASPECT:1
+Loot_PharaohNemes:
+  Id: GOLDEN_HELMET
+  Data: 0
+  Display: '&dNemes of the Pharaoh'
+  Lore:
+  - '&6An ancient crowl that grants'
+  - '&6the wearer unwavering power!'
+  - ''
+  - '&L&cPharaoh'
+  - ''
+  - '&L&F&KO&R&L&9Uncommon Loot&F&KO'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:3
+  - PROTECTION_PROJECTILE:3
+  - PROTECTION_FIRE:3
+  - PROTECTION_EXPLOSIONS:3
+  Attributes:
+    Head:
+      Health: 2
+      Armor: 2
+
+Loot_MummyHelmet:
+  Id: LEATHER_HELMET
+  Display: '&EMummy Helmet'
+  Lore:
+  - '&6Mummy Armor'
+  - ''
+  - '&L&cMummy'
+  - ''
+  - '&L&F&KO&R&L&eCommon Loot&F&KO'
+  Options:
+    Color: 239,221,111
+  Attributes:
+    Head:
+      Health: 1
+      Armor: 2
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:1
+  - PROTECTION_FIRE:1
+
+Loot_MummyChestplate:
+  Id: LEATHER_CHESTPLATE
+  Display: '&EMummy Chestplate'
+  Lore:
+  - '&6Mummy Armor'
+  - ''
+  - '&L&cMummy'
+  - ''
+  - '&L&F&KO&R&L&eCommon Loot&F&KO'
+  Options:
+    Color: 239,221,111
+  Attributes:
+    Chest:
+      Health: 1
+      Armor: 6
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:1
+  - PROTECTION_FIRE:1
+
+Loot_MummyLeggings:
+  Id: LEATHER_LEGGINGS
+  Display: '&EMummy Leggings'
+  Lore:
+  - '&6Mummy Armor'
+  - ''
+  - '&L&cMummy'
+  - ''
+  - '&L&F&KO&R&L&eCommon Loot&F&KO'
+  Options:
+    Color: 239,221,111
+  Attributes:
+    Legs:
+      Health: 1
+      Armor: 5
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:1
+  - PROTECTION_FIRE:1
+
+Loot_MummyBoots:
+  Id: LEATHER_BOOTS
+  Display: '&EMummy Boots'
+  Lore:
+  - '&6Mummy Armor'
+  - ''
+  - '&L&cMummy'
+  - ''
+  - '&L&F&KO&R&L&eCommon Loot&F&KO'
+  Options:
+    Color: 239,221,111
+  Attributes:
+    FEET:
+      Health: 1
+      Armor: 2
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:1
+  - PROTECTION_FIRE:1
+
+

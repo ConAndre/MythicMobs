@@ -1,0 +1,47 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#
+
+##Boss Mobs
+PharaohLootTable:
+  Conditions:
+  - playerwithin 40
+  Drops:
+  - PharaohItemDrops 1
+PharaohItemDrops:
+  MinItems: 1
+  MaxItems: 2
+  Drops:
+  - Loot_PharaohWeapon 1 0.12
+  - Loot_PharaohNemes 0.12
+  - GOLDEN_APPLE 5 0.76
+
+IllusionLootTable:
+  Conditions:
+  - playerwithin 40
+  Drops:
+  - IllusionItemDrops 1
+IllusionItemDrops:
+  MinItems: 1
+  MaxItems: 2
+  Drops:
+  # - Loot_LostZombieSword 1 0.08
+  # - Loot_LostZombieChestplate 1 0.08
+  # - Loot_LostZombieLeggings 1 0.08
+  - GOLDEN_APPLE 5 0.76
+
+
+Second_DungeonLootTable:
+  Conditions:
+  - playerwithin 40
+  Drops:
+  - Second_DungeonLootDrop 1
+Second_DungeonLootDrop:
+  MinItems: 1
+  MaxItems: 1
+  Drops:
+  - Loot_MummyHelmet 1 0.01
+  - Loot_MummyChestplate 1 0.01
+  - Loot_MummyLeggings 1 0.01
+  - Loot_MummyBoots 1 0.01
+  - GOLDEN_APPLE 1 .96

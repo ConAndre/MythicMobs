@@ -1,0 +1,105 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#
+
+SmashAttack:
+  Cooldown: 12
+  Conditions:
+  - targetwithin 25
+  - targetinlineofsight true
+  Skills:
+  - teleport @target
+  - effect:sound{s=mob.endermen.portal;volume=1.0;pitch=0.5}
+  - delay 10
+  - damage{amount=3;ignorearmor=true} @PlayersInRadius{r=5}
+  - throw{velocity=10;velocityY=5} @PlayersInRadius{r=5}
+  - effect:explosion @Self
+
+WaterBuffs:
+  Cooldown: 1
+  Skills:
+  - potion{type=WATER_BREATHING;lvl=0;duration=400} @PlayersInRadius{r=5}
+  - potion{type=DOLPHINS_GRACE;lvl=0;duration=400} @PlayersInRadius{r=5}
+  - effect:particles{p=drip_water;amount=200;hSpread=3;ySpread=1;speed=0;yOffset=0.5} @Self
+  - sound{s=entity.dolphin.splash} @self
+
+LeapAttack:
+  Condition:
+  - OnGround
+  - TargetWithin 8
+  - LineOfSight
+  Skills:
+  - lunge{velocity=1.2;velocityY=0.3} @self
+
+TeleportToSpawnOnDeath:
+  Skills:
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A15 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - delay 20
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A14 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - delay 20
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A13 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - delay 20
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A12 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - delay 20
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A11 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - delay 20
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A10 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - delay 20
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A9 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - delay 20
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A8 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - delay 20
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A7 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - delay 20
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A6 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - delay 20
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A5 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - delay 20
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A4 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - delay 20
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A3 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - delay 20
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A2 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - delay 20
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A1 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - delay 20
+  - teleportto{location=748,64,-195} @PlayersInRadius{r=25}
+
+
+
+
+  TeleportToOutsideBigBite:
+  Skills:
+  - sendtitle{title="&cBoss Cleared!";subtitle="&cTeleporting to outside in &A15 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cBoss Cleared!";subtitle="&cTeleporting to outside in &A14 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cBoss Cleared!";subtitle="&cTeleporting to outside in &A13 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cBoss Cleared!";subtitle="&cTeleporting to outside in &A12 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cBoss Cleared!";subtitle="&cTeleporting to outside in &A11 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cBoss Cleared!";subtitle="&cTeleporting to outside in &A10 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cBoss Cleared!";subtitle="&cTeleporting to outside in &A9 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cBoss Cleared!";subtitle="&cTeleporting to outside in &A8 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cBoss Cleared!";subtitle="&cTeleporting to outside in &A7 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cBoss Cleared!";subtitle="&cTeleporting to outside in &A6 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cBoss Cleared!";subtitle="&cTeleporting to outside in &A5 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cBoss Cleared!";subtitle="&cTeleporting to outside in &A4 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cBoss Cleared!";subtitle="&cTeleporting to outside in &A3 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - delay 20
+  - sendtitle{title="&cBoss Cleared!";subtitle="&cTeleporting to outside in &A2 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - delay 20
+  - sendtitle{title="&cBoss Cleared!";subtitle="&cTeleporting to outside in &A1 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - delay 20
+  - teleportto{location=-786,153,26} @PlayersInRadius{r=12}
+
+

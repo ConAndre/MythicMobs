@@ -1,0 +1,194 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#
+
+##################################################BOSSES####################################################
+Pharaoh:
+  Type: Skeleton
+  Display: '&ePharaoh'
+  Health: 500
+  Damage: 9
+  BossBar:
+    Enabled: true
+    Title: 'Pharaoh'
+    Range: 18
+    Color: YELLOW
+    Style: SOLID
+  Skills:
+  - speak{m="&cYou dare challenge me!?";cooldown=60} @Target
+    ~onCombat >0 0.2
+  - skill{s=SummonMummiesScarabs} @self 0.1
+  - skill{s=SolarFlare} 0.2
+  - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
+  - skill{s=PharaohPushBack} @self ~onDamaged =50%
+  - skill{s=PharaohFin} @self =15%
+  - skill{s=TeleportToSpawnOnDeath} ~onDeath
+
+  Equipment:
+  - PharaohNemes HEAD
+  - MummyChestplate CHEST
+  - MummyLeggings LEGS
+  - DepthLeatherBoots FEET
+  - PharaohWeapon HAND
+  Drops:
+  - PharaohLootTable
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.25
+    MaxCombatDistance: 25
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+  Modules:
+    ThreatTable: true
+
+Illusion:
+  Type: ZOMBIE
+  Display: '&cIllusion'
+  Health: 300
+  Damage: 8
+  Armor: 0
+  Equipment:
+  - SCP01:4
+  - iron_CHESTPLATE CHEST
+  - iron_LEGGINGS LEGS
+  - DepthIronBoots FEET
+  Options:
+    MovementSpeed: 0.25
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 float
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Skills:
+  - sound{s=entity.ghast.hurt} @self ~OnTimer:200
+  - skill{s=NightSpawn} @self 0.1
+  - skill{s=Night} @PlayersInRadius{r=15}
+  - skill{s=NightTornado} @PlayersInRadius{r=15}
+  - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
+  Drops:
+  - IllusionLootTable
+
+IllusionMob:
+  Type: ZOMBIE
+  Display: '&ceye'
+  Health: 20
+  Damage: 4
+  Equipment:
+   - SCP02:4
+  Options:
+    MovementSpeed: 0.325
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  - 0 float
+  Skills:
+   - potion{t=INVISIBILITY;d=630720000;l=0} @self ~onSpawn
+   - effect:sound{s=entity.phantom.hurt;v=1;p=0} @self ~onDamaged
+
+
+##################################################REGULARS####################################################
+Mummy:
+  Type: ZOMBIE
+  Display: '&EMummy'
+  Health: 45
+  Damage: 6
+  Equipment:
+  - MummyHelmet HEAD
+  - MummyChestplate CHEST
+  - MummyLeggings LEGS
+  - DepthLeatherBoots FEET
+  - Iron_Sword HAND
+  Drops:
+  - Second_DungeonLootTable
+  Options:
+    MovementSpeed: 0.275
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  - 3 float
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+MummyArcher:
+  Type: SKELETON
+  Display: '&EMummy Archer'
+  Health: 35
+  Equipment:
+  - MummyHelmet HEAD
+  - MummyChestplate CHEST
+  - MummyLeggings LEGS
+  - DepthLeatherBoots FEET
+  - MummyBow HAND
+  Drops:
+  - Second_DungeonLootTable
+  Options:
+    MovementSpeed: 0.275
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Skills:
+  - skill{s=MummyHomer} @target ~onTimer:140
+PyramidGuardian:
+  Type: GUARDIAN
+  Display: '&EPyramid Guardian'
+  Health: 35
+  Damage: 10
+  Equipment:
+  Drops:
+  - Second_DungeonLootTable
+  Options:
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+Scarab:
+  Type: SILVERFISH
+  Display: '&EScarab'
+  Health: 15
+  Damage: 8
+  Equipment:
+  Drops:
+  - Second_DungeonLootTable
+  Options:
+    MovementSpeed: 0.375
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  - 3 float
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Skills:
+  - skill{s=ScarabAttack} ~onAttack @target
+
+

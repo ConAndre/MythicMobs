@@ -1,0 +1,31 @@
+  - ''
+  - '&L&cLost Zombie'
+  - ''
+  - '&L&F&KO&R&L&eCommon Loot&F&KO'                     1% from any mob in dungeon, 5% from MiniBosses
+
+  - ''
+  - '&L&cLost Zombie'
+  - ''
+  - '&L&F&KO&R&L&9Uncommon Loot&F&KO'                   8% from Minibosses, 12% from bosses
+
+  - ''
+  - '&L&cLost Zombie'
+  - ''
+  - '&L&F&KO&R&L&1Rare Loot&F&KO'                       5% from bosses
+
+  - ''
+  - '&L&cLost Zombie'
+  - ''
+  - '&L&F&KO&R&L&CLegendary Loot&F&KO'                  1% from bosses
+
+  - ''
+  - '&L&cLost Zombie'
+  - ''
+  - '&L&F&KO&R&L&4Mythic Loot&F&KO'                     Raids
+
+
+  - ''
+  - '&L&cLost Zombie'
+  - ''
+  - '&L&F&KO&R&L&DDivine Loot&F&KO'                     Raids
+

@@ -1,0 +1,343 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#
+
+##################################################BOSSES####################################################
+PiranhaBoss:
+  Type: GUARDIAN
+  Display: '&9Big Bite'
+  Health: 1000
+  Damage: 8
+  BossBar:
+    Enabled: true
+    Title: 'Big Bite'
+    Range: 12
+    Color: BLUE
+    Style: SOLID
+  Equipment:
+  Options:
+    MovementSpeed: 1.5
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Skills:
+  - skill{s=PiranhaExpunge} @self ~onTimer:180
+  - skill{s=PiranhaEffects} ~onTimer:240
+  - skill{s=TeleportToOutsideBigBite} ~onDeath
+  Drops:
+  - Third_DungeonLootTable
+NexusPetBoss:
+  Type: wolf
+  Display: '&cNexus<&sq> Pet'
+  Health: 1750
+  Damage: 24
+  BossBar:
+    Enabled: true
+    Title: 'Nexus<&sq> Pet'
+    Range: 22
+    Color: YELLOW
+    Style: SOLID
+  Skills:
+  - skill{s=LeapAttack} @self ~onTimer:140
+  - skill{s=QuickChomp;cooldown=45} @target ~onDamaged .05
+  - skill{s=HarshHowl;cooldown=60} @self ~onDamaged .05
+  - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
+  - skill{s=SummonPetsMinions;cooldown=85} @self ~onDamaged .05
+  Drops:
+  - PirateCaptainLootTable
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.4
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+  Modules:
+    ThreatTable: true
+NexusBoss:
+  Type: ZOMBIE
+  Display: '&cNexus'
+  Health: 1750
+  Damage: 26
+  Disguise:
+    Type: Player
+    Skin: God
+  BossBar:
+    Enabled: true
+    Title: 'Nexus'
+    Range: 22
+    Color: YELLOW
+    Style: SOLID
+  Skills:
+  - skill{s=AzureBlastProjectile;cooldown 15} @target onDamaged .05
+  - skill{s=SummonSquids} @self ~onDamaged =50%
+  - skill{s=AzureHomer;cooldown=35} @target ~onTimer:20
+  - skill{s=AzureSplash;cooldown=25} @PlayersInRadius{r=16} ~onDamaged .05
+  - skill{s=AzureJumpLightning;cooldown=35} @self ~onDamaged .05
+  - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
+  - skill{s=AzureFin} @self =15%
+  - skill{s=TeleportToSpawnOnDeath} ~onDeath
+  Equipment:
+  - Diamond_Helmet HEAD
+  - Diamond_Chestplate CHEST
+  - Diamond_Leggings LEGS
+  - DepthDiamondBoots FEET
+  Drops:
+  - PirateCaptainLootTable
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.275
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+  Modules:
+    ThreatTable: true
+
+AzureBoss:
+  Type: WITHER_SKELETON
+  Display: '&9Azure'
+  Health: 1250
+  Damage: 15
+  Disguise:
+    Type: Player
+    Skin: Blue
+  BossBar:
+    Enabled: true
+    Title: 'Azure'
+    Range: 22
+    Color: BLUE
+    Style: SOLID
+  Skills:
+  - skill{s=AzureBlastProjectile;cooldown 15} @target onDamaged .05
+  - skill{s=SummonSquids} @self ~onDamaged =50%
+  - skill{s=AzureHomer;cooldown=35} @target ~onTimer:20
+  - skill{s=AzureSplash;cooldown=25} @PlayersInRadius{r=16} ~onDamaged .05
+  - skill{s=AzureJumpLightning;cooldown=35} @self ~onDamaged .05
+  - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
+  - skill{s=AzureFin} @self =15%
+  Equipment:
+  - Iron_Helmet HEAD
+  - Iron_Chestplate CHEST
+  - Iron_Leggings LEGS
+  - Diamond_Sword HAND
+  - DepthDiamondBoots FEET
+  Drops:
+  - PirateCaptainLootTable
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.275
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+  Modules:
+    ThreatTable: true
+
+CarmineBoss:
+  Type: WITHER_SKELETON
+  Display: '&cCarmine'
+  Disguise:
+    Type: Player
+    Skin: Red
+  Health: 1250
+  Damage: 15
+  BossBar:
+    Enabled: true
+    Title: 'Carmine'
+    Range: 22
+    Color: RED
+    Style: SOLID
+  Equipment:
+  - Iron_Helmet HEAD
+  - Iron_Chestplate CHEST
+  - Iron_Leggings LEGS
+  - Iron_Boots FEET
+  - Diamond_Sword HAND
+  Options:
+    MovementSpeed: 0.275
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 float
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Skills:
+  - message{cooldown=20;m="<mob.name><&co> Get off me port!"} @PlayersInRadius{r=40} ~onCombat >0 0.2
+  - message{m="<mob.name><&co> Eating you alive will be a real treat! Braw hah hah!"} @PlayersInRadius{r=40} ~onPlayerKill >0 1
+  - skill{s=SummonJunkees} @self =85%
+  - skill{s=SummonParrots} @self ~onDamaged =35%
+  - skill{s=PharaohFin} @self =15%
+  - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
+  - effect:particletornado{p=flame;cp=largeexplode;mr=1;h=3;i=4;d=100;rs=1;sh=1;cs=0;ca=0;chs=0.1;cvs=0.1;cps=1;cyo=2} @self ~onTimer:200
+  - skill{s=SmashAttackII} @Target >0 0.01
+  - skill{s=AngryAura} ~onTimer:600
+  - skill{s=Death} @Self ~onDeath
+  Drops:
+  - PirateGoldingLootTable
+
+
+
+
+##################################################REGULARS####################################################
+AirBubble:
+  Type: TROPICAL_FISH
+  Display: '&N&AOxygen'
+  Health: 2000
+  Options:
+    MovementSpeed: 0.25
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=WaterBuffs} ~onInteract
+
+
+SquidMinion:
+  Type: BABY_ZOMBIE
+  Display: '&cInk'
+  Disguise:
+    Type: squid
+  Health: 55
+  Equipment:
+  Options:
+    MovementSpeed: 0.0
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 float
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Skills:
+  - skill{s=SquidHomer} @target ~onTimer:240
+  - jump{velocity=0.75} @self ~onTimer:80
+  - effect:sound{s=entity.ghast.ambient;v=1;p=0} @self ~onDamaged
+
+PetsMinion:
+  Type: BABY_ZOMBIE
+  Display: '&cPet<&sq>s Minion'
+  Disguise:
+    Type: rabbit
+  Health: 10
+  Damage: 0
+  Equipment:
+  - KnockBackStick HAND
+  Options:
+    MovementSpeed: 0.35
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+
+
+Piranha:
+  Type: GUARDIAN
+  Display: '&cPiranha'
+  Health: 85
+  Damage: 8
+  Equipment:
+  Drops:
+  - Third_DungeonLootDrop
+  Options:
+    MovementSpeed: 1.5
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Skills:
+  Drops:
+  - Third_DungeonLootTable
+
+NexusArcher:
+  Type: SKELETON
+  Display: '&cNexus<&sq> Archer'
+  Disguise:
+    Type: Player
+    Skin: Demon
+  Health: 90
+  Equipment:
+  - Iron_Helmet HEAD
+  - Iron_Chestplate CHEST
+  - Iron_Leggings LEGS
+  - Iron_Boots FEET
+  - NexusBow HAND
+  Drops:
+  - Third_DungeonLootDrop
+  Options:
+    MovementSpeed: 0.275
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Skills:
+  - skill{s=SmokeBlastProjectile;cooldown=20} @target ~onAttack 0.35
+  Drops:
+  - Third_DungeonLootDrop
+
+NexusGuard:
+  Type: SKELETON
+  Display: '&cNexus<&sq> Guard'
+  Disguise:
+    Type: Player
+    Skin: Demon
+  Health: 130
+  Damage: 12
+  Equipment:
+  - Iron_Helmet HEAD
+  - Iron_Chestplate CHEST
+  - Iron_Leggings LEGS
+  - Iron_Boots FEET
+  - Iron_Sword HAND
+  Drops:
+  - Third_DungeonLootDrop
+  Options:
+    MovementSpeed: 0.275
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Skills:
+  - skill{s=SmokeBlastProjectile;cooldown=20} @target ~onAttack 0.35
+  Drops:
+  - Third_DungeonLootDrop
+
+

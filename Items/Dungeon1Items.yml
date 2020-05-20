@@ -1,0 +1,188 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#
+
+SkeletonKingAxe:
+  Id: iron_axe
+  Data: 0
+  Display: '&3Greataxe of the Skeleton King'
+  Lore:
+  - '&6A powerful axe used by'
+  - '&6the King of Skeletons.'
+  Enchantments:
+  - DAMAGE_ALL:1
+  # Attributes:
+  #   MainHand:
+  #     Health: 10
+  #     MovementSpeed: 0.1
+KingsCrown:
+  Id: GOLDEN_HELMET
+  Data: 0
+  Amount: 1
+  Display: '&dCrown of the King'
+  Lore:
+  - '&6A kingly crowl that grants'
+  - '&6the wearer unwavering power!'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:2
+  - PROTECTION_PROJECTILE:2
+  - PROTECTION_FIRE:2
+  - PROTECTION_EXPLOSIONS:2
+
+
+LostZombieSword:
+  Id: iron_sword
+  Data: 0
+  Display: '&3Sword of the Lost Zombie'
+  Lore:
+  - '&6A sword used by'
+  - '&6the Lost Zombie.'
+  Enchantments:
+  - DAMAGE_ALL:1
+LostZombieChestplate:
+  Id: iron_chestplate
+  Data: 0
+  Display: '&3Chestplate of the Lost Zombie'
+  Lore:
+  - '&6A Chestplate used by'
+  - '&6the Lost Zombie.'
+
+LostArcherBow:
+  Id: bow
+  Data: 0
+  Display: '&3Bow of the Lost Archer'
+  Lore:
+  - '&6A bow used by'
+  - '&6the Lost Archer.'
+  Enchantments:
+  - ARROW_DAMAGE:1
+  - ARROW_INFINITE:1
+
+LostArcherBoots:
+  Id: iron_boots
+  Data: 0
+  Display: '&3Boots of the Lost Archer'
+  Lore:
+  - '&6Boots used by'
+  - '&6the Lost Archer.'
+  Attributes:
+    Feet:
+      MovementSpeed: 0.1
+
+##Lootables
+##Helmet, Chestplate, Leggings, Boots, Bow, Axe, Sword
+
+Loot_KingsCrown:
+  Id: GOLDEN_HELMET
+  Data: 0
+  Display: '&3&LCrown of the &cKing'
+  Lore:
+  - '&6A kingly crowl that grants'
+  - '&6the wearer unwavering power!'
+  - ''
+  - '&L&cSkeleton King'
+  - ''
+  - '&L&F&KO&R&L&9Uncommon Loot&F&KO'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:2
+  - PROTECTION_PROJECTILE:2
+  - PROTECTION_FIRE:2
+  - PROTECTION_EXPLOSIONS:2
+  Attributes:
+    Head:
+      Health: 2
+      Armor: 2
+Loot_LostZombieChestplate:
+  Id: iron_chestplate
+  Data: 0
+  Display: '&3&LChestplate of the &cLost &3Zombie'
+  Lore:
+  - '&6Chestplate used by'
+  - '&6the Lost Zombie.'
+  - ''
+  - '&L&cLost Zombie'
+  - ''
+  - '&L&F&KO&R&L&eCommon Loot&F&KO'
+  Attributes:
+    Chest:
+      Health: 1
+      Armor: 6
+Loot_LostZombieLeggings:
+  Id: iron_leggings
+  Data: 0
+  Display: '&3&LLeggings of the &cLost &3Zombie'
+  Lore:
+  - '&6Leggings used by'
+  - '&6the Lost Zombie.'
+  - ''
+  - '&L&cLost Zombie'
+  - ''
+  - '&L&F&KO&R&L&eCommon Loot&F&KO'
+  Attributes:
+    Legs:
+      Health: 1
+      Armor: 5
+Loot_LostArcherBoots:
+  Id: iron_boots
+  Data: 0
+  Display: '&3&LBoots of the &cLost &3Archer'
+  Lore:
+  - '&6Boots used by'
+  - '&6the Lost Archer.'
+  - ''
+  - '&L&cLost Archer'
+  - ''
+  - '&L&F&KO&R&L&eCommon Loot&F&KO'
+  Attributes:
+    Feet:
+      MovementSpeed: 0.01
+      Health: 1
+      Armor: 2
+Loot_LostArcherBow:
+  Id: bow
+  Data: 0
+  Display: '&3&LBow of the &cLost &3Archer'
+  Lore:
+  - '&6A bow used by'
+  - '&6the Lost Archer.'
+  - ''
+  - '&L&cLost Archer'
+  - ''
+  - '&L&F&KO&R&L&eCommon Loot&F&KO'
+  Enchantments:
+  - ARROW_DAMAGE:1
+  - ARROW_INFINITE:1
+  Attributes:
+    MainHand:
+      MovementSpeed: 0.01
+Loot_SkeletonKingAxe:
+  Id: iron_axe
+  Data: 0
+  Display: '&3&LGreataxe of the &cSkeleton King'
+  Lore:
+  - '&6A powerful axe used by'
+  - '&6the King of Skeletons.'
+  - ''
+  - '&L&cSkeleton King'
+  - ''
+  - '&L&F&KO&R&L&9Uncommon Loot&F&KO'
+  Enchantments:
+  - DAMAGE_ALL:1
+Loot_LostZombieSword:
+  Id: iron_sword
+  Data: 0
+  Display: '&3&LSword of the &cLost &3Zombie'
+  Lore:
+  - '&6A sword used by'
+  - '&6the Lost Zombie.'
+  - ''
+  - '&L&cLost Zombie'
+  - ''
+  - '&L&F&KO&R&L&eCommon Loot&F&KO'
+  Enchantments:
+  - DAMAGE_ALL:1
+
+
+
+
+

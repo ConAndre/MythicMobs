@@ -1,0 +1,22 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#
+SummonSkeletons:
+  Cooldown: 30
+  Skills:
+  - message{m="<mob.name><&co> Arise, my minions!"} @target
+  - delay 20
+  - summon{mob=SkeletalMinion;amount=2;noise=5} @Self
+  - delay 20
+  - summon{mob=SkeletalMinion;amount=2;noise=5} @Self
+  - delay 20
+  - summon{mob=SkeletalMinion;amount=2;noise=5} @Self
+AngrySludgePoison:
+  Conditions:
+  - targetwithin 8
+  - targetinlineofsight true
+  - incombat
+  Skills:
+  - potion{type=POISON;lvl=0;duration=60} @PlayersInRadius{r=8}
+  - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @Self
+

@@ -1,0 +1,25 @@
+boss_LostZombie:
+  MobName: LostZombie
+  World: world
+  X: -53
+  Y: 40
+  Z: -206
+  Radius: 0
+  UseTimer: true
+  MaxMobs: '1'
+  MobLevel: '1'
+  MobsPerSpawn: 1
+  Cooldown: 0
+  CooldownTimer: 0
+  Warmup: 180
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 30
+  ScalingRange: 25.0
+  LeashRange: 25
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 0

@@ -1,0 +1,25 @@
+AngrySludge13:
+  MobName: AngrySludge
+  World: world
+  X: -65
+  Y: 39
+  Z: -172
+  Radius: 0
+  UseTimer: true
+  MaxMobs: '1'
+  MobLevel: '1'
+  MobsPerSpawn: 1
+  Cooldown: 0
+  CooldownTimer: 0
+  Warmup: 180
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 30
+  ScalingRange: 25.0
+  LeashRange: 15
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 0

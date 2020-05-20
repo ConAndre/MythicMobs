@@ -1,0 +1,37 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#
+DepthLeatherBoots:
+  Id: LEATHER_BOOTS
+  Options:
+    Color: 239,221,111
+  Enchantments:
+  - DEPTH_STRIDER:3
+  Hide:
+  - ENCHANTS
+
+DepthIronBoots:
+  Id: Iron_BOOTS
+  Enchantments:
+  - DEPTH_STRIDER:3
+  Hide:
+  - ENCHANTS
+
+DepthGoldBoots:
+  Id: Gold_BOOTS
+  Enchantments:
+  - DEPTH_STRIDER:3
+  Hide:
+  - ENCHANTS
+
+DepthDiamondBoots:
+  Id: Diamond_BOOTS
+  Enchantments:
+  - DEPTH_STRIDER:3
+  Hide:
+  - ENCHANTS
+
+KnockBackStick:
+  Id: STICK
+  Enchantments:
+  - KNOCKBACK:10

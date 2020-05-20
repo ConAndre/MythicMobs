@@ -1,0 +1,9 @@
+NexusBow:
+  Id: bow
+  Display: '&cNexus Bow'
+  Lore:
+  - '&cNexus Bow'
+  Enchantments:
+  - ARROW_DAMAGE:8
+  - ARROW_FIRE:1
+  - ARROW_INFINITE:1

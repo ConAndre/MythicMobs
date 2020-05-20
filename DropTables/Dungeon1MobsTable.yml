@@ -1,0 +1,60 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#
+
+##Boss Mobs
+SkeletonKingLootTable:
+  Conditions:
+  - playerwithin 40
+  Drops:
+  - SkeletonKingItemDrops 1
+SkeletonKingItemDrops:
+  MinItems: 1
+  MaxItems: 2
+  Drops:
+  - Loot_KingsCrown 1 0.12
+  - Loot_SkeletonKingAxe 0.12
+  - GOLDEN_APPLE 5 0.76
+
+LostZombieLootTable:
+  Conditions:
+  - playerwithin 40
+  Drops:
+  - LostZombieItemDrops 1
+LostZombieItemDrops:
+  MinItems: 1
+  MaxItems: 2
+  Drops:
+  - Loot_LostZombieSword 1 0.08
+  - Loot_LostZombieChestplate 1 0.08
+  - Loot_LostZombieLeggings 1 0.08
+  - GOLDEN_APPLE 3 0.76
+
+LostArcherLootTable:
+  Conditions:
+  - playerwithin 40
+  Drops:
+  - LostArcherItemDrops 1
+LostArcherItemDrops:
+  MinItems: 1
+  MaxItems: 2
+  Drops:
+  - Loot_LostArcherBoots 1 0.08
+  - Loot_LostArcherBow 1 0.08
+  - GOLDEN_APPLE 3 0.84
+
+First_DungeonLootTable:
+  Conditions:
+  - playerwithin 40
+  Drops:
+  - First_DungeonLootDrop 1
+First_DungeonLootDrop:
+  MinItems: 1
+  MaxItems: 1
+  Drops:
+  - Loot_LostArcherBoots 1 0.01
+  - Loot_LostArcherBow 1 0.01
+  - Loot_LostZombieSword 1 0.01
+  - Loot_LostZombieChestplate 1 0.01
+  - Loot_LostZombieLeggings 1 0.01
+  - GOLDEN_APPLE 1 .95
