@@ -1,52 +1,6 @@
 # For more information, check out the plugin manual or join us on Discord:
 # http://www.mythicmobs.net
 #
-
-SkeletonKingAxe:
-  Id: iron_axe
-  Data: 0
-  Display: '&3Greataxe of the Skeleton King'
-  Lore:
-  - '&6A powerful axe used by'
-  - '&6the King of Skeletons.'
-  Enchantments:
-  - DAMAGE_ALL:1
-  # Attributes:
-  #   MainHand:
-  #     Health: 10
-  #     MovementSpeed: 0.1
-KingsCrown:
-  Id: GOLDEN_HELMET
-  Data: 0
-  Amount: 1
-  Display: '&dCrown of the King'
-  Lore:
-  - '&6A kingly crowl that grants'
-  - '&6the wearer unwavering power!'
-  Enchantments:
-  - PROTECTION_ENVIRONMENTAL:2
-  - PROTECTION_PROJECTILE:2
-  - PROTECTION_FIRE:2
-  - PROTECTION_EXPLOSIONS:2
-
-
-LostZombieSword:
-  Id: iron_sword
-  Data: 0
-  Display: '&3Sword of the Lost Zombie'
-  Lore:
-  - '&6A sword used by'
-  - '&6the Lost Zombie.'
-  Enchantments:
-  - DAMAGE_ALL:1
-LostZombieChestplate:
-  Id: iron_chestplate
-  Data: 0
-  Display: '&3Chestplate of the Lost Zombie'
-  Lore:
-  - '&6A Chestplate used by'
-  - '&6the Lost Zombie.'
-
 LostArcherBow:
   Id: bow
   Data: 0
@@ -57,17 +11,6 @@ LostArcherBow:
   Enchantments:
   - ARROW_DAMAGE:1
   - ARROW_INFINITE:1
-
-LostArcherBoots:
-  Id: iron_boots
-  Data: 0
-  Display: '&3Boots of the Lost Archer'
-  Lore:
-  - '&6Boots used by'
-  - '&6the Lost Archer.'
-  Attributes:
-    Feet:
-      MovementSpeed: 0.1
 
 ##Lootables
 ##Helmet, Chestplate, Leggings, Boots, Bow, Axe, Sword

@@ -1,38 +1,6 @@
 # For more information, check out the plugin manual or join us on Discord:
 # http://www.mythicmobs.net
 #
-PirateHelmet:
-  Id: IRON_HELMET
-  Display: '&cPirate Helmet'
-  Lore:
-  - '&cPirate Armor'
-
-PirateChestplate:
-  Id: IRON_CHESTPLATE
-  Display: '&cPirate Chestplate'
-  Lore:
-  - '&cPirate Armor'
-
-PirateLeggings:
-  Id: IRON_LEGGINGS
-  Display: '&cPirate Leggings'
-  Lore:
-  - '&cPirate Armor'
-
-PirateBoots:
-  Id: IRON_BOOTS
-  Display: '&cPirate Boots'
-  Lore:
-  - '&cPirate Armor'
-PirateWeapon:
-  Id: IRON_SWORD
-  Display: '&cPirate Weapon'
-  Lore:
-  - '&cPirate Weapon'
-  Enchantments:
-  - DAMAGE_ALL:3
-  - DAMAGE_UNDEAD:2
-  - DAMAGE_ARTHROPODS:2
 PirateBow:
   Id: bow
   Display: '&cPirate Bow'
@@ -48,23 +16,15 @@ CaptainWeapon:
   Lore:
   - '&6The hook of a'
   - '&6stinky pirate.'
+  Attributes:
+    MainHand:
+      Damage: 0
   Enchantments:
-  - DAMAGE_ALL:8
-  - DAMAGE_UNDEAD:4
-  - DAMAGE_ARTHROPODS:4
   - FIRE_ASPECT:1
-CaptainChestplate:
-  Id: IRON_CHESTPLATE
-  Data: 0
-  Display: '&dCaptain<&sq>s Chestplate'
-  Lore:
-  - '&6This chestplate reeks of bile'
-  - '&6and saltwater...'
-  Enchantments:
-  - PROTECTION_ENVIRONMENTAL:2
-  - PROTECTION_PROJECTILE:2
-  - PROTECTION_FIRE:2
-  - PROTECTION_EXPLOSIONS:2
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+
 
 JunkeeHead:
  Id: 397
