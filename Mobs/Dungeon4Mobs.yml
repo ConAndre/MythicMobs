@@ -16,6 +16,7 @@ PiranhaBoss:
     Style: SOLID
   Equipment:
   Options:
+    AlwaysShowName: false
     MovementSpeed: 1.5
     PreventOtherDrops: true
     KnockbackResistance: 1
@@ -61,7 +62,7 @@ NexusPetBoss:
   - 0 clear
   - 1 players
   Options:
-    AlwaysShowName: true
+    AlwaysShowName: false
     MovementSpeed: 0.4
     PreventOtherDrops: true
     KnockbackResistance: 1
@@ -98,13 +99,12 @@ NexusBoss:
   Drops:
   - PirateCaptainLootTable
   Options:
-    AlwaysShowName: true
+    AlwaysShowName: false
     MovementSpeed: 0.275
     PreventOtherDrops: true
     KnockbackResistance: 1
   Modules:
     ThreatTable: true
-
 AzureBoss:
   Type: WITHER_SKELETON
   Display: '&9Azure'
@@ -136,7 +136,7 @@ AzureBoss:
   Drops:
   - PirateCaptainLootTable
   Options:
-    AlwaysShowName: true
+    AlwaysShowName: false
     MovementSpeed: 0.275
     PreventOtherDrops: true
     KnockbackResistance: 1
@@ -164,6 +164,7 @@ CarmineBoss:
   - Iron_Boots FEET
   - Diamond_Sword HAND
   Options:
+    AlwaysShowName: false
     MovementSpeed: 0.275
     KnockbackResistance: 1
     PreventOtherDrops: true
@@ -199,6 +200,7 @@ AirBubble:
   Display: '&N&AOxygen'
   Health: 2000
   Options:
+    AlwaysShowName: false
     MovementSpeed: 0.25
     KnockbackResistance: 1
     PreventOtherDrops: true
@@ -214,6 +216,7 @@ SquidMinion:
   Health: 55
   Equipment:
   Options:
+    AlwaysShowName: false
     MovementSpeed: 0.0
     KnockbackResistance: 1
     PreventOtherDrops: true
@@ -240,6 +243,7 @@ PetsMinion:
   Equipment:
   - KnockBackStick HAND
   Options:
+    AlwaysShowName: false
     MovementSpeed: 0.35
     KnockbackResistance: 1
     PreventOtherDrops: true
@@ -263,6 +267,7 @@ Piranha:
   Drops:
   - Third_DungeonLootDrop
   Options:
+    AlwaysShowName: false
     MovementSpeed: 1.5
     PreventOtherDrops: true
     KnockbackResistance: 1
@@ -295,6 +300,7 @@ NexusArcher:
   Drops:
   - Third_DungeonLootDrop
   Options:
+    AlwaysShowName: false
     MovementSpeed: 0.275
     PreventOtherDrops: true
     KnockbackResistance: 1
@@ -326,6 +332,7 @@ NexusGuard:
   Drops:
   - Third_DungeonLootDrop
   Options:
+    AlwaysShowName: false
     MovementSpeed: 0.275
     PreventOtherDrops: true
     KnockbackResistance: 1

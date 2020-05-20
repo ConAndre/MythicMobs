@@ -27,6 +27,7 @@ SkeletonKing:
   Drops:
   - SkeletonKingLootTable
   Options:
+    AlwaysShowName: false
     MovementSpeed: 0.225
     PreventOtherDrops: true
     KnockbackResistance: 1
@@ -36,6 +37,7 @@ LostZombie:
   Health: 100
   Damage: 4
   Options:
+    AlwaysShowName: false
     MovementSpeed: 0.275
     PreventOtherDrops: true
     KnockbackResistance: 1
@@ -65,6 +67,7 @@ LostArcher:
   Display: '&L&cLost Archer'
   Health: 100
   Options:
+    AlwaysShowName: false
     MovementSpeed: 0.225
     PreventOtherDrops: true
     KnockbackResistance: 1
@@ -93,6 +96,7 @@ SkeletalMinion:
   Display: '&L&2Skeletal Minion'
   Health: 5
   Options:
+    AlwaysShowName: false
     MovementSpeed: 0.1
     PreventOtherDrops: true
   AIGoalSelectors:
@@ -110,6 +114,7 @@ SkeletalKnight:
   Drops:
   - First_DungeonLootTable
   Options:
+    AlwaysShowName: false
     MovementSpeed: 0.25
     PreventOtherDrops: true
   Modules:
@@ -122,7 +127,6 @@ SkeletalKnight:
   AITargetSelectors:
   - 0 clear
   - 1 players
-
 AngrySludge:
   Type: SLIME
   Display: '&L&cAngry Sludge'
@@ -130,6 +134,7 @@ AngrySludge:
   Damage: 0
   Options:
     Size: 1
+      AlwaysShowName: false
     MovementSpeed: 0.3
     PreventOtherDrops: true
     MaxCombatDistance: 30

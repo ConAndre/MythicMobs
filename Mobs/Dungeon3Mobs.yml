@@ -35,7 +35,7 @@ PirateCaptain:
   Drops:
   - PirateCaptainLootTable
   Options:
-    AlwaysShowName: true
+    AlwaysShowName: false
     MovementSpeed: 0.275
     PreventOtherDrops: true
     KnockbackResistance: 1
@@ -64,6 +64,7 @@ PirateGolding:
   - PirateBoots FEET
   - PirateWeapon HAND
   Options:
+    AlwaysShowName: false
     MovementSpeed: 0.275
     KnockbackResistance: 1
     PreventOtherDrops: true
@@ -110,6 +111,7 @@ PirateParrotBoss:
   - PirateLeggings LEGS
   - PirateBoots FEET
   Options:
+    AlwaysShowName: false
     MovementSpeed: 0.275
     KnockbackResistance: 1
     PreventOtherDrops: true
@@ -133,12 +135,7 @@ PirateParrotBoss:
   - skill{s=ParrotLeapAttack} @self ~onTimer:120
   Drops:
   - PirateParrotBossLootTable
-
-
-
-
 ##################################################REGULARS####################################################
-
 PirateJunkee:
   Type: BABY_ZOMBIE
   Display: '&cJunkee'
@@ -151,6 +148,7 @@ PirateJunkee:
       - PirateBoots FEET
       - PirateWeapon HAND
   Options:
+    AlwaysShowName: false
     MovementSpeed: 0.275
     KnockbackResistance: 1
     PreventOtherDrops: true
@@ -161,9 +159,6 @@ PirateJunkee:
   Skills:
   - skill{s=JunkeeHomer} @target ~onTimer:180
   - skill{s=LeapAttack} @self ~onTimer:140
-
-
-
 PirateParrot:
   Type: BABY_ZOMBIE
   Display: '&cButtercup'
@@ -178,6 +173,7 @@ PirateParrot:
   - PirateLeggings LEGS
   - PirateBoots FEET
   Options:
+    AlwaysShowName: false
     MovementSpeed: 0.325
     KnockbackResistance: 1
     PreventOtherDrops: true
@@ -212,6 +208,7 @@ Pirate:
   Drops:
   - Third_DungeonLootDrop
   Options:
+    AlwaysShowName: false
     MovementSpeed: 0.275
     PreventOtherDrops: true
     KnockbackResistance: 1
@@ -246,6 +243,7 @@ PirateArcher:
   Drops:
   - Third_DungeonLootDrop
   Options:
+    AlwaysShowName: false
     MovementSpeed: 0.275
     PreventOtherDrops: true
     KnockbackResistance: 1

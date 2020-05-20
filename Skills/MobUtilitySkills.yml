@@ -68,7 +68,7 @@ TeleportToSpawnOnDeath:
 
 
 
-  TeleportToOutsideBigBite:
+TeleportToOutsideBigBite:
   Skills:
   - sendtitle{title="&cBoss Cleared!";subtitle="&cTeleporting to outside in &A15 &cseconds!";d=25} @PlayersInRadius{r=12}
   - delay 20

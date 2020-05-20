@@ -53,6 +53,7 @@ Illusion:
   - iron_LEGGINGS LEGS
   - DepthIronBoots FEET
   Options:
+    AlwaysShowName: false
     MovementSpeed: 0.25
     KnockbackResistance: 1
     PreventOtherDrops: true
@@ -76,12 +77,13 @@ Illusion:
 
 IllusionMob:
   Type: ZOMBIE
-  Display: '&ceye'
+  Display: '&cEye'
   Health: 20
   Damage: 4
   Equipment:
    - SCP02:4
   Options:
+    AlwaysShowName: false
     MovementSpeed: 0.325
     KnockbackResistance: 1
     PreventOtherDrops: true
@@ -109,6 +111,7 @@ Mummy:
   Drops:
   - Second_DungeonLootTable
   Options:
+    AlwaysShowName: false
     MovementSpeed: 0.275
     PreventOtherDrops: true
     KnockbackResistance: 1
@@ -135,6 +138,7 @@ MummyArcher:
   Drops:
   - Second_DungeonLootTable
   Options:
+    AlwaysShowName: false
     MovementSpeed: 0.275
     PreventOtherDrops: true
     KnockbackResistance: 1
@@ -155,6 +159,7 @@ PyramidGuardian:
   Drops:
   - Second_DungeonLootTable
   Options:
+    AlwaysShowName: false
     PreventOtherDrops: true
     KnockbackResistance: 1
   Modules:
@@ -175,6 +180,7 @@ Scarab:
   Drops:
   - Second_DungeonLootTable
   Options:
+    AlwaysShowName: false
     MovementSpeed: 0.375
     PreventOtherDrops: true
     KnockbackResistance: 1

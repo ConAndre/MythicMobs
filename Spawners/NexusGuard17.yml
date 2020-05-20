@@ -1,9 +1,9 @@
-base_AirBubble:
-  MobName: AirBubble
+NexusGuard17:
+  MobName: NexusGuard
   World: world
-  X: -786
-  Y: 137
-  Z: 21
+  X: -798
+  Y: 164
+  Z: 24
   Radius: 0
   UseTimer: true
   MaxMobs: '1'
@@ -11,7 +11,7 @@ base_AirBubble:
   MobsPerSpawn: 1
   Cooldown: 0
   CooldownTimer: 0
-  Warmup: 0
+  Warmup: 180
   WarmupTimer: 0
   CheckForPlayers: true
   ActivationRange: 40
