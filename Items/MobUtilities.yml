@@ -1,37 +1,356 @@
 # For more information, check out the plugin manual or join us on Discord:
 # http://www.mythicmobs.net
 #
-DepthLeatherBoots:
+#DepthBoots
+DepthMummyBoots:
   Id: LEATHER_BOOTS
   Options:
     Color: 239,221,111
   Enchantments:
   - DEPTH_STRIDER:3
+  Attributes:
+    Feet:
+      Armor: 0
+      ArmorToughness: 0
   Hide:
   - ENCHANTS
+  - ATTRIBUTES
+
+DepthLeatherBoots:
+  Id: LEATHER_BOOTS
+  Enchantments:
+  - DEPTH_STRIDER:3
+  Attributes:
+    Feet:
+      Armor: 0
+      ArmorToughness: 0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
 
 DepthIronBoots:
   Id: Iron_BOOTS
   Enchantments:
   - DEPTH_STRIDER:3
+  Attributes:
+    Feet:
+      Armor: 0
+      ArmorToughness: 0
   Hide:
   - ENCHANTS
+  - ATTRIBUTES
 
 DepthGoldBoots:
-  Id: Gold_BOOTS
+  Id: Golden_BOOTS
   Enchantments:
   - DEPTH_STRIDER:3
+  Attributes:
+    Feet:
+      Armor: 0
+      ArmorToughness: 0
   Hide:
   - ENCHANTS
-
+  - ATTRIBUTES
 DepthDiamondBoots:
   Id: Diamond_BOOTS
   Enchantments:
   - DEPTH_STRIDER:3
+  Attributes:
+    Feet:
+      Armor: 0
+      ArmorToughness: 0
   Hide:
   - ENCHANTS
+  - ATTRIBUTES
 
+#Helmets
+MobMummyHelmet:
+  Id: Leather_Helmet
+  Options:
+    Color: 239,221,111
+  Attributes:
+    Feet:
+      Armor: 0
+      ArmorToughness: 0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+MobLeatherHelmet:
+  Id: Leather_Helmet
+  Attributes:
+    Feet:
+      Armor: 0
+      ArmorToughness: 0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+MobIronHelmet:
+  Id: Iron_Helmet
+  Attributes:
+    Feet:
+      Armor: 0
+      ArmorToughness: 0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+MobGoldHelmet:
+  Id: Golden_Helmet
+  Attributes:
+    Feet:
+      Armor: 0
+      ArmorToughness: 0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+MobDiamondHelmet:
+  Id: Diamond_Helmet
+  Attributes:
+    Feet:
+      Armor: 0
+      ArmorToughness: 0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+
+#Chestplates
+MobMummyChestplate:
+  Id: Leather_Chestplate
+  Options:
+    Color: 239,221,111
+  Attributes:
+    Feet:
+      Armor: 0
+      ArmorToughness: 0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+MobLeatherChestplate:
+  Id: Leather_Chestplate
+  Attributes:
+    Feet:
+      Armor: 0
+      ArmorToughness: 0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+MobIronChestplate:
+  Id: Iron_Chestplate
+  Attributes:
+    Feet:
+      Armor: 0
+      ArmorToughness: 0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+MobGoldChestplate:
+  Id: Golden_Chestplate
+  Attributes:
+    Feet:
+      Armor: 0
+      ArmorToughness: 0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+MobDiamondChestplate:
+  Id: Diamond_Chestplate
+  Attributes:
+    Feet:
+      Armor: 0
+      ArmorToughness: 0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+
+#Leggings
+MobMummyLeggings:
+  Id: Leather_Leggings
+  Options:
+    Color: 239,221,111
+  Attributes:
+    Feet:
+      Armor: 0
+      ArmorToughness: 0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+MobLeatherLeggings:
+  Id: Leather_Leggings
+  Attributes:
+    Feet:
+      Armor: 0
+      ArmorToughness: 0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+MobIronLeggings:
+  Id: Iron_Leggings
+  Attributes:
+    Feet:
+      Armor: 0
+      ArmorToughness: 0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+MobGoldLeggings:
+  Id: Golden_Leggings
+  Attributes:
+    Feet:
+      Armor: 0
+      ArmorToughness: 0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+MobDiamondLeggings:
+  Id: Diamond_Leggings
+  Attributes:
+    Feet:
+      Armor: 0
+      ArmorToughness: 0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+#Boots
+MobMummyBoots:
+  Id: Leather_Boots
+  Options:
+    Color: 239,221,111
+  Attributes:
+    Feet:
+      Armor: 0
+      ArmorToughness: 0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+MobLeatherBoots:
+  Id: Leather_Boots
+  Attributes:
+    Feet:
+      Armor: 0
+      ArmorToughness: 0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+MobIronBoots:
+  Id: Iron_Boots
+  Attributes:
+    Feet:
+      Armor: 0
+      ArmorToughness: 0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+MobGoldBoots:
+  Id: Golden_Boots
+  Attributes:
+    Feet:
+      Armor: 0
+      ArmorToughness: 0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+MobDiamondBoots:
+  Id: Diamond_Boots
+  Attributes:
+    Feet:
+      Armor: 0
+      ArmorToughness: 0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+
+#KnockBack
 KnockBackStick:
   Id: STICK
   Enchantments:
   - KNOCKBACK:10
+
+#Swords
+MobWoodenSword:
+  Id: Wooden_Sword
+  Attributes:
+    MainHand:
+      Damage: 0
+  Hide:
+  - ATTRIBUTES
+MobIronSword:
+  Id: Iron_Sword
+  Attributes:
+    MainHand:
+      Damage: 0
+  Hide:
+  - ATTRIBUTES
+MobGoldSword:
+  Id: Golden_Sword
+  Attributes:
+    MainHand:
+      Damage: 0
+  Hide:
+  - ATTRIBUTES
+MobDiamondSword:
+  Id: Diamond_Sword
+  Attributes:
+    MainHand:
+      Damage: 0
+  Hide:
+  - ATTRIBUTES
+#Axes
+MobWoodenAxe:
+  Id: Wooden_Axe
+  Attributes:
+    MainHand:
+      Damage: 0
+  Hide:
+  - ATTRIBUTES
+MobIronAxe:
+  Id: Iron_Axe
+  Attributes:
+    MainHand:
+      Damage: 0
+  Hide:
+  - ATTRIBUTES
+MobGoldAxe:
+  Id: Golden_Axe
+  Attributes:
+    MainHand:
+      Damage: 0
+  Hide:
+  - ATTRIBUTES
+MobDiamondAxe:
+  Id: Diamond_Axe
+  Attributes:
+    MainHand:
+      Damage: 0
+  Hide:
+  - ATTRIBUTES
+#Hoes
+MobWoodenHoe:
+  Id: Wooden_Hoe
+  Attributes:
+    MainHand:
+      Damage: 0
+  Hide:
+  - ATTRIBUTES
+MobIronHoe:
+  Id: Iron_Hoe
+  Attributes:
+    MainHand:
+      Damage: 0
+  Hide:
+  - ATTRIBUTES
+MobGoldHoe:
+  Id: Golden_Hoe
+  Attributes:
+    MainHand:
+      Damage: 0
+  Hide:
+  - ATTRIBUTES
+MobDiamondHoe:
+  Id: Diamond_Hoe
+  Attributes:
+    MainHand:
+      Damage: 0
+  Hide:
+  - ATTRIBUTES
+
+
+

@@ -1,3 +1,5 @@
 Add more content to dungeon2 items/drop table
 Add items for golding drop
-Add pull to dungeon 4 final boss to prevent glitching players
+Add drop tables/items for dungeon4
+Lets make an invasion type event
+Add guaranteed drops to bosses

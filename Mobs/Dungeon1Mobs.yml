@@ -7,7 +7,7 @@ SkeletonKing:
   Type: WITHER_SKELETON
   Display: '&L&cSkeleton King'
   Health: 350
-  Damage: 2
+  Damage: -2
   BossBar:
     Enabled: true
     Title: 'Skeleton King'
@@ -23,7 +23,7 @@ SkeletonKing:
   - skill{s=TeleportToSpawnOnDeath} ~onDeath
   Equipment:
   - KingsCrown HEAD
-  - SkeletonKingAxe HAND
+  - MobIronAxe HAND
   Drops:
   - SkeletonKingLootTable
   Options:
@@ -35,7 +35,7 @@ LostZombie:
   Type: ZOMBIE
   Display: '&L&cLost Zombie'
   Health: 100
-  Damage: 4
+  Damage: 0
   Options:
     AlwaysShowName: false
     MovementSpeed: 0.275
@@ -48,7 +48,7 @@ LostZombie:
   - LostZombieChestplate CHEST
   - IRON_LEGGINGS LEGS
   - DepthIronBoots FEET
-  - LostZombieSword HAND
+  - MobIronSword HAND
   - SHIELD OFFHAND
   Drops:
   - LostZombieLootTable
@@ -107,9 +107,9 @@ SkeletalKnight:
   Type: WITHER_SKELETON
   Display: '&cSkeletal Knight'
   Health: 30
-  Damage: 4
+  Damage: 1
   Equipment:
-  - IRON_SWORD HAND
+  - MobIronSword HAND
   - SHIELD OFFHAND
   Drops:
   - First_DungeonLootTable

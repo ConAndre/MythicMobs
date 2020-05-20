@@ -10,7 +10,7 @@ PirateCaptain:
     Type: Player
     Skin: Captain
   Health: 650
-  Damage: 12
+  Damage: 10
   BossBar:
     Enabled: true
     Title: 'Pirate Captain'
@@ -49,7 +49,7 @@ PirateGolding:
     Type: Player
     Skin: Pirate
   Health: 500
-  Damage: 10
+  Damage: 8
   Armor: 0
   BossBar:
     Enabled: true
@@ -62,7 +62,7 @@ PirateGolding:
   - PirateChestplate CHEST
   - PirateLeggings LEGS
   - PirateBoots FEET
-  - PirateWeapon HAND
+  - Iron_Sword HAND
   Options:
     AlwaysShowName: false
     MovementSpeed: 0.275
@@ -97,7 +97,7 @@ PirateParrotBoss:
   Disguise:
     Type: parrot
   Health: 500
-  Damage: 12
+  Damage: 14
   Armor: 0
   BossBar:
     Enabled: true
@@ -140,7 +140,7 @@ PirateJunkee:
   Type: BABY_ZOMBIE
   Display: '&cJunkee'
   Health: 35
-  Damage: 2
+  Damage: 6
   Equipment:
       - JunkeeHead HEAD
       - PirateChestplate CHEST
@@ -165,7 +165,7 @@ PirateParrot:
   Disguise:
     Type: parrot
   Health: 35
-  Damage: 12
+  Damage: 6
   Armor: 0
   Equipment:
   - PirateHelmet HEAD
@@ -198,7 +198,7 @@ Pirate:
   #   Type: Player
   #   Skin: Pirate
   Health: 75
-  Damage: 8
+  Damage: 4
   Equipment:
   - PirateHelmet HEAD
   - PirateChestplate CHEST

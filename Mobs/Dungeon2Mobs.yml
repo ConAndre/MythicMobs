@@ -7,7 +7,7 @@ Pharaoh:
   Type: Skeleton
   Display: '&ePharaoh'
   Health: 500
-  Damage: 9
+  Damage: 6.5
   BossBar:
     Enabled: true
     Title: 'Pharaoh'
@@ -28,7 +28,7 @@ Pharaoh:
   - PharaohNemes HEAD
   - MummyChestplate CHEST
   - MummyLeggings LEGS
-  - DepthLeatherBoots FEET
+  - DepthMummyBoots FEET
   - PharaohWeapon HAND
   Drops:
   - PharaohLootTable
@@ -79,7 +79,7 @@ IllusionMob:
   Type: ZOMBIE
   Display: '&cEye'
   Health: 20
-  Damage: 4
+  Damage: 6
   Equipment:
    - SCP02:4
   Options:
@@ -101,7 +101,7 @@ Mummy:
   Type: ZOMBIE
   Display: '&EMummy'
   Health: 45
-  Damage: 6
+  Damage: 0
   Equipment:
   - MummyHelmet HEAD
   - MummyChestplate CHEST
@@ -154,7 +154,7 @@ PyramidGuardian:
   Type: GUARDIAN
   Display: '&EPyramid Guardian'
   Health: 35
-  Damage: 10
+  Damage: 6
   Equipment:
   Drops:
   - Second_DungeonLootTable
@@ -175,7 +175,7 @@ Scarab:
   Type: SILVERFISH
   Display: '&EScarab'
   Health: 15
-  Damage: 8
+  Damage: 6
   Equipment:
   Drops:
   - Second_DungeonLootTable

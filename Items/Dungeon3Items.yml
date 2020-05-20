@@ -39,7 +39,8 @@ PirateBow:
   Lore:
   - '&cPirate Bow'
   Enchantments:
-  - ARROW_DAMAGE:4
+  - ARROW_DAMAGE:5
+  - ARROW_FIRE:1
   - ARROW_INFINITE:1
 CaptainWeapon:
   Id: flint_and_steel

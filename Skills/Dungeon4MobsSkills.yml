@@ -1,6 +1,122 @@
 # For more information, check out the plugin manual or join us on Discord:
 # http://www.mythicmobs.net
 #
+SummonCarmineMinions:
+  Skills:
+  - message{m="<mob.name><&co> &cYour window to run away... is closing."} @target
+  - delay 20
+  - summon{mob=CarmineMinion;amount=1;noise=5} @Self
+  - delay 40
+  - summon{mob=CarmineMinion;amount=1;noise=5} @Self
+  - delay 40
+  - summon{mob=CarmineMinion;amount=1;noise=5} @Self
+  - delay 40
+  - summon{mob=CarmineMinion;amount=1;noise=5} @Self
+  - delay 40
+  - summon{mob=CarmineMinion;amount=1;noise=5} @Self
+  - delay 40
+  - summon{mob=CarmineMinion;amount=1;noise=5} @Self
+CarmineSplash:
+  Conditions:
+  - targetwithin 8
+  - targetinlineofsight true
+  - incombat
+  Skills:
+  - sound{s=block.campfire.crackle} @self
+  - effect:particles{p=lava;amount=200;hSpread=16;ySpread=1;speed=0;yOffset=0.5} @Self
+  - effect:particles{p=squid_ink;amount=200;hSpread=16;ySpread=1;speed=0;yOffset=0.5} @Self
+  - delay 5
+  - potion{type=HARM;lvl=0;duration=1} @PlayersInRadius{r=16}
+  - potion{type=SLOW;lvl=3;duration=40} @PlayersInRadius{r=16}
+  - sound{s=block.campfire.crackle} @self
+CarmineFin:
+    Skills:
+    - effect:particles{p=current_down;a=5;vs=5.5;hs=5.5;s=0;y=1} @Self
+    - effect:sound{s=block.fire.ambient;v=2;p=0.5} @Self
+    - damage{amount=8} @PlayersInRadius{r=5}
+    - throw{velocity=15;velocityY=5} @PlayersInRadius{r=5}
+    - delay 10
+    - teleport @target
+    - delay 30
+    - throw{velocity=5;velocityY=5} @PIR{r=10}
+    - damage{a=12;i=false} @PIR{r=10}
+    - effect:particles{p=current_down;a=5;vs=0.5;hs=3.5;s=0;y=1} @Self
+    - effect:sound{s=block.fire.ambient;v=2;p=0.5} @Self
+    - effect:sound{s=block.fire.ambient;v=2;p=1;repeat=7;repeatInterval=2} @Self
+    - effect:particlering{p=current_down;a=40;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=1} @Self
+    - delay 2
+    - effect:particlering{p=current_down;a=40;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=3} @Self
+    - delay 2
+    - effect:particlering{p=current_down;a=40;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=5} @Self
+    - delay 2
+    - effect:particlering{p=current_down;a=40;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=7} @Self
+    - delay 2
+    - effect:particlering{p=current_down;a=40;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=9} @Self
+    - delay 2
+    - effect:particlering{p=current_down;a=40;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=11} @Self
+CarmineHomer:
+  Skills:
+  - effect:sound{s=block.fire.ambient;v=1;p=0}
+  - delay 10
+  - missile{ot=CarmineHomer_TICK;oh=CarmineHomer_HIT;v=8;i=1;hR=1;vR=1;in=0.75;syo=1;MaxRange=96}
+  - delay 5
+  - missile{ot=CarmineHomer_TICK;oh=CarmineHomer_HIT;v=8;i=1;hR=1;vR=1;in=0.75;syo=2;MaxRange=96}
+
+CarmineHomer_TICK:
+  Skills:
+  - effect:particles{p=end_rod;a=1} @origin
+CarmineHomer_HIT:
+  Skills:
+  - effect:particles{p=lava;a=200;hS=2;vS=2}
+  - effect:sound{s=block.campfire.crackle;v=1;p=0}
+  - damage{a=6;i=false}
+CarmineJumpLightning:
+  Condition:
+  - OnGround
+  Skills:
+  - message{m="<mob.name><&co> &cDIE."} @target
+  - delay 20
+  - jump{velocity=2}
+  - delay 20
+  - lightning{d=8} @PlayersInRadius{r=25}
+
+CarmineBlastProjectile:
+  Cooldown: 25
+  Skills:
+  - projectile{hp=true;v=12;onTick=CarmineBlast-Ontick;hRadius=2;vRadius=2;onHit=CarmineBlast-onhit;onEnd=CarmineBlast-onhit;StartYOffset=8;Interval=1;MaxRange=64}
+CarmineBlast-Ontick:
+  Skills:
+  - effect:particlesphere{p=blockcrack;material=REDSTONE_BLOCK;amount=75;radius=2} @Origin
+  - effect:particlesphere{particle=lava;amount=75;radius=2} @Origin
+CarmineBlast-onhit:
+  Skills:
+  - effect:blockmask{m=REDSTONE_BLOCK;r=5;d=100} @Origin
+  - potion{type=SLOW;duration=80;level=1} @EntitiesNearOrigin{r=5}
+  - potion{type=BLINDNESS;duration=80;level=20} @EntitiesNearOrigin{r=5}
+  - damage{amount=6;ignoreArmor=false}
+
+NexusJumpLightning:
+  Condition:
+  - OnGround
+  Skills:
+  - message{m="<mob.name><&co> &c AHAHAHA."} @PlayersInRadius{r=25}
+  - delay 20
+  - jump{velocity=2}
+  - delay 20
+  - lightning{d=10} @PlayersInRadius{r=25}
+
+
+NexusJumpPlayers:
+  Condition:
+  - OnGround
+  Skills:
+  - message{m="<mob.name><&co> &c Goodbye."} @PlayersInRadius{r=20}
+  - delay 20
+  - effect:particles{p=lava;amount=200;hSpread=20;ySpread=1;speed=0;yOffset=0.5} @Self
+  - effect:particles{p=squid_ink;amount=200;hSpread=20;ySpread=1;speed=0;yOffset=0.5} @Self
+  - jump{velocity=3} @PlayersInRadius{r=20}
+
+
 
 PiranhaExpunge:
   Conditions:
@@ -48,8 +164,8 @@ AzureSplash:
   - incombat
   Skills:
   - sound{s=entity.dolphin.splash} @self
-  - effect:particles{p=drip_water;amount=2000;hSpread=16;ySpread=1;speed=0;yOffset=0.5} @Self
-  - effect:particles{p=squid_ink;amount=2000;hSpread=16;ySpread=1;speed=0;yOffset=0.5} @Self
+  - effect:particles{p=drip_water;amount=200;hSpread=16;ySpread=1;speed=0;yOffset=0.5} @Self
+  - effect:particles{p=squid_ink;amount=200;hSpread=16;ySpread=1;speed=0;yOffset=0.5} @Self
   - delay 5
   - potion{type=HARM;lvl=0;duration=1} @PlayersInRadius{r=16}
   - potion{type=SLOW;lvl=3;duration=40} @PlayersInRadius{r=16}

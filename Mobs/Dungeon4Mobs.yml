@@ -40,6 +40,7 @@ NexusPetBoss:
   Display: '&cNexus<&sq> Pet'
   Health: 1750
   Damage: 24
+  Faction: Nexus
   BossBar:
     Enabled: true
     Title: 'Nexus<&sq> Pet'
@@ -73,6 +74,7 @@ NexusBoss:
   Display: '&cNexus'
   Health: 1750
   Damage: 26
+  Faction: Nexus
   Disguise:
     Type: Player
     Skin: God
@@ -87,7 +89,8 @@ NexusBoss:
   - skill{s=SummonSquids} @self ~onDamaged =50%
   - skill{s=AzureHomer;cooldown=35} @target ~onTimer:20
   - skill{s=AzureSplash;cooldown=25} @PlayersInRadius{r=16} ~onDamaged .05
-  - skill{s=AzureJumpLightning;cooldown=35} @self ~onDamaged .05
+  - skill{s=NexusJumpLightning;cooldown=35} @self ~onDamaged .05
+  - skill{s=NexusJumpPlayers;cooldown=35} @self ~onDamaged .05
   - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
   - skill{s=AzureFin} @self =15%
   - skill{s=TeleportToSpawnOnDeath} ~onDeath
@@ -110,6 +113,7 @@ AzureBoss:
   Display: '&9Azure'
   Health: 1250
   Damage: 15
+  Faction: Nexus
   Disguise:
     Type: Player
     Skin: Blue
@@ -142,7 +146,6 @@ AzureBoss:
     KnockbackResistance: 1
   Modules:
     ThreatTable: true
-
 CarmineBoss:
   Type: WITHER_SKELETON
   Display: '&cCarmine'
@@ -151,6 +154,7 @@ CarmineBoss:
     Skin: Red
   Health: 1250
   Damage: 15
+  Faction: Nexus
   BossBar:
     Enabled: true
     Title: 'Carmine'
@@ -178,21 +182,15 @@ CarmineBoss:
   - 0 clear
   - 1 players
   Skills:
-  - message{cooldown=20;m="<mob.name><&co> Get off me port!"} @PlayersInRadius{r=40} ~onCombat >0 0.2
-  - message{m="<mob.name><&co> Eating you alive will be a real treat! Braw hah hah!"} @PlayersInRadius{r=40} ~onPlayerKill >0 1
-  - skill{s=SummonJunkees} @self =85%
-  - skill{s=SummonParrots} @self ~onDamaged =35%
-  - skill{s=PharaohFin} @self =15%
+  - skill{s=CarmineBlastProjectile;cooldown 15} @target onDamaged .05
+  - skill{s=SummonCarmineMinions} @self ~onDamaged =50%
+  - skill{s=CarmineHomer;cooldown=35} @target ~onTimer:20
+  - skill{s=CarmineSplash;cooldown=25} @PlayersInRadius{r=16} ~onDamaged .05
+  - skill{s=CarmineJumpLightning;cooldown=35} @self ~onDamaged .05
   - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
-  - effect:particletornado{p=flame;cp=largeexplode;mr=1;h=3;i=4;d=100;rs=1;sh=1;cs=0;ca=0;chs=0.1;cvs=0.1;cps=1;cyo=2} @self ~onTimer:200
-  - skill{s=SmashAttackII} @Target >0 0.01
-  - skill{s=AngryAura} ~onTimer:600
-  - skill{s=Death} @Self ~onDeath
+  - skill{s=CarmineFin} @self =15%
   Drops:
   - PirateGoldingLootTable
-
-
-
 
 ##################################################REGULARS####################################################
 AirBubble:
@@ -206,14 +204,13 @@ AirBubble:
     PreventOtherDrops: true
   Skills:
   - skill{s=WaterBuffs} ~onInteract
-
-
 SquidMinion:
   Type: BABY_ZOMBIE
   Display: '&cInk'
   Disguise:
     Type: squid
   Health: 55
+  Faction: Nexus
   Equipment:
   Options:
     AlwaysShowName: false
@@ -233,6 +230,29 @@ SquidMinion:
   - jump{velocity=0.75} @self ~onTimer:80
   - effect:sound{s=entity.ghast.ambient;v=1;p=0} @self ~onDamaged
 
+CarmineMinion:
+  Type: BABY_ZOMBIE
+  Display: '&cCarmine Minion'
+  Health: 55
+  Damage: 6
+  Faction: Nexus
+  Equipment:
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.35
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 float
+  - 2 meleeattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Skills:
+  - effect:sound{s=entity.ghast.ambient;v=1;p=0} @self ~onDamaged
 PetsMinion:
   Type: BABY_ZOMBIE
   Display: '&cPet<&sq>s Minion'
@@ -240,6 +260,7 @@ PetsMinion:
     Type: rabbit
   Health: 10
   Damage: 0
+  Faction: Nexus
   Equipment:
   - KnockBackStick HAND
   Options:
@@ -256,13 +277,12 @@ PetsMinion:
   AITargetSelectors:
   - 0 clear
   - 1 players
-
-
 Piranha:
   Type: GUARDIAN
   Display: '&cPiranha'
-  Health: 85
+  Health: 55
   Damage: 8
+  Faction: Nexus
   Equipment:
   Drops:
   - Third_DungeonLootDrop
@@ -288,6 +308,7 @@ NexusArcher:
   Type: SKELETON
   Display: '&cNexus<&sq> Archer'
   Health: 90
+  Faction: Nexus
   Equipment:
   - Iron_Helmet HEAD
   - Iron_Chestplate CHEST
@@ -317,6 +338,7 @@ NexusGuard:
   Display: '&cNexus<&sq> Guard'
   Health: 130
   Damage: 12
+  Faction: Nexus
   Equipment:
   - Iron_Helmet HEAD
   - Iron_Chestplate CHEST

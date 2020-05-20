@@ -102,4 +102,3 @@ TeleportToOutsideBigBite:
   - delay 20
   - teleportto{location=-786,153,26} @PlayersInRadius{r=12}
 
-
