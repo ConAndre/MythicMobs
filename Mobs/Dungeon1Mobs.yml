@@ -134,7 +134,7 @@ AngrySludge:
   Damage: 0
   Options:
     Size: 1
-      AlwaysShowName: false
+    AlwaysShowName: false
     MovementSpeed: 0.3
     PreventOtherDrops: true
     MaxCombatDistance: 30

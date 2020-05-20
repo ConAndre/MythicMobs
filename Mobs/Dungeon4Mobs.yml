@@ -287,9 +287,6 @@ Piranha:
 NexusArcher:
   Type: SKELETON
   Display: '&cNexus<&sq> Archer'
-  Disguise:
-    Type: Player
-    Skin: Demon
   Health: 90
   Equipment:
   - Iron_Helmet HEAD
@@ -318,9 +315,6 @@ NexusArcher:
 NexusGuard:
   Type: SKELETON
   Display: '&cNexus<&sq> Guard'
-  Disguise:
-    Type: Player
-    Skin: Demon
   Health: 130
   Damage: 12
   Equipment:

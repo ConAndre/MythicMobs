@@ -194,9 +194,9 @@ PirateParrot:
 Pirate:
   Type: Skeleton
   Display: '&cPirate'
-  Disguise:
-    Type: Player
-    Skin: Pirate
+  # Disguise:
+  #   Type: Player
+  #   Skin: Pirate
   Health: 75
   Damage: 8
   Equipment:
@@ -230,9 +230,9 @@ Pirate:
 PirateArcher:
   Type: SKELETON
   Display: '&cPirate Archer'
-  Disguise:
-    Type: Player
-    Skin: Pirate
+  # Disguise:
+  #   Type: Player
+  #   Skin: Pirate
   Health: 65
   Equipment:
   - PirateHelmet HEAD
