@@ -1,15 +1,14 @@
 EnableLoot_SkeletonKing:
   Skills:
   - summon{mob=Cache_SkeletonKing;amount=1;noise=0} @Self
-  - setvariable{var=target.hasLootedSkeleCacheAndParticipated;t=STRING;value="true"}
-  - setvariable{var=target.boosted;t=STRING;value="true"}
+  - setvariable{var=target.AllowedToLoot-SkeletonKing;t=STRING;value="true"}
 Loot_SkeletonKing:
   TargetConditions:
-  - variableisset target.hasLootedSkeleCacheAndParticipated true
-  - varEquals{var=target.hasLootedSkeleCacheAndParticipated;value="false"} castinstead Loot_SkeletonKingLooted
-  - varEquals{var=target.hasLootedSkeleCacheAndParticipated;value="true"}
+  - variableisset target.AllowedToLoot-SkeletonKing true
+  - varEquals{var=target.AllowedToLoot-SkeletonKing;value="false"} castinstead Loot_SkeletonKingLooted
+  - varEquals{var=target.AllowedToLoot-SkeletonKing;value="true"}
   Skills:
-  - setvariable{var=target.hasLootedSkeleCacheAndParticipated;t=STRING;value="false"}
+  - setvariable{var=target.AllowedToLoot-SkeletonKing;t=STRING;value="false"}
   - message{m="&A&LYou loot the cache!"} @trigger
   - sound{s=block.ender_chest.open} @trigger
   - delay 40

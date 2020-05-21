@@ -3,3 +3,6 @@ Add items for golding drop
 Add drop tables/items for dungeon4
 Lets make an invasion type event
 Add guaranteed drops to bosses
+Wipe Boss bar on death
+Degrade armor on death
+Add Loot ReRoller > consume + give target.boost = true

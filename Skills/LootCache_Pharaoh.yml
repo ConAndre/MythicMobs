@@ -1,0 +1,61 @@
+EnableLoot_Pharaoh:
+  Skills:
+  - summon{mob=Cache_Pharaoh;amount=1;noise=0} @Self
+  - setvariable{var=target.AllowedToLoot-Pharaoh;t=STRING;value="true"}
+Loot_Pharaoh:
+  TargetConditions:
+  - variableisset target.AllowedToLoot-Pharaoh true
+  - varEquals{var=target.AllowedToLoot-Pharaoh;value="false"} castinstead Loot_SkeletonKingLooted
+  - varEquals{var=target.AllowedToLoot-Pharaoh;value="true"}
+  Skills:
+  - setvariable{var=target.AllowedToLoot-Pharaoh;t=STRING;value="false"}
+  - message{m="&A&LYou loot the cache!"} @trigger
+  - sound{s=block.ender_chest.open} @trigger
+  - delay 40
+  - sound{s=entity.item.pickup} @trigger
+  - skill{s=Loot_SkeletonKingBoosted} @trigger 1
+  - randomskill{skills=Loot_PharaohWeapon_DULLED,Loot_PharaohNemes_DULLED} @trigger 1
+  - randomskill{skills=Loot_PharaohWeapon,Loot_PharaohNemes} @trigger .12
+
+Loot_PharaohBoosted:
+  TargetConditions:
+  - variableisset target.boosted true
+  - varEquals{var=target.boosted;value="true"}
+  Skills:
+  - message{m="&6&L<target.name> used a &N&LLoot Reroller!"} @PlayersInRadius{r=25}
+  - setvariable{var=target.boosted;t=STRING;value="false"}
+  - delay 20
+  - message{m="&A&LYou managed to loot the cache again!"} @trigger
+  - sound{s=block.ender_chest.open} @trigger
+  - delay 40
+  - sound{s=entity.item.pickup} @trigger
+  - randomskill{skills=Loot_PharaohWeapon_DULLED,Loot_PharaohNemes_DULLED} @trigger 1
+  - randomskill{skills=Loot_PharaohWeapon,Loot_PharaohNemes} @trigger .12
+
+Loot_PharaohWeapon:
+  Skills:
+  - sound{s=entity.zombie_villager.converted} @trigger
+  - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
+  - giveitem{i=Loot_PharaohWeapon} @trigger 1
+  - command{c="broadcast <target.name> has looted the Pharaoh<&sq>s Staff"} @trigger
+
+Loot_PharaohNemes:
+  Skills:
+  - sound{s=entity.zombie_villager.converted} @trigger
+  - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
+  - giveitem{i=Loot_KingsAxe} @trigger 1
+  - command{c="broadcast <target.name> has looted the Pharaoh<&sq>s Nemes"} @trigger
+
+Loot_PharaohWeapon_DULLED:
+  Skills:
+  - giveitem{i=Loot_PharaohWeapon_DULLED} @trigger 1
+  - message{m="&A&LYou recieved a &e&Ldulled &9&LPharaoh<&sq>s Staff"} @trigger 1
+
+Loot_PharaohNemes_DULLED:
+  Skills:
+  - giveitem{i=Loot_PharaohNemes_DULLED} @trigger 1
+  - message{m="&A&LYou recieved a &e&Ldulled &9&LPharaoh<&sq>s Nemes"} @trigger 1
+
+Loot_PharaohLooted:
+  Skills:
+  - message{m="&c&LYou have already looted this cache &A&Lor &c&Lyou did not participate in this battle!"} @trigger

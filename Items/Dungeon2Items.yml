@@ -105,6 +105,7 @@ Loot_MummyBoots:
 Loot_MummyWeapon:
   Id: golden_hoe
   Display: '&EMummy Weapon'
+  Data: 0
   Lore:
   - '&6A staff of'
   - '&6great power.'
@@ -119,6 +120,7 @@ Loot_MummyWeapon:
 Loot_PharaohWeapon:
   Id: golden_hoe
   Display: '&EThe Pharaoh Staff'
+  Data: 0
   Lore:
   - '&6A staff of'
   - '&6great power.'
@@ -142,11 +144,6 @@ Loot_PharaohNemes:
   - '&L&cPharaoh'
   - ''
   - '&L&F&KO&R&L&9Uncommon Loot&F&KO'
-  Enchantments:
-  - PROTECTION_ENVIRONMENTAL:3
-  - PROTECTION_PROJECTILE:3
-  - PROTECTION_FIRE:3
-  - PROTECTION_EXPLOSIONS:3
   Attributes:
     Head:
       Health: 2
@@ -155,6 +152,7 @@ Loot_PharaohNemes:
 Loot_PharaohWeapon_DULLED:
   Id: golden_hoe
   Display: '&EThe Pharaoh Staff'
+  Data: 0
   Lore:
   - '&6A staff of'
   - '&6great power.'

@@ -24,7 +24,9 @@ Pharaoh:
   - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
   - skill{s=PharaohPushBack} @self ~onDamaged =50%
   - skill{s=PharaohFin} @self =15%
+  - skill{s=EnableLoot_Pharaoh} @PlayersInRadius{r=16} ~onDeath
   - skill{s=TeleportToSpawnOnDeath} ~onDeath
+  - sendtoast{icon=DIAMOND; iconnbt={CustomModelData:1};message="&A&LKill <mob.name>!";frame=challenge} @PlayersInRadius{r=16} ~onDeath
   Equipment:
   - MobGoldHelmet HEAD
   - MobMummyChestplate CHEST
@@ -32,7 +34,7 @@ Pharaoh:
   - DepthMummyBoots FEET
   - PharaohWeapon HAND
   Drops:
-  - PharaohLootTable
+  # - PharaohLootTable
   Options:
     AlwaysShowName: false
     MovementSpeed: 0.25

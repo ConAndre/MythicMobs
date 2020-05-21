@@ -40,6 +40,11 @@ Chestplate > 10 + 0h
 Leggings > 10 + 0h
 Boots > 10 + 0h
 
+IllusionBoots > 17 + 2h + 1t + .05sp
+IllusionBootsDull > 15 + 2h + 1t + .01sp
+IllusionStaff >
+
+
 Dungeon 3 Armor:
 Helmet > 15 + 1h + 1t
 Chestplate > 15 + 1h + 1t
