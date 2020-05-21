@@ -1,0 +1,25 @@
+Cache_SkeletonKing:
+  Type: COW
+  Display: '&N&ALoot Cache'
+  Disguise:
+    Type: BLOCK
+    Block: BEACON
+    BlockData: 0
+    ShowName: true
+  Health: 2000
+  Options:
+    MovementSpeed: 0.0
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+    Collidable: true
+    Glowing: true
+    Invincible: true
+    Interactable: true
+    NoAI: true
+    Silent: true
+  Skills:
+  - remove @self ~onTimer:3600
+  - skill{s=Loot_SkeletonKing} ~onInteract
+
+
+

@@ -1,17 +1,57 @@
-Starter :
+Starter Weapons:
 Stone Sword > +5
 
-Dungeon 1:
+Dungeon 1 Weapons:
 Lost Sword > +6
 Kings Axe Dulled > +7
 Kings Axe > +10
 
-Dungeon 2:
-Mummy Weapon > +8
+Dungeon 2 Weapons:
+Mummy Weapon > +7
 Pharaoh Scepter Dulled > +9
 Pharaoh Scepter > +12.5
 
-Dungeon 3:
-Pirate Sword > +10
+Dungeon 3 Weapons:
+Pirate Sword > +9
 Captain Weapon Dulled > +11.5
 Captain Weapon > +14
+
+#
+#
+#
+Starter Armor:
+Helmet > 5 + 0h
+Chestplate > 5 + 0h
+Leggings > 5 + 0h
+Boots > 5 + 0h
+
+Dungeon 1 Armor:
+Helmet > 7 + 0h
+Chestplate > 7 + 0h
+Leggings > 7 + 0h
+Boots > 7 + 0h
+
+KingsHelmetDull > 10 + 1h
+KingsHelmet > 12 + 2h
+
+Dungeon 2 Armor:
+Helmet > 10 + 0h
+Chestplate > 10 + 0h
+Leggings > 10 + 0h
+Boots > 10 + 0h
+
+Dungeon 3 Armor:
+Helmet > 15 + 1h + 1t
+Chestplate > 15 + 1h + 1t
+Leggings > 15 + 1h + 1t
+Boots > 15 + 1h + 1t
+
+CaptainChestplate > 22 + 3h + 2t
+CaptainChestplateDull > 20 + 2h +2t
+
+Dungeon 4 Armor:
+Helmet > 20 + 1h +2t
+Chestplate > 20 + 1h +2t
+Leggings > 20 + 1h +2t
+Boots > 20 + 1h +2t
+

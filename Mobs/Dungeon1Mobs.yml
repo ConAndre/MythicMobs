@@ -7,12 +7,12 @@ SkeletonKing:
   Type: WITHER_SKELETON
   Display: '&L&cSkeleton King'
   Health: 350
-  Damage: 6
+  Damage: 20
   Armor: 0
   BossBar:
     Enabled: true
     Title: 'Skeleton King'
-    Range: 18
+    Range: 16
     Color: RED
     Style: SOLID
   Modules:
@@ -21,12 +21,14 @@ SkeletonKing:
   - speak{m="None may challenge the Skeleton King!";cooldown=20} @Target ~onCombat >0 0.2
   - skill{s=SummonSkeletons} @self 0.1
   - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
+  - skill{s=EnableLoot_SkeletonKing} @PlayersInRadius{r=12} ~onDeath
   - skill{s=TeleportToSpawnOnDeath} ~onDeath
+  - sendtoast{icon=DIAMOND; iconnbt={CustomModelData:1};message="&A&LKill <mob.name>!";frame=challenge} @PlayersInRadius{r=12} ~onDeath
   Equipment:
   - MobGoldHelmet HEAD
   - MobIronAxe HAND
   Drops:
-  - SkeletonKingLootTable
+  # - SkeletonKingLootTable
   Options:
     AlwaysShowName: false
     MovementSpeed: 0.225
@@ -36,7 +38,7 @@ LostZombie:
   Type: ZOMBIE
   Display: '&L&cLost Zombie'
   Health: 100
-  Damage: 6
+  Damage: 20
   Armor: 0
   Options:
     AlwaysShowName: false
@@ -112,7 +114,7 @@ SkeletalKnight:
   Type: WITHER_SKELETON
   Display: '&cSkeletal Knight'
   Health: 30
-  Damage: 4
+  Damage: 10
   Armor: 0
   Equipment:
   - MobIronSword HAND

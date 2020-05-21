@@ -13,9 +13,9 @@ SkeletonKingItemDrops:
   MaxItems: 1
   Drops:
   - Loot_KingsCrown 1 0.12
-  - Loot_SkeletonKingAxe 1 0.12
+  - Loot_KingsAxe 1 0.12
   - Loot_KingsCrown_DULLED 1 0.38
-  - Loot_SkeletonKingAxe_DULLED 1 0.38
+  - Loot_KingsAxe_DULLED 1 0.38
 
 LostZombieLootTable:
   Conditions:

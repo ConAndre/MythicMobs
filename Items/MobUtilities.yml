@@ -352,5 +352,10 @@ MobDiamondHoe:
   Hide:
   - ATTRIBUTES
 
+DevSword:
+  Id: Iron_Sword
+  Attributes:
+    MainHand:
+      Damage: 10000
 
 

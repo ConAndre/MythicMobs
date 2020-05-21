@@ -55,11 +55,7 @@ Loot_MummyHelmet:
     Color: 239,221,111
   Attributes:
     Head:
-      Health: 1
-      Armor: 2
-  Enchantments:
-  - PROTECTION_ENVIRONMENTAL:1
-  - PROTECTION_FIRE:1
+      Armor: 10
 
 Loot_MummyChestplate:
   Id: LEATHER_CHESTPLATE
@@ -74,11 +70,7 @@ Loot_MummyChestplate:
     Color: 239,221,111
   Attributes:
     Chest:
-      Health: 1
-      Armor: 6
-  Enchantments:
-  - PROTECTION_ENVIRONMENTAL:1
-  - PROTECTION_FIRE:1
+      Armor: 10
 
 Loot_MummyLeggings:
   Id: LEATHER_LEGGINGS
@@ -93,11 +85,7 @@ Loot_MummyLeggings:
     Color: 239,221,111
   Attributes:
     Legs:
-      Health: 1
-      Armor: 5
-  Enchantments:
-  - PROTECTION_ENVIRONMENTAL:1
-  - PROTECTION_FIRE:1
+      Armor: 10
 
 Loot_MummyBoots:
   Id: LEATHER_BOOTS
@@ -112,11 +100,7 @@ Loot_MummyBoots:
     Color: 239,221,111
   Attributes:
     FEET:
-      Health: 1
-      Armor: 2
-  Enchantments:
-  - PROTECTION_ENVIRONMENTAL:1
-  - PROTECTION_FIRE:1
+      Armor: 10
 
 Loot_MummyWeapon:
   Id: golden_hoe
@@ -130,7 +114,7 @@ Loot_MummyWeapon:
   - '&L&F&KO&R&L&9Uncommon Loot&F&KO'
   Attributes:
     MainHand:
-      Damage: 8
+      Damage: 7
 #BOSS
 Loot_PharaohWeapon:
   Id: golden_hoe
@@ -166,7 +150,7 @@ Loot_PharaohNemes:
   Attributes:
     Head:
       Health: 2
-      Armor: 2
+      Armor: 12
 #DULLED
 Loot_PharaohWeapon_DULLED:
   Id: golden_hoe
@@ -196,8 +180,8 @@ Loot_PharaohNemes_DULLED:
   - '&L&F&KO&R&L&9Uncommon Loot&F&KO'
   Attributes:
     Head:
-      Health: 2
-      Armor: 2
+      Health: 1
+      Armor: 10
 
 
 

@@ -58,11 +58,8 @@ Loot_PirateHelmet:
   Attributes:
     Head:
       Health: 1
-      Armor: 2
-  Enchantments:
-  - PROTECTION_ENVIRONMENTAL:2
-  - PROTECTION_FIRE:1
-
+      Armor: 15
+      ArmorToughness: 1
 Loot_PirateChestplate:
   Id: IRON_CHESTPLATE
   Display: '&cPirate Chestplate'
@@ -75,11 +72,8 @@ Loot_PirateChestplate:
   Attributes:
     Chest:
       Health: 1
-      Armor: 6
-  Enchantments:
-  - PROTECTION_ENVIRONMENTAL:2
-  - PROTECTION_FIRE:1
-
+      Armor: 15
+      ArmorToughness: 1
 Loot_PirateLeggings:
   Id: IRON_LEGGINGS
   Display: '&cPirate Leggings'
@@ -91,12 +85,9 @@ Loot_PirateLeggings:
   - '&L&F&KO&R&L&eCommon Loot&F&KO'
   Attributes:
     Legs:
-      Health: 2
-      Armor: 5
-  Enchantments:
-  - PROTECTION_ENVIRONMENTAL:2
-  - PROTECTION_FIRE:1
-
+      Health: 1
+      Armor: 15
+      ArmorToughness: 1
 Loot_PirateBoots:
   Id: IRON_BOOTS
   Display: '&cPirate Boots'
@@ -108,12 +99,9 @@ Loot_PirateBoots:
   - '&L&F&KO&R&L&eCommon Loot&F&KO'
   Attributes:
     Feet:
-      MovementSpeed: 0.02
       Health: 1
-      Armor: 2
-  Enchantments:
-  - PROTECTION_ENVIRONMENTAL:2
-  - PROTECTION_FIRE:1
+      Armor: 15
+      ArmorToughness: 1
 Loot_PirateWeapon:
   Id: IRON_SWORD
   Display: '&cPirate Weapon'
@@ -125,8 +113,7 @@ Loot_PirateWeapon:
   - '&L&F&KO&R&L&eCommon Loot&F&KO'
   Attributes:
     MainHand:
-      Damage: 10
-
+      Damage: 9
 Loot_PirateBow:
   Id: bow
   Display: '&cPirate Bow'
@@ -168,13 +155,9 @@ Loot_CaptainChestplate:
   - '&L&F&KO&R&L&1Rare Loot&F&KO'
   Attributes:
     Chest:
-      Health: 2
-      Armor: 6
-  Enchantments:
-  - PROTECTION_ENVIRONMENTAL:4
-  - PROTECTION_PROJECTILE:4
-  - PROTECTION_FIRE:4
-  - PROTECTION_EXPLOSIONS:4
+      Health: 3
+      Armor: 22
+      ArmorToughness: 1
 
 
 #Dulled
@@ -207,12 +190,9 @@ Loot_CaptainChestplate_DULLED:
   Attributes:
     Chest:
       Health: 2
-      Armor: 6
-  Enchantments:
-  - PROTECTION_ENVIRONMENTAL:2
-  - PROTECTION_PROJECTILE:2
-  - PROTECTION_FIRE:2
-  - PROTECTION_EXPLOSIONS:2
+      Armor: 20
+      ArmorToughness: 2
+
 
 
 

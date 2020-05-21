@@ -1,0 +1,59 @@
+Starter_Helmet:
+  Id: LEATHER_HELMET
+  Display: '&AStarter Helmet'
+  Lore:
+  - '&AStarter Armor'
+  Attributes:
+    Head:
+      Armor: 5
+
+Starter_Chestplate:
+  Id: LEATHER_CHESTPLATE
+  Display: '&AStarter Chestplate'
+  Lore:
+  - '&AStarter Armor'
+  Attributes:
+    Chest:
+      Armor: 5
+
+Starter_Leggings:
+  Id: LEATHER_LEGGINGS
+  Display: '&AStarter Leggings'
+  Lore:
+  - '&AStarter Armor'
+  Attributes:
+    Legs:
+      Armor: 5
+
+Starter_Boots:
+  Id: LEATHER_BOOTS
+  Display: '&AStarter Boots'
+  Lore:
+  - '&AStarter Armor'
+  Attributes:
+    FEET:
+      Armor: 5
+
+Starter_Sword:
+  Id: iron_sword
+  Data: 0
+  Display: '&AStarter Sword'
+  Lore:
+  - '&AStarter Sword'
+  Attributes:
+    MainHand:
+      Damage: 5
+Starter_Bow:
+  Id: bow
+  Data: 0
+  Display: '&AStarter Bow'
+  Lore:
+  - '&AStarter Bow'
+  Enchantments:
+  - ARROW_INFINITE:1
+  Hide:
+  - ENCHANTS
+
+
+
+

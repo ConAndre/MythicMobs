@@ -7,7 +7,7 @@ Pharaoh:
   Type: Skeleton
   Display: '&ePharaoh'
   Health: 500
-  Damage: 9
+  Damage: 30
   Armor: 0
   Faction: Mummy
   BossBar:
@@ -46,7 +46,7 @@ Illusion:
   Type: ZOMBIE
   Display: '&cIllusion'
   Health: 300
-  Damage: 9
+  Damage: 30
   Armor: 0
   Faction: Mummy
   Equipment:
@@ -82,7 +82,7 @@ IllusionMob:
   Type: ZOMBIE
   Display: '&cEye'
   Health: 20
-  Damage: 7
+  Damage: 10
   Armor: 0
   Faction: Mummy
   Equipment:
@@ -104,7 +104,7 @@ Mummy:
   Type: ZOMBIE
   Display: '&EMummy'
   Health: 45
-  Damage: 7
+  Damage: 20
   Armor: 0
   Faction: Mummy
   Equipment:
@@ -161,7 +161,7 @@ PyramidGuardian:
   Type: GUARDIAN
   Display: '&EPyramid Guardian'
   Health: 35
-  Damage: 7
+  Damage: 10
   Armor: 0
   Faction: Mummy
   Drops:
@@ -183,7 +183,7 @@ Scarab:
   Type: SILVERFISH
   Display: '&EScarab'
   Health: 15
-  Damage: 7
+  Damage: 20
   Armor: 0
   Faction: Mummy
   Drops:

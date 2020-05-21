@@ -7,7 +7,7 @@ PiranhaBoss:
   Type: GUARDIAN
   Display: '&9Big Bite'
   Health: 1000
-  Damage: 8
+  Damage: 50
   BossBar:
     Enabled: true
     Title: 'Big Bite'
@@ -39,7 +39,7 @@ NexusPetBoss:
   Type: wolf
   Display: '&cNexus<&sq> Pet'
   Health: 1750
-  Damage: 24
+  Damage: 50
   Faction: Nexus
   BossBar:
     Enabled: true
@@ -73,7 +73,7 @@ NexusBoss:
   Type: ZOMBIE
   Display: '&cNexus'
   Health: 1750
-  Damage: 26
+  Damage: 50
   Faction: Nexus
   Disguise:
     Type: Player
@@ -112,7 +112,7 @@ AzureBoss:
   Type: WITHER_SKELETON
   Display: '&9Azure'
   Health: 1250
-  Damage: 15
+  Damage: 50
   Faction: Nexus
   Disguise:
     Type: Player
@@ -153,7 +153,7 @@ CarmineBoss:
     Type: Player
     Skin: Red
   Health: 1250
-  Damage: 15
+  Damage: 50
   Faction: Nexus
   BossBar:
     Enabled: true
@@ -234,7 +234,7 @@ CarmineMinion:
   Type: BABY_ZOMBIE
   Display: '&cCarmine Minion'
   Health: 55
-  Damage: 6
+  Damage: 30
   Faction: Nexus
   Equipment:
   - MobIronHelmet HEAD
@@ -290,7 +290,7 @@ Piranha:
   Type: GUARDIAN
   Display: '&cPiranha'
   Health: 55
-  Damage: 8
+  Damage: 30
   Faction: Nexus
   Equipment:
   Drops:
@@ -346,7 +346,7 @@ NexusGuard:
   Type: SKELETON
   Display: '&cNexus<&sq> Guard'
   Health: 130
-  Damage: 12
+  Damage: 40
   Faction: Nexus
   Equipment:
   - MobIronHelmet HEAD
