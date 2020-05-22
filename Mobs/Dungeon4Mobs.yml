@@ -293,8 +293,6 @@ Piranha:
   Damage: 30
   Faction: Nexus
   Equipment:
-  Drops:
-  - Third_DungeonLootDrop
   Options:
     AlwaysShowName: false
     MovementSpeed: 1.5
@@ -324,8 +322,6 @@ NexusArcher:
   - MobIronLeggings LEGS
   - MobIronBoots FEET
   - NexusBow HAND
-  Drops:
-  - Third_DungeonLootDrop
   Options:
     AlwaysShowName: false
     MovementSpeed: 0.275
@@ -340,7 +336,7 @@ NexusArcher:
   Skills:
   - skill{s=SmokeBlastProjectile;cooldown=20} @target ~onAttack 0.35
   Drops:
-  - Third_DungeonLootDrop
+  - Third_DungeonLootTable
 NexusGuard:
   Type: SKELETON
   Display: '&cNexus<&sq> Guard'
@@ -353,8 +349,6 @@ NexusGuard:
   - MobIronLeggings LEGS
   - MobIronBoots FEET
   - Iron_Sword HAND
-  Drops:
-  - Third_DungeonLootDrop
   Options:
     AlwaysShowName: false
     MovementSpeed: 0.275
@@ -369,6 +363,6 @@ NexusGuard:
   Skills:
   - skill{s=SmokeBlastProjectile;cooldown=20} @target ~onAttack 0.35
   Drops:
-  - Third_DungeonLootDrop
+  - Third_DungeonLootTable
 
 

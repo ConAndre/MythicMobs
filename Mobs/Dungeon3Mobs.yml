@@ -211,8 +211,6 @@ Pirate:
   - MobIronLeggings LEGS
   - MobIronBoots FEET
   - MobIronSword HAND
-  Drops:
-  - Third_DungeonLootDrop
   Options:
     AlwaysShowName: false
     MovementSpeed: 0.275
@@ -245,8 +243,6 @@ PirateArcher:
   - MobIronLeggings LEGS
   - MobIronBoots FEET
   - PirateBow HAND
-  Drops:
-  - Third_DungeonLootDrop
   Options:
     AlwaysShowName: false
     MovementSpeed: 0.275
@@ -261,6 +257,6 @@ PirateArcher:
   Skills:
   - skill{s=SmokeBlastProjectile;cooldown=20} @target ~onAttack 0.35
   Drops:
-  - Third_DungeonLootDrop
+  - Third_DungeonLootTable
 
 

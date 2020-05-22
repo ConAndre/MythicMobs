@@ -1,0 +1,26 @@
+RaidRunner12:
+  SpawnerGroup: Raider1
+  MobName: RaidRunner
+  World: world
+  X: 723
+  Y: 84
+  Z: -1243
+  Radius: 0
+  UseTimer: true
+  MaxMobs: '0'
+  MobLevel: '1'
+  MobsPerSpawn: 1
+  Cooldown: 0
+  CooldownTimer: 0
+  Warmup: 0
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 255
+  ScalingRange: 25.0
+  LeashRange: 255
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 0

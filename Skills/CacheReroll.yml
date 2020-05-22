@@ -1,0 +1,7 @@
+CacheReroll:
+  Skills:
+  - setvariable{var=target.boosted;t=STRING;value="true"}
+  - consumeUsedItem ~onUse
+  - message{m="&A&LYou used a &6&N&LLoot Reroller!"} @self
+  - sound{s=entity.illusioner.prepare_mirror;v=.25} @self
+  - effect:particles{particle=flame;amount=50;hS=1;vS=1;speed=1} @self

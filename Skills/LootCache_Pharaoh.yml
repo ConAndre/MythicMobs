@@ -32,7 +32,7 @@ Loot_PharaohBoosted:
   - delay 40
   - sound{s=entity.item.pickup} @trigger
   - randomskill{skills=Loot_PharaohWeapon_DULLED,Loot_PharaohNemes_DULLED} @trigger 1
-  - randomskill{skills=Loot_PharaohWeapon,Loot_PharaohNemes} @trigger 1
+  - randomskill{skills=Loot_PharaohWeapon,Loot_PharaohNemes} @trigger .12
 
 Loot_PharaohWeapon:
   Skills:

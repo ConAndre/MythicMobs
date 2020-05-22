@@ -1,0 +1,38 @@
+RaidBegin1:
+  Skills:
+  - summon{mob=RaidArtifact1;amount=1;noise=0} @Self
+  - remove @self
+RaidEnd1:
+  Skills:
+  - sendtitle{title="&c&LRaid failed!";subtitle="&cThe artifact was lost!";d=40} @PlayersInRadius{r=255} ~onDeath
+  - command{c="mm s set g:Raider1 maxmobs 0"} ~onDeath
+  - remove @EntitiesInRadius{r=255;ignore=players} ~onDeath
+
+RaidWaves1:
+  Skills:
+  - effect:explosion @self
+  - delay 20
+  - effect:explosion @self
+  - delay 15
+  - effect:explosion @self
+  - delay 10
+  - effect:explosion @self
+  - delay 3
+  - effect:explosion @self
+  - delay 2
+  - effect:explosion @self
+  - delay 2
+  - effect:explosion @self
+  - delay 2
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - command{c="mm s set g:Raider1 maxmobs 1"}
+  - delay 80
+  - command{c="mm s set g:Raider1 maxmobs 0"}
+
+
