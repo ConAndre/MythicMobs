@@ -163,14 +163,14 @@ Loot_CaptainChestplate:
 #Dulled
 Loot_CaptainWeapon_DULLED:
   Id: flint_and_steel
-  Display: '&cCaptain<&sq>s hook'
+  Display: '&8&LDulled &c&LCaptain<&sq>s hook'
   Lore:
   - '&6The hook of a'
   - '&6stinky pirate.'
   - ''
   - '&L&cCaptain'
   - ''
-  - '&L&F&KO&R&L&1Rare Loot&F&KO'
+  - '&L&F&KO&R&L&8Dulled Loot&F&KO'
   Enchantments:
   - FIRE_ASPECT:1
   Attributes:
@@ -179,19 +179,33 @@ Loot_CaptainWeapon_DULLED:
 Loot_CaptainChestplate_DULLED:
   Id: IRON_CHESTPLATE
   Data: 0
-  Display: '&dCaptain<&sq>s Chestplate'
+  Display: '&8&LDulled &d&LCaptain<&sq>s Chestplate'
   Lore:
   - '&6This chestplate reeks of bile'
   - '&6and saltwater...'
   - ''
   - '&L&cCaptain'
   - ''
-  - '&L&F&KO&R&L&1Rare Loot&F&KO'
+  - '&L&F&KO&R&L&8Dulled Loot&F&KO'
   Attributes:
     Chest:
       Health: 2
       Armor: 20
       ArmorToughness: 2
+Loot_SquawksBeak_DULLED:
+  Id: bow
+  Display: '&8&LDulled &e&LSquawk<&sq>s Beak'
+  Lore:
+  - '&1 Squawk<&sq>s flaming beak that he has used'
+  - 'to peck down thousands of warriors.'
+  - ''
+  - '&L&cSquawk'
+  - ''
+  - '&L&F&KO&R&L&8Dulled Loot&F&KO'
+  Enchantments:
+  - ARROW_DAMAGE:3
+  - ARROW_INFINITE:1
+  - ARROW_FIRE:2
 
 
 

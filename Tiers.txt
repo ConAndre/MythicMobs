@@ -30,5 +30,8 @@
   - '&L&F&KO&R&L&DDivine Loot&F&KO'                     Raids
 
 
+  &5Consumable                                          &5Consumable
+
+
 
 

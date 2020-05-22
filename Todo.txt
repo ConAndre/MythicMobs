@@ -5,4 +5,5 @@ Lets make an invasion type event
 Add guaranteed drops to bosses
 Wipe Boss bar on death
 Degrade armor on death
-Add Loot ReRoller > consume + give target.boost = true
+Add Loot ReRoller > consume + give target.boost = true #NEEDS ARTIFACTS ADDON ? IMPLEMENT SKILLS TO ITEMS
+ActionHealth Plugin throws an error near removed caches/mobs

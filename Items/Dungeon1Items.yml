@@ -18,7 +18,7 @@ LostArcherBow:
 Loot_LostZombieChestplate:
   Id: iron_chestplate
   Data: 0
-  Display: '&3&LChestplate of the &cLost &3Zombie'
+  Display: '&3&LChestplate of the &c&LLost &3&LZombie'
   Lore:
   - '&6Chestplate used by'
   - '&6the Lost Zombie.'
@@ -32,7 +32,7 @@ Loot_LostZombieChestplate:
 Loot_LostZombieLeggings:
   Id: iron_leggings
   Data: 0
-  Display: '&3&LLeggings of the &cLost &3Zombie'
+  Display: '&3&LLeggings of the &c&LLost &3&LZombie'
   Lore:
   - '&6Leggings used by'
   - '&6the Lost Zombie.'
@@ -46,7 +46,7 @@ Loot_LostZombieLeggings:
 Loot_LostArcherBoots:
   Id: iron_boots
   Data: 0
-  Display: '&3&LBoots of the &cLost &3Archer'
+  Display: '&3&LBoots of the &c&LLost &3&LArcher'
   Lore:
   - '&6Boots used by'
   - '&6the Lost Archer.'
@@ -60,7 +60,7 @@ Loot_LostArcherBoots:
 Loot_LostArcherBow:
   Id: bow
   Data: 0
-  Display: '&3&LBow of the &cLost &3Archer'
+  Display: '&3&LBow of the &c&LLost &3&LArcher'
   Lore:
   - '&6A bow used by'
   - '&6the Lost Archer.'
@@ -77,7 +77,7 @@ Loot_LostArcherBow:
 Loot_LostZombieSword:
   Id: iron_sword
   Data: 0
-  Display: '&3&LSword of the &cLost &3Zombie'
+  Display: '&3&LSword of the &c&LLost &3&LZombie'
   Lore:
   - '&6A sword used by'
   - '&6the Lost Zombie.'
@@ -93,7 +93,7 @@ Loot_LostZombieSword:
 Loot_KingsAxe:
   Id: iron_axe
   Data: 0
-  Display: '&3&LGreataxe of the &cSkeleton King'
+  Display: '&3&LGreataxe of the &c&LSkeleton King'
   Lore:
   - '&6A powerful axe used by'
   - '&6the King of Skeletons.'
@@ -107,7 +107,7 @@ Loot_KingsAxe:
 Loot_KingsCrown:
   Id: GOLDEN_HELMET
   Data: 0
-  Display: '&3&LCrown of the &cKing'
+  Display: '&3&LCrown of the &c&LSkeleton King'
   Lore:
   - '&6A kingly crowl that grants'
   - '&6the wearer unwavering power!'
@@ -123,28 +123,28 @@ Loot_KingsCrown:
 Loot_KingsAxe_DULLED:
   Id: iron_axe
   Data: 0
-  Display: '&3&LGreataxe of the &cSkeleton King'
+  Display: '&8&LDulled &3&LGreataxe of the &cSkeleton King'
   Lore:
-  - '&6A powerful axe used by'
+  - '&6A worn down axe used by'
   - '&6the King of Skeletons.'
   - ''
   - '&L&cSkeleton King'
   - ''
-  - '&L&F&KO&R&L&9Uncommon Loot&F&KO'
+  - '&L&F&KO&R&L&8Dulled Loot&F&KO'
   Attributes:
     MainHand:
       Damage: 7
 Loot_KingsCrown_DULLED:
   Id: GOLDEN_HELMET
   Data: 0
-  Display: '&3&LCrown of the &cKing'
+  Display: '&8&LDulled &3&LCrown of the &cKing'
   Lore:
-  - '&6A kingly crowl that grants'
-  - '&6the wearer unwavering power!'
+  - '&6A worn down crowl that grants'
+  - '&6the wearer power!'
   - ''
   - '&L&cSkeleton King'
   - ''
-  - '&L&F&KO&R&L&9Uncommon Loot&F&KO'
+  - '&L&F&KO&R&L&8Dulled Loot&F&KO'
   Attributes:
     Head:
       Health: 1

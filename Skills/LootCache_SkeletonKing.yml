@@ -16,15 +16,17 @@ Loot_SkeletonKing:
   - skill{s=Loot_SkeletonKingBoosted} @trigger 1
   - randomskill{skills=Loot_KingsCrown_DULLED,Loot_KingsAxe_DULLED} @trigger 1
   - randomskill{skills=Loot_KingsCrown,Loot_KingsAxe} @trigger .12
+  - delay 1800
+  - remove @self
 
 Loot_SkeletonKingBoosted:
   TargetConditions:
   - variableisset target.boosted true
   - varEquals{var=target.boosted;value="true"}
   Skills:
-  - message{m="&6&L<target.name> used a &N&LLoot Reroller!"} @PlayersInRadius{r=25}
   - setvariable{var=target.boosted;t=STRING;value="false"}
-  - delay 20
+  - message{m="&A&L<target.name> used a &6&N&LLoot Reroller!"} @PlayersInRadius{r=25}
+  - delay 30
   - message{m="&A&LYou managed to loot the cache again!"} @trigger
   - sound{s=block.ender_chest.open} @trigger
   - delay 40
@@ -37,14 +39,14 @@ Loot_KingsCrown:
   - sound{s=entity.zombie_villager.converted} @trigger
   - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
   - giveitem{i=Loot_KingsCrown} @trigger 1
-  - command{c="broadcast <target.name> has looted the King<&sq>s Crown"} @trigger
+  - message{m="&A&L<target.name> has looted the &E&LKing<&sq>s Crown"} @PlayersInWorld 1
 
 Loot_KingsAxe:
   Skills:
   - sound{s=entity.zombie_villager.converted} @trigger
   - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
   - giveitem{i=Loot_KingsAxe} @trigger 1
-  - command{c="broadcast <target.name> has looted the King<&sq>s Axe"} @trigger
+  - message{m="&A&L<target.name> has looted the &E&LKing<&sq>s Axe"} @PlayersInWorld 1
 
 Loot_KingsCrown_DULLED:
   Skills:
@@ -59,3 +61,5 @@ Loot_KingsAxe_DULLED:
 Loot_SkeletonKingLooted:
   Skills:
   - message{m="&c&LYou have already looted this cache &A&Lor &c&Lyou did not participate in this battle!"} @trigger
+  - delay 1800
+  - remove @self

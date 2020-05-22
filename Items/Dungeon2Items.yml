@@ -107,12 +107,11 @@ Loot_MummyWeapon:
   Display: '&EMummy Weapon'
   Data: 0
   Lore:
-  - '&6A staff of'
-  - '&6great power.'
+  - '&6Mummy Weapon'
   - ''
-  - '&L&cPharaoh'
+  - '&L&cMummy'
   - ''
-  - '&L&F&KO&R&L&9Uncommon Loot&F&KO'
+  - '&L&F&KO&R&L&eCommon Loot&F&KO'
   Attributes:
     MainHand:
       Damage: 7
@@ -151,7 +150,7 @@ Loot_PharaohNemes:
 #DULLED
 Loot_PharaohWeapon_DULLED:
   Id: golden_hoe
-  Display: '&EThe Pharaoh Staff'
+  Display: '&8&LDulled &E&LPharaoh<&sq>s Staff'
   Data: 0
   Lore:
   - '&6A staff of'
@@ -159,7 +158,7 @@ Loot_PharaohWeapon_DULLED:
   - ''
   - '&L&cPharaoh'
   - ''
-  - '&L&F&KO&R&L&9Uncommon Loot&F&KO'
+  - '&L&F&KO&R&L&8Dulled Loot&F&KO'
   Enchantments:
   - FIRE_ASPECT:1
   Attributes:
@@ -168,14 +167,14 @@ Loot_PharaohWeapon_DULLED:
 Loot_PharaohNemes_DULLED:
   Id: GOLDEN_HELMET
   Data: 0
-  Display: '&dNemes of the Pharaoh'
+  Display: '&8&LDulled &e&LNemes of the Pharaoh'
   Lore:
   - '&6An ancient crowl that grants'
   - '&6the wearer unwavering power!'
   - ''
   - '&L&cPharaoh'
   - ''
-  - '&L&F&KO&R&L&9Uncommon Loot&F&KO'
+  - '&L&F&KO&R&L&8Dulled Loot&F&KO'
   Attributes:
     Head:
       Health: 1

@@ -341,7 +341,6 @@ NexusArcher:
   - skill{s=SmokeBlastProjectile;cooldown=20} @target ~onAttack 0.35
   Drops:
   - Third_DungeonLootDrop
-
 NexusGuard:
   Type: SKELETON
   Display: '&cNexus<&sq> Guard'

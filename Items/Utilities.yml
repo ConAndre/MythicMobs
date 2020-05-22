@@ -358,4 +358,38 @@ DevSword:
     MainHand:
       Damage: 10000
 
+CacheReroll:
+  Id: blaze_rod
+  Display: '&6&N&LLoot Reroller'
+  Lore:
+  - '&1 Squawk<&sq>s flaming beak that he has used'
+  - 'to peck down thousands of warriors.'
+  - ''
+  - '&L&cSquawk'
+  - ''
+  - '&L&F&KO&R&L&5Consumable&F&KO'
+  Enchantments:
+  - ARROW_DAMAGE:3
+  Skills:
+  - skill{s=CacheReroll} @self ~onUse
+
+
+
+ArmourToken:
+  Id: Arrow
+  Data: 0
+  Options:
+    Model: 3
+  Display: '&dArmour Token'
+  Skills:
+  - equip{item=diamond_helmet:4} @Self ~onUse
+  - equip{item=diamond_chestplate:3} @Self ~onUse
+  - equip{item=diamond_leggings:2} @Self ~onUse
+  - equip{item=diamond_boots:1} @Self ~onUse
+  - equip{item=diamond_axe:0} @Self ~onUse
+  - consumeUsedItem ~onUse
+
+
+
+
 

@@ -12,18 +12,16 @@ Cache_SkeletonKing:
     KnockbackResistance: 1
     PreventOtherDrops: true
     Collidable: true
-    Glowing: true
     Invincible: true
     Interactable: true
     NoAI: true
     Silent: true
   Skills:
-  - remove @self ~onTimer:3600
   - skill{s=Loot_SkeletonKing} ~onInteract
 
 Cache_Pharaoh:
-  Type: COW
-  Display: '&N&ALoot Cache'
+  Type: SHEEP
+  Display: '&N&ALoot Cache 1'
   Disguise:
     Type: BLOCK
     Block: BEACON
@@ -35,13 +33,11 @@ Cache_Pharaoh:
     KnockbackResistance: 1
     PreventOtherDrops: true
     Collidable: true
-    Glowing: true
     Invincible: true
     Interactable: true
     NoAI: true
     Silent: true
   Skills:
-  - remove @self ~onTimer:3600
   - skill{s=Loot_Pharaoh} ~onInteract
 
 
