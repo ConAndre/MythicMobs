@@ -20,3 +20,23 @@ AngrySludgePoison:
   - potion{type=POISON;lvl=0;duration=60} @PlayersInRadius{r=8}
   - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @Self
 
+
+Loot_Artifact_SlimePoison:
+  Cooldown: 15
+  Skills:
+    - message{m="&A&LYou poison all targets around you!"} @self
+    - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @Self
+    - potion{type=POISON;duration=200;level=1} @EntitiesInRadius{r=8;ignore=players}
+    - delay 300
+    - message{m="&A&LCorrosive Residue is recharged!"} @self
+Loot_Artifact_SkeletalWither:
+  Cooldown: 15
+  Skills:
+    - message{m="&A&LYou wither all targets around you!"} @self
+    - effect:particles{p=smoke_normal;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @Self
+    - potion{type=Wither;duration=200;level=1} @EntitiesInRadius{r=8;ignore=players}
+    - delay 300
+    - message{m="&A&LWither Rose is recharged!"} @self
+
+
+

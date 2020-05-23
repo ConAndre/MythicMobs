@@ -1,23 +1,22 @@
-RaidRunner29:
-  SpawnerGroup: Raider1
-  MobName: RaidRunner
+base_RaidStarter:
+  MobName: RaidStarter
   World: world
-  X: 722
-  Y: 84
-  Z: -1341
+  X: 723
+  Y: 82
+  Z: -1293
   Radius: 0
-  UseTimer: true
-  MaxMobs: '0'
+  UseTimer: false
+  MaxMobs: '1'
   MobLevel: '1'
   MobsPerSpawn: 1
   Cooldown: 0
   CooldownTimer: 0
-  Warmup: 0
+  Warmup: 360000
   WarmupTimer: 0
-  CheckForPlayers: true
-  ActivationRange: 255
+  CheckForPlayers: false
+  ActivationRange: 0
   ScalingRange: 25.0
-  LeashRange: 255
+  LeashRange: 32
   HealOnLeash: false
   ResetThreatOnLeash: false
   ShowFlames: false

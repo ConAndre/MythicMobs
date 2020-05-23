@@ -1,0 +1,188 @@
+RaidStarter:
+  Type: SNOWMAN
+  Display: '&L&9Strange Artifact'
+  Disguise:
+    Type: BLOCK
+    Block: END_PORTAL_FRAME
+    BlockData: 0
+    ShowName: true
+  Health: 2000
+  Options:
+    MovementSpeed: 0.0
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+    Collidable: true
+    Invincible: true
+    Interactable: true
+    NoAI: true
+    Silent: true
+  Skills:
+  - skill{s=RaidBegin;cooldown=30} ~onInteract
+
+RaidArtifact:
+  Type: SNOWMAN
+  Display: '&c&LFragile Artifact'
+  Disguise:
+    Type: ender_crystal
+    ShowName: true
+  Health: 2000
+  Faction: RaidArtifact
+  BossBar:
+    Enabled: true
+    Title: 'Fragile Artifact'
+    Range: 255
+    Color: RED
+    Style: SEGMENTED_20
+    CreateFog: true
+    DarkenSky: true
+  Options:
+    MovementSpeed: 0.0
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+    Collidable: true
+    Interactable: true
+    NoAI: true
+    Silent: true
+  Skills:
+  - skill{s=RaidWaves} @self ~onSpawn
+  - sound{s=entity.ghast.hurt} @self ~onDamaged 0.35
+  - skill{s=RaidEnd} @self ~onDeath
+
+RaidTank:
+  Type: Zombie
+  Display: '&cRaid Tank'
+  Health: 2000
+  Damage: 100
+  Faction: Raid
+  Equipment:
+  - MobDiamondHelmet HEAD
+  - MobDiamondChestplate CHEST
+  - MobDiamondLeggings LEGS
+  - MobDiamondBoots FEET
+  - MobDiamondSword HAND
+  Options:
+    FollowRange: 100
+    AlwaysShowName: false
+    MovementSpeed: 0.15
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  AITargetSelectors:
+  - 0 clear
+  - 1 SpecificFaction RaidArtifact
+  Skills:
+  Drops:
+
+
+RaidHorse:
+  Type: Zombie
+  Disguise:
+    Type: skeleton_horse
+  Display: '&cRaid Horse'
+  Health: 250
+  Damage: 40
+  Faction: Raid
+  Equipment:
+  - MobDiamondHelmet HEAD
+  - MobDiamondChestplate CHEST
+  - MobDiamondLeggings LEGS
+  - MobDiamondBoots FEET
+  - MobDiamondSword HAND
+  Options:
+    FollowRange: 100
+    AlwaysShowName: false
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  AITargetSelectors:
+  - 0 clear
+  - 1 SpecificFaction RaidArtifact
+  Skills:
+  Drops:
+
+RaidRunner:
+  Type: SKELETON
+  Display: '&cRaid Runner'
+  Health: 250
+  Damage: 40
+  Faction: Raid
+  Equipment:
+  - MobDiamondHelmet HEAD
+  - MobDiamondChestplate CHEST
+  - MobDiamondLeggings LEGS
+  - MobDiamondBoots FEET
+  - MobDiamondSword HAND
+  Options:
+    FollowRange: 100
+    AlwaysShowName: false
+    MovementSpeed: 0.2
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  AITargetSelectors:
+  - 0 clear
+  - 1 SpecificFaction RaidArtifact
+  Skills:
+  Drops:
+
+RaidWarrior:
+  Type: Zombie
+  Display: '&cRaid Warrior'
+  Health: 400
+  Damage: 40
+  Faction: Raid
+  Equipment:
+  - MobDiamondHelmet HEAD
+  - MobDiamondChestplate CHEST
+  - MobDiamondLeggings LEGS
+  - MobDiamondBoots FEET
+  - MobDiamondSword HAND
+  Options:
+    FollowRange: 100
+    AlwaysShowName: false
+    MovementSpeed: 0.275
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  AITargetSelectors:
+  - 0 clear
+  - 1 SpecificFaction RaidArtifact
+  - 2 hurtbytarget
+  Skills:
+  Drops:
+
+RaidArcher:
+  Type: SKELETON
+  Display: '&cRaid Archer'
+  Health: 500
+  Faction: Raid
+  Equipment:
+  - MobDiamondHelmet HEAD
+  - MobDiamondChestplate CHEST
+  - MobDiamondLeggings LEGS
+  - MobDiamondBoots FEET
+  - Bow HAND
+  Options:
+    FollowRange: 100
+    AlwaysShowName: false
+    MovementSpeed: 0.2
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  AITargetSelectors:
+  - 0 clear
+  - 1 SpecificFaction RaidArtifact
+  - 2 hurtbytarget
+  Skills:
+  Drops:

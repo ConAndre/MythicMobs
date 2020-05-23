@@ -1,8 +1,8 @@
-RaidRunner25:
-  SpawnerGroup: Raider1
-  MobName: RaidRunner
+wave_1_RaidArcher:
+  SpawnerGroup: wave_1
+  MobName: RaidArcher
   World: world
-  X: 675
+  X: 773
   Y: 84
   Z: -1292
   Radius: 0
@@ -14,10 +14,10 @@ RaidRunner25:
   CooldownTimer: 0
   Warmup: 0
   WarmupTimer: 0
-  CheckForPlayers: true
-  ActivationRange: 255
+  CheckForPlayers: false
+  ActivationRange: 0
   ScalingRange: 25.0
-  LeashRange: 255
+  LeashRange: 125
   HealOnLeash: false
   ResetThreatOnLeash: false
   ShowFlames: false

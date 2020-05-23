@@ -151,5 +151,43 @@ Loot_KingsCrown_DULLED:
       Armor: 10
 
 
+#Spells
+Loot_Artifact_SlimePoison:
+  Id: Slime_Ball
+  Data: 0
+  Display: '&A&LCorrosive Residue'
+  Lore:
+  - '&6A magic infused orb'
+  - '&6that douses enemies'
+  - '&6in a deadly &Apoison!'
+  - ''
+  - '&L&cAngry Sludge'
+  - ''
+  - '&L&F&KO&R&L&DSpell&F&KO'
+  Enchantments:
+  - ARROW_DAMAGE:1
+  Hide:
+  - ENCHANTS
+  Skills:
+  - skill{s=Loot_Artifact_SlimePoison} ~onUse
+Loot_Artifact_SkeletalWither:
+  Id: wither_rose
+  Data: 0
+  Display: '&0&LWither Rose'
+  Lore:
+  - '&6A magic infused rose'
+  - '&6that taps into the life'
+  - '&6of enemies!'
+  - ''
+  - '&L&cSkeletal Knight'
+  - ''
+  - '&L&F&KO&R&L&DSpell&F&KO'
+  Enchantments:
+  - ARROW_DAMAGE:1
+  Hide:
+  - ENCHANTS
+  Skills:
+  - skill{s=Loot_Artifact_SkeletalWither} ~onUse
+
 
 

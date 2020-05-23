@@ -349,6 +349,7 @@ NexusGuard:
   - MobIronLeggings LEGS
   - MobIronBoots FEET
   - Iron_Sword HAND
+
   Options:
     AlwaysShowName: false
     MovementSpeed: 0.275

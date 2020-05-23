@@ -180,5 +180,24 @@ Loot_PharaohNemes_DULLED:
       Health: 1
       Armor: 10
 
+#Spells
+Loot_Artifact_IllusionStaff:
+  Id: stick
+  Data: 0
+  Display: '&9&LIllusion Staff'
+  Lore:
+  - '&6A magic staff'
+  - '&6that decreases the'
+  - '&6life of enemies!'
+  - ''
+  - '&L&cIllusion'
+  - ''
+  - '&L&F&KO&R&L&DSpell&F&KO'
+  Enchantments:
+  - ARROW_DAMAGE:1
+  Hide:
+  - ENCHANTS
+  Skills:
+  - skill{s=Loot_Artifact_IllusionStaff} ~onUse
 
 

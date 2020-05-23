@@ -77,6 +77,7 @@ Illusion:
   - skill{s=Night} @PlayersInRadius{r=15}
   - skill{s=NightTornado} @PlayersInRadius{r=15}
   - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
+  - dropitem{i=Loot_Artifact_IllusionStaff} ~onDeath .05
   Drops:
   - IllusionLootTable
 

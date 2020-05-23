@@ -1,14 +1,26 @@
-RaidBegin1:
+RaidBegin:
   Skills:
-  - summon{mob=RaidArtifact1;amount=1;noise=0} @Self
+  - summon{mob=RaidArtifact;amount=1;noise=0} @Self
   - remove @self
-RaidEnd1:
+RaidEnd:
   Skills:
   - sendtitle{title="&c&LRaid failed!";subtitle="&cThe artifact was lost!";d=40} @PlayersInRadius{r=255} ~onDeath
   - command{c="mm s set g:Raider1 maxmobs 0"} ~onDeath
+  - command{c="mm s set g:wave_1 maxmobs 0"} ~onDeath
+  - command{c="mm s set g:wave_2 maxmobs 0"} ~onDeath
+  - command{c="mm s set g:wave_3 maxmobs 0"} ~onDeath
+  - command{c="mm s set g:wave_4 maxmobs 0"} ~onDeath
+  - command{c="mm s set g:wave_5 maxmobs 0"} ~onDeath
+  - command{c="mm s set g:wave_6 maxmobs 0"} ~onDeath
+  - command{c="mm s set g:wave_7 maxmobs 0"} ~onDeath
+  - command{c="mm s set g:wave_8 maxmobs 0"} ~onDeath
+  - command{c="mm s set g:wave_9 maxmobs 0"} ~onDeath
+  - command{c="mm s set g:wave_10 maxmobs 0"} ~onDeath
+  - command{c="mm s set g:wave_11 maxmobs 0"} ~onDeath
+  - command{c="mm s set g:wave_12 maxmobs 0"} ~onDeath
   - remove @EntitiesInRadius{r=255;ignore=players} ~onDeath
 
-RaidWaves1:
+RaidWaves:
   Skills:
   - effect:explosion @self
   - delay 20
@@ -31,8 +43,98 @@ RaidWaves1:
   - effect:explosion @self
   - delay 1
   - effect:explosion @self
-  - command{c="mm s set g:Raider1 maxmobs 1"}
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - message{m="&c&L Wave 1"} @PlayersInRadius{r=100}
+  - command{c="mm s set g:wave_1 maxmobs 1"}
   - delay 80
-  - command{c="mm s set g:Raider1 maxmobs 0"}
+  - command{c="mm s set g:wave_1 maxmobs 0"}
+  - delay 3600
+  - message{m="&c&L Wave 2"} @PlayersInRadius{r=100}
+  - command{c="mm s set g:wave_2 maxmobs 1"}
+  - delay 80
+  - command{c="mm s set g:wave_2 maxmobs 0"}
+  - delay 3600
+  - message{m="&c&L Wave 3"} @PlayersInRadius{r=100}
+  - command{c="mm s set g:wave_3 maxmobs 1"}
+  - delay 80
+  - command{c="mm s set g:wave_3 maxmobs 0"}
+  - delay 3600
+  - message{m="&c&L Wave 4"} @PlayersInRadius{r=100}
+  - command{c="mm s set g:wave_4 maxmobs 1"}
+  - delay 80
+  - command{c="mm s set g:wave_4 maxmobs 0"}
+  - delay 3600
+  - message{m="&c&L Wave 5"} @PlayersInRadius{r=100}
+  - command{c="mm s set g:wave_5 maxmobs 1"}
+  - delay 80
+  - command{c="mm s set g:wave_5 maxmobs 0"}
+  - delay 3600
+  - message{m="&c&L Wave 6"} @PlayersInRadius{r=100}
+  - command{c="mm s set g:wave_6 maxmobs 1"}
+  - delay 80
+  - command{c="mm s set g:wave_6  maxmobs 0"}
+  - delay 3600
+  - message{m="&c&L Wave 7"} @PlayersInRadius{r=100}
+  - command{c="mm s set g:wave_7 maxmobs 1"}
+  - delay 80
+  - command{c="mm s set g:wave_7  maxmobs 0"}
+  - delay 3600
+  - message{m="&c&L Wave 8"} @PlayersInRadius{r=100}
+  - command{c="mm s set g:wave_8 maxmobs 1"}
+  - delay 80
+  - command{c="mm s set g:wave_8 maxmobs 0"}
+  - delay 3600
+  - message{m="&c&L Wave 9"} @PlayersInRadius{r=100}
+  - command{c="mm s set g:wave_9 maxmobs 1"}
+  - delay 80
+  - command{c="mm s set g:wave_9 maxmobs 0"}
+  - delay 3600
+  - message{m="&c&L Wave 10"} @PlayersInRadius{r=100}
+  - command{c="mm s set g:wave_10 maxmobs 1"}
+  - delay 80
+  - command{c="mm s set g:wave_10 maxmobs 0"}
+  - delay 3600
+  - message{m="&c&L Wave 11"} @PlayersInRadius{r=100}
+  - command{c="mm s set g:wave_11 maxmobs 1"}
+  - delay 80
+  - command{c="mm s set g:wave_11 maxmobs 0"}
+  - delay 3600
+  - message{m="&c&L Wave 12"} @PlayersInRadius{r=100}
+  - command{c="mm s set g:wave_12 maxmobs 1"}
+  - delay 80
+  - command{c="mm s set g:wave_12 maxmobs 0"}
+
+
 
 

@@ -1,10 +1,10 @@
-RaidRunner4:
-  SpawnerGroup: Raider1
-  MobName: RaidRunner
+wave_1_RaidWarrior:
+  SpawnerGroup: wave_1
+  MobName: RaidWarrior
   World: world
-  X: 773
+  X: 772
   Y: 84
-  Z: -1294
+  Z: -1293
   Radius: 0
   UseTimer: true
   MaxMobs: '0'
@@ -14,10 +14,10 @@ RaidRunner4:
   CooldownTimer: 0
   Warmup: 0
   WarmupTimer: 0
-  CheckForPlayers: true
-  ActivationRange: 255
+  CheckForPlayers: false
+  ActivationRange: 0
   ScalingRange: 25.0
-  LeashRange: 255
+  LeashRange: 125
   HealOnLeash: false
   ResetThreatOnLeash: false
   ShowFlames: false

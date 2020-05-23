@@ -1,20 +1,20 @@
-base_RaidStarter1:
-  MobName: RaidStarter1
+base_RaidStarter:
+  MobName: RaidStarter
   World: world
   X: 723
   Y: 82
   Z: -1293
   Radius: 0
-  UseTimer: true
+  UseTimer: false
   MaxMobs: '1'
   MobLevel: '1'
   MobsPerSpawn: 1
-  Cooldown: 60
-  CooldownTimer: 3
-  Warmup: 0
+  Cooldown: 0
+  CooldownTimer: 0
+  Warmup: 360000
   WarmupTimer: 0
-  CheckForPlayers: true
-  ActivationRange: 40
+  CheckForPlayers: false
+  ActivationRange: 0
   ScalingRange: 25.0
   LeashRange: 32
   HealOnLeash: false

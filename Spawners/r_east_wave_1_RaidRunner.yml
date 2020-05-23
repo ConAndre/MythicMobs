@@ -1,10 +1,10 @@
-RaidRunner15:
-  SpawnerGroup: Raider1
+wave_1_RaidRunner:
+  SpawnerGroup: wave_1
   MobName: RaidRunner
   World: world
-  X: 724
+  X: 773
   Y: 84
-  Z: -1245
+  Z: -1294
   Radius: 0
   UseTimer: true
   MaxMobs: '0'
@@ -14,10 +14,10 @@ RaidRunner15:
   CooldownTimer: 0
   Warmup: 0
   WarmupTimer: 0
-  CheckForPlayers: true
-  ActivationRange: 255
+  CheckForPlayers: false
+  ActivationRange: 0
   ScalingRange: 25.0
-  LeashRange: 255
+  LeashRange: 125
   HealOnLeash: false
   ResetThreatOnLeash: false
   ShowFlames: false
