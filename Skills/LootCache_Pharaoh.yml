@@ -2,6 +2,7 @@ EnableLoot_Pharaoh:
   Skills:
   - summon{mob=Cache_Pharaoh;amount=1;noise=0} @Self
   - setvariable{var=target.AllowedToLoot-Pharaoh;t=STRING;value="true"}
+  - sendtoast{icon=DIAMOND; iconnbt={CustomModelData:1};message="&A&LKill <mob.name>!";frame=challenge} @PlayersInRadius{r=16}
 Loot_Pharaoh:
   TargetConditions:
   - variableisset target.AllowedToLoot-Pharaoh true

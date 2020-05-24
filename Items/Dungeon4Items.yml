@@ -5,5 +5,69 @@ NexusBow:
   - '&cNexus Bow'
   Enchantments:
   - ARROW_DAMAGE:8
-  - ARROW_FIRE:1
+  - ARROW_FIRE:4
   - ARROW_INFINITE:1
+Loot_NexusHelmet:
+  Id: IRON_HELMET
+  Display: '&cNexus Helmet'
+  Lore:
+  - '&cNexus Armor'
+  - ''
+  - '&L&cNexus'
+  - ''
+  - '&L&F&KO&R&L&eCommon Loot&F&KO'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:3
+  Attributes:
+    Head:
+      Health: 2
+      Armor: 15
+      ArmorToughness: 2
+Loot_NexusChestplate:
+  Id: IRON_CHESTPLATE
+  Display: '&cNexus Chestplate'
+  Lore:
+  - '&cNexus Armor'
+  - ''
+  - '&L&cNexus'
+  - ''
+  - '&L&F&KO&R&L&eCommon Loot&F&KO'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:3
+  Attributes:
+    Chest:
+      Health: 2
+      Armor: 15
+      ArmorToughness: 2
+Loot_NexusLeggings:
+  Id: IRON_LEGGINGS
+  Display: '&cNexus Leggings'
+  Lore:
+  - '&cNexus Armor'
+  - ''
+  - '&L&cNexus'
+  - ''
+  - '&L&F&KO&R&L&eCommon Loot&F&KO'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:3
+  Attributes:
+    Legs:
+      Health: 2
+      Armor: 15
+      ArmorToughness: 2
+Loot_NexusBoots:
+  Id: IRON_BOOTS
+  Display: '&cNexus Boots'
+  Lore:
+  - '&cNexus Armor'
+  - ''
+  - '&L&cNexus'
+  - ''
+  - '&L&F&KO&R&L&eCommon Loot&F&KO'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:3
+  Attributes:
+    Feet:
+      Health: 2
+      Armor: 15
+      ArmorToughness: 2

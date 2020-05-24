@@ -1,4 +1,5 @@
 SkeletalKnight15:
+  SpawnerGroup: Dungeon1
   MobName: SkeletalKnight
   World: world
   X: -32
@@ -11,12 +12,12 @@ SkeletalKnight15:
   MobsPerSpawn: 1
   Cooldown: 0
   CooldownTimer: 0
-  Warmup: 180
+  Warmup: 45
   WarmupTimer: 0
   CheckForPlayers: true
-  ActivationRange: 40
+  ActivationRange: 45
   ScalingRange: 25.0
-  LeashRange: 15
+  LeashRange: 45
   HealOnLeash: false
   ResetThreatOnLeash: false
   ShowFlames: false

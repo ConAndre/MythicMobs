@@ -2,48 +2,6 @@
 # http://www.mythicmobs.net
 #
 
-##Boss Mobs
-SkeletonKingLootTable:
-  Conditions:
-  - playerwithin 40
-  Drops:
-  - SkeletonKingItemDrops 1
-SkeletonKingItemDrops:
-  MinItems: 1
-  MaxItems: 1
-  Drops:
-  - Loot_KingsCrown 1 0.12
-  - Loot_KingsAxe 1 0.12
-  - Loot_KingsCrown_DULLED 1 0.38
-  - Loot_KingsAxe_DULLED 1 0.38
-
-LostZombieLootTable:
-  Conditions:
-  - playerwithin 40
-  Drops:
-  - LostZombieItemDrops 1
-LostZombieItemDrops:
-  MinItems: 1
-  MaxItems: 2
-  Drops:
-  - Loot_LostZombieSword 1 0.16
-  - Loot_LostZombieChestplate 1 0.16
-  - Loot_LostZombieLeggings 1 0.16
-  - GOLDEN_APPLE 3 0.52
-
-LostArcherLootTable:
-  Conditions:
-  - playerwithin 40
-  Drops:
-  - LostArcherItemDrops 1
-LostArcherItemDrops:
-  MinItems: 1
-  MaxItems: 2
-  Drops:
-  - Loot_LostArcherBoots 1 0.16
-  - Loot_LostArcherBow 1 0.16
-  - GOLDEN_APPLE 3 0.68
-
 First_DungeonLootTable:
   Conditions:
   - playerwithin 40
@@ -53,9 +11,10 @@ First_DungeonLootDrop:
   MinItems: 1
   MaxItems: 1
   Drops:
-  - Loot_LostArcherBoots 1 0.03
-  - Loot_LostArcherBow 1 0.03
-  - Loot_LostZombieSword 1 0.03
-  - Loot_LostZombieChestplate 1 0.03
-  - Loot_LostZombieLeggings 1 0.03
-  - GOLDEN_APPLE 1 0.85
+  - Loot_LostArcherBoots 1 0.04
+  - Loot_LostArcherBow 1 0.04
+  - Loot_LostArcherHelmet 1 0.04
+  - Loot_LostZombieSword 1 0.04
+  - Loot_LostZombieChestplate 1 0.04
+  - Loot_LostZombieLeggings 1 0.04
+  - GOLDEN_APPLE 1 0.76

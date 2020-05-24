@@ -1,0 +1,36 @@
+Loot_Artifact_SlimePoison:
+  Cooldown: 15
+  Skills:
+    - message{m="&A&LYou poison all targets around you!"} @self
+    - effect:particles{p=happyVillager;amount=140;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @Self
+    - potion{type=POISON;duration=200;level=1} @EntitiesInRadius{r=8;ignore=players}
+    - delay 300
+    - message{m="&A&LCorrosive Residue is recharged!"} @self
+Loot_Artifact_SkeletalWither:
+  Cooldown: 15
+  Skills:
+    - message{m="&A&LYou wither all targets around you!"} @self
+    - effect:particles{p=smoke_normal;amount=140;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @Self
+    - potion{type=Wither;duration=200;level=1} @EntitiesInRadius{r=8;ignore=players}
+    - delay 300
+    - message{m="&A&LWither Rose is recharged!"} @self
+
+Loot_SquawksBeakSpell:
+  Cooldown: 15
+  Skills:
+  - message{m="&A&LYou used Jump Volley!"} @self
+  - sound{s=entity.parrot.ambient} @self
+  - jump{velocity=.95}
+  - delay 10
+  - arrowvolley{a=1;s=1;v=100;f=120;rd=80} @EntitiesInRadius{r=15;ignore=players}
+  - delay 290
+  - message{m="&A&LJump Volley is recharged!"} @self
+
+Loot_SquawksCookieSpell:
+  Cooldown: 60
+  Skills:
+  - message{m="&A&LYou call a parrot upon yourself!"} @self
+  - sound{s=entity.parrot.ambient} @self
+  - summon{mob=FriendlyParrot;amount=1;r=0} @self
+  - delay 1200
+  - message{m="&A&LSquawk<&sq>s Cookie is recharged!"} @self

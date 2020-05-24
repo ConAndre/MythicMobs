@@ -36,16 +36,37 @@ Loot_SquawksBeak:
   Id: bow
   Display: '&eSquawk<&sq>s Beak'
   Lore:
-  - '&1 Squawk<&sq>s flaming beak that he has used'
+  - '&1Squawk<&sq>s flaming beak that he has used'
   - 'to peck down thousands of warriors.'
   - ''
   - '&L&cSquawk'
   - ''
   - '&L&F&KO&R&L&9Uncommon Loot&F&KO'
+  - '&L&F&KO&R&L&DSpell&F&KO'
   Enchantments:
   - ARROW_DAMAGE:3
   - ARROW_INFINITE:1
   - ARROW_FIRE:2
+  Skills:
+  - skill{s=Loot_SquawksBeakSpell} ~onSwing
+Loot_SquawksCookie:
+  Id: Cookie
+  Display: '&eSquawk<&sq>s Cookie'
+  Lore:
+  - '&1Squawk<&sq>s snack that he has used'
+  - 'to peck summon thousands of parrots.'
+  - ''
+  - '&L&cSquawk'
+  - ''
+  - '&L&F&KO&R&L&DSpell&F&KO'
+  Enchantments:
+  - ARROW_DAMAGE:3
+  - ARROW_INFINITE:1
+  - ARROW_FIRE:2
+  Skills:
+  - skill{s=Loot_SquawksCookieSpell} ~onUse
+  Hide:
+  - ENCHANTS
 Loot_PirateHelmet:
   Id: IRON_HELMET
   Display: '&cPirate Helmet'
@@ -55,11 +76,13 @@ Loot_PirateHelmet:
   - '&L&cPirate'
   - ''
   - '&L&F&KO&R&L&eCommon Loot&F&KO'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:1
   Attributes:
     Head:
       Health: 1
       Armor: 15
-      ArmorToughness: 1
+      ArmorToughness: 2
 Loot_PirateChestplate:
   Id: IRON_CHESTPLATE
   Display: '&cPirate Chestplate'
@@ -69,11 +92,13 @@ Loot_PirateChestplate:
   - '&L&cPirate'
   - ''
   - '&L&F&KO&R&L&eCommon Loot&F&KO'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:1
   Attributes:
     Chest:
       Health: 1
       Armor: 15
-      ArmorToughness: 1
+      ArmorToughness: 2
 Loot_PirateLeggings:
   Id: IRON_LEGGINGS
   Display: '&cPirate Leggings'
@@ -83,11 +108,13 @@ Loot_PirateLeggings:
   - '&L&cPirate'
   - ''
   - '&L&F&KO&R&L&eCommon Loot&F&KO'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:1
   Attributes:
     Legs:
       Health: 1
       Armor: 15
-      ArmorToughness: 1
+      ArmorToughness: 2
 Loot_PirateBoots:
   Id: IRON_BOOTS
   Display: '&cPirate Boots'
@@ -97,11 +124,13 @@ Loot_PirateBoots:
   - '&L&cPirate'
   - ''
   - '&L&F&KO&R&L&eCommon Loot&F&KO'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:1
   Attributes:
     Feet:
       Health: 1
       Armor: 15
-      ArmorToughness: 1
+      ArmorToughness: 2
 Loot_PirateWeapon:
   Id: IRON_SWORD
   Display: '&cPirate Weapon'
@@ -153,13 +182,15 @@ Loot_CaptainChestplate:
   - '&L&cCaptain'
   - ''
   - '&L&F&KO&R&L&1Rare Loot&F&KO'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:3
+  - PROTECTION_PROJECTILE:3
+  - PROTECTION_FIRE:3
   Attributes:
     Chest:
       Health: 3
-      Armor: 22
-      ArmorToughness: 1
-
-
+      Armor: 15
+      ArmorToughness: 2
 #Dulled
 Loot_CaptainWeapon_DULLED:
   Id: flint_and_steel
@@ -187,10 +218,12 @@ Loot_CaptainChestplate_DULLED:
   - '&L&cCaptain'
   - ''
   - '&L&F&KO&R&L&8Dulled Loot&F&KO'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:2
   Attributes:
     Chest:
-      Health: 2
-      Armor: 20
+      Health: 3
+      Armor: 15
       ArmorToughness: 2
 Loot_SquawksBeak_DULLED:
   Id: bow

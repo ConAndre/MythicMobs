@@ -170,11 +170,14 @@ CaptainBlastProjectile:
 
 SummonParrots:
   Skills:
-  - message{m="<mob.name><&co> &cMy vengeance will be bloody."} @target
-  - delay 20
   - summon{mob=PirateParrot;amount=3;noise=5} @Self
   - delay 20
-  - summon{mob=PirateParrot;amount=2;noise=5} @Self
+  - summon{mob=PirateParrot;amount=3;noise=5} @Self
+
+
+
+
+
 
 
 

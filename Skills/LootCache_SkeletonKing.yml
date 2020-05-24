@@ -2,6 +2,8 @@ EnableLoot_SkeletonKing:
   Skills:
   - summon{mob=Cache_SkeletonKing;amount=1;noise=0} @Self
   - setvariable{var=target.AllowedToLoot-SkeletonKing;t=STRING;value="true"}
+  - sendtoast{icon=DIAMOND; iconnbt={CustomModelData:1};message="&A&LKill <mob.name>!";frame=challenge} @PlayersInRadius{r=16}
+
 Loot_SkeletonKing:
   TargetConditions:
   - variableisset target.AllowedToLoot-SkeletonKing true
@@ -16,7 +18,7 @@ Loot_SkeletonKing:
   - skill{s=Loot_SkeletonKingBoosted} @trigger 1
   - randomskill{skills=Loot_KingsCrown_DULLED,Loot_KingsAxe_DULLED} @trigger 1
   - randomskill{skills=Loot_KingsCrown,Loot_KingsAxe} @trigger .12
-  - delay 1800
+  - delay 600
   - remove @self
 
 Loot_SkeletonKingBoosted:

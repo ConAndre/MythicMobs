@@ -362,16 +362,20 @@ CacheReroll:
   Id: blaze_rod
   Display: '&6&N&LLoot Reroller'
   Lore:
-  - '&1 Squawk<&sq>s flaming beak that he has used'
-  - 'to peck down thousands of warriors.'
+  - '&6Use this to get another chance at'
+  - '&6looting a boss cache'
+  - '&6(Use before opening cache)'
   - ''
-  - '&L&cSquawk'
+  - '&L&cBoss Drop'
   - ''
   - '&L&F&KO&R&L&5Consumable&F&KO'
   Enchantments:
   - ARROW_DAMAGE:3
   Skills:
   - skill{s=CacheReroll} @self ~onUse
+  Hide:
+  - ENCHANTS
+
 
 
 

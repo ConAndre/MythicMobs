@@ -35,7 +35,7 @@ Starter_Boots:
       Armor: 5
 
 Starter_Sword:
-  Id: iron_sword
+  Id: stone_sword
   Data: 0
   Display: '&AStarter Sword'
   Lore:

@@ -55,8 +55,8 @@ Loot_MummyHelmet:
     Color: 239,221,111
   Attributes:
     Head:
-      Armor: 10
-
+      Armor: 15
+      ArmorToughness: 1
 Loot_MummyChestplate:
   Id: LEATHER_CHESTPLATE
   Display: '&EMummy Chestplate'
@@ -70,7 +70,8 @@ Loot_MummyChestplate:
     Color: 239,221,111
   Attributes:
     Chest:
-      Armor: 10
+      Armor: 15
+      ArmorToughness: 1
 
 Loot_MummyLeggings:
   Id: LEATHER_LEGGINGS
@@ -85,7 +86,8 @@ Loot_MummyLeggings:
     Color: 239,221,111
   Attributes:
     Legs:
-      Armor: 10
+      Armor: 15
+      ArmorToughness: 1
 
 Loot_MummyBoots:
   Id: LEATHER_BOOTS
@@ -100,7 +102,9 @@ Loot_MummyBoots:
     Color: 239,221,111
   Attributes:
     FEET:
-      Armor: 10
+      Armor: 15
+      ArmorToughness: 1
+
 
 Loot_MummyWeapon:
   Id: golden_hoe

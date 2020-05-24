@@ -6,7 +6,7 @@
 PiranhaBoss:
   Type: GUARDIAN
   Display: '&9Big Bite'
-  Health: 1000
+  Health: 1250
   Damage: 50
   BossBar:
     Enabled: true
@@ -38,7 +38,7 @@ PiranhaBoss:
 NexusPetBoss:
   Type: wolf
   Display: '&cNexus<&sq> Pet'
-  Health: 1750
+  Health: 1500
   Damage: 50
   Faction: Nexus
   BossBar:
@@ -111,7 +111,7 @@ NexusBoss:
 AzureBoss:
   Type: WITHER_SKELETON
   Display: '&9Azure'
-  Health: 1250
+  Health: 1500
   Damage: 50
   Faction: Nexus
   Disguise:
@@ -152,7 +152,7 @@ CarmineBoss:
   Disguise:
     Type: Player
     Skin: Red
-  Health: 1250
+  Health: 1500
   Damage: 50
   Faction: Nexus
   BossBar:
@@ -314,7 +314,7 @@ Piranha:
 NexusArcher:
   Type: SKELETON
   Display: '&cNexus<&sq> Archer'
-  Health: 90
+  Health: 150
   Faction: Nexus
   Equipment:
   - MobIronHelmet HEAD
@@ -340,7 +340,7 @@ NexusArcher:
 NexusGuard:
   Type: SKELETON
   Display: '&cNexus<&sq> Guard'
-  Health: 130
+  Health: 190
   Damage: 40
   Faction: Nexus
   Equipment:
@@ -348,8 +348,7 @@ NexusGuard:
   - MobIronChestplate CHEST
   - MobIronLeggings LEGS
   - MobIronBoots FEET
-  - Iron_Sword HAND
-
+  - MobIronSword HAND
   Options:
     AlwaysShowName: false
     MovementSpeed: 0.275

@@ -9,7 +9,7 @@ PirateCaptain:
   Disguise:
     Type: Player
     Skin: Captain
-  Health: 650
+  Health: 1000
   Damage: 40
   Armor: 0
   Faction: Pirate
@@ -50,7 +50,7 @@ PirateGolding:
   Disguise:
     Type: Player
     Skin: Pirate
-  Health: 500
+  Health: 1000
   Damage: 40
   Armor: 0
   Faction: Pirate
@@ -80,6 +80,7 @@ PirateGolding:
   AITargetSelectors:
   - 0 clear
   - 1 players
+  - 2 attacker
   Skills:
   - message{cooldown=20;m="<mob.name><&co> Get off me port!"} @PlayersInRadius{r=40} ~onCombat >0 0.2
   - message{m="<mob.name><&co> Eating you alive will be a real treat! Braw hah hah!"} @PlayersInRadius{r=40} ~onPlayerKill >0 1
@@ -100,7 +101,7 @@ PirateParrotBoss:
   Disguise:
     Type: parrot
   Faction: Pirate
-  Health: 500
+  Health: 1000
   Damage: 40
   Armor: 0
   BossBar:
@@ -130,6 +131,7 @@ PirateParrotBoss:
   AITargetSelectors:
   - 0 clear
   - 1 players
+  - 2 attacker
   Skills:
   - skill{s=ParrotJumpBarrage} @self ~onDamaged 0.05
   - skill{s=ParrotPeck} @Target ~onAttack 0.1
@@ -137,6 +139,8 @@ PirateParrotBoss:
   - skill{s=ParrotJumpLightning} @self ~onDamaged =50%
   - skill{s=SummonParrots} @self ~onDamaged =35%
   - skill{s=ParrotLeapAttack} @self ~onTimer:120
+  - skill{s=EnableLoot_Parrot} @PlayersInRadius{r=16} ~onDeath
+
   Drops:
   - PirateParrotBossLootTable
 ##################################################REGULARS####################################################
@@ -172,7 +176,6 @@ PirateParrot:
     Type: parrot
   Health: 35
   Damage: 20
-  Armor: 0
   Faction: Pirate
   Armor: 0
   Equipment:
@@ -196,12 +199,46 @@ PirateParrot:
   AITargetSelectors:
   - 0 clear
   - 1 players
+  - 2 attacker
   Skills:
   - skill{s=ParrotLeapAttack} @self ~onTimer:80
+FriendlyParrot:
+  Type: BABY_ZOMBIE
+  Display: '&A&LFallop'
+  Disguise:
+    Type: parrot
+  Faction: Friendly
+  Health: 35
+  Damage: 10
+  Armor: 50
+  Equipment:
+  - MobIronHelmet HEAD
+  - MobIronChestplate CHEST
+  - MobIronLeggings LEGS
+  - MobIronBoots FEET
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.4
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+  Modules:
+    ThreatTable: true
+  DamageModifiers:
+  - Fall -1
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 float
+  AITargetSelectors:
+  - 0 clear
+  - 1 monsters
+  Skills:
+
+
 Pirate:
   Type: Skeleton
   Display: '&cPirate'
-  Health: 75
+  Health: 120
   Damage: 30
   Armor: 0
   Faction: Pirate
@@ -226,6 +263,7 @@ Pirate:
   AITargetSelectors:
   - 0 clear
   - 1 players
+  - 2 attacker
   Skills:
   - skill{s=FireballProjectile;cooldown=20} @target ~onAttack 0.35
   - skill{s=LeapAttack} @self ~onTimer:100
@@ -234,7 +272,7 @@ Pirate:
 PirateArcher:
   Type: SKELETON
   Display: '&cPirate Archer'
-  Health: 65
+  Health: 100
   Armor: 0
   Faction: Pirate
   Equipment:
@@ -254,6 +292,7 @@ PirateArcher:
   AITargetSelectors:
   - 0 clear
   - 1 players
+  - 2 attacker
   Skills:
   - skill{s=SmokeBlastProjectile;cooldown=20} @target ~onAttack 0.35
   Drops:

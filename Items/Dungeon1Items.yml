@@ -15,6 +15,36 @@ LostArcherBow:
 ##Lootables
 ##Helmet, Chestplate, Leggings, Boots, Bow, Axe, Sword
 
+Loot_LostArcherHelmet:
+  Id: iron_helmet
+  Data: 0
+  Display: '&3&LHelmet of the &c&LLost &3&Archer'
+  Lore:
+  - '&6Helmet used by'
+  - '&6the Lost Archer.'
+  - ''
+  - '&L&cLost Archer'
+  - ''
+  - '&L&F&KO&R&L&eCommon Loot&F&KO'
+  Attributes:
+    Head:
+      Armor: 7
+Loot_LostZombieLeggings:
+  Id: iron_leggings
+  Data: 0
+  Display: '&3&LLeggings of the &c&LLost &3&LZombie'
+  Lore:
+  - '&6Leggings used by'
+  - '&6the Lost Zombie.'
+  - ''
+  - '&L&cLost Zombie'
+  - ''
+  - '&L&F&KO&R&L&eCommon Loot&F&KO'
+  Attributes:
+    Legs:
+      Armor: 7
+
+
 Loot_LostZombieChestplate:
   Id: iron_chestplate
   Data: 0

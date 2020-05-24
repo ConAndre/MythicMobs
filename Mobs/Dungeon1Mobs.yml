@@ -6,8 +6,8 @@
 SkeletonKing:
   Type: WITHER_SKELETON
   Display: '&L&cSkeleton King'
-  Health: 350
-  Damage: 20
+  Health: 500
+  Damage: 12
   Armor: 0
   BossBar:
     Enabled: true
@@ -23,7 +23,6 @@ SkeletonKing:
   - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
   - skill{s=EnableLoot_SkeletonKing} @PlayersInRadius{r=16} ~onDeath
   - skill{s=TeleportToSpawnOnDeath} ~onDeath
-  - sendtoast{icon=DIAMOND; iconnbt={CustomModelData:1};message="&A&LKill <mob.name>!";frame=challenge} @PlayersInRadius{r=16} ~onDeath
   Equipment:
   - MobGoldHelmet HEAD
   - MobIronAxe HAND
@@ -38,7 +37,7 @@ LostZombie:
   Type: ZOMBIE
   Display: '&L&cLost Zombie'
   Health: 100
-  Damage: 20
+  Damage: 10
   Armor: 0
   Options:
     AlwaysShowName: false
@@ -55,7 +54,7 @@ LostZombie:
   - MobIronSword HAND
   - SHIELD OFFHAND
   Drops:
-  - LostZombieLootTable
+  - First_DungeonLootTable
   AIGoalSelectors:
   - 0 clear
   - 1 meleeattack
@@ -63,10 +62,11 @@ LostZombie:
   AITargetSelectors:
   - 0 clear
   - 1 players
+  - 2 attacker
   DamageModifiers:
   Skills:
   - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
-  # - skill{s=NerfDamageSkeleton} @self ~onSpawn
+  - randomskill{skills=Loot_LostZombieSword,Loot_LostZombieChestplate,Loot_LostZombieLeggings} ~onDeath 1
 LostArcher:
   Type: Skeleton
   Display: '&L&cLost Archer'
@@ -86,14 +86,17 @@ LostArcher:
   - DepthIronBoots FEET
   - LostArcherBow HAND
   Drops:
-  - LostArcherLootTable
+  - First_DungeonLootTable
   AIGoalSelectors:
+  - 0 float
   AITargetSelectors:
   - 0 clear
   - 1 players
+  - 2 attacker
   DamageModifiers:
   Skills:
   - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
+  - randomskill{skills=Loot_LostArcherHelmet,Loot_LostArcherBoots,Loot_LostArcherBow} ~onDeath 1
 
 
 ##################################################REGULARS####################################################
@@ -110,11 +113,12 @@ SkeletalMinion:
   AITargetSelectors:
   - 0 clear
   - 1 players
+  Skills:
 SkeletalKnight:
   Type: WITHER_SKELETON
   Display: '&cSkeletal Knight'
   Health: 30
-  Damage: 10
+  Damage: 5
   Armor: 0
   Equipment:
   - MobIronSword HAND
@@ -135,6 +139,7 @@ SkeletalKnight:
   AITargetSelectors:
   - 0 clear
   - 1 players
+  - 2 attacker
   Skills:
   - dropitem{i=Loot_Artifact_SkeletalWither} ~onDeath .05
 AngrySludge:
@@ -158,6 +163,7 @@ AngrySludge:
   AITargetSelectors:
   - 0 clear
   - 1 players
+  - 2 attacker
   Drops:
   - First_DungeonLootTable
   Skills:

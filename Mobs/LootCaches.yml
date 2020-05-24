@@ -21,7 +21,7 @@ Cache_SkeletonKing:
 
 Cache_Pharaoh:
   Type: SHEEP
-  Display: '&N&ALoot Cache 1'
+  Display: '&N&ALoot Cache'
   Disguise:
     Type: BLOCK
     Block: BEACON
@@ -39,6 +39,27 @@ Cache_Pharaoh:
     Silent: true
   Skills:
   - skill{s=Loot_Pharaoh} ~onInteract
+
+Cache_Parrot:
+  Type: SHEEP
+  Display: '&N&ALoot Cache'
+  Disguise:
+    Type: BLOCK
+    Block: BEACON
+    BlockData: 0
+    ShowName: true
+  Health: 2000
+  Options:
+    MovementSpeed: 0.0
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+    Collidable: true
+    Invincible: true
+    Interactable: true
+    NoAI: true
+    Silent: true
+  Skills:
+  - skill{s=Loot_Parrot} ~onInteract
 
 
 

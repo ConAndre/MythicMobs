@@ -6,7 +6,7 @@
 Pharaoh:
   Type: Skeleton
   Display: '&ePharaoh'
-  Health: 500
+  Health: 750
   Damage: 30
   Armor: 0
   Faction: Mummy
@@ -106,7 +106,7 @@ IllusionMob:
 Mummy:
   Type: ZOMBIE
   Display: '&EMummy'
-  Health: 45
+  Health: 65
   Damage: 20
   Armor: 0
   Faction: Mummy
@@ -136,7 +136,7 @@ Mummy:
 MummyArcher:
   Type: SKELETON
   Display: '&EMummy Archer'
-  Health: 35
+  Health: 50
   Armor: 0
   Faction: Mummy
   Equipment:
