@@ -1,0 +1,64 @@
+Loot_SanctuaryHelmet:
+  Id: IRON_HELMET
+  Display: '&cNexus Helmet'
+  Lore:
+  - '&cNexus Armor'
+  - ''
+  - '&L&cNexus'
+  - ''
+  - '&L&F&KO&R&L&eCommon Loot&F&KO'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:4
+  Attributes:
+    Head:
+      Health: 2
+      Armor: 15
+      ArmorToughness: 2
+Loot_SChestplate:
+  Id: IRON_CHESTPLATE
+  Display: '&cNexus Chestplate'
+  Lore:
+  - '&cNexus Armor'
+  - ''
+  - '&L&cNexus'
+  - ''
+  - '&L&F&KO&R&L&eCommon Loot&F&KO'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:5
+  Attributes:
+    Chest:
+      Health: 2
+      Armor: 15
+      ArmorToughness: 2
+Loot_SanctuaryLeggings:
+  Id: IRON_LEGGINGS
+  Display: '&cNexus Leggings'
+  Lore:
+  - '&cNexus Armor'
+  - ''
+  - '&L&cNexus'
+  - ''
+  - '&L&F&KO&R&L&eCommon Loot&F&KO'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:5
+  Attributes:
+    Legs:
+      Health: 2
+      Armor: 15
+      ArmorToughness: 2
+Loot_SanctuaryBoots:
+  Id: IRON_BOOTS
+  Display: '&cNexus Boots'
+  Lore:
+  - '&cNexus Armor'
+  - ''
+  - '&L&cNexus'
+  - ''
+  - '&L&F&KO&R&L&eCommon Loot&F&KO'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:4
+  Attributes:
+    Feet:
+      Health: 2
+      Armor: 15
+      ArmorToughness: 2

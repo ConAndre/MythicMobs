@@ -27,14 +27,13 @@ PirateCaptain:
   - skill{s=CaptainBlastProjectile} @Target ~onTimer:120
   - skill{s=PharaohFin} @self =15%
   - skill{s=CallPirateBoat} @self =10%
+  - skill{s=EnableLoot_Captain} @PlayersInRadius{r=25} ~onDeath
   Equipment:
   - MobIronHelmet HEAD
   - MobIronChestplate CHEST
   - MobIronLeggings LEGS
   - MobIronBoots FEET
   - CaptainWeapon HAND
-  Drops:
-  - PirateCaptainLootTable
   Options:
     AlwaysShowName: false
     MovementSpeed: 0.275
@@ -89,10 +88,7 @@ PirateGolding:
   - skill{s=PharaohFin} @self =15%
   - skill{s=SmashAttackII} @Target >0 0.01
   - skill{s=AngryAura} ~onTimer:600
-  - skill{s=Death} @Self ~onDeath
-  Drops:
-  - PirateGoldingLootTable
-
+  - skill{s=EnableLoot_Golding} @PlayersInRadius{r=25} ~onDeath
 PirateParrotBoss:
   Type: BABY_ZOMBIE
   Display: '&cSquawk'
@@ -138,8 +134,6 @@ PirateParrotBoss:
   - skill{s=SummonParrots} @self ~onDamaged =35%
   - skill{s=ParrotLeapAttack} @self ~onTimer:120
   - skill{s=EnableLoot_Parrot} @PlayersInRadius{r=25} ~onDeath
-  Drops:
-  - PirateParrotBossLootTable
 ##################################################REGULARS####################################################
 PirateJunkee:
   Type: BABY_ZOMBIE
@@ -232,7 +226,6 @@ FriendlyParrot:
   - 0 clear
   - 1 monsters
   Skills:
-  - skill{s=SetOwner} @trigger ~onSpawn
   - skill{s=RemoveSelf180s} ~onSpawn
   - skill{s=LeapAttack;cooldown=5} ~onTimer:40
 

@@ -53,7 +53,7 @@ Loot_GoldingShield:
   Enchantments:
   -
   Skills:
-  - skill{s=GoldingShield} ~onUse
+  - skill{s=Loot_GoldingShield_Spell} ~onRightClick
 
 Loot_SquawksBeak:
   Id: bow
@@ -282,7 +282,7 @@ Loot_GoldingShield_DULLED:
   Enchantments:
   -
   Skills:
-  - skill{s=GoldingShield_DULLED} ~onUse
+  - skill{s=Loot_GoldingShield_DULLED_Spell} ~onRightClick
 
 
 

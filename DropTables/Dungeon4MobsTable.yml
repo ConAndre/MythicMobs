@@ -10,7 +10,7 @@ Fourth_DungeonLootTable:
   - playerwithin 40
   Drops:
   - Fourth_DungeonLootDrop 1
-First_DungeonLootDrop:
+Fourth_DungeonLootDrop:
   MinItems: 1
   MaxItems: 1
   Drops:

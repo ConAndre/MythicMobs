@@ -40,6 +40,47 @@ Cache_Pharaoh:
   Skills:
   - skill{s=Loot_Pharaoh} ~onInteract
 
+Cache_Captain:
+  Type: SHEEP
+  Display: '&N&ALoot Cache'
+  Disguise:
+    Type: BLOCK
+    Block: BEACON
+    BlockData: 0
+    ShowName: true
+  Health: 2000
+  Options:
+    MovementSpeed: 0.0
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+    Collidable: true
+    Invincible: true
+    Interactable: true
+    NoAI: true
+    Silent: true
+  Skills:
+  - skill{s=Loot_Captain} ~onInteract
+Cache_Golding:
+  Type: SHEEP
+  Display: '&N&ALoot Cache'
+  Disguise:
+    Type: BLOCK
+    Block: BEACON
+    BlockData: 0
+    ShowName: true
+  Health: 2000
+  Options:
+    MovementSpeed: 0.0
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+    Collidable: true
+    Invincible: true
+    Interactable: true
+    NoAI: true
+    Silent: true
+  Skills:
+  - skill{s=Loot_Golding} ~onInteract
+
 Cache_Parrot:
   Type: SHEEP
   Display: '&N&ALoot Cache'

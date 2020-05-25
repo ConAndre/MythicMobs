@@ -22,7 +22,6 @@ SkeletonKing:
   - skill{s=SummonSkeletons} @self 0.1
   - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
   - skill{s=EnableLoot_SkeletonKing} @PlayersInRadius{r=25} ~onDeath
-  - skill{s=TeleportToSpawnOnDeath} ~onDeath
   Equipment:
   - MobGoldHelmet HEAD
   - MobIronAxe HAND

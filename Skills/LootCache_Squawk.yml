@@ -2,7 +2,8 @@ EnableLoot_Parrot:
   Skills:
   - summon{mob=Cache_Parrot;amount=1;noise=0} @Self
   - setvariable{var=target.AllowedToLoot-Parrot;t=STRING;value="true"}
-  - sendtoast{icon=DIAMOND; iconnbt={CustomModelData:1};message="&A&LKill <mob.name>!";frame=challenge} @PlayersInRadius{r=16}
+  - skill{s=Death} @Self
+  - sendtoast{icon=DIAMOND; iconnbt={CustomModelData:1};message="&A&LKill <mob.name>!";frame=challenge} @PlayersInRadius{r=25}
 Loot_Parrot:
   TargetConditions:
   - variableisset target.AllowedToLoot-Parrot true
@@ -50,7 +51,7 @@ Loot_SquawksCookie:
 Loot_SquawksBeak_DULLED:
   Skills:
   - giveitem{i=Loot_SquawksBeak_DULLED} @trigger 1
-  - message{m="&A&LYou looted a &e&Ldulled &E&LSquawk<&sq>s Beak"} @trigger 1
+  - message{m="&A&LYou looted a &8&Ldulled &E&LSquawk<&sq>s Beak"} @trigger 1
 Loot_ParrotLooted:
   Skills:
   - message{m="&c&LYou have already looted this cache &A&Lor &c&Lyou did not participate in this battle!"} @trigger

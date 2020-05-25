@@ -1,6 +1,29 @@
 # For more information, check out the plugin manual or join us on Discord:
 # http://www.mythicmobs.net
 #
+
+NexusChainLightning:
+  Skills:
+  - message{m="<mob.name><&co> &cFear me."} @PlayersInRadius{r=20}
+  - chain{
+      bounces=5;
+      bounceRadius=10;
+      bounceDelay=1;
+      hitSelf=false;
+      hitPlayers=true;
+      hitNonPlayers=false;
+      hitTarget=true;
+      onBounce=[
+        - effect:particleline{p=flame;fromOrigin=true}
+        - effect:sound{s=entity.generic.explode;v=1;p=0.5} @target
+        - lightning{d=6} @target
+      ];
+      bounceConditions=[
+        - inlineofsight
+      ];
+    }
+
+
 SummonCarmineMinions:
   Skills:
   - message{m="<mob.name><&co> &cYour window to run away... is closing."} @target

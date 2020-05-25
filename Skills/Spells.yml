@@ -52,18 +52,43 @@ Loot_Artifact_SummonEye_Spell:
   - delay 3600
   - message{m="&A&LEye Summon is recharged!"} @self
 
-GoldingShield:
+Loot_GoldingShield_Spell:
   Cooldown: 10
   Skills:
   - message{m="&A&LYou harness a mighty aura!"} @self
   - shield{amount=4;maxShield=8} @self
-  - delay 300
+  - delay 200
   - message{m="&A&LGolding Shield is recharged!"} @self
 
-GoldingShield_DULLED:
+Loot_GoldingShield_DULLED_Spell:
   Cooldown: 10
   Skills:
   - message{m="&A&LYou harness a mighty aura!"} @self
   - shield{amount=2;maxShield=4} @self
-  - delay 300
+  - delay 200
   - message{m="&A&LGolding Shield is recharged!"} @self
+
+Loot_NexusShard_Spell:
+  Cooldown: 15
+  Skills:
+  - message{m="&A&LYou chain lightning your enemies!"} @self
+  - chain{
+      bounces=5;
+      bounceRadius=10;
+      bounceDelay=1;
+      hitSelf=false;
+      hitPlayers=false;
+      hitNonPlayers=true;
+      hitTarget=true;
+      onBounce=[
+        - effect:particleline{p=flame;fromOrigin=true}
+        - effect:sound{s=entity.generic.explode;v=1;p=0.5} @target
+        - lightning{d=40} @target
+      ];
+      bounceConditions=[
+        - inlineofsight
+      ];
+    }
+  - delay 300
+  - message{m="&A&LNexus Shard is recharged!"} @self
+

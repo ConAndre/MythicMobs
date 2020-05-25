@@ -79,15 +79,67 @@ Loot_NexusBow:
   Enchantments:
   - ARROW_DAMAGE:4
   - ARROW_INFINITE:1
-Loot_PirateWeapon:
+Loot_NexusSword:
   Id: IRON_SWORD
-  Display: '&cPirate Weapon'
+  Display: '&cNexus Weapon'
   Lore:
-  - '&cPirate Weapon'
+  - '&cNexus Weapon'
   - ''
-  - '&L&cPirate'
+  - '&L&cNexus'
   - ''
   - '&L&F&KO&R&L&eCommon Loot&F&KO'
   Attributes:
     MainHand:
       Damage: 13
+
+Loot_AzureBoots:
+  Id: Diamond_BOOTS
+  Display: '&cAzure Boots'
+  Enchantments:
+  - DEPTH_STRIDER:3
+  - PROTECTION_ENVIRONMENTAL:5
+  Lore:
+  - '&1Water guides the wearer'
+  - ''
+  - '&L&cAzure'
+  - ''
+  - '&L&F&KO&R&L&1Rare Loot&F&KO'
+  Attributes:
+    Feet:
+      Health: 3
+      Armor: 15
+      ArmorToughness: 2
+Loot_PiranhaLeggings:
+  Id: Diamond_Leggings
+  Display: '&cPiranha Leggings'
+  Enchantments:
+  - THORNS:7
+  - PROTECTION_ENVIRONMENTAL:5
+  Lore:
+  - '&1Wow this stuff is sharp!'
+  - ''
+  - '&L&cBig Bite'
+  - ''
+  - '&L&F&KO&R&L&1Rare Loot&F&KO'
+  Attributes:
+    Feet:
+      Health: 3
+      Armor: 15
+      ArmorToughness: 2
+Loot_NexusShard:
+  Id: Prismarine_shard
+  Enchantments:
+  - DEPTH_STRIDER:1
+  HIDE:
+  - ENCHANTS
+  Lore:
+  - '&1A shard from the armor of Nexus.'
+  - '&1It seems to harness a wonderful power.'
+  - ''
+  - '&L&cNexus'
+  - ''
+  - '&L&F&KO&R&L&1Rare Loot&F&KO'
+  - '&L&F&KO&R&L&DSpell&F&KO'
+  Skills:
+  - skill{s=Loot_NexusShard_Spell}
+

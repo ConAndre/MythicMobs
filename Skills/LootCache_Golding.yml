@@ -1,0 +1,53 @@
+EnableLoot_Golding:
+  Skills:
+  - summon{mob=Cache_Golding;amount=1;noise=0} @Self
+  - setvariable{var=target.AllowedToLoot-Golding;t=STRING;value="true"}
+  - skill{s=Death} @Self
+  - sendtoast{icon=DIAMOND; iconnbt={CustomModelData:1};message="&A&LKill <mob.name>!";frame=challenge} @PlayersInRadius{r=25}
+Loot_Golding:
+  TargetConditions:
+  - variableisset target.AllowedToLoot-Golding true
+  - varEquals{var=target.AllowedToLoot-Golding;value="false"} castinstead Loot_GoldingLooted
+  - varEquals{var=target.AllowedToLoot-Golding;value="true"}
+  Skills:
+  - setvariable{var=target.AllowedToLoot-Golding;t=STRING;value="false"}
+  - message{m="&A&LYou loot the cache!"} @trigger
+  - sound{s=block.ender_chest.open} @trigger
+  - delay 40
+  - sound{s=entity.item.pickup} @trigger
+  - skill{s=Loot_GoldingBoosted} @trigger 1
+  - randomskill{skills=Loot_GoldingShield_DULLED} @trigger 1
+  - randomskill{skills=Loot_GoldingShield} @trigger .12
+  - delay 1800
+  - remove @self
+
+Loot_GoldingBoosted:
+  TargetConditions:
+  - variableisset target.boosted true
+  - varEquals{var=target.boosted;value="true"}
+  Skills:
+  - setvariable{var=target.boosted;t=STRING;value="false"}
+  - message{m="&A&L<target.name> used a &6&N&LLoot Reroller!"} @PlayersInRadius{r=25}
+  - delay 30
+  - message{m="&A&LYou managed to loot the cache again!"} @trigger
+  - sound{s=block.ender_chest.open} @trigger
+  - delay 40
+  - sound{s=entity.item.pickup} @trigger
+  - randomskill{skills=Loot_GoldingShield_DULLED} @trigger 1
+  - randomskill{skills=Loot_GoldingShield} @trigger .12
+
+Loot_GoldingShield:
+  Skills:
+  - sound{s=entity.zombie_villager.converted} @trigger
+  - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
+  - giveitem{i=Loot_GoldingShield} @trigger 1
+  - message{m="&A&L<target.name> has looted the &E&LGolding<&sq>s Shield"} @PlayersInWorld 1
+Loot_GoldingShield_DULLED:
+  Skills:
+  - giveitem{i=Loot_GoldingShield_DULLED} @trigger 1
+  - message{m="&A&LYou looted a &8&Ldulled &E&LGolding<&sq>s Shield"} @trigger 1
+Loot_GoldingLooted:
+  Skills:
+  - message{m="&c&LYou have already looted this cache &A&Lor &c&Lyou did not participate in this battle!"} @trigger
+  - delay 1800
+  - remove @self

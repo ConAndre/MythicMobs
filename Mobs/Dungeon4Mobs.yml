@@ -69,7 +69,7 @@ NexusBoss:
   Type: ZOMBIE
   Display: '&cNexus'
   Health: 1750
-  Damage: 50
+  Damage: 60
   Faction: Nexus
   Disguise:
     Type: Player
@@ -81,12 +81,13 @@ NexusBoss:
     Color: YELLOW
     Style: SOLID
   Skills:
-  - skill{s=AzureBlastProjectile;cooldown 15} @target onDamaged .05
-  - skill{s=SummonSquids} @self ~onDamaged =50%
+  - skill{s=AzureBlastProjectile;cooldown=15} @target ~onDamaged .05
+  - skill{s=SummonSquids} @self  =50%
+  - skill{s=NexusChainLightning;cooldown=15} @self ~onDamaged .05
   - skill{s=AzureHomer;cooldown=20} @target ~onTimer:20
   - skill{s=CarmineSplash;cooldown=25} @PlayersInRadius{r=16} ~onDamaged .05
-  - skill{s=NexusJumpLightning;cooldown=35} @self ~onDamaged .05
-  - skill{s=NexusJumpPlayers;cooldown=35} @self ~onDamaged .05
+  - skill{s=NexusJumpLightning;cooldown=35} @self ~onDamaged .02
+  - skill{s=NexusJumpPlayers;cooldown=25} ~onDamaged .05
   - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
   - skill{s=CarmineFin} @self =25%
   - skill{s=AzureFin} @self =15%
@@ -121,7 +122,7 @@ AzureBoss:
     Color: BLUE
     Style: SOLID
   Skills:
-  - skill{s=AzureBlastProjectile;cooldown 15} @target onDamaged .05
+  - skill{s=AzureBlastProjectile;cooldown=15} @target ~onDamaged .05
   - skill{s=SummonSquids} @self ~onDamaged =50%
   - skill{s=AzureHomer;cooldown=35} @target ~onTimer:20
   - skill{s=AzureSplash;cooldown=25} @PlayersInRadius{r=16} ~onDamaged .05
@@ -179,7 +180,7 @@ CarmineBoss:
   - 0 clear
   - 1 players
   Skills:
-  - skill{s=CarmineBlastProjectile;cooldown=15} @target onDamaged .05
+  - skill{s=CarmineBlastProjectile;cooldown=15} @target ~onDamaged .05
   - skill{s=SummonCarmineMinions} @self ~onDamaged =50%
   - skill{s=CarmineHomer;cooldown=35} @target ~onTimer:20
   - skill{s=CarmineSplash;cooldown=25} @PlayersInRadius{r=16} ~onDamaged .05

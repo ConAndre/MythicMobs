@@ -25,8 +25,6 @@ Pharaoh:
   - skill{s=PharaohPushBack} @self ~onDamaged =50%
   - skill{s=PharaohFin} @self =15%
   - skill{s=EnableLoot_Pharaoh} @PlayersInRadius{r=25} ~onDeath
-  - skill{s=TeleportToSpawnOnDeath} ~onDeath
-  - sendtoast{icon=DIAMOND; iconnbt={CustomModelData:1};message="&A&LKill <mob.name>!";frame=challenge} @PlayersInRadius{r=16} ~onDeath
   Equipment:
   - MobGoldHelmet HEAD
   - MobMummyChestplate CHEST
@@ -246,7 +244,6 @@ FriendlyEye:
   - 0 clear
   - 1 monsters
   Skills:
-  - skill{s=SetOwner} @trigger ~onSpawn
   - skill{s=RemoveSelf180s} ~onSpawn
   - potion{t=INVISIBILITY;d=630720000;l=0} @self ~onSpawn
 

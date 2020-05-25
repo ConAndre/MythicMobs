@@ -1,7 +1,9 @@
 EnableLoot_SkeletonKing:
   Skills:
   - summon{mob=Cache_SkeletonKing;amount=1;noise=0} @Self
+  - skill{s=TeleportToSpawnOnDeath} @PlayersInRadius{r=25}
   - setvariable{var=target.AllowedToLoot-SkeletonKing;t=STRING;value="true"}
+  - skill{s=Death} @Self
   - sendtoast{icon=DIAMOND; iconnbt={CustomModelData:1};message="&A&LKill <mob.name>!";frame=challenge} @PlayersInRadius{r=16}
 
 Loot_SkeletonKing:
@@ -53,12 +55,12 @@ Loot_KingsAxe:
 Loot_KingsCrown_DULLED:
   Skills:
   - giveitem{i=Loot_KingsCrown_DULLED} @trigger 1
-  - message{m="&A&LYou recieved a &e&Ldulled &9&LKing<&sq>s Crown"} @trigger 1
+  - message{m="&A&LYou recieved a &8&Ldulled &9&LKing<&sq>s Crown"} @trigger 1
 
 Loot_KingsAxe_DULLED:
   Skills:
   - giveitem{i=Loot_KingsAxe_DULLED} @trigger 1
-  - message{m="&A&LYou recieved a &e&Ldulled &9&LKing<&sq>s Axe"} @trigger 1
+  - message{m="&A&LYou recieved a &8&Ldulled &9&LKing<&sq>s Axe"} @trigger 1
 
 Loot_SkeletonKingLooted:
   Skills:
