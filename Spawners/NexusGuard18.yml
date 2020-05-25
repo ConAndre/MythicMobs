@@ -12,7 +12,7 @@ NexusGuard18:
   Cooldown: 0
   CooldownTimer: 0
   Warmup: 180
-  WarmupTimer: 0
+  WarmupTimer: 109
   CheckForPlayers: true
   ActivationRange: 40
   ScalingRange: 25.0

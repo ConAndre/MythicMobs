@@ -73,17 +73,17 @@ Loot_NexusShard_Spell:
   Skills:
   - message{m="&A&LYou chain lightning your enemies!"} @self
   - chain{
-      bounces=5;
-      bounceRadius=10;
-      bounceDelay=1;
+      bounces=4;
+      bounceRadius=20;
+      bounceDelay=10;
       hitSelf=false;
       hitPlayers=false;
       hitNonPlayers=true;
-      hitTarget=true;
+      hitTarget=false;
       onBounce=[
         - effect:particleline{p=flame;fromOrigin=true}
-        - effect:sound{s=entity.generic.explode;v=1;p=0.5} @target
-        - lightning{d=40} @target
+        - effect:sound{s=entity.generic.explode;v=1;p=0.5}
+        - lightning{d=40}
       ];
       bounceConditions=[
         - inlineofsight
@@ -91,4 +91,27 @@ Loot_NexusShard_Spell:
     }
   - delay 300
   - message{m="&A&LNexus Shard is recharged!"} @self
+
+Loot_NexusPetTeeth_Spell:
+ Cooldown: 15
+ Skills:
+  - message{m="&A&LYou unleash the beast!"} @self
+  - effect:sound{s=entity.wolf.growl;v=.1;p=0}
+  - damage{a=12} @target
+  - effect:particles{particle=falling_dust;amount=100;hS=.5;vS=3;speed=5} @target
+  - delay 15
+  - damage{a=12} @target
+  - effect:particles{particle=falling_dust;amount=100;hS=.5;vS=3;speed=5} @target
+  - delay 15
+  - damage{a=12} @target
+  - effect:particles{particle=falling_dust;amount=100;hS=.5;vS=3;speed=5} @target
+  - delay 15
+  - damage{a=12} @target
+  - effect:particles{particle=falling_dust;amount=100;hS=.5;vS=3;speed=5} @target
+  - delay 255
+  - message{m="&A&LFerocious Teeth is recharged!"} @self
+
+
+
+
 

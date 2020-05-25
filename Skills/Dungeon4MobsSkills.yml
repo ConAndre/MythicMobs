@@ -6,17 +6,17 @@ NexusChainLightning:
   Skills:
   - message{m="<mob.name><&co> &cFear me."} @PlayersInRadius{r=20}
   - chain{
-      bounces=5;
-      bounceRadius=10;
-      bounceDelay=1;
+      bounces=10;
+      bounceRadius=20;
+      bounceDelay=10;
       hitSelf=false;
       hitPlayers=true;
       hitNonPlayers=false;
-      hitTarget=true;
+      hitTarget=false;
       onBounce=[
         - effect:particleline{p=flame;fromOrigin=true}
-        - effect:sound{s=entity.generic.explode;v=1;p=0.5} @target
-        - lightning{d=6} @target
+        - effect:sound{s=entity.generic.explode;v=1;p=0.5}
+        - lightning{d=8}
       ];
       bounceConditions=[
         - inlineofsight
@@ -312,7 +312,7 @@ QuickChomp:
   - TargetWithin 2
   - LineOfSight
   Skills:
-  - effect:sound{s=entity.wolf.growl	;v=1;p=0}
+  - effect:sound{s=entity.wolf.growl;v=1;p=0}
   - damage{amount=6;ignoreArmor=false}
   - delay 12
   - damage{amount=6;ignoreArmor=false}

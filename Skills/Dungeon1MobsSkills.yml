@@ -24,32 +24,32 @@ AngrySludgePoison:
 Loot_LostArcherHelmet:
   Skills:
   - dropitem{i=Loot_LostArcherHelmet} @self 1
-  - effect:particles{particle=falling_dust;amount=200;hS=.5;vS=3;speed=5} @self
+  - effect:particles{particle=falling_dust;amount=100;hS=.5;vS=3;speed=5} @self
   - sound{s=entity.item.pickup} @self
 Loot_LostArcherBoots:
   Skills:
   - dropitem{i=Loot_LostArcherBoots} @self 1
-  - effect:particles{particle=falling_dust;amount=200;hS=.5;vS=3;speed=5} @self
+  - effect:particles{particle=falling_dust;amount=100;hS=.5;vS=3;speed=5} @self
   - sound{s=entity.item.pickup} @self
 Loot_LostArcherBow:
   Skills:
   - dropitem{i=Loot_LostArcherBow} @self 1
-  - effect:particles{particle=falling_dust;amount=200;hS=.5;vS=3;speed=5} @self
+  - effect:particles{particle=falling_dust;amount=100;hS=.5;vS=3;speed=5} @self
   - sound{s=entity.item.pickup} @self
 Loot_LostZombieSword:
   Skills:
   - dropitem{i=Loot_LostZombieSword} @self 1
-  - effect:particles{particle=falling_dust;amount=200;hS=.5;vS=3;speed=5} @self
+  - effect:particles{particle=falling_dust;amount=100;hS=.5;vS=3;speed=5} @self
   - sound{s=entity.item.pickup} @self
 Loot_LostZombieChestplate:
   Skills:
   - dropitem{i=Loot_LostZombieChestplate} @self 1
-  - effect:particles{particle=falling_dust;amount=200;hS=.5;vS=3;speed=5} @self
+  - effect:particles{particle=falling_dust;amount=100;hS=.5;vS=3;speed=5} @self
   - sound{s=entity.item.pickup} @self
 Loot_LostZombieLeggings:
   Skills:
   - dropitem{i=Loot_LostZombieLeggings} @self 1
-  - effect:particles{particle=falling_dust;amount=200;hS=.5;vS=3;speed=5} @self
+  - effect:particles{particle=falling_dust;amount=100;hS=.5;vS=3;speed=5} @self
   - sound{s=entity.item.pickup} @self
 
 

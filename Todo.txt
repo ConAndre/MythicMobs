@@ -13,7 +13,7 @@ Boss that disguises as a random player
 Grapple weapon
 Lift weapon
 Boss with healers with healing staff drop
-Azure Depth Strider boots/ a weapon that does a line of ice blocks and lifts up target
+Azure a weapon that does a line of ice blocks and lifts up target
 NexusPet Weapon MultiChomp/Summon/Chestplate pelt
 Nexus spawn 2 healing totems at 50% hp/healing mobs drop healing staff
 

@@ -99,7 +99,7 @@ Loot_AzureBoots:
   - DEPTH_STRIDER:3
   - PROTECTION_ENVIRONMENTAL:5
   Lore:
-  - '&1Water guides the wearer'
+  - '&6Water guides the wearer'
   - ''
   - '&L&cAzure'
   - ''
@@ -116,7 +116,7 @@ Loot_PiranhaLeggings:
   - THORNS:7
   - PROTECTION_ENVIRONMENTAL:5
   Lore:
-  - '&1Wow this stuff is sharp!'
+  - '&6Wow this stuff is sharp!'
   - ''
   - '&L&cBig Bite'
   - ''
@@ -128,18 +128,39 @@ Loot_PiranhaLeggings:
       ArmorToughness: 2
 Loot_NexusShard:
   Id: Prismarine_shard
+  Display: '&CNexus Shard'
   Enchantments:
   - DEPTH_STRIDER:1
-  HIDE:
+  Hide:
   - ENCHANTS
   Lore:
-  - '&1A shard from the armor of Nexus.'
-  - '&1It seems to harness a wonderful power.'
+  - '&6A shard from the armor of Nexus.'
+  - '&6It seems to harness a wonderful power.'
   - ''
   - '&L&cNexus'
   - ''
   - '&L&F&KO&R&L&1Rare Loot&F&KO'
   - '&L&F&KO&R&L&DSpell&F&KO'
   Skills:
-  - skill{s=Loot_NexusShard_Spell}
+  - skill{s=Loot_NexusShard_Spell} ~onUse
 
+Loot_NexusPetTeeth:
+  Id: Shears
+  Display: '&CFerocious Teeth'
+  Enchantments:
+  - DEPTH_STRIDER:1
+  Lore:
+  - '&6The teeth from a foul beast.'
+  - '&6They are still sharp...'
+  - ''
+  - '&L&cNexus Pet'
+  - ''
+  - '&L&F&KO&R&L&1Rare Loot&F&KO'
+  - '&L&F&KO&R&L&DSpell&F&KO'
+  Attributes:
+    MainHand:
+      Damage: 18
+  Skills:
+  - skill{s=Loot_NexusPetTeeth_Spell} ~onUse
+  Hide:
+  - ENCHANTS
