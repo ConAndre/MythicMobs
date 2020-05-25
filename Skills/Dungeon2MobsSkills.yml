@@ -25,6 +25,7 @@ SolarFlare:
   - effect:particlesphere{p=explode;amount=40;radius=2;speed=0.1;yOffset=0} @Self
   - sendtitle{title="";subtitle="&cSOLAR FLARE!";d=40} @Target
   - potion{type=BLINDNESS;duration=200;level=1} @PlayersInRadius{r=20}
+  - damage{amount=10} @PlayersInRadius{r=5}
 PharaohPushBack:
   Skills:
   - message{m="<mob.name><&co> GET OUT OF HERE YOU FOOL!!!"} @target
@@ -54,7 +55,7 @@ PharaohFin:
     - teleport @target
     - delay 30
     - throw{velocity=5;velocityY=5} @PIR{r=10}
-    - damage{a=4;i=false} @PIR{r=10}
+    - damage{a=10;i=false} @PIR{r=10}
     - effect:particles{p=hugeexplode;a=5;vs=0.5;hs=0.5;s=0;y=1} @Self
     - effect:sound{s=entity.generic.explode;v=2;p=0.5} @Self
     - effect:sound{s=entity.generic.explode;v=2;p=1;repeat=7;repeatInterval=2} @Self
@@ -76,8 +77,7 @@ Night:
    - sound{s=entity.ghast.hurt} @PlayersInRadius{r=15}
    - potion{type=Blindness;lvl=2;duration=100} @PlayersInRadius{r=15}
    - potion{type=Harm;lvl=0;duration=1} @PlayersInRadius{r=15}
-   - effect:particles{p=reddust;color=#ff0000;amount=3000;hSpread=15;ySpread=1;speed=0;yOFfset=0.5}
-    @Self
+   - effect:particles{p=reddust;color=#ff0000;amount=3000;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
 NightTornado:
  Cooldown: 10
  Skills:
@@ -112,7 +112,7 @@ MummyHomer_HIT:
   Skills:
   - effect:particles{p=lava;a=50;hS=1;vS=1}
   - effect:sound{s=entity.generic.explode;v=1;p=0}
-  - damage{a=2;i=false}
+  - damage{a=15;i=false}
 
 #Scarab
 ScarabAttack:
@@ -121,14 +121,6 @@ ScarabAttack:
   - potion{type=BLINDNESS;lvl=0;duration=60} @Target
   - effect:sound{s=entity.ghast.hurt;v=.5;p=0}
 
-
-Loot_Artifact_IllusionStaff:
-  Cooldown: 10
-  Skills:
-  - message{m="&A&LYou radiate life harming beams!"} @self
-  - skill{s=IllusionStaffBolt} @EntitiesInRadius{r=8;ignore=players}
-  - delay 200
-  - message{m="&A&LIllusion Staff is recharged!"} @self
 
 IllusionStaffBolt:
   Skills:
@@ -140,3 +132,18 @@ IllusionStaffBolt-Hit:
   Skills:
   - damage{a=15}
   - sound{s=entity.ghast.hurt}
+
+
+
+Loot_Artifact_IllusionStaff:
+  Skills:
+  - dropitem{i=Loot_Artifact_IllusionStaff} @self 1
+  - effect:particles{particle=falling_dust;amount=200;hS=.5;vS=3;speed=5} @self
+  - sound{s=entity.item.pickup} @self
+Loot_Artifact_SummonEye:
+  Skills:
+  - dropitem{i=Loot_Artifact_SummonEye} @self 1
+  - effect:particles{particle=falling_dust;amount=200;hS=.5;vS=3;speed=5} @self
+  - sound{s=entity.item.pickup} @self
+
+

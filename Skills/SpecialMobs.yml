@@ -1,0 +1,11 @@
+MimicAbility:
+  Skills:
+  - doppleganger @NearestPlayer
+  - setname{name=<target.name>} @NearestPlayer
+  - look{headOnly=true;immediately=true} @NearestPlayer
+  - threat{amount=10} @NearestPlayer
+  - summon{type=MimicClone;amount=10;radius=4;copyThreatTable=true} @self
+
+
+
+

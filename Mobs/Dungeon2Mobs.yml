@@ -24,7 +24,7 @@ Pharaoh:
   - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
   - skill{s=PharaohPushBack} @self ~onDamaged =50%
   - skill{s=PharaohFin} @self =15%
-  - skill{s=EnableLoot_Pharaoh} @PlayersInRadius{r=16} ~onDeath
+  - skill{s=EnableLoot_Pharaoh} @PlayersInRadius{r=25} ~onDeath
   - skill{s=TeleportToSpawnOnDeath} ~onDeath
   - sendtoast{icon=DIAMOND; iconnbt={CustomModelData:1};message="&A&LKill <mob.name>!";frame=challenge} @PlayersInRadius{r=16} ~onDeath
   Equipment:
@@ -71,6 +71,7 @@ Illusion:
   AITargetSelectors:
   - 0 clear
   - 1 players
+  - 2 attacker
   Skills:
   - sound{s=entity.ghast.hurt} @self ~OnTimer:200
   - skill{s=NightSpawn} @self 0.1
@@ -78,6 +79,7 @@ Illusion:
   - skill{s=NightTornado} @PlayersInRadius{r=15}
   - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
   - dropitem{i=Loot_Artifact_IllusionStaff} ~onDeath .05
+  - randomskill{skills=Loot_Artifact_IllusionStaff,Loot_Artifact_SummonEye} ~onDeath 1
   Drops:
   - IllusionLootTable
 
@@ -133,6 +135,7 @@ Mummy:
   AITargetSelectors:
   - 0 clear
   - 1 players
+  - 2 attacker
 MummyArcher:
   Type: SKELETON
   Display: '&EMummy Archer'
@@ -158,6 +161,7 @@ MummyArcher:
   AITargetSelectors:
   - 0 clear
   - 1 players
+  - 2 attacker
   Skills:
   - skill{s=MummyHomer} @target ~onTimer:140
 PyramidGuardian:
@@ -182,6 +186,7 @@ PyramidGuardian:
   AITargetSelectors:
   - 0 clear
   - 1 players
+  - 2 attacker
 Scarab:
   Type: SILVERFISH
   Display: '&EScarab'
@@ -206,7 +211,42 @@ Scarab:
   AITargetSelectors:
   - 0 clear
   - 1 players
+  - 2 attacker
   Skills:
   - skill{s=ScarabAttack} ~onAttack @target
-
+FriendlyEye:
+  Type: Skeleton
+  Display: 'mini-eye'
+  Disguise:
+    Type: Baby_zombie
+  Faction: Friendly
+  Health: 100
+  Damage: 5
+  Armor: 50
+  Equipment:
+  - SCP02 HEAD
+  - Air HAND
+  Options:
+    PreventRandomEquipment: true
+    AlwaysShowName: false
+    MovementSpeed: 0.255
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+  Modules:
+    ThreatTable: true
+  DamageModifiers:
+  - Fall -1
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 float
+  - 3 gotoowner
+  - 4 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 monsters
+  Skills:
+  - skill{s=SetOwner} @trigger ~onSpawn
+  - skill{s=RemoveSelf180s} ~onSpawn
+  - potion{t=INVISIBILITY;d=630720000;l=0} @self ~onSpawn
 

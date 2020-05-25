@@ -7,12 +7,10 @@ MummyBow:
   Lore:
   - '&6Mummy Bow'
   Enchantments:
-  - ARROW_DAMAGE:2
+  - ARROW_DAMAGE:12
   - ARROW_INFINITE:1
   Hide:
   - ENCHANTS
-
-
 PharaohWeapon:
   Id: golden_hoe
   Display: '&EThe Pharaoh Staff'
@@ -167,7 +165,7 @@ Loot_PharaohWeapon_DULLED:
   - FIRE_ASPECT:1
   Attributes:
     MainHand:
-      Damage: 9
+      Damage: 8
 Loot_PharaohNemes_DULLED:
   Id: GOLDEN_HELMET
   Data: 0
@@ -202,6 +200,22 @@ Loot_Artifact_IllusionStaff:
   Hide:
   - ENCHANTS
   Skills:
-  - skill{s=Loot_Artifact_IllusionStaff} ~onUse
+  - skill{s=Loot_Artifact_IllusionStaff_Spell} ~onUse
 
+Loot_Artifact_SummonEye:
+  Id: fermented_spider_eye
+  Display: '&eEye<&sq>s Summon'
+  Lore:
+  - '&6Summons a strange eyeball'
+  - '&6to help fight for you'
+  - ''
+  - '&L&cIllusion'
+  - ''
+  - '&L&F&KO&R&L&DSpell&F&KO'
+  Enchantments:
+  - ARROW_INFINITE:1
+  Skills:
+  - skill{s=Loot_Artifact_SummonEye_Spell} ~onUse
+  Hide:
+  - ENCHANTS
 

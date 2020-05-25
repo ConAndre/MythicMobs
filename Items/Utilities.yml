@@ -353,10 +353,15 @@ MobDiamondHoe:
   - ATTRIBUTES
 
 DevSword:
-  Id: Iron_Sword
+  Id: Wooden_Sword
+  Display: '&6&N&LDev Sword'
   Attributes:
     MainHand:
       Damage: 10000
+  Enchantments:
+  - ARROW_DAMAGE:3
+  Hide:
+  - ENCHANTS
 
 CacheReroll:
   Id: blaze_rod

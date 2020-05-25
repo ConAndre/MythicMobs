@@ -1,4 +1,55 @@
 # # For more information, check out the plugin manual or join us on Discord:
 # # http://www.mythicmobs.net
-# #  
+# #
+
+Mimic:
+  Type: SKELETON
+  Display: 'Mimic'
+  Health: 150
+  Faction: Nexus
+  Equipment:
+  - Air HEAD
+  - MobIronChestplate CHEST
+  - MobIronLeggings LEGS
+  - MobIronBoots FEET
+  - MobIronSword HAND
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.275
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Skills:
+  - skill{s=MimicAbility} ~onSpawn
+  Drops:
+MimicClone:
+  Type: SKELETON
+  Display: ''
+  Health: 150
+  Faction: Nexus
+  Equipment:
+  - MobIronHelmet HEAD
+  - MobIronChestplate CHEST
+  - MobIronLeggings LEGS
+  - MobIronBoots FEET
+  - MobIronSword HAND
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.275
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Skills:
+  -   - setname{name=<target.name>} @RandomThreatTarget ~onSpawn
+  Drops:
 

@@ -11,7 +11,6 @@ PirateCaptain:
     Skin: Captain
   Health: 1000
   Damage: 40
-  Armor: 0
   Faction: Pirate
   BossBar:
     Enabled: true
@@ -22,12 +21,12 @@ PirateCaptain:
   Skills:
   - speak{m="&cCruelty for all.";cooldown=60} @Target ~onCombat >0 0.2
   - skill{s=SummonJunkees} @self =85%
-  - skill{s=SummonParrots} @self ~onDamaged =50%
+  - skill{s=SummonParrots} @self =50%
   - skill{s=SummonParrots} @self =30%
-  - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
-  - skill{s=CaptainBlastProjectile} @Target ~onTimer:240
-  - skill{s=CallPig} @self 0.1
+  - skill{s=SmashAttack;cooldown=5} @target ~onDamaged .05
+  - skill{s=CaptainBlastProjectile} @Target ~onTimer:120
   - skill{s=PharaohFin} @self =15%
+  - skill{s=CallPirateBoat} @self =10%
   Equipment:
   - MobIronHelmet HEAD
   - MobIronChestplate CHEST
@@ -61,11 +60,11 @@ PirateGolding:
     Color: RED
     Style: SOLID
   Equipment:
-  - MobIronHelmet HEAD
-  - MobIronChestplate CHEST
-  - MobIronLeggings LEGS
-  - MobIronBoots FEET
-  - MobIronSword HAND
+  - MobGoldHelmet HEAD
+  - MobGoldChestplate CHEST
+  - MobGoldLeggings LEGS
+  - MobGoldBoots FEET
+  - MobGoldSword HAND
   Options:
     AlwaysShowName: false
     MovementSpeed: 0.275
@@ -87,8 +86,6 @@ PirateGolding:
   - skill{s=SummonJunkees} @self =85%
   - skill{s=SummonParrots} @self ~onDamaged =35%
   - skill{s=PharaohFin} @self =15%
-  - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
-  - effect:particletornado{p=flame;cp=largeexplode;mr=1;h=3;i=4;d=100;rs=1;sh=1;cs=0;ca=0;chs=0.1;cvs=0.1;cps=1;cyo=2} @self ~onTimer:200
   - skill{s=SmashAttackII} @Target >0 0.01
   - skill{s=AngryAura} ~onTimer:600
   - skill{s=Death} @Self ~onDeath
@@ -139,8 +136,7 @@ PirateParrotBoss:
   - skill{s=ParrotJumpLightning} @self ~onDamaged =50%
   - skill{s=SummonParrots} @self ~onDamaged =35%
   - skill{s=ParrotLeapAttack} @self ~onTimer:120
-  - skill{s=EnableLoot_Parrot} @PlayersInRadius{r=16} ~onDeath
-
+  - skill{s=EnableLoot_Parrot} @PlayersInRadius{r=25} ~onDeath
   Drops:
   - PirateParrotBossLootTable
 ##################################################REGULARS####################################################
@@ -168,7 +164,7 @@ PirateJunkee:
   - 0 float
   Skills:
   - skill{s=JunkeeHomer} @target ~onTimer:180
-  - skill{s=LeapAttack} @self ~onTimer:140
+  - skill{s=LeapAttack;cooldown=10} ~onDamaged
 PirateParrot:
   Type: BABY_ZOMBIE
   Display: '&cButtercup'
@@ -201,14 +197,14 @@ PirateParrot:
   - 1 players
   - 2 attacker
   Skills:
-  - skill{s=ParrotLeapAttack} @self ~onTimer:80
+  - skill{s=ParrotLeapAttack;cooldown=10} @self ~onDamaged
 FriendlyParrot:
-  Type: BABY_ZOMBIE
-  Display: '&A&LFallop'
+  Type: Skeleton
+  Display: 'Fallop'
   Disguise:
     Type: parrot
   Faction: Friendly
-  Health: 35
+  Health: 200
   Damage: 10
   Armor: 50
   Equipment:
@@ -218,7 +214,7 @@ FriendlyParrot:
   - MobIronBoots FEET
   Options:
     AlwaysShowName: false
-    MovementSpeed: 0.4
+    MovementSpeed: 0.225
     KnockbackResistance: 1
     PreventOtherDrops: true
   Modules:
@@ -229,10 +225,15 @@ FriendlyParrot:
   - 0 clear
   - 1 meleeattack
   - 2 float
+  - 3 gotoowner
+  - 4 randomstroll
   AITargetSelectors:
   - 0 clear
   - 1 monsters
   Skills:
+  - skill{s=SetOwner} @trigger ~onSpawn
+  - skill{s=RemoveSelf180s} ~onSpawn
+  - skill{s=LeapAttack;cooldown=5} ~onTimer:40
 
 
 Pirate:
@@ -265,8 +266,8 @@ Pirate:
   - 1 players
   - 2 attacker
   Skills:
-  - skill{s=FireballProjectile;cooldown=20} @target ~onAttack 0.35
-  - skill{s=LeapAttack} @self ~onTimer:100
+  - skill{s=FireballProjectile;cooldown=10} @target ~onAttack 0.35
+  - skill{s=LeapAttack;cooldown=10} @self ~onDamaged
   Drops:
   - Third_DungeonLootTable
 PirateArcher:
@@ -294,8 +295,71 @@ PirateArcher:
   - 1 players
   - 2 attacker
   Skills:
-  - skill{s=SmokeBlastProjectile;cooldown=20} @target ~onAttack 0.35
+  - skill{s=SmokeBlastProjectile;cooldown=10} @target ~onAttack 0.35
   Drops:
   - Third_DungeonLootTable
 
+PirateCaptainBoat:
+  Type: Skeleton
+  Display: '&cBetsy'
+  Health: 500
+  Damage: 20
+  Disguise:
+    Type: boat
+  Faction: Pirate
+  Equipment:
+  - MobIronHelmet HEAD
+  - MobIronChestplate CHEST
+  - MobIronLeggings LEGS
+  - MobIronBoots FEET
+  - MobIronSword HAND
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.355
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  - 3 float
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  Skills:
+
+PirateCaptainMount:
+  Type: Skeleton
+  Display: '&cBetsy'
+  Health: 500
+  Damage: 20
+  Disguise:
+    Type: skeleton_horse
+  Faction: Pirate
+  Equipment:
+  - MobIronHelmet HEAD
+  - MobIronChestplate CHEST
+  - MobIronLeggings LEGS
+  - MobIronBoots FEET
+  - MobIronSword HAND
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.355
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  - 3 float
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  Skills:
 

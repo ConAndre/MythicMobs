@@ -7,7 +7,7 @@ PirateBow:
   Lore:
   - '&cPirate Bow'
   Enchantments:
-  - ARROW_DAMAGE:5
+  - ARROW_DAMAGE:15
   - ARROW_FIRE:1
   - ARROW_INFINITE:1
 CaptainWeapon:
@@ -48,23 +48,21 @@ Loot_SquawksBeak:
   - ARROW_INFINITE:1
   - ARROW_FIRE:2
   Skills:
-  - skill{s=Loot_SquawksBeakSpell} ~onSwing
+  - skill{s=Loot_SquawksBeak_Spell} ~onSwing
 Loot_SquawksCookie:
   Id: Cookie
   Display: '&eSquawk<&sq>s Cookie'
   Lore:
-  - '&1Squawk<&sq>s snack that he has used'
-  - 'to peck summon thousands of parrots.'
+  - '&6Squawk<&sq>s parrot bait that he has used'
+  - '&6to peck summon thousands of parrots.'
   - ''
   - '&L&cSquawk'
   - ''
   - '&L&F&KO&R&L&DSpell&F&KO'
   Enchantments:
-  - ARROW_DAMAGE:3
   - ARROW_INFINITE:1
-  - ARROW_FIRE:2
   Skills:
-  - skill{s=Loot_SquawksCookieSpell} ~onUse
+  - skill{s=Loot_SquawksCookie_Spell} ~onUse
   Hide:
   - ENCHANTS
 Loot_PirateHelmet:

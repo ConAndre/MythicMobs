@@ -5,5 +5,29 @@ Lets make an invasion type event
 Add guaranteed drops to bosses
 Wipe Boss bar on death
 Degrade armor on death
-Add Loot ReRoller > consume + give target.boost = true #NEEDS ARTIFACTS ADDON ? IMPLEMENT SKILLS TO ITEMS
 ActionHealth Plugin throws an error near removed caches/mobs
+Could make a capture the monument and mobs try and kill players on the monument.
+
+Goblin that steals money > rare spawn > use long cooldown
+Boss that disguises as a random player
+Grapple weapon
+Lift weapon
+Boss with healers with healing staff drop
+Golding Shield drop
+Azure Depth Strider boots/ a weapon that does a line of ice blocks and lifts up target
+NexusPet Weapon MultiChomp/Summon/Chestplate pelt
+Nexus spawn 2 healing totems at 50% hp/healing mobs drop healing staff
+Prot 3 d4 armor
+
+Hall of fame:
+Donators can buy a spot in it
+
+Auction plugin
+Block shop
+Add my own food
+https://i.pinimg.com/originals/7f/ac/09/7fac0926dd3d9d2e262db43a52a0b563.jpg Ranking system for Donators
+Squire<Jester<Knight<Lord<Baron>Count/Earl<Prince/Princess<Duke<Grand Prince<Grand Duke<King<Empreror
+10$ increment
+
+
+

@@ -87,11 +87,12 @@ NexusBoss:
   Skills:
   - skill{s=AzureBlastProjectile;cooldown 15} @target onDamaged .05
   - skill{s=SummonSquids} @self ~onDamaged =50%
-  - skill{s=AzureHomer;cooldown=35} @target ~onTimer:20
-  - skill{s=AzureSplash;cooldown=25} @PlayersInRadius{r=16} ~onDamaged .05
+  - skill{s=AzureHomer;cooldown=20} @target ~onTimer:20
+  - skill{s=CarmineSplash;cooldown=25} @PlayersInRadius{r=16} ~onDamaged .05
   - skill{s=NexusJumpLightning;cooldown=35} @self ~onDamaged .05
   - skill{s=NexusJumpPlayers;cooldown=35} @self ~onDamaged .05
   - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
+  - skill{s=CarmineFin} @self =25%
   - skill{s=AzureFin} @self =15%
   - skill{s=TeleportToSpawnOnDeath} ~onDeath
   Equipment:
@@ -182,7 +183,7 @@ CarmineBoss:
   - 0 clear
   - 1 players
   Skills:
-  - skill{s=CarmineBlastProjectile;cooldown 15} @target onDamaged .05
+  - skill{s=CarmineBlastProjectile;cooldown=15} @target onDamaged .05
   - skill{s=SummonCarmineMinions} @self ~onDamaged =50%
   - skill{s=CarmineHomer;cooldown=35} @target ~onTimer:20
   - skill{s=CarmineSplash;cooldown=25} @PlayersInRadius{r=16} ~onDamaged .05
@@ -235,6 +236,8 @@ CarmineMinion:
   Display: '&cCarmine Minion'
   Health: 55
   Damage: 30
+  Disguise:
+    Type: Blaze
   Faction: Nexus
   Equipment:
   - MobIronHelmet HEAD
@@ -250,9 +253,6 @@ CarmineMinion:
   Modules:
     ThreatTable: true
   AIGoalSelectors:
-  - 0 clear
-  - 1 float
-  - 2 meleeattack
   AITargetSelectors:
   - 0 clear
   - 1 players

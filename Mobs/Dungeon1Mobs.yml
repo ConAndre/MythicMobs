@@ -21,7 +21,7 @@ SkeletonKing:
   - speak{m="None may challenge the Skeleton King!";cooldown=20} @Target ~onCombat >0 0.2
   - skill{s=SummonSkeletons} @self 0.1
   - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
-  - skill{s=EnableLoot_SkeletonKing} @PlayersInRadius{r=16} ~onDeath
+  - skill{s=EnableLoot_SkeletonKing} @PlayersInRadius{r=25} ~onDeath
   - skill{s=TeleportToSpawnOnDeath} ~onDeath
   Equipment:
   - MobGoldHelmet HEAD

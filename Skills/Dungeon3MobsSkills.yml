@@ -18,11 +18,11 @@ JunkeeHomer_TICK:
 JunkeeHomer_HIT:
   Skills:
   - effect:sound{s=entity.slime.attack;v=.5;p=0}
-  - damage{a=3;i=false}
+  - damage{a=20;i=false}
 
 #Pirates
 SmokeBlastProjectile:
-  Cooldown: 25
+  Cooldown: 15
   Skills:
   - projectile{hp=true;v=12;onTick=SmokeBlast-Ontick;hRadius=2;vRadius=2;onHit=SmokeBlast-onhit;onEnd=SmokeBlast-onhit;StartYOffset=8;Interval=1;MaxRange=64}
 SmokeBlast-Ontick:
@@ -35,10 +35,10 @@ SmokeBlast-onhit:
   - effect:flames @Origin
   - potion{type=SLOW;duration=80;level=1} @EntitiesNearOrigin{r=5}
   - potion{type=BLINDNESS;duration=80;level=20} @EntitiesNearOrigin{r=5}
-  - damage{amount=3;ignoreArmor=true}
+  - damage{amount=25;ignoreArmor=false} @EntitiesNearOrigin{r=5}
 
 FireballProjectile:
-  Cooldown: 25
+  Cooldown: 15
   Skills:
   - projectile{hp=true;v=12;onTick=Fireball-Ontick;hRadius=1.5;vRadius=1.5;OnHit=Fireball-Onhit;OnEnd=Fireball-Onhit;StartYOffset=+8;Interval=1;MaxRange=96}
 Fireball-Ontick:
@@ -49,7 +49,7 @@ Fireball-Onhit:
   Skills:
   - effect:explosion
   - ignite{ticks=60}
-  - damage{amount=3;ignoreArmor=true}
+  - damage{amount=25;ignoreArmor=false} @EntitiesNearOrigin{r=5}
 
 SummonJunkees:
   Skills:
@@ -68,7 +68,7 @@ ParrotJumpBarrage:
   - delay 20
   - jump{velocity=.95}
   - delay 20
-  - arrowvolley{a=40;s=500;v=50;f=120;rd=80} @target
+  - arrowvolley{a=15;s=250;v=150;f=120;rd=80} @EntitiesInRadius{r=25;ignore=monsters}
 
 ParrotJumpLightning:
   Condition:
@@ -155,15 +155,20 @@ Death:
   - effect:sound{s=entity.endermen.scream;v=.5;p=1.2} @Self ~onDeath
   - delay 10
   - effect:sound{s=entity.endermen.scream;v=.5;p=1.1} @Self ~onDeath
-CallPig:
+CallPirateBoat:
   Skills:
-  - mount{type=UndeadMount}
-  - delay 500
+  - lightning{d=6} @PlayersInRadius{r=25}
+  - mount{type=PirateCaptainBoat}
+
+CallPirateMount:
+  Skills:
+  - lightning{d=6} @PlayersInRadius{r=25}
+  - mount{type=PirateCaptainMount}
 
 
 #Captain
 CaptainBlastProjectile:
-  Cooldown: 25
+  Cooldown: 10
   Skills:
   - projectile{hp=true;v=12;onTick=Fireball-Ontick;hRadius=1.5;vRadius=1.5;OnHit=Fireball-Onhit;OnEnd=Fireball-Onhit;StartYOffset=+8;Interval=1;MaxRange=96}
   - projectile{hp=true;v=12;onTick=SmokeBlast-Ontick;hRadius=2;vRadius=2;onHit=SmokeBlast-onhit;onEnd=SmokeBlast-onhit;StartYOffset=8;Interval=1;MaxRange=64}

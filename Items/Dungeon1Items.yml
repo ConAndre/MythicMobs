@@ -16,7 +16,7 @@ LostArcherBow:
 ##Helmet, Chestplate, Leggings, Boots, Bow, Axe, Sword
 
 Loot_LostArcherHelmet:
-  Id: iron_helmet
+  Id: leather_helmet
   Data: 0
   Display: '&3&LHelmet of the &c&LLost &3&Archer'
   Lore:
@@ -29,24 +29,8 @@ Loot_LostArcherHelmet:
   Attributes:
     Head:
       Armor: 7
-Loot_LostZombieLeggings:
-  Id: iron_leggings
-  Data: 0
-  Display: '&3&LLeggings of the &c&LLost &3&LZombie'
-  Lore:
-  - '&6Leggings used by'
-  - '&6the Lost Zombie.'
-  - ''
-  - '&L&cLost Zombie'
-  - ''
-  - '&L&F&KO&R&L&eCommon Loot&F&KO'
-  Attributes:
-    Legs:
-      Armor: 7
-
-
 Loot_LostZombieChestplate:
-  Id: iron_chestplate
+  Id: leather_chestplate
   Data: 0
   Display: '&3&LChestplate of the &c&LLost &3&LZombie'
   Lore:
@@ -60,7 +44,7 @@ Loot_LostZombieChestplate:
     Chest:
       Armor: 7
 Loot_LostZombieLeggings:
-  Id: iron_leggings
+  Id: leather_leggings
   Data: 0
   Display: '&3&LLeggings of the &c&LLost &3&LZombie'
   Lore:
@@ -74,7 +58,7 @@ Loot_LostZombieLeggings:
     Legs:
       Armor: 7
 Loot_LostArcherBoots:
-  Id: iron_boots
+  Id: leather_boots
   Data: 0
   Display: '&3&LBoots of the &c&LLost &3&LArcher'
   Lore:
@@ -148,7 +132,8 @@ Loot_KingsCrown:
   Attributes:
     Head:
       Health: 2
-      Armor: 12
+      Armor: 17
+      Toughness: 1
 #DULLED
 Loot_KingsAxe_DULLED:
   Id: iron_axe
@@ -199,7 +184,7 @@ Loot_Artifact_SlimePoison:
   Hide:
   - ENCHANTS
   Skills:
-  - skill{s=Loot_Artifact_SlimePoison} ~onUse
+  - skill{s=Loot_Artifact_SlimePoison_Spell} ~onUse
 Loot_Artifact_SkeletalWither:
   Id: wither_rose
   Data: 0
@@ -217,7 +202,7 @@ Loot_Artifact_SkeletalWither:
   Hide:
   - ENCHANTS
   Skills:
-  - skill{s=Loot_Artifact_SkeletalWither} ~onUse
+  - skill{s=Loot_Artifact_SkeletalWither_Spell} ~onUse
 
 
 

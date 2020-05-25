@@ -1,4 +1,4 @@
-Loot_Artifact_SlimePoison:
+Loot_Artifact_SlimePoison_Spell:
   Cooldown: 15
   Skills:
     - message{m="&A&LYou poison all targets around you!"} @self
@@ -6,7 +6,7 @@ Loot_Artifact_SlimePoison:
     - potion{type=POISON;duration=200;level=1} @EntitiesInRadius{r=8;ignore=players}
     - delay 300
     - message{m="&A&LCorrosive Residue is recharged!"} @self
-Loot_Artifact_SkeletalWither:
+Loot_Artifact_SkeletalWither_Spell:
   Cooldown: 15
   Skills:
     - message{m="&A&LYou wither all targets around you!"} @self
@@ -15,7 +15,15 @@ Loot_Artifact_SkeletalWither:
     - delay 300
     - message{m="&A&LWither Rose is recharged!"} @self
 
-Loot_SquawksBeakSpell:
+Loot_Artifact_IllusionStaff_Spell:
+  Cooldown: 10
+  Skills:
+  - message{m="&A&LYou radiate life harming beams!"} @self
+  - skill{s=IllusionStaffBolt} @EntitiesInRadius{r=8;ignore=players}
+  - delay 200
+  - message{m="&A&LIllusion Staff is recharged!"} @self
+
+Loot_SquawksBeak_Spell:
   Cooldown: 15
   Skills:
   - message{m="&A&LYou used Jump Volley!"} @self
@@ -26,11 +34,20 @@ Loot_SquawksBeakSpell:
   - delay 290
   - message{m="&A&LJump Volley is recharged!"} @self
 
-Loot_SquawksCookieSpell:
-  Cooldown: 60
+Loot_SquawksCookie_Spell:
+  Cooldown: 180
   Skills:
-  - message{m="&A&LYou call a parrot upon yourself!"} @self
+  - message{m=" &A&LYou call a parrot upon yourself!"} @self
   - sound{s=entity.parrot.ambient} @self
   - summon{mob=FriendlyParrot;amount=1;r=0} @self
-  - delay 1200
+  - delay 3600
   - message{m="&A&LSquawk<&sq>s Cookie is recharged!"} @self
+
+Loot_Artifact_SummonEye_Spell:
+  Cooldown: 180
+  Skills:
+  - message{m="&A&LYou fester a friendly Eye!"} @self
+  - effect:sound{s=entity.phantom.hurt;v=1;p=0} @self
+  - summon{mob=FriendlyEye;amount=1;r=0} @self
+  - delay 3600
+  - message{m="&A&LEye Summon is recharged!"} @self
