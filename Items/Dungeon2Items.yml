@@ -145,10 +145,13 @@ Loot_PharaohNemes:
   - '&L&cPharaoh'
   - ''
   - '&L&F&KO&R&L&9Uncommon Loot&F&KO'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:1
   Attributes:
     Head:
-      Health: 2
-      Armor: 12
+      Health: 3
+      Armor: 15
+      Toughness: 2
 #DULLED
 Loot_PharaohWeapon_DULLED:
   Id: golden_hoe
@@ -179,9 +182,9 @@ Loot_PharaohNemes_DULLED:
   - '&L&F&KO&R&L&8Dulled Loot&F&KO'
   Attributes:
     Head:
-      Health: 1
-      Armor: 10
-
+      Health: 2
+      Armor: 15
+      Toughness: 1
 #Spells
 Loot_Artifact_IllusionStaff:
   Id: stick

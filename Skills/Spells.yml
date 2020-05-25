@@ -26,13 +26,13 @@ Loot_Artifact_IllusionStaff_Spell:
 Loot_SquawksBeak_Spell:
   Cooldown: 15
   Skills:
-  - message{m="&A&LYou used Jump Volley!"} @self
+  - message{m="&A&LYou used Squawk<&sq>s Beak!"} @self
   - sound{s=entity.parrot.ambient} @self
   - jump{velocity=.95}
   - delay 10
   - arrowvolley{a=1;s=1;v=100;f=120;rd=80} @EntitiesInRadius{r=15;ignore=players}
   - delay 290
-  - message{m="&A&LJump Volley is recharged!"} @self
+  - message{m="&A&LSquawk<&sq>s Beak is recharged!"} @self
 
 Loot_SquawksCookie_Spell:
   Cooldown: 180
@@ -51,3 +51,19 @@ Loot_Artifact_SummonEye_Spell:
   - summon{mob=FriendlyEye;amount=1;r=0} @self
   - delay 3600
   - message{m="&A&LEye Summon is recharged!"} @self
+
+GoldingShield:
+  Cooldown: 10
+  Skills:
+  - message{m="&A&LYou harness a mighty aura!"} @self
+  - shield{amount=4;maxShield=8} @self
+  - delay 300
+  - message{m="&A&LGolding Shield is recharged!"} @self
+
+GoldingShield_DULLED:
+  Cooldown: 10
+  Skills:
+  - message{m="&A&LYou harness a mighty aura!"} @self
+  - shield{amount=2;maxShield=4} @self
+  - delay 300
+  - message{m="&A&LGolding Shield is recharged!"} @self

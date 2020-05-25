@@ -32,6 +32,29 @@ JunkeeHead:
     SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmZkNDMwODc2M2ZmZDVlMjYzMWM3NGQwYmUyZmY0OWE5MGJhYzQ5MDUzNjE4YzI4ODgyZTc1YzRkY2NlMjJhYyJ9fX0==
 
 ##LOOT
+Loot_GoldingShield:
+  Id: shield
+  Display: '&e&LGolding<&sq>s Shield'
+  BannerLayers:
+  - ORANGE HALF_HORIZONTAL
+  - RED STRIPE_SMALL
+  - BLACK BORDER
+  - WHITE SKULL
+  - BLACK HALF_HORIZONTAL_MIRROR
+  - RED TRIANGLE_BOTTOM
+  Lore:
+  - '&1Golding<&sq>s used this shield to'
+  - 'deflect the many arrows of invading pirates.'
+  - ''
+  - '&L&cGolding'
+  - ''
+  - '&L&F&KO&R&L&1Rare Loot&F&KO'
+  - '&L&F&KO&R&L&DSpell&F&KO'
+  Enchantments:
+  -
+  Skills:
+  - skill{s=GoldingShield} ~onUse
+
 Loot_SquawksBeak:
   Id: bow
   Display: '&eSquawk<&sq>s Beak'
@@ -234,9 +257,33 @@ Loot_SquawksBeak_DULLED:
   - ''
   - '&L&F&KO&R&L&8Dulled Loot&F&KO'
   Enchantments:
-  - ARROW_DAMAGE:3
+  - ARROW_DAMAGE:2
   - ARROW_INFINITE:1
-  - ARROW_FIRE:2
+  - ARROW_FIRE:1
+
+Loot_GoldingShield_DULLED:
+  Id: shield
+  BannerLayers:
+  - ORANGE HALF_HORIZONTAL
+  - RED STRIPE_SMALL
+  - BLACK BORDER
+  - WHITE SKULL
+  - BLACK HALF_HORIZONTAL_MIRROR
+  - RED TRIANGLE_BOTTOM
+  Display: '&8&LDulled &e&LGolding<&sq>s Shield'
+  Lore:
+  - '&1Golding<&sq>s used this shield to'
+  - 'deflect the many arrows of invading pirates.'
+  - ''
+  - '&L&cGolding'
+  - ''
+  - '&L&F&KO&R&L&8Dulled Loot&F&KO'
+  - '&L&F&KO&R&L&DSpell&F&KO'
+  Enchantments:
+  -
+  Skills:
+  - skill{s=GoldingShield_DULLED} ~onUse
+
 
 
 

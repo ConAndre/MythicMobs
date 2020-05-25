@@ -65,6 +65,7 @@ PirateGolding:
   - MobGoldLeggings LEGS
   - MobGoldBoots FEET
   - MobGoldSword HAND
+  - Loot_GoldingShield OFFHAND
   Options:
     AlwaysShowName: false
     MovementSpeed: 0.275

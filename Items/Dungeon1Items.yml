@@ -132,7 +132,7 @@ Loot_KingsCrown:
   Attributes:
     Head:
       Health: 2
-      Armor: 17
+      Armor: 15
       Toughness: 1
 #DULLED
 Loot_KingsAxe_DULLED:

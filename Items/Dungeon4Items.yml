@@ -4,7 +4,7 @@ NexusBow:
   Lore:
   - '&cNexus Bow'
   Enchantments:
-  - ARROW_DAMAGE:20
+  - ARROW_DAMAGE:25
   - ARROW_FIRE:4
   - ARROW_INFINITE:1
 Loot_NexusHelmet:
@@ -71,3 +71,23 @@ Loot_NexusBoots:
       Health: 2
       Armor: 15
       ArmorToughness: 2
+Loot_NexusBow:
+  Id: bow
+  Display: '&cNexus Bow'
+  Lore:
+  - '&cNexus Bow'
+  Enchantments:
+  - ARROW_DAMAGE:4
+  - ARROW_INFINITE:1
+Loot_PirateWeapon:
+  Id: IRON_SWORD
+  Display: '&cPirate Weapon'
+  Lore:
+  - '&cPirate Weapon'
+  - ''
+  - '&L&cPirate'
+  - ''
+  - '&L&F&KO&R&L&eCommon Loot&F&KO'
+  Attributes:
+    MainHand:
+      Damage: 13

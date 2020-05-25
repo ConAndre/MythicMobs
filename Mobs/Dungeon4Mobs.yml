@@ -33,8 +33,6 @@ PiranhaBoss:
   - skill{s=PiranhaExpunge} @self ~onTimer:180
   - skill{s=PiranhaEffects} ~onTimer:240
   - skill{s=TeleportToOutsideBigBite} ~onDeath
-  Drops:
-  - Third_DungeonLootTable
 NexusPetBoss:
   Type: wolf
   Display: '&cNexus<&sq> Pet'
@@ -53,8 +51,6 @@ NexusPetBoss:
   - skill{s=HarshHowl;cooldown=60} @self ~onDamaged .05
   - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
   - skill{s=SummonPetsMinions;cooldown=85} @self ~onDamaged .05
-  Drops:
-  - PirateCaptainLootTable
   AIGoalSelectors:
   - 0 clear
   - 1 meleeattack
@@ -101,7 +97,7 @@ NexusBoss:
   - MobDiamondLeggings LEGS
   - DepthDiamondBoots FEET
   Drops:
-  - PirateCaptainLootTable
+  - Fourth_DungeonLootTable
   Options:
     AlwaysShowName: false
     MovementSpeed: 0.275
@@ -139,7 +135,7 @@ AzureBoss:
   - DepthDiamondBoots FEET
   - MobDiamondSword HAND
   Drops:
-  - PirateCaptainLootTable
+  - Fourth_DungeonLootTable
   Options:
     AlwaysShowName: false
     MovementSpeed: 0.275
@@ -190,9 +186,6 @@ CarmineBoss:
   - skill{s=CarmineJumpLightning;cooldown=35} @self ~onDamaged .05
   - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
   - skill{s=CarmineFin} @self =15%
-  Drops:
-  - PirateGoldingLootTable
-
 ##################################################REGULARS####################################################
 AirBubble:
   Type: TROPICAL_FISH
@@ -309,7 +302,7 @@ Piranha:
   - 1 players
   Skills:
   Drops:
-  - Third_DungeonLootTable
+  - Fourth_DungeonLootTable
 
 NexusArcher:
   Type: SKELETON
@@ -336,7 +329,7 @@ NexusArcher:
   Skills:
   - skill{s=SmokeBlastProjectile;cooldown=20} @target ~onAttack 0.35
   Drops:
-  - Third_DungeonLootTable
+  - Fourth_DungeonLootTable
 NexusGuard:
   Type: SKELETON
   Display: '&cNexus<&sq> Guard'
@@ -363,6 +356,6 @@ NexusGuard:
   Skills:
   - skill{s=SmokeBlastProjectile;cooldown=20} @target ~onAttack 0.35
   Drops:
-  - Third_DungeonLootTable
+  - Fourth_DungeonLootTable
 
 

@@ -1,0 +1,23 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#
+
+##Boss Mobs
+
+
+Fourth_DungeonLootTable:
+  Conditions:
+  - playerwithin 40
+  Drops:
+  - Fourth_DungeonLootDrop 1
+First_DungeonLootDrop:
+  MinItems: 1
+  MaxItems: 1
+  Drops:
+  - Loot_NexusHelmet 1 0.01
+  - Loot_NexusChestplate 1 0.01
+  - Loot_NexusLeggings 1 0.01
+  - Loot_NexusBoots 1 0.01
+  - Loot_NexusBow 1 0.01
+  - Loot_NexusSword 1 0.01
+  - GOLDEN_APPLE 1 0.94
