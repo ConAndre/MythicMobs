@@ -33,6 +33,8 @@ PiranhaBoss:
   - skill{s=PiranhaExpunge} @self ~onTimer:180
   - skill{s=PiranhaEffects} ~onTimer:240
   - skill{s=TeleportToOutsideBigBite} ~onDeath
+  - skill{s=EnableLoot_PiranhaBoss} @PlayersInRadius{r=35} ~onDeath
+
 NexusPetBoss:
   Type: wolf
   Display: '&cNexus<&sq> Pet'
@@ -46,11 +48,13 @@ NexusPetBoss:
     Color: YELLOW
     Style: SOLID
   Skills:
-  - skill{s=LeapAttack} @self ~onTimer:140
+  - skill{s=LeapAttack;cooldown=5}  ~onCombat
   - skill{s=QuickChomp;cooldown=45} @target ~onDamaged .05
   - skill{s=HarshHowl;cooldown=60} @self ~onDamaged .05
   - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
   - skill{s=SummonPetsMinions;cooldown=85} @self ~onDamaged .05
+  - skill{s=EnableLoot_NexusPet} @PlayersInRadius{r=35} ~onDeath
+
   AIGoalSelectors:
   - 0 clear
   - 1 meleeattack
@@ -87,11 +91,11 @@ NexusBoss:
   - skill{s=AzureHomer;cooldown=20} @target ~onTimer:20
   - skill{s=CarmineSplash;cooldown=25} @PlayersInRadius{r=16} ~onDamaged .05
   - skill{s=NexusJumpLightning;cooldown=35} @self ~onDamaged .02
-  - skill{s=NexusJumpPlayers;cooldown=25} ~onDamaged .05
   - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
   - skill{s=CarmineFin} @self =25%
   - skill{s=AzureFin} @self =15%
   - skill{s=TeleportToSpawnOnDeath} ~onDeath
+  - skill{s=EnableLoot_NexusBoss} @PlayersInRadius{r=35} ~onDeath
   Equipment:
   - MobDiamondHelmet HEAD
   - MobDiamondChestplate CHEST
@@ -129,6 +133,8 @@ AzureBoss:
   - skill{s=AzureJumpLightning;cooldown=35} @self ~onDamaged .05
   - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
   - skill{s=AzureFin} @self =15%
+  - skill{s=EnableLoot_Azure} @PlayersInRadius{r=35} ~onDeath
+
   Equipment:
   - MobIronHelmet HEAD
   - MobIronChestplate CHEST
@@ -187,12 +193,15 @@ CarmineBoss:
   - skill{s=CarmineJumpLightning;cooldown=35} @self ~onDamaged .05
   - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
   - skill{s=CarmineFin} @self =15%
+  - skill{s=EnableLoot_Carmine} @PlayersInRadius{r=35} ~onDeath
+
 ##################################################REGULARS####################################################
 AirBubble:
   Type: TROPICAL_FISH
   Display: '&N&AOxygen'
   Health: 2000
   Options:
+    Invincible: true
     AlwaysShowName: false
     MovementSpeed: 0.25
     KnockbackResistance: 1
@@ -358,5 +367,37 @@ NexusGuard:
   - skill{s=SmokeBlastProjectile;cooldown=20} @target ~onAttack 0.35
   Drops:
   - Fourth_DungeonLootTable
-
+FriendlyNexusPet:
+  Type: Skeleton
+  Display: 'Ghost'
+  Disguise:
+    Type: Wolf
+  Faction: Friendly
+  Health: 200
+  Damage: 15
+  Armor: 50
+  Equipment:
+  - MobIronHelmet HEAD
+  - MobIronChestplate CHEST
+  - MobIronLeggings LEGS
+  - MobIronBoots FEET
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.255
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+  DamageModifiers:
+  - Fall -1
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 float
+  - 3 gotoowner
+  - 4 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 monsters
+  Skills:
+  - skill{s=RemoveSelf180s} ~onSpawn
+  - skill{s=LeapAttack;cooldown=5} ~onCombat
 

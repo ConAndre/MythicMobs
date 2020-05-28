@@ -91,7 +91,6 @@ Loot_NexusSword:
   Attributes:
     MainHand:
       Damage: 13
-
 Loot_AzureBoots:
   Id: Diamond_BOOTS
   Display: '&cAzure Boots'
@@ -109,9 +108,79 @@ Loot_AzureBoots:
       Health: 3
       Armor: 15
       ArmorToughness: 2
+Loot_AzureBoots:
+  Id: Diamond_BOOTS
+  Display: '&cAzure Boots'
+  Enchantments:
+  - DEPTH_STRIDER:3
+  - PROTECTION_ENVIRONMENTAL:5
+  Lore:
+  - '&6Water guides the wearer'
+  - ''
+  - '&L&cAzure'
+  - ''
+  - '&L&F&KO&R&L&1Rare Loot&F&KO'
+  Attributes:
+    Feet:
+      Health: 3
+      Armor: 15
+      ArmorToughness: 2
+Loot_AzureBoots_DULLED:
+  Id: Diamond_BOOTS
+  Display: '&8&LDulled &cAzure Boots'
+  Enchantments:
+  - DEPTH_STRIDER:2
+  - PROTECTION_ENVIRONMENTAL:3
+  Lore:
+  - '&6Water guides the wearer'
+  - ''
+  - '&L&cAzure'
+  - ''
+  - '&L&F&KO&R&L&1Rare Loot&F&KO'
+  - '&L&F&KO&R&L&8Dulled Loot&F&KO'
+  Attributes:
+    Feet:
+      Health: 3
+      Armor: 15
+      ArmorToughness: 2
+Loot_CarmineBoots:
+  Id: Diamond_BOOTS
+  Display: '&cCarmine Boots'
+  Enchantments:
+  - PROTECTION_FIRE:5
+  - PROTECTION_ENVIRONMENTAL:5
+  Lore:
+  - '&6Fire belongs to the wearer'
+  - ''
+  - '&L&cCarmine'
+  - ''
+  - '&L&F&KO&R&L&1Rare Loot&F&KO'
+  Attributes:
+    Feet:
+      Health: 3
+      Armor: 15
+      ArmorToughness: 2
+Loot_CarmineBoots_DULLED:
+  Id: Diamond_BOOTS
+  Display: '&8&LDulled &cCarmine Boots'
+  Enchantments:
+  - PROTECTION_FIRE:3
+  - PROTECTION_ENVIRONMENTAL:3
+  Lore:
+  - '&6Fire belongs to the wearer'
+  - ''
+  - '&L&cCarmine'
+  - ''
+  - '&L&F&KO&R&L&1Rare Loot&F&KO'
+  - '&L&F&KO&R&L&8Dulled Loot&F&KO'
+  Attributes:
+    Feet:
+      Health: 3
+      Armor: 15
+      ArmorToughness: 2
 Loot_PiranhaLeggings:
   Id: Diamond_Leggings
-  Display: '&cPiranha Leggings'
+  Display: '&cBig Bite Leggings'
   Enchantments:
   - THORNS:7
   - PROTECTION_ENVIRONMENTAL:5
@@ -126,9 +195,27 @@ Loot_PiranhaLeggings:
       Health: 3
       Armor: 15
       ArmorToughness: 2
+Loot_PiranhaLeggings_DULLED:
+  Id: Diamond_Leggings
+  Display: '&8&LDulled &cBig Bite Leggings'
+  Enchantments:
+  - THORNS:4
+  - PROTECTION_ENVIRONMENTAL:3
+  Lore:
+  - '&6Wow this stuff is sharp!'
+  - ''
+  - '&L&cBig Bite'
+  - ''
+  - '&L&F&KO&R&L&1Rare Loot&F&KO'
+  - '&L&F&KO&R&L&8Dulled Loot&F&KO'
+  Attributes:
+    Feet:
+      Health: 3
+      Armor: 15
+      ArmorToughness: 2
 Loot_NexusShard:
   Id: Prismarine_shard
-  Display: '&CNexus Shard'
+  Display: '&CNexus<&sq> Shard'
   Enchantments:
   - DEPTH_STRIDER:1
   Hide:
@@ -143,8 +230,7 @@ Loot_NexusShard:
   - '&L&F&KO&R&L&DSpell&F&KO'
   Skills:
   - skill{s=Loot_NexusShard_Spell} ~onUse
-
-Loot_NexusPetTeeth:
+Loot_NexusPetWeapon:
   Id: Shears
   Display: '&CFerocious Teeth'
   Enchantments:
@@ -153,7 +239,7 @@ Loot_NexusPetTeeth:
   - '&6The teeth from a foul beast.'
   - '&6They are still sharp...'
   - ''
-  - '&L&cNexus Pet'
+  - '&L&cNexus<&sq> Pet'
   - ''
   - '&L&F&KO&R&L&1Rare Loot&F&KO'
   - '&L&F&KO&R&L&DSpell&F&KO'
@@ -161,6 +247,174 @@ Loot_NexusPetTeeth:
     MainHand:
       Damage: 18
   Skills:
-  - skill{s=Loot_NexusPetTeeth_Spell} ~onUse
+  - skill{s=Loot_NexusPetWeapon_Spell} ~onUse
   Hide:
   - ENCHANTS
+Loot_NexusPetWeapon_DULLED:
+  Id: Shears
+  Display: '&8&LDulled &CFerocious Teeth'
+  Enchantments:
+  - DEPTH_STRIDER:1
+  Lore:
+  - '&6The teeth from a foul beast.'
+  - '&6They are still sharp...'
+  - ''
+  - '&L&cNexus<&sq> Pet'
+  - ''
+  - '&L&F&KO&R&L&1Rare Loot&F&KO'
+  - '&L&F&KO&R&L&8Dulled Loot&F&KO'
+  Attributes:
+    MainHand:
+      Damage: 13
+  Hide:
+  - ENCHANTS
+Loot_PiranhaLeggings:
+  Id: Diamond_Leggings
+  Display: '&cBig Bite<&sq>s Leggings'
+  Enchantments:
+  - THORNS:7
+  - PROTECTION_ENVIRONMENTAL:5
+  Lore:
+  - '&6Wow this stuff is sharp!'
+  - ''
+  - '&L&cBig Bite'
+  - ''
+  - '&L&F&KO&R&L&1Rare Loot&F&KO'
+  Attributes:
+    Feet:
+      Health: 3
+      Armor: 15
+      ArmorToughness: 2
+Loot_NexusPetHelmet:
+  Id: Diamond_Helmet
+  Display: '&cNexus<&sq> Pet Pelt'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:5
+  Lore:
+  - '&6Empowered by wolves'
+  - '&6Grants the wearer swiftness'
+  - ''
+  - '&L&cNexus<&sq> Pet'
+  - ''
+  - '&L&F&KO&R&L&1Rare Loot&F&KO'
+  Attributes:
+    Head:
+      Health: 3
+      Armor: 15
+      ArmorToughness: 2
+      MovementSpeed: .05
+Loot_NexusPetHelmet_DULLED:
+  Id: Diamond_Helmet
+  Display: '&8&LDulled &cNexus<&sq> Pet Pelt'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:3
+  Lore:
+  - '&6Empowered by wolves'
+  - '&6Grants the wearer swiftness'
+  - ''
+  - '&L&cNexus<&sq> Pet'
+  - ''
+  - '&L&F&KO&R&L&1Rare Loot&F&KO'
+  - '&L&F&KO&R&L&8Dulled Loot&F&KO'
+  Attributes:
+    Head:
+      Health: 3
+      Armor: 15
+      ArmorToughness: 2
+      MovementSpeed: .15
+Loot_NexusBossChestplate:
+  Id: Diamond_Chestplate
+  Display: '&cNexus<&sq> Chestplate'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:5
+  Lore:
+  - '&6The void watches the wearer'
+  - ''
+  - '&L&cNexus'
+  - ''
+  - '&L&F&KO&R&L&1Rare Loot&F&KO'
+  - '&L&F&KO&R&L&DSpell&F&KO'
+  Attributes:
+    Chest:
+      Health: 4
+      Armor: 15
+      ArmorToughness: 2
+      KnockbackResistance: 1
+  Skills:
+  - skill{s=Loot_NexusBossChestplate_Spell} ~onDamaged
+
+Loot_NexusBossChestplate_DULLED:
+  Id: Diamond_Chestplate
+  Display: '&8&LDulled &cNexus<&sq> Chestplate'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:3
+  Lore:
+  - '&6The void watches the wearer'
+  - ''
+  - '&L&cNexus'
+  - ''
+  - '&L&F&KO&R&L&1Rare Loot&F&KO'
+  - '&L&F&KO&R&L&DSpell&F&KO'
+  - '&L&F&KO&R&L&8Dulled Loot&F&KO'
+  Attributes:
+    Chest:
+      Health: 4
+      Armor: 15
+      ArmorToughness: 2
+      KnockbackResistance: .5
+  Skills:
+  - skill{s=Loot_NexusBossChestplate_DULLED_Spell} ~onDamaged
+
+
+Loot_AzureRod:
+  Id: end_rod
+  Display: '&CAzure<&sq>s Rod'
+  Enchantments:
+  - DEPTH_STRIDER:1
+  Hide:
+  - ENCHANTS
+  Lore:
+  - '&6A rod used by Azure.'
+  - '&6It seems to have an opening.'
+  - ''
+  - '&L&cAzure'
+  - ''
+  - '&L&F&KO&R&L&1Rare Loot&F&KO'
+  - '&L&F&KO&R&L&DSpell&F&KO'
+  Skills:
+  - skill{s=Loot_AzureRod_Spell} ~onUse
+Loot_CarmineEssence:
+  Id: RED_DYE
+  Display: '&CEssence of Fire'
+  Enchantments:
+  - DEPTH_STRIDER:1
+  Hide:
+  - ENCHANTS
+  Lore:
+  - '&6This chipped off the cape of Carmine.'
+  - '&6It glows with power.'
+  - ''
+  - '&L&cCarmine'
+  - ''
+  - '&L&F&KO&R&L&1Rare Loot&F&KO'
+  - '&L&F&KO&R&L&DSpell&F&KO'
+  Skills:
+  - skill{s=Loot_CarmineEssence_Spell} ~onUse
+
+Loot_Artifact_DogCollar:
+  Id: Name_tag
+  Display: '&cDog Collar'
+  Enchantments:
+  - DEPTH_STRIDER:1
+  Hide:
+  - ENCHANTS
+  Lore:
+  - '&6The collar of a foul beast.'
+  - '&6You can hear the horrible howls.'
+  - ''
+  - '&L&cNexus<&sq> Pet'
+  - ''
+  - '&L&F&KO&R&L&1Rare Loot&F&KO'
+  - '&L&F&KO&R&L&DSpell&F&KO'
+  Skills:
+  - skill{s=Loot_Artifact_DogCollar_Spell} ~onUse

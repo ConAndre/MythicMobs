@@ -13,7 +13,7 @@ SummonSkeletons:
   - summon{mob=SkeletalMinion;amount=2;noise=5} @Self
 AngrySludgePoison:
   Conditions:
-  - targetwithin 8
+  - targetwithin{d=8} true
   - targetinlineofsight true
   - incombat
   Skills:

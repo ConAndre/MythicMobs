@@ -32,18 +32,11 @@ JunkeeHead:
     SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmZkNDMwODc2M2ZmZDVlMjYzMWM3NGQwYmUyZmY0OWE5MGJhYzQ5MDUzNjE4YzI4ODgyZTc1YzRkY2NlMjJhYyJ9fX0==
 
 ##LOOT
-Loot_GoldingShield:
-  Id: shield
-  Display: '&e&LGolding<&sq>s Shield'
-  BannerLayers:
-  - ORANGE HALF_HORIZONTAL
-  - RED STRIPE_SMALL
-  - BLACK BORDER
-  - WHITE SKULL
-  - BLACK HALF_HORIZONTAL_MIRROR
-  - RED TRIANGLE_BOTTOM
+Loot_GoldingApple:
+  Id: golden_apple
+  Display: '&e&LGolding<&sq>s Apple'
   Lore:
-  - '&1Golding<&sq>s used this shield to'
+  - '&1Golding used this apple to'
   - 'deflect the many arrows of invading pirates.'
   - ''
   - '&L&cGolding'
@@ -51,9 +44,11 @@ Loot_GoldingShield:
   - '&L&F&KO&R&L&1Rare Loot&F&KO'
   - '&L&F&KO&R&L&DSpell&F&KO'
   Enchantments:
-  -
+  - ARROW_FIRE:1
+  Hide:
+  - ENCHANTS
   Skills:
-  - skill{s=Loot_GoldingShield_Spell} ~onRightClick
+  - skill{s=Loot_GoldingApple_Spell} ~onDamaged
 
 Loot_SquawksBeak:
   Id: bow
@@ -76,8 +71,8 @@ Loot_SquawksCookie:
   Id: Cookie
   Display: '&eSquawk<&sq>s Cookie'
   Lore:
-  - '&6Squawk<&sq>s parrot bait that he has used'
-  - '&6to peck summon thousands of parrots.'
+  - '&6Squawk<&sq>s parrot that he has used'
+  - '&6to summon thousands of parrots.'
   - ''
   - '&L&cSquawk'
   - ''
@@ -261,18 +256,11 @@ Loot_SquawksBeak_DULLED:
   - ARROW_INFINITE:1
   - ARROW_FIRE:1
 
-Loot_GoldingShield_DULLED:
-  Id: shield
-  BannerLayers:
-  - ORANGE HALF_HORIZONTAL
-  - RED STRIPE_SMALL
-  - BLACK BORDER
-  - WHITE SKULL
-  - BLACK HALF_HORIZONTAL_MIRROR
-  - RED TRIANGLE_BOTTOM
-  Display: '&8&LDulled &e&LGolding<&sq>s Shield'
+Loot_GoldingApple_DULLED:
+  Id: golden_apple
+  Display: '&8&LDulled &e&LGolding<&sq>s Apple'
   Lore:
-  - '&1Golding<&sq>s used this shield to'
+  - '&1Golding used this apple to'
   - 'deflect the many arrows of invading pirates.'
   - ''
   - '&L&cGolding'
@@ -280,9 +268,11 @@ Loot_GoldingShield_DULLED:
   - '&L&F&KO&R&L&8Dulled Loot&F&KO'
   - '&L&F&KO&R&L&DSpell&F&KO'
   Enchantments:
-  -
+  - ARROW_FIRE:1
+  Hide:
+  - ENCHANTS
   Skills:
-  - skill{s=Loot_GoldingShield_DULLED_Spell} ~onRightClick
+  - skill{s=Loot_GoldingApple_DULLED_Spell} ~onDamaged
 
 
 

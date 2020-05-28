@@ -83,7 +83,7 @@ ParrotJumpLightning:
 ParrotPeck:
   Condition:
   - OnGround
-  - TargetWithin 2
+  - targetwithin{d=2}
   - LineOfSight
   Skills:
   - message{m="<mob.name><&co> &c*Peck* x4 "} @target
@@ -102,7 +102,7 @@ ParrotPeck:
 ParrotLeapAttack:
   Condition:
   - OnGround
-  - TargetWithin 8
+  - targetwithin{d=8}
   - LineOfSight
   Skills:
   - effect:sound{s=entity.parrot.ambient;v=1;p=0}
@@ -111,14 +111,13 @@ ParrotLeapAttack:
 
 ##Golding
 SmashAttackII:
-  Cooldown: 12
   Conditions:
-  - targetwithin 25
+  - targetwithin{d=25}
   Skills:
   - effect:particles{cooldown=5;particle=angryVillager;amount=20;vSpread=1;hSpread=2;Speed=0;yoffset=2} @target
   - message{cooldown=30;m="<mob.name><&co> SAVAGE SMASH!"} @PlayersInRadius{r=40}
   - teleport @target
-  - effect:sound{s=ENTITY_ZOMBIE_ATTACK_IRON_DOOR;volume=2.0;pitch=0.5}
+  - effect:sound{s=entity.zombie.attack_iron_door;volume=2.0;pitch=0.5} @target
   - sendtitle{title="";subtitle="&c<<Hit by Savage Smash!>>";d=40} @PlayersNearOrigin{r=10}
   - delay 10
   - damage{amount=2;ignorearmor=true} @PlayersInRadius{r=5}

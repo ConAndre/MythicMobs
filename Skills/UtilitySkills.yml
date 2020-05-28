@@ -5,7 +5,7 @@
 SmashAttack:
   Cooldown: 12
   Conditions:
-  - targetwithin 25
+  - targetwithin{d=25}
   - targetinlineofsight true
   Skills:
   - teleport @target
@@ -18,71 +18,71 @@ SmashAttack:
 WaterBuffs:
   Cooldown: 1
   Skills:
-  - potion{type=WATER_BREATHING;lvl=0;duration=400} @PlayersInRadius{r=5}
-  - potion{type=DOLPHINS_GRACE;lvl=0;duration=400} @PlayersInRadius{r=5}
+  - potion{type=WATER_BREATHING;lvl=0;duration=1200} @PlayersInRadius{r=5}
+  - potion{type=DOLPHINS_GRACE;lvl=0;duration=1200} @PlayersInRadius{r=5}
   - effect:particles{p=drip_water;amount=200;hSpread=3;ySpread=1;speed=0;yOffset=0.5} @Self
   - sound{s=entity.dolphin.splash} @self
 
 LeapAttack:
   Condition:
-  - TargetWithin 4
+  - targetwithin{d=4}
   - LineOfSight
   Skills:
   - lunge{velocity=1.2;velocityY=0.3} @self
 
 TeleportToSpawnOnDeath:
   Skills:
-  - sendtitle{title="&cBoss Cleared!";subtitle="&cTeleporting to spawn in &A25 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A25 &cseconds!";d=25} @PlayersInRadius{r=35}
   - delay 20
-  - sendtitle{title="&cBoss Cleared!";subtitle="&cTeleporting to spawn in &A24 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A24 &cseconds!";d=25} @PlayersInRadius{r=35}
   - delay 20
-  - sendtitle{title="&cBoss Cleared!";subtitle="&cTeleporting to spawn in &A23 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A23 &cseconds!";d=25} @PlayersInRadius{r=35}
   - delay 20
-  - sendtitle{title="&cBoss Cleared!";subtitle="&cTeleporting to spawn in &A22 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A22 &cseconds!";d=25} @PlayersInRadius{r=35}
   - delay 20
-  - sendtitle{title="&cBoss Cleared!";subtitle="&cTeleporting to spawn in &A21 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A21 &cseconds!";d=25} @PlayersInRadius{r=35}
   - delay 20
-  - sendtitle{title="&cBoss Cleared!";subtitle="&cTeleporting to spawn in &A20 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A20 &cseconds!";d=25} @PlayersInRadius{r=35}
   - delay 20
-  - sendtitle{title="&cBoss Cleared!";subtitle="&cTeleporting to spawn in &A19 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A19 &cseconds!";d=25} @PlayersInRadius{r=35}
   - delay 20
-  - sendtitle{title="&cBoss Cleared!";subtitle="&cTeleporting to spawn in &A18 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A18 &cseconds!";d=25} @PlayersInRadius{r=35}
   - delay 20
-  - sendtitle{title="&cBoss Cleared!";subtitle="&cTeleporting to spawn in &A17 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A17 &cseconds!";d=25} @PlayersInRadius{r=35}
   - delay 20
-  - sendtitle{title="&cBoss Cleared!";subtitle="&cTeleporting to spawn in &A16 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A16 &cseconds!";d=25} @PlayersInRadius{r=35}
   - delay 20
-  - sendtitle{title="&cBoss Cleared!";subtitle="&cTeleporting to spawn in &A15 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A15 &cseconds!";d=25} @PlayersInRadius{r=35}
   - delay 20
-  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A14 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A14 &cseconds!";d=25} @PlayersInRadius{r=35}
   - delay 20
-  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A13 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A13 &cseconds!";d=25} @PlayersInRadius{r=35}
   - delay 20
-  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A12 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A12 &cseconds!";d=25} @PlayersInRadius{r=35}
   - delay 20
-  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A11 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A11 &cseconds!";d=25} @PlayersInRadius{r=35}
   - delay 20
-  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A10 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A10 &cseconds!";d=25} @PlayersInRadius{r=35}
   - delay 20
-  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A9 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A9 &cseconds!";d=25} @PlayersInRadius{r=35}
   - delay 20
-  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A8 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A8 &cseconds!";d=25} @PlayersInRadius{r=35}
   - delay 20
-  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A7 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A7 &cseconds!";d=25} @PlayersInRadius{r=35}
   - delay 20
-  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A6 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A6 &cseconds!";d=25} @PlayersInRadius{r=35}
   - delay 20
-  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A5 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A5 &cseconds!";d=25} @PlayersInRadius{r=35}
   - delay 20
-  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A4 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A4 &cseconds!";d=25} @PlayersInRadius{r=35}
   - delay 20
-  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A3 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A3 &cseconds!";d=25} @PlayersInRadius{r=35}
   - delay 20
-  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A2 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A2 &cseconds!";d=25} @PlayersInRadius{r=35}
   - delay 20
-  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A1 &cseconds!";d=25} @PlayersInRadius{r=25}
+  - sendtitle{title="&cDungeon Cleared!";subtitle="&cTeleporting to spawn in &A1 &cseconds!";d=25} @PlayersInRadius{r=35}
   - delay 20
-  - teleportto{location=748,64,-195} @PlayersInRadius{r=25}
+  - teleportto{location=748,64,-195} @PlayersInRadius{r=35}
 
 
 TeleportToOutsideBigBite:
@@ -144,4 +144,12 @@ RemoveSelf180s:
   Skills:
   - delay 3600
   - remove @self
+
+CacheReroll:
+  Skills:
+  - setvariable{var=target.boosted;t=STRING;value="true"}
+  - consumeUsedItem ~onUse
+  - message{m="&A&LYou used a &6&N&LLoot Reroller!"} @self
+  - sound{s=entity.illusioner.prepare_mirror;v=.25} @self
+  - effect:particles{particle=flame;amount=50;hS=1;vS=1;speed=1} @self
 

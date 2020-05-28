@@ -1,0 +1,301 @@
+EnableLoot_Carmine:
+  Skills:
+  - summon{mob=Cache_Carmine;amount=1;noise=0} @Self
+  - setvariable{var=target.AllowedToLoot-Carmine;t=STRING;value="true"}
+  - skill{s=Death} @Self
+  - sendtoast{icon=DIAMOND; iconnbt={CustomModelData:1};message="&A&LKill <mob.name>!";frame=challenge} @PlayersInRadius{r=35}
+Loot_Carmine:
+  TargetConditions:
+  - variableisset target.AllowedToLoot-Carmine true
+  - varEquals{var=target.AllowedToLoot-Carmine;value="false"} castinstead Loot_CarmineLooted
+  - varEquals{var=target.AllowedToLoot-Carmine;value="true"}
+  Skills:
+  - setvariable{var=target.AllowedToLoot-Carmine;t=STRING;value="false"}
+  - message{m="&A&LYou loot the cache!"} @trigger
+  - sound{s=block.ender_chest.open} @trigger
+  - delay 40
+  - sound{s=entity.item.pickup} @trigger
+  - skill{s=Loot_CarmineBoosted} @trigger 1
+  - randomskill{skills=Loot_CarmineBoots_DULLED} @trigger 1
+  - randomskill{skills=Loot_CarmineEssence,Loot_CarmineBoots} @trigger .12
+  - delay 1800
+  - remove @self
+
+Loot_CarmineBoosted:
+  TargetConditions:
+  - variableisset target.boosted true
+  - varEquals{var=target.boosted;value="true"}
+  Skills:
+  - setvariable{var=target.boosted;t=STRING;value="false"}
+  - message{m="&A&L<target.name> used a &6&N&LLoot Reroller!"} @PlayersInRadius{r=25}
+  - delay 30
+  - message{m="&A&LYou managed to loot the cache again!"} @trigger
+  - sound{s=block.ender_chest.open} @trigger
+  - delay 40
+  - sound{s=entity.item.pickup} @trigger
+  - randomskill{skills=Loot_CarmineBoots_DULLED} @trigger 1
+  - randomskill{skills=Loot_CarmineEssence,Loot_CarmineBoots} @trigger .12
+
+Loot_CarmineBoots:
+  Skills:
+  - sound{s=entity.zombie_villager.converted} @trigger
+  - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
+  - giveitem{i=Loot_CaptainWeapon} @trigger 1
+  - message{m="&A&L<target.name> has looted the &E&LCaptain<&sq>s Hook"} @PlayersInWorld 1
+Loot_CarmineBoots_DULLED:
+  Skills:
+  - giveitem{i=Loot_CarmineBoots_DULLED} @trigger 1
+  - message{m="&A&LYou looted a &8&Ldulled &E&LCarmine<&sq>s Boots"} @trigger 1
+Loot_CarmineEssence:
+  Skills:
+  - sound{s=entity.zombie_villager.converted} @trigger
+  - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
+  - giveitem{i=Loot_CarmineEssence} @trigger 1
+  - message{m="&A&L<target.name> has looted &E&LEssence of Fire"} @PlayersInWorld 1
+Loot_CarmineLooted:
+  Skills:
+  - message{m="&c&LYou have already looted this cache &A&Lor &c&Lyou did not participate in this battle!"} @trigger
+  - delay 1800
+  - remove @self
+
+##
+EnableLoot_Azure:
+  Skills:
+  - summon{mob=Cache_Azure;amount=1;noise=0} @Self
+  - setvariable{var=target.AllowedToLoot-Azure;t=STRING;value="true"}
+  - skill{s=Death} @Self
+  - sendtoast{icon=DIAMOND; iconnbt={CustomModelData:1};message="&A&LKill <mob.name>!";frame=challenge} @PlayersInRadius{r=35}
+Loot_Azure:
+  TargetConditions:
+  - variableisset target.AllowedToLoot-Azure true
+  - varEquals{var=target.AllowedToLoot-Azure;value="false"} castinstead Loot_AzureLooted
+  - varEquals{var=target.AllowedToLoot-Azure;value="true"}
+  Skills:
+  - setvariable{var=target.AllowedToLoot-Azure;t=STRING;value="false"}
+  - message{m="&A&LYou loot the cache!"} @trigger
+  - sound{s=block.ender_chest.open} @trigger
+  - delay 40
+  - sound{s=entity.item.pickup} @trigger
+  - skill{s=Loot_AzureBoosted} @trigger 1
+  - randomskill{skills=Loot_AzureBoots_DULLED} @trigger 1
+  - randomskill{skills=Loot_AzureRod,Loot_AzuredBoots} @trigger .12
+  - delay 1800
+  - remove @self
+
+Loot_AzureBoosted:
+  TargetConditions:
+  - variableisset target.boosted true
+  - varEquals{var=target.boosted;value="true"}
+  Skills:
+  - setvariable{var=target.boosted;t=STRING;value="false"}
+  - message{m="&A&L<target.name> used a &6&N&LLoot Reroller!"} @PlayersInRadius{r=25}
+  - delay 30
+  - message{m="&A&LYou managed to loot the cache again!"} @trigger
+  - sound{s=block.ender_chest.open} @trigger
+  - delay 40
+  - sound{s=entity.item.pickup} @trigger
+  - randomskill{skills=Loot_AzureBoots_DULLED} @trigger 1
+  - randomskill{skills=Loot_AzureRod,Loot_AzuredBoots} @trigger .12
+
+Loot_AzureBoots:
+  Skills:
+  - sound{s=entity.zombie_villager.converted} @trigger
+  - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
+  - giveitem{i=Loot_AzureBoots} @trigger 1
+  - message{m="&A&L<target.name> has looted the &E&LAzure<&sq>s Boots"} @PlayersInWorld 1
+Loot_AzureBoots_DULLED:
+  Skills:
+  - giveitem{i=Loot_AzureBoots_DULLED} @trigger 1
+  - message{m="&A&LYou looted a &8&Ldulled &E&LAzure<&sq>s Boots"} @trigger 1
+Loot_AzureRod:
+  Skills:
+  - sound{s=entity.zombie_villager.converted} @trigger
+  - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
+  - giveitem{i=Loot_AzureRod} @trigger 1
+  - message{m="&A&L<target.name> has looted &E&LAzure<&sq>s Rod"} @PlayersInWorld 1
+Loot_AzureLooted:
+  Skills:
+  - message{m="&c&LYou have already looted this cache &A&Lor &c&Lyou did not participate in this battle!"} @trigger
+  - delay 1800
+  - remove @self
+#
+
+EnableLoot_PiranhaBoss:
+  Skills:
+  - summon{mob=Cache_PiranhaBoss;amount=1;noise=0} @Self
+  - setvariable{var=target.AllowedToLoot-PiranhaBoss;t=STRING;value="true"}
+  - skill{s=Death} @Self
+  - sendtoast{icon=DIAMOND; iconnbt={CustomModelData:1};message="&A&LKill <mob.name>!";frame=challenge} @PlayersInRadius{r=35}
+Loot_PiranhaBoss:
+  TargetConditions:
+  - variableisset target.AllowedToLoot-PiranhaBoss true
+  - varEquals{var=target.AllowedToLoot-PiranhaBoss;value="false"} castinstead Loot_PiranhaBossLooted
+  - varEquals{var=target.AllowedToLoot-PiranhaBoss;value="true"}
+  Skills:
+  - setvariable{var=target.AllowedToLoot-PiranhaBoss;t=STRING;value="false"}
+  - message{m="&A&LYou loot the cache!"} @trigger
+  - sound{s=block.ender_chest.open} @trigger
+  - delay 40
+  - sound{s=entity.item.pickup} @trigger
+  - skill{s=Loot_PiranhaBossBoosted} @trigger 1
+  - randomskill{skills=Loot_PiranhaLeggings_DULLED} @trigger 1
+  - randomskill{skills=Loot_PiranhaLeggings} @trigger .12
+  - delay 1800
+  - remove @self
+Loot_PiranhaBossBoosted:
+  TargetConditions:
+  - variableisset target.boosted true
+  - varEquals{var=target.boosted;value="true"}
+  Skills:
+  - setvariable{var=target.boosted;t=STRING;value="false"}
+  - message{m="&A&L<target.name> used a &6&N&LLoot Reroller!"} @PlayersInRadius{r=25}
+  - delay 30
+  - message{m="&A&LYou managed to loot the cache again!"} @trigger
+  - sound{s=block.ender_chest.open} @trigger
+  - delay 40
+  - sound{s=entity.item.pickup} @trigger
+  - randomskill{skills=Loot_PiranhaLeggings_DULLED} @trigger 1
+  - randomskill{skills=Loot_PiranhaLeggings} @trigger .12
+Loot_PiranhaLeggings:
+  Skills:
+  - sound{s=entity.zombie_villager.converted} @trigger
+  - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
+  - giveitem{i=Loot_PiranhaLeggings} @trigger 1
+  - message{m="&A&L<target.name> has looted the &E&LBig Bite<&sq>s Leggings"} @PlayersInWorld 1
+Loot_PiranhaLeggings_DULLED:
+  Skills:
+  - giveitem{i=Loot_PiranhaLeggings_DULLED} @trigger 1
+  - message{m="&A&LYou looted a &8&Ldulled &E&LBig Bite<&sq>s Leggings"} @trigger 1
+Loot_PiranhaBossLooted:
+  Skills:
+  - message{m="&c&LYou have already looted this cache &A&Lor &c&Lyou did not participate in this battle!"} @trigger
+  - delay 1800
+  - remove @self
+
+
+#
+
+EnableLoot_NexusPet:
+  Skills:
+  - summon{mob=Cache_NexusPet;amount=1;noise=0} @Self
+  - setvariable{var=target.AllowedToLoot-NexusPet;t=STRING;value="true"}
+  - skill{s=Death} @Self
+  - sendtoast{icon=DIAMOND; iconnbt={CustomModelData:1};message="&A&LKill <mob.name>!";frame=challenge} @PlayersInRadius{r=35}
+Loot_NexusPet:
+  TargetConditions:
+  - variableisset target.AllowedToLoot-NexusPet true
+  - varEquals{var=target.AllowedToLoot-NexusPet;value="false"} castinstead Loot_NexusPetLooted
+  - varEquals{var=target.AllowedToLoot-NexusPet;value="true"}
+  Skills:
+  - setvariable{var=target.AllowedToLoot-NexusPet;t=STRING;value="false"}
+  - message{m="&A&LYou loot the cache!"} @trigger
+  - sound{s=block.ender_chest.open} @trigger
+  - delay 40
+  - sound{s=entity.item.pickup} @trigger
+  - skill{s=Loot_NexusPetBoosted} @trigger 1
+  - randomskill{skills=Loot_NexusPetHelmet_DULLED,Loot_NexusPetWeapon_DULLED} @trigger 1
+  - randomskill{skills=Loot_NexusPetHelmet,Loot_NexusPetWeapon} @trigger .12
+  - delay 1800
+  - remove @self
+Loot_NexusPetBoosted:
+  TargetConditions:
+  - variableisset target.boosted true
+  - varEquals{var=target.boosted;value="true"}
+  Skills:
+  - setvariable{var=target.boosted;t=STRING;value="false"}
+  - message{m="&A&L<target.name> used a &6&N&LLoot Reroller!"} @PlayersInRadius{r=25}
+  - delay 30
+  - message{m="&A&LYou managed to loot the cache again!"} @trigger
+  - sound{s=block.ender_chest.open} @trigger
+  - delay 40
+  - sound{s=entity.item.pickup} @trigger
+  - randomskill{skills=Loot_NexusPetHelmet_DULLED,Loot_NexusPetWeapon_DULLED} @trigger 1
+  - randomskill{skills=Loot_NexusPetHelmet,Loot_NexusPetWeapon} @trigger .12
+
+Loot_NexusPetHelmet:
+  Skills:
+  - sound{s=entity.zombie_villager.converted} @trigger
+  - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
+  - giveitem{i=Loot_NexusPetHelmet} @trigger 1
+  - message{m="&A&L<target.name> has looted &E&LNexus<&sq> Pet Boots"} @PlayersInWorld 1
+Loot_NexusPetHelmet_DULLED:
+  Skills:
+  - giveitem{i=Loot_NexusPetHelmet_DULLED} @trigger 1
+  - message{m="&A&LYou looted &8&Ldulled &E&LNexus<&sq> Pet Boots"} @trigger 1
+Loot_NexusPetWeapon:
+  Skills:
+  - sound{s=entity.zombie_villager.converted} @trigger
+  - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
+  - giveitem{i=Loot_NexusPetWeapon} @trigger 1
+  - message{m="&A&LYou looted &8&Ldulled &E&LFerocious Teeth"} @trigger 1
+Loot_NexusPetWeapon_DULLED:
+  Skills:
+  - sound{s=entity.zombie_villager.converted} @trigger
+  - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
+  - giveitem{i=Loot_NexusPetWeapon_DULLED} @trigger 1
+  - message{m="&A&L<target.name> has looted &E&LFerocious Teeth"} @PlayersInWorld 1
+Loot_NexusPetLooted:
+  Skills:
+  - message{m="&c&LYou have already looted this cache &A&Lor &c&Lyou did not participate in this battle!"} @trigger
+  - delay 1800
+  - remove @self
+
+#
+EnableLoot_NexusBoss:
+  Skills:
+  - summon{mob=Cache_NexusBoss;amount=1;noise=0} @Self
+  - setvariable{var=target.AllowedToLoot-NexusBoss;t=STRING;value="true"}
+  - skill{s=Death} @Self
+  - sendtoast{icon=DIAMOND; iconnbt={CustomModelData:1};message="&A&LKill <mob.name>!";frame=challenge} @PlayersInRadius{r=35}
+Loot_NexusBoss:
+  TargetConditions:
+  - variableisset target.AllowedToLoot-NexusBoss true
+  - varEquals{var=target.AllowedToLoot-NexusBoss;value="false"} castinstead Loot_NexusBossLooted
+  - varEquals{var=target.AllowedToLoot-NexusBoss;value="true"}
+  Skills:
+  - setvariable{var=target.AllowedToLoot-NexusBoss;t=STRING;value="false"}
+  - message{m="&A&LYou loot the cache!"} @trigger
+  - sound{s=block.ender_chest.open} @trigger
+  - delay 40
+  - sound{s=entity.item.pickup} @trigger
+  - skill{s=Loot_NexusBossBoosted} @trigger 1
+  - randomskill{skills=Loot_NexusBossChestplate_DULLED} @trigger 1
+  - randomskill{skills=Loot_NexusBossChestplate,Loot_NexusShard} @trigger .12
+  - delay 1800
+  - remove @self
+Loot_NexusBossBoosted:
+  TargetConditions:
+  - variableisset target.boosted true
+  - varEquals{var=target.boosted;value="true"}
+  Skills:
+  - setvariable{var=target.boosted;t=STRING;value="false"}
+  - message{m="&A&L<target.name> used a &6&N&LLoot Reroller!"} @PlayersInRadius{r=25}
+  - delay 30
+  - message{m="&A&LYou managed to loot the cache again!"} @trigger
+  - sound{s=block.ender_chest.open} @trigger
+  - delay 40
+  - sound{s=entity.item.pickup} @trigger
+  - randomskill{skills=Loot_NexusBossChestplate_DULLED} @trigger 1
+  - randomskill{skills=Loot_NexusBossChestplate,Loot_NexusShard} @trigger .12
+
+Loot_NexusBossChestplate:
+  Skills:
+  - sound{s=entity.zombie_villager.converted} @trigger
+  - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
+  - giveitem{i=Loot_NexusBossChestplate} @trigger 1
+  - message{m="&A&L<target.name> has looted &E&LNexus<&sq> Chestplate"} @PlayersInWorld 1
+Loot_NexusBossChestplate_DULLED:
+  Skills:
+  - giveitem{i=Loot_NexusBossChestplate_DULLED} @trigger 1
+  - message{m="&A&LYou looted a &8&Ldulled &E&LNexus<&sq> Chestplate"} @trigger 1
+Loot_NexusShard:
+  Skills:
+  - sound{s=entity.zombie_villager.converted} @trigger
+  - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
+  - giveitem{i=Loot_NexusShard} @trigger 1
+  - message{m="&A&L<target.name> has looted &E&LNexus<&sq> Shard"} @PlayersInWorld 1
+Loot_NexusBossLooted:
+  Skills:
+  - message{m="&c&LYou have already looted this cache &A&Lor &c&Lyou did not participate in this battle!"} @trigger
+  - delay 1800
+  - remove @self

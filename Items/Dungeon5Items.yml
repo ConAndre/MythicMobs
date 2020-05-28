@@ -14,7 +14,7 @@ Loot_SanctuaryHelmet:
       Health: 2
       Armor: 15
       ArmorToughness: 2
-Loot_SChestplate:
+Loot_SanctuaryChestplate:
   Id: IRON_CHESTPLATE
   Display: '&cNexus Chestplate'
   Lore:

@@ -27,7 +27,7 @@ PirateCaptain:
   - skill{s=CaptainBlastProjectile} @Target ~onTimer:120
   - skill{s=PharaohFin} @self =15%
   - skill{s=CallPirateBoat} @self =10%
-  - skill{s=EnableLoot_Captain} @PlayersInRadius{r=25} ~onDeath
+  - skill{s=EnableLoot_Captain} @PlayersInRadius{r=35} ~onDeath
   Equipment:
   - MobIronHelmet HEAD
   - MobIronChestplate CHEST
@@ -41,6 +41,10 @@ PirateCaptain:
     KnockbackResistance: 1
   Modules:
     ThreatTable: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 float
 
 PirateGolding:
   Type: Skeleton
@@ -64,7 +68,7 @@ PirateGolding:
   - MobGoldLeggings LEGS
   - MobGoldBoots FEET
   - MobGoldSword HAND
-  - Loot_GoldingShield OFFHAND
+  - Loot_GoldingApple OFFHAND
   Options:
     AlwaysShowName: false
     MovementSpeed: 0.275
@@ -86,9 +90,9 @@ PirateGolding:
   - skill{s=SummonJunkees} @self =85%
   - skill{s=SummonParrots} @self ~onDamaged =35%
   - skill{s=PharaohFin} @self =15%
-  - skill{s=SmashAttackII} @Target >0 0.01
+  - skill{s=SmashAttackII;cooldown=10} @target ~onDamaged 0.05
   - skill{s=AngryAura} ~onTimer:600
-  - skill{s=EnableLoot_Golding} @PlayersInRadius{r=25} ~onDeath
+  - skill{s=EnableLoot_Golding} @PlayersInRadius{r=35} ~onDeath
 PirateParrotBoss:
   Type: BABY_ZOMBIE
   Display: '&cSquawk'
@@ -133,7 +137,7 @@ PirateParrotBoss:
   - skill{s=ParrotJumpLightning} @self ~onDamaged =50%
   - skill{s=SummonParrots} @self ~onDamaged =35%
   - skill{s=ParrotLeapAttack} @self ~onTimer:120
-  - skill{s=EnableLoot_Parrot} @PlayersInRadius{r=25} ~onDeath
+  - skill{s=EnableLoot_Parrot} @PlayersInRadius{r=35} ~onDeath
 ##################################################REGULARS####################################################
 PirateJunkee:
   Type: BABY_ZOMBIE
@@ -199,7 +203,7 @@ FriendlyParrot:
   Disguise:
     Type: parrot
   Faction: Friendly
-  Health: 200
+  Health: 150
   Damage: 10
   Armor: 50
   Equipment:
@@ -209,11 +213,9 @@ FriendlyParrot:
   - MobIronBoots FEET
   Options:
     AlwaysShowName: false
-    MovementSpeed: 0.225
+    MovementSpeed: 0.255
     KnockbackResistance: 1
     PreventOtherDrops: true
-  Modules:
-    ThreatTable: true
   DamageModifiers:
   - Fall -1
   AIGoalSelectors:
@@ -227,7 +229,8 @@ FriendlyParrot:
   - 1 monsters
   Skills:
   - skill{s=RemoveSelf180s} ~onSpawn
-  - skill{s=LeapAttack;cooldown=5} ~onTimer:40
+  - skill{s=LeapAttack;cooldown=5} ~onCombat
+
 
 
 Pirate:

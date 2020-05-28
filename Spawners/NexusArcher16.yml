@@ -12,7 +12,7 @@ NexusArcher16:
   Cooldown: 0
   CooldownTimer: 0
   Warmup: 180
-  WarmupTimer: 166
+  WarmupTimer: 0
   CheckForPlayers: true
   ActivationRange: 40
   ScalingRange: 25.0

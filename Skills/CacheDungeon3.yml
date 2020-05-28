@@ -1,0 +1,187 @@
+EnableLoot_Captain:
+  Skills:
+  - summon{mob=Cache_Captain;amount=1;noise=0} @Self
+  - setvariable{var=target.AllowedToLoot-Captain;t=STRING;value="true"}
+  - skill{s=Death} @Self
+  - sendtoast{icon=DIAMOND; iconnbt={CustomModelData:1};message="&A&LKill <mob.name>!";frame=challenge} @PlayersInRadius{r=35}
+Loot_Captain:
+  TargetConditions:
+  - variableisset target.AllowedToLoot-Captain true
+  - varEquals{var=target.AllowedToLoot-Captain;value="false"} castinstead Loot_CaptainLooted
+  - varEquals{var=target.AllowedToLoot-Captain;value="true"}
+  Skills:
+  - setvariable{var=target.AllowedToLoot-Captain;t=STRING;value="false"}
+  - message{m="&A&LYou loot the cache!"} @trigger
+  - sound{s=block.ender_chest.open} @trigger
+  - delay 40
+  - sound{s=entity.item.pickup} @trigger
+  - skill{s=Loot_CaptainBoosted} @trigger 1
+  - randomskill{skills=Loot_CaptainWeapon_DULLED,Loot_CaptainChestplate_DULLED} @trigger 1
+  - randomskill{skills=Loot_CaptainWeapon,Loot_CaptainChestplate} @trigger .12
+  - delay 1800
+  - remove @self
+
+Loot_CaptainBoosted:
+  TargetConditions:
+  - variableisset target.boosted true
+  - varEquals{var=target.boosted;value="true"}
+  Skills:
+  - setvariable{var=target.boosted;t=STRING;value="false"}
+  - message{m="&A&L<target.name> used a &6&N&LLoot Reroller!"} @PlayersInRadius{r=25}
+  - delay 30
+  - message{m="&A&LYou managed to loot the cache again!"} @trigger
+  - sound{s=block.ender_chest.open} @trigger
+  - delay 40
+  - sound{s=entity.item.pickup} @trigger
+  - randomskill{skills=Loot_GoldingApple_DULLED} @trigger 1
+  - randomskill{skills=Loot_GoldingApple} @trigger .12
+
+Loot_CaptainWeapon:
+  Skills:
+  - sound{s=entity.zombie_villager.converted} @trigger
+  - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
+  - giveitem{i=Loot_CaptainWeapon} @trigger 1
+  - message{m="&A&L<target.name> has looted the &E&LCaptain<&sq>s Hook"} @PlayersInWorld 1
+Loot_CaptainWeapon_DULLED:
+  Skills:
+  - giveitem{i=Loot_CaptainWeapon_DULLED} @trigger 1
+  - message{m="&A&LYou looted a &8&Ldulled &E&LCaptain<&sq>s Hook"} @trigger 1
+Loot_CaptainChestplate:
+  Skills:
+  - sound{s=entity.zombie_villager.converted} @trigger
+  - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
+  - giveitem{i=Loot_CaptainChestplate} @trigger 1
+  - message{m="&A&L<target.name> has looted the &E&LCaptain<&sq>s Chestplate"} @PlayersInWorld 1
+Loot_CaptainChestplate_DULLED:
+  Skills:
+  - giveitem{i=Loot_CaptainChestplate_DULLED} @trigger 1
+  - message{m="&A&LYou looted a &8&Ldulled &E&LCaptain<&sq>s Chestplate"} @trigger 1
+Loot_CaptainLooted:
+  Skills:
+  - message{m="&c&LYou have already looted this cache &A&Lor &c&Lyou did not participate in this battle!"} @trigger
+  - delay 1800
+  - remove @self
+
+EnableLoot_Golding:
+  Skills:
+  - summon{mob=Cache_Golding;amount=1;noise=0} @Self
+  - setvariable{var=target.AllowedToLoot-Golding;t=STRING;value="true"}
+  - skill{s=Death} @Self
+  - sendtoast{icon=DIAMOND; iconnbt={CustomModelData:1};message="&A&LKill <mob.name>!";frame=challenge} @PlayersInRadius{r=35}
+Loot_Golding:
+  TargetConditions:
+  - variableisset target.AllowedToLoot-Golding true
+  - varEquals{var=target.AllowedToLoot-Golding;value="false"} castinstead Loot_GoldingLooted
+  - varEquals{var=target.AllowedToLoot-Golding;value="true"}
+  Skills:
+  - setvariable{var=target.AllowedToLoot-Golding;t=STRING;value="false"}
+  - message{m="&A&LYou loot the cache!"} @trigger
+  - sound{s=block.ender_chest.open} @trigger
+  - delay 40
+  - sound{s=entity.item.pickup} @trigger
+  - skill{s=Loot_GoldingBoosted} @trigger 1
+  - randomskill{skills=Loot_GoldingApple_DULLED} @trigger 1
+  - randomskill{skills=Loot_GoldingApple} @trigger .12
+  - delay 1800
+  - remove @self
+
+##
+##
+##
+##
+
+Loot_GoldingBoosted:
+  TargetConditions:
+  - variableisset target.boosted true
+  - varEquals{var=target.boosted;value="true"}
+  Skills:
+  - setvariable{var=target.boosted;t=STRING;value="false"}
+  - message{m="&A&L<target.name> used a &6&N&LLoot Reroller!"} @PlayersInRadius{r=25}
+  - delay 30
+  - message{m="&A&LYou managed to loot the cache again!"} @trigger
+  - sound{s=block.ender_chest.open} @trigger
+  - delay 40
+  - sound{s=entity.item.pickup} @trigger
+  - randomskill{skills=Loot_GoldingApple_DULLED} @trigger 1
+  - randomskill{skills=Loot_GoldingApple} @trigger .12
+
+Loot_GoldingApple:
+  Skills:
+  - sound{s=entity.zombie_villager.converted} @trigger
+  - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
+  - giveitem{i=Loot_GoldingApple} @trigger 1
+  - message{m="&A&L<target.name> has looted the &E&LGolding<&sq>s Apple"}
+Loot_GoldingApple_DULLED:
+  Skills:
+  - giveitem{i=Loot_GoldingApple_DULLED} @trigger 1
+  - message{m="&A&LYou looted a &8&Ldulled &E&LGolding<&sq>s Apple"} @trigger 1
+Loot_GoldingLooted:
+  Skills:
+  - message{m="&c&LYou have already looted this cache &A&Lor &c&Lyou did not participate in this battle!"} @trigger
+  - delay 1800
+  - remove @self
+
+##
+##
+##
+##
+
+EnableLoot_Parrot:
+  Skills:
+  - summon{mob=Cache_Parrot;amount=1;noise=0} @Self
+  - setvariable{var=target.AllowedToLoot-Parrot;t=STRING;value="true"}
+  - skill{s=Death} @Self
+  - sendtoast{icon=DIAMOND; iconnbt={CustomModelData:1};message="&A&LKill <mob.name>!";frame=challenge} @PlayersInRadius{r=35}
+Loot_Parrot:
+  TargetConditions:
+  - variableisset target.AllowedToLoot-Parrot true
+  - varEquals{var=target.AllowedToLoot-Parrot;value="false"} castinstead Loot_ParrotLooted
+  - varEquals{var=target.AllowedToLoot-Parrot;value="true"}
+  Skills:
+  - setvariable{var=target.AllowedToLoot-Parrot;t=STRING;value="false"}
+  - message{m="&A&LYou loot the cache!"} @trigger
+  - sound{s=block.ender_chest.open} @trigger
+  - delay 40
+  - sound{s=entity.item.pickup} @trigger
+  - skill{s=Loot_ParrotBoosted} @trigger 1
+  - randomskill{skills=Loot_SquawksBeak_DULLED} @trigger 1
+  - randomskill{skills=Loot_SquawksBeak,Loot_SquawksCookie} @trigger .12
+  - delay 1800
+  - remove @self
+
+Loot_ParrotBoosted:
+  TargetConditions:
+  - variableisset target.boosted true
+  - varEquals{var=target.boosted;value="true"}
+  Skills:
+  - setvariable{var=target.boosted;t=STRING;value="false"}
+  - message{m="&A&L<target.name> used a &6&N&LLoot Reroller!"} @PlayersInRadius{r=25}
+  - delay 30
+  - message{m="&A&LYou managed to loot the cache again!"} @trigger
+  - sound{s=block.ender_chest.open} @trigger
+  - delay 40
+  - sound{s=entity.item.pickup} @trigger
+  - randomskill{skills=Loot_SquawksBeak_DULLED} @trigger 1
+  - randomskill{skills=Loot_SquawksBeak,Loot_SquawksCookie} @trigger .12
+
+Loot_SquawksBeak:
+  Skills:
+  - sound{s=entity.zombie_villager.converted} @trigger
+  - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
+  - giveitem{i=Loot_SquawksBeak} @trigger 1
+  - message{m="&A&L<target.name> has looted the &E&LSquawk<&sq>s Beak"} @PlayersInWorld 1
+Loot_SquawksCookie:
+  Skills:
+  - sound{s=entity.zombie_villager.converted} @trigger
+  - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
+  - giveitem{i=Loot_SquawksCookie} @trigger 1
+  - message{m="&A&L<target.name> has looted the &E&LSquawk<&sq>s Cookie"} @PlayersInWorld 1
+Loot_SquawksBeak_DULLED:
+  Skills:
+  - giveitem{i=Loot_SquawksBeak_DULLED} @trigger 1
+  - message{m="&A&LYou looted a &8&Ldulled &E&LSquawk<&sq>s Beak"} @trigger 1
+Loot_ParrotLooted:
+  Skills:
+  - message{m="&c&LYou have already looted this cache &A&Lor &c&Lyou did not participate in this battle!"} @trigger
+  - delay 1800
+  - remove @self

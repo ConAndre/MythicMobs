@@ -24,7 +24,7 @@ Pharaoh:
   - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
   - skill{s=PharaohPushBack} @self ~onDamaged =50%
   - skill{s=PharaohFin} @self =15%
-  - skill{s=EnableLoot_Pharaoh} @PlayersInRadius{r=25} ~onDeath
+  - skill{s=EnableLoot_Pharaoh} @PlayersInRadius{r=35} ~onDeath
   Equipment:
   - MobGoldHelmet HEAD
   - MobMummyChestplate CHEST
@@ -78,8 +78,6 @@ Illusion:
   - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
   - dropitem{i=Loot_Artifact_IllusionStaff} ~onDeath .05
   - randomskill{skills=Loot_Artifact_IllusionStaff,Loot_Artifact_SummonEye} ~onDeath 1
-  Drops:
-  - IllusionLootTable
 
 IllusionMob:
   Type: ZOMBIE
@@ -213,7 +211,7 @@ Scarab:
   Skills:
   - skill{s=ScarabAttack} ~onAttack @target
 FriendlyEye:
-  Type: Skeleton
+  Type: BABY_ZOMBIE
   Display: 'mini-eye'
   Disguise:
     Type: Baby_zombie
@@ -230,8 +228,6 @@ FriendlyEye:
     MovementSpeed: 0.255
     KnockbackResistance: 1
     PreventOtherDrops: true
-  Modules:
-    ThreatTable: true
   DamageModifiers:
   - Fall -1
   AIGoalSelectors:

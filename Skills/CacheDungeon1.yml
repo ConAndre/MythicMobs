@@ -4,7 +4,7 @@ EnableLoot_SkeletonKing:
   - skill{s=TeleportToSpawnOnDeath} @PlayersInRadius{r=25}
   - setvariable{var=target.AllowedToLoot-SkeletonKing;t=STRING;value="true"}
   - skill{s=Death} @Self
-  - sendtoast{icon=DIAMOND; iconnbt={CustomModelData:1};message="&A&LKill <mob.name>!";frame=challenge} @PlayersInRadius{r=16}
+  - sendtoast{icon=DIAMOND; iconnbt={CustomModelData:1};message="&A&LKill <mob.name>!";frame=challenge} @PlayersInRadius{r=35}
 
 Loot_SkeletonKing:
   TargetConditions:

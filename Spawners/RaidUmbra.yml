@@ -1,23 +1,22 @@
-wave_1_RaidArcher:
-  SpawnerGroup: wave_1
-  MobName: RaidArcher
+RaidUmbra:
+  MobName: RaidUmbra
   World: world
-  X: 773
-  Y: 84
-  Z: -1292
+  X: 981
+  Y: 4
+  Z: -747
   Radius: 0
   UseTimer: true
-  MaxMobs: '0'
+  MaxMobs: '1'
   MobLevel: '1'
   MobsPerSpawn: 1
   Cooldown: 0
   CooldownTimer: 0
   Warmup: 0
   WarmupTimer: 0
-  CheckForPlayers: false
-  ActivationRange: 0
+  CheckForPlayers: true
+  ActivationRange: 40
   ScalingRange: 25.0
-  LeashRange: 125
+  LeashRange: 32
   HealOnLeash: false
   ResetThreatOnLeash: false
   ShowFlames: false

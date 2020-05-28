@@ -1,0 +1,92 @@
+Raid_EasyCheck:
+  TargetConditions:
+  - hascurrency{a=5000} true
+  Skills:
+  - summon{type=Raid_EasyInit;amount=1;radius=0} @self
+  - currencytake{amount=5000} @trigger
+  - suicide @self
+
+Raid_EasyInit:
+  Skills:
+  - effect:sound{s=entity.ender_eye.death;v=1;p=1;repeat=7;repeatInterval=2} @Self
+  - effect:sound{s=entity.ender_eye.death;v=1;p=1;repeat=7;repeatInterval=25} @Self
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to Easy Raid in &A10 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to Easy Raid in &A9 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to Easy Raid in &A8 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to Easy Raid in &A7 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to Easy Raid in &A6 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to Easy Raid in &A5 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to Easy Raid in &A4 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to Easy Raid in &A3 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to Easy Raid in &A2 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to Easy Raid in &A1 &csecond!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - effect:explosion @self
+  - delay 20
+  - effect:explosion @self
+  - delay 15
+  - effect:explosion @self
+  - delay 10
+  - effect:explosion @self
+  - delay 3
+  - effect:explosion @self
+  - delay 2
+  - effect:explosion @self
+  - delay 2
+  - effect:explosion @self
+  - delay 2
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - teleportto{location=952,5,-749} @PlayersInRadius{r=12}
+  - remove @self
+
+
+
+
+

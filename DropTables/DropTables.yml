@@ -1,0 +1,68 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#
+First_DungeonLootTable:
+  Conditions:
+  - playerwithin 40
+  Drops:
+  - First_DungeonLootDrop 1
+First_DungeonLootDrop:
+  MinItems: 1
+  MaxItems: 1
+  Drops:
+  - Loot_LostArcherBoots 1 0.04
+  - Loot_LostArcherBow 1 0.04
+  - Loot_LostArcherHelmet 1 0.04
+  - Loot_LostZombieSword 1 0.04
+  - Loot_LostZombieChestplate 1 0.04
+  - Loot_LostZombieLeggings 1 0.04
+  - GOLDEN_APPLE 1 0.76
+
+Second_DungeonLootTable:
+  Conditions:
+  - playerwithin 40
+  Drops:
+  - Second_DungeonLootDrop 1
+Second_DungeonLootDrop:
+  MinItems: 1
+  MaxItems: 1
+  Drops:
+  - Loot_MummyHelmet 1 0.02
+  - Loot_MummyChestplate 1 0.02
+  - Loot_MummyLeggings 1 0.02
+  - Loot_MummyBoots 1 0.02
+  - GOLDEN_APPLE 1 .92
+
+Third_DungeonLootTable:
+  Conditions:
+  - playerwithin 40
+  Drops:
+  - Third_DungeonLootDrop 1
+Third_DungeonLootDrop:
+  MinItems: 1
+  MaxItems: 1
+  Drops:
+  - Loot_PirateHelmet 1 0.01
+  - Loot_PirateChestplate 1 0.01
+  - Loot_PirateLeggings 1 0.01
+  - Loot_PirateBoots 1 0.01
+  - Loot_PirateWeapon 1 0.01
+  - Loot_PirateBow 1 0.01
+  - GOLDEN_APPLE 2 0.94
+
+Fourth_DungeonLootTable:
+  Conditions:
+  - playerwithin 40
+  Drops:
+  - Fourth_DungeonLootDrop 1
+Fourth_DungeonLootDrop:
+  MinItems: 1
+  MaxItems: 1
+  Drops:
+  - Loot_NexusHelmet 1 0.01
+  - Loot_NexusChestplate 1 0.01
+  - Loot_NexusLeggings 1 0.01
+  - Loot_NexusBoots 1 0.01
+  - Loot_NexusBow 1 0.01
+  - Loot_NexusSword 1 0.01
+  - GOLDEN_APPLE 1 0.94

@@ -37,7 +37,7 @@ Loot_SquawksBeak_Spell:
 Loot_SquawksCookie_Spell:
   Cooldown: 180
   Skills:
-  - message{m=" &A&LYou call a parrot upon yourself!"} @self
+  - message{m="&A&LYou call a parrot upon yourself!"} @self
   - sound{s=entity.parrot.ambient} @self
   - summon{mob=FriendlyParrot;amount=1;r=0} @self
   - delay 3600
@@ -52,7 +52,7 @@ Loot_Artifact_SummonEye_Spell:
   - delay 3600
   - message{m="&A&LEye Summon is recharged!"} @self
 
-Loot_GoldingShield_Spell:
+Loot_GoldingApple_Spell:
   Cooldown: 10
   Skills:
   - message{m="&A&LYou harness a mighty aura!"} @self
@@ -60,7 +60,7 @@ Loot_GoldingShield_Spell:
   - delay 200
   - message{m="&A&LGolding Shield is recharged!"} @self
 
-Loot_GoldingShield_DULLED_Spell:
+Loot_GoldingApple_DULLED_Spell:
   Cooldown: 10
   Skills:
   - message{m="&A&LYou harness a mighty aura!"} @self
@@ -92,7 +92,7 @@ Loot_NexusShard_Spell:
   - delay 300
   - message{m="&A&LNexus Shard is recharged!"} @self
 
-Loot_NexusPetTeeth_Spell:
+Loot_NexusPetWeapon_Spell:
  Cooldown: 15
  Skills:
   - message{m="&A&LYou unleash the beast!"} @self
@@ -112,6 +112,87 @@ Loot_NexusPetTeeth_Spell:
   - message{m="&A&LFerocious Teeth is recharged!"} @self
 
 
+Loot_AzureRod_Spell:
+  Cooldown: 15
+  TargetCondition:
+  - targetwithin{d=12} true
+  Skills:
+  - message{m="&A&LYou activate Azure<&sq>s Rod!"} @self
+  - effect:particles{p=current_down;a=5;vs=5.5;hs=5.5;s=0;y=1} @Self
+  - effect:sound{s=entity.generic.splash;v=2;p=0.5} @Self
+  - damage{amount=5} @EntitiesInRadius{r=4;ignore=players}
+  - throw{velocity=15;velocityY=5} @EntitiesInRadius{r=4;ignore=players}
+  - delay 10
+  - teleport @target
+  - delay 10
+  - throw{velocity=5;velocityY=5} @EntitiesInRadius{r=8;ignore=players}
+  - damage{a=25;i=false} @EntitiesInRadius{r=8;ignore=players}
+  - effect:particles{p=current_down;a=5;vs=0.5;hs=3.5;s=0;y=1} @Self
+  - effect:sound{s=entity.generic.splash;v=2;p=0.5} @Self
+  - effect:sound{s=entity.generic.splash;v=2;p=1;repeat=7;repeatInterval=2} @Self
+  - effect:particlering{p=current_down;a=40;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=1} @Self
+  - delay 2
+  - effect:particlering{p=current_down;a=40;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=3} @Self
+  - delay 2
+  - effect:particlering{p=current_down;a=40;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=5} @Self
+  - delay 2
+  - effect:particlering{p=current_down;a=40;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=7} @Self
+  - delay 2
+  - effect:particlering{p=current_down;a=40;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=9} @Self
+  - delay 2
+  - effect:particlering{p=current_down;a=40;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=11} @Self
+  - delay 270
+  - message{m="&A&LAzure<&sq>s Rod is recharged!"} @self
+Loot_CarmineEssence_Spell:
+  Cooldown: 15
+  TargetCondition:
+  - targetwithin{d=12} true
+  Skills:
+  - message{m="&A&LYou activate Essence of Fire!"} @self
+  - effect:particles{p=lava;a=5;vs=5.5;hs=5.5;s=0;y=1} @Self
+  - effect:sound{s=block.fire.ambient;v=2;p=0.5} @Self
+  - damage{amount=5} @EntitiesInRadius{r=4;ignore=players}
+  - throw{velocity=15;velocityY=5} @EntitiesInRadius{r=4;ignore=players}
+  - delay 10
+  - teleport @target
+  - delay 10
+  - throw{velocity=5;velocityY=5} @EntitiesInRadius{r=8;ignore=players}
+  - damage{a=25;i=false} @EntitiesInRadius{r=8;ignore=players}
+  - ignite{ticks=60} @EntitiesInRadius{r=8;ignore=players}
+  - effect:particles{p=lava;a=5;vs=0.5;hs=3.5;s=0;y=1} @Self
+  - effect:sound{s=block.fire.ambient;v=2;p=0.5} @Self
+  - effect:sound{s=block.fire.ambient;v=2;p=1;repeat=7;repeatInterval=2} @Self
+  - effect:particlering{p=lava;a=1;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=1} @Self
+  - delay 2
+  - effect:particlering{p=lava;a=1;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=3} @Self
+  - delay 2
+  - effect:particlering{p=lava;a=1;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=5} @Self
+  - delay 2
+  - effect:particlering{p=lava;a=1;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=7} @Self
+  - delay 2
+  - effect:particlering{p=lava;a=1;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=9} @Self
+  - delay 2
+  - effect:particlering{p=lava;a=1;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=11} @Self
+  - delay 270
+  - message{m="&A&LEssence of Fire is recharged!"} @self
+
+Loot_Artifact_DogCollar_Spell:
+  Cooldown: 180
+  Skills:
+  - message{m="&A&LYou call upon a friendly Wolf!"} @self
+  - effect:sound{s=entity.phantom.hurt;v=1;p=0} @self
+  - summon{mob=FriendlyNexusPet;amount=1;r=0} @self
+  - delay 3600
+  - message{m="&A&LDog Collar is recharged!"} @self
 
 
 
+Loot_NexusBossChestplate_Spell:
+  Cooldown: 3
+  Skills:
+  - damage{a=12} @EntitiesInRadius{r=8;ignore=players}
+
+Loot_NexusBossChestplate_DULLED_Spell:
+  Cooldown: 3
+  Skills:
+  - damage{a=6} @EntitiesInRadius{r=8;ignore=players}

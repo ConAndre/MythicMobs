@@ -13,8 +13,8 @@ Boss that disguises as a random player
 Grapple weapon
 Lift weapon
 Boss with healers with healing staff drop
-Azure a weapon that does a line of ice blocks and lifts up target
-NexusPet Weapon MultiChomp/Summon/Chestplate pelt
+NexusPet Weapon MultiChomp/Chestplate pelt
+Add nexus pet summon drop to Nexus
 Nexus spawn 2 healing totems at 50% hp/healing mobs drop healing staff
 
 Hall of fame:
@@ -27,5 +27,13 @@ https://i.pinimg.com/originals/7f/ac/09/7fac0926dd3d9d2e262db43a52a0b563.jpg Ran
 Squire<Jester<Knight<Lord<Baron>Count/Earl<Prince/Princess<Duke<Grand Prince<Grand Duke<King<Empreror
 10$ increment
 
+  - message{m="&A&L<target.name> has looted the &E&LGolding<&sq>s Shield"}
+try for player fix
 
+For raids:
 
+Have boss set a variable true if players near when it spawns
+Boss despawns/dies set false
+easypz
+
+Tier 4 Raid Make boss a cake

@@ -3,7 +3,7 @@ EnableLoot_Pharaoh:
   - summon{mob=Cache_Pharaoh;amount=1;noise=0} @Self
   - skill{s=TeleportToSpawnOnDeath} @PlayersInRadius{r=25}
   - setvariable{var=target.AllowedToLoot-Pharaoh;t=STRING;value="true"}
-  - sendtoast{icon=DIAMOND; iconnbt={CustomModelData:1};message="&A&LKill <mob.name>!";frame=challenge} @PlayersInRadius{r=25}
+  - sendtoast{icon=DIAMOND; iconnbt={CustomModelData:1};message="&A&LKill <mob.name>!";frame=challenge} @PlayersInRadius{r=35}
 Loot_Pharaoh:
   TargetConditions:
   - variableisset target.AllowedToLoot-Pharaoh true

@@ -102,5 +102,107 @@ Cache_Parrot:
   Skills:
   - skill{s=Loot_Parrot} ~onInteract
 
+Cache_PiranhaBoss:
+  Type: SHEEP
+  Display: '&N&ALoot Cache'
+  Disguise:
+    Type: BLOCK
+    Block: BEACON
+    BlockData: 0
+    ShowName: true
+  Health: 2000
+  Options:
+    MovementSpeed: 0.0
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+    Collidable: true
+    Invincible: true
+    Interactable: true
+    NoAI: true
+    Silent: true
+  Skills:
+  - skill{s=Loot_PiranhaBoss} ~onInteract
 
+Cache_NexusBoss:
+  Type: SHEEP
+  Display: '&N&ALoot Cache'
+  Disguise:
+    Type: BLOCK
+    Block: BEACON
+    BlockData: 0
+    ShowName: true
+  Health: 2000
+  Options:
+    MovementSpeed: 0.0
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+    Collidable: true
+    Invincible: true
+    Interactable: true
+    NoAI: true
+    Silent: true
+  Skills:
+  - skill{s=Loot_NexusBoss} ~onInteract
+Cache_NexusPet:
+  Type: SHEEP
+  Display: '&N&ALoot Cache'
+  Disguise:
+    Type: BLOCK
+    Block: BEACON
+    BlockData: 0
+    ShowName: true
+  Health: 2000
+  Options:
+    MovementSpeed: 0.0
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+    Collidable: true
+    Invincible: true
+    Interactable: true
+    NoAI: true
+    Silent: true
+  Skills:
+  - skill{s=Loot_NexusPet} ~onInteract
+
+Cache_Carmine:
+  Type: SHEEP
+  Display: '&N&ALoot Cache'
+  Disguise:
+    Type: BLOCK
+    Block: BEACON
+    BlockData: 0
+    ShowName: true
+  Health: 2000
+  Options:
+    MovementSpeed: 0.0
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+    Collidable: true
+    Invincible: true
+    Interactable: true
+    NoAI: true
+    Silent: true
+  Skills:
+  - skill{s=Loot_Carmine} ~onInteract
+
+Cache_Azure:
+  Type: SHEEP
+  Display: '&N&ALoot Cache'
+  Disguise:
+    Type: BLOCK
+    Block: BEACON
+    BlockData: 0
+    ShowName: true
+  Health: 2000
+  Options:
+    MovementSpeed: 0.0
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+    Collidable: true
+    Invincible: true
+    Interactable: true
+    NoAI: true
+    Silent: true
+  Skills:
+  - skill{s=Loot_Azure} ~onInteract
 

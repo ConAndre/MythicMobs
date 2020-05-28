@@ -1,0 +1,110 @@
+Raid_EasyInit:
+  Type: SHEEP
+  Disguise:
+    Type: ender_signal
+  Health: 2000
+  Options:
+    MovementSpeed: 0.0
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+    Collidable: true
+    Invincible: true
+    Interactable: true
+    NoAI: true
+    Silent: true
+  Skills:
+  - skill{s=Raid_EasyInit} ~onSpawn
+Raid_EasyTeleport:
+  Type: SHEEP
+  Display: '&N&AEasy Raid Teleport ($5000)'
+  Disguise:
+    Type: VEX
+    ShowName: true
+  Health: 2000
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - MAGIC 0
+  Options:
+    MovementSpeed: 0.0
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+    Collidable: true
+    Invincible: false
+    Interactable: true
+    NoAI: true
+    Silent: true
+  Skills:
+  - skill{s=Raid_EasyCheck} @trigger ~onInteract
+  - setrotation{relative=false;yaw=180} @self ~onSpawn
+
+Raid_MediumTeleport:
+  Type: SHEEP
+  Display: '&N&AMedium Raid Teleport ($10000)'
+  Disguise:
+    Type: VEX
+    ShowName: true
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - MAGIC 0
+  Health: 2000
+  Options:
+    MovementSpeed: 0.0
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+    Collidable: true
+    Invincible: false
+    Interactable: true
+    NoAI: true
+    Silent: true
+  Skills:
+  - skill{s=Raid_MediumTeleport} ~onInteract
+  - setrotation{relative=false;yaw=-90} @self ~onSpawn
+Raid_HardTeleport:
+  Type: SHEEP
+  Display: '&N&AHard Raid Teleport ($15000)'
+  Disguise:
+    Type: VEX
+    ShowName: true
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - MAGIC 0
+  Health: 2000
+  Options:
+    MovementSpeed: 0.0
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+    Collidable: true
+    Invincible: false
+    Interactable: true
+    NoAI: true
+    Silent: true
+  Skills:
+  - skill{s=Raid_HardTeleport} ~onInteract
+  - setrotation{relative=false;yaw=0} @self ~onSpawn
+
+Raid_NightmareTeleport:
+  Type: SHEEP
+  Display: '&N&ANightmare Raid Teleport ($20000)'
+  Disguise:
+    Type: VEX
+    ShowName: true
+  Health: 2000
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - MAGIC 0
+  Options:
+    MovementSpeed: 0.0
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+    Collidable: true
+    Invincible: false
+    Interactable: true
+    NoAI: true
+    Silent: true
+  Skills:
+  - skill{s=Raid_NightmareTeleport} ~onInteract
+  - setrotation{relative=false;yaw=90} @self ~onSpawn

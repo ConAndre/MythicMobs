@@ -1,188 +1,40 @@
-RaidStarter:
-  Type: SNOWMAN
-  Display: '&L&9Strange Artifact'
-  Disguise:
-    Type: BLOCK
-    Block: END_PORTAL_FRAME
-    BlockData: 0
-    ShowName: true
-  Health: 2000
-  Options:
-    MovementSpeed: 0.0
-    KnockbackResistance: 1
-    PreventOtherDrops: true
-    Collidable: true
-    Invincible: true
-    Interactable: true
-    NoAI: true
-    Silent: true
-  Skills:
-  - skill{s=RaidBegin;cooldown=30} ~onInteract
-
-RaidArtifact:
-  Type: SNOWMAN
-  Display: '&c&LFragile Artifact'
-  Disguise:
-    Type: ender_crystal
-    ShowName: true
-  Health: 2000
-  Faction: RaidArtifact
-  BossBar:
-    Enabled: true
-    Title: 'Fragile Artifact'
-    Range: 255
-    Color: RED
-    Style: SEGMENTED_20
-    CreateFog: true
-    DarkenSky: true
-  Options:
-    MovementSpeed: 0.0
-    KnockbackResistance: 1
-    PreventOtherDrops: true
-    Collidable: true
-    Interactable: true
-    NoAI: true
-    Silent: true
-  Skills:
-  - skill{s=RaidWaves} @self ~onSpawn
-  - sound{s=entity.ghast.hurt} @self ~onDamaged 0.35
-  - skill{s=RaidEnd} @self ~onDeath
-
-RaidTank:
-  Type: Zombie
-  Display: '&cRaid Tank'
-  Health: 2000
-  Damage: 100
-  Faction: Raid
-  Equipment:
-  - MobDiamondHelmet HEAD
-  - MobDiamondChestplate CHEST
-  - MobDiamondLeggings LEGS
-  - MobDiamondBoots FEET
-  - MobDiamondSword HAND
-  Options:
-    FollowRange: 100
-    AlwaysShowName: false
-    MovementSpeed: 0.15
-    PreventOtherDrops: true
-    KnockbackResistance: 1
-  Modules:
-    ThreatTable: true
-  AIGoalSelectors:
-  AITargetSelectors:
-  - 0 clear
-  - 1 SpecificFaction RaidArtifact
-  Skills:
-  Drops:
-
-
-RaidHorse:
-  Type: Zombie
-  Disguise:
-    Type: skeleton_horse
-  Display: '&cRaid Horse'
-  Health: 250
-  Damage: 40
-  Faction: Raid
-  Equipment:
-  - MobDiamondHelmet HEAD
-  - MobDiamondChestplate CHEST
-  - MobDiamondLeggings LEGS
-  - MobDiamondBoots FEET
-  - MobDiamondSword HAND
-  Options:
-    FollowRange: 100
-    AlwaysShowName: false
-    MovementSpeed: 0.3
-    PreventOtherDrops: true
-    KnockbackResistance: 1
-  Modules:
-    ThreatTable: true
-  AIGoalSelectors:
-  AITargetSelectors:
-  - 0 clear
-  - 1 SpecificFaction RaidArtifact
-  Skills:
-  Drops:
-
-RaidRunner:
-  Type: SKELETON
-  Display: '&cRaid Runner'
-  Health: 250
-  Damage: 40
-  Faction: Raid
-  Equipment:
-  - MobDiamondHelmet HEAD
-  - MobDiamondChestplate CHEST
-  - MobDiamondLeggings LEGS
-  - MobDiamondBoots FEET
-  - MobDiamondSword HAND
-  Options:
-    FollowRange: 100
-    AlwaysShowName: false
-    MovementSpeed: 0.2
-    PreventOtherDrops: true
-    KnockbackResistance: 1
-  Modules:
-    ThreatTable: true
-  AIGoalSelectors:
-  AITargetSelectors:
-  - 0 clear
-  - 1 SpecificFaction RaidArtifact
-  Skills:
-  Drops:
-
-RaidWarrior:
-  Type: Zombie
-  Display: '&cRaid Warrior'
-  Health: 400
-  Damage: 40
-  Faction: Raid
-  Equipment:
-  - MobDiamondHelmet HEAD
-  - MobDiamondChestplate CHEST
-  - MobDiamondLeggings LEGS
-  - MobDiamondBoots FEET
-  - MobDiamondSword HAND
-  Options:
-    FollowRange: 100
-    AlwaysShowName: false
-    MovementSpeed: 0.275
-    PreventOtherDrops: true
-    KnockbackResistance: 1
-  Modules:
-    ThreatTable: true
-  AIGoalSelectors:
-  AITargetSelectors:
-  - 0 clear
-  - 1 SpecificFaction RaidArtifact
-  - 2 hurtbytarget
-  Skills:
-  Drops:
-
-RaidArcher:
-  Type: SKELETON
-  Display: '&cRaid Archer'
-  Health: 500
-  Faction: Raid
-  Equipment:
-  - MobDiamondHelmet HEAD
-  - MobDiamondChestplate CHEST
-  - MobDiamondLeggings LEGS
-  - MobDiamondBoots FEET
-  - Bow HAND
-  Options:
-    FollowRange: 100
-    AlwaysShowName: false
-    MovementSpeed: 0.2
-    PreventOtherDrops: true
-    KnockbackResistance: 1
-  Modules:
-    ThreatTable: true
-  AIGoalSelectors:
-  AITargetSelectors:
-  - 0 clear
-  - 1 SpecificFaction RaidArtifact
-  - 2 hurtbytarget
-  Skills:
-  Drops:
+RaidUmbra:
+    Type: WITHER_SKELETON
+    Display: '&eUmbra, the Consuming Shadow'
+    Health: 2000
+    Damage: 10
+    Faction: Dungeon1
+    Skills:
+    - command{c="mm spawners set Raid_EasyTeleport maxmobs 0"} ~onSpawn
+    - command{c="mm spawners set Raid_EasyTeleport maxmobs 1"} ~onDeath
+    - command{c="mm spawners set Raid_EasyTeleport maxmobs 1"} ~onDespawn
+    - message{cooldown=20;m="<mob.name>&f<&co> Your light is fading!"} @PlayersInRadius{r=40} ~onCombat >0 0.2
+    - message{m="<mob.name>&f<&co> Welcome to the end, <trigger.name>!"} @PlayersInRadius{r=40} ~onKillPlayer >0 1
+    - skill{s=SmashAttackChampion} @PIR{r=40} ~onTimer:20 >0 0.2
+    - skill{s=SummonSkeletonsChampion} @PIR{r=40} ~onTimer:20 >0 0.2
+    - skill{s=BleedingChampion} @PIR{r=40} ~onAttack 0.25
+    - skill{s=LifeLeechChampion} @PIR{r=40} ~onTimer:20 >0 0.2
+    - skill{s=CrippleChampion} @PIR{r=40} ~onTimer:20 >0 0.2
+    - skill{s=ShadowstepChampion} @PIR{r=40} ~onDamaged 0.2
+    - skill{s=RallyChampion} @PIR{r=40} ~onTimer:20 >0 0.2
+    - skill{s=LevitateChampion} @PIR{r=40} ~onTimer:20 >0 0.2
+    - skill{s=RootChampion} ~onTimer:20 >0 0.2
+    - skill{s=UmbraHorde} ~onTimer:20 >0 0.2
+    Options:
+        AlwaysShowName: true
+        MovementSpeed: 0.35
+        MaxCombatDistance: 25
+        FollowRange: 50
+        PreventOtherDrops: false
+        Despawn: true
+    BossBar:
+        Enabled: true
+        Title: '&eUmbra, the Consuming Shadow'
+        Range: 50
+        Color: YELLOW
+        Style: SEGMENTED_10
+        CreateFog: true
+        DarkenSky: true
+        PlayMusic: false
+    Modules:
+        ThreatTable: true

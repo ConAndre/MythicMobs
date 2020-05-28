@@ -1,26 +1,26 @@
-wave_1_RaidArcher:
-  SpawnerGroup: wave_1
-  MobName: RaidArcher
+Raid_NightmareTeleport:
+  SpawnerGroup: RaidTeleport
+  MobName: Raid_NightmareTeleport
   World: world
-  X: 773
-  Y: 84
-  Z: -1292
+  X: 772
+  Y: 85
+  Z: -1293
   Radius: 0
   UseTimer: true
-  MaxMobs: '0'
+  MaxMobs: '1'
   MobLevel: '1'
   MobsPerSpawn: 1
-  Cooldown: 0
+  Cooldown: 50
   CooldownTimer: 0
   Warmup: 0
   WarmupTimer: 0
   CheckForPlayers: false
-  ActivationRange: 0
+  ActivationRange: 32
   ScalingRange: 25.0
-  LeashRange: 125
+  LeashRange: 32
   HealOnLeash: false
   ResetThreatOnLeash: false
-  ShowFlames: false
+  ShowFlames: true
   Breakable: false
   Conditions: []
   ActiveMobs: 0
