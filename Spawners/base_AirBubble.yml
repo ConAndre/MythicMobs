@@ -11,7 +11,7 @@ base_AirBubble:
   MobsPerSpawn: 1
   Cooldown: 0
   CooldownTimer: 0
-  Warmup: 0
+  Warmup: 60
   WarmupTimer: 0
   CheckForPlayers: true
   ActivationRange: 40

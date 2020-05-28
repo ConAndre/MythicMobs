@@ -1,0 +1,111 @@
+### Meteor Shower Block ###
+
+MeteorShower:
+  Conditions:
+  - offgcd
+  Cooldown: 10
+  Skills:
+  - summon{m=MeteorPointer;a=15;r=30}
+  - GCD{ticks=120}
+MeteorPointerSpawn:
+  Skills:
+  - potion{type=INVISIBILITY;d=2000;l=1} @self
+  - delay 200
+  - skill{s=MeteorPointerFinish}
+MeteorPointerFinish:
+  Cooldown: 100
+  Skills:
+  - projectile{onTick=MeteorTick;onEnd=MeteorEnd;v=30;i=1;hR=2;vR=2;syo=75;sfo=20;mr=1000;d=500;sE=false} @Self
+  - delay 500
+  - remove{m=MeteorPointer} @Self
+MeteorTick:
+  Skills:
+  - effect:particles{p=flame;a=10;vS=1.5;hS=1.5} @Origin
+  - effect:particles{p=largesmoke;a=5;vS=1;hS=1} @Origin
+  - effect:particles{p=largeexplosion;a=1;vS=0.75;hS=0.75} @Origin
+MeteorEnd:
+  Skills:
+  - explosion{blockdamage=false;fire=true;yield=5} @Origin
+  - remove{m=MeteorPointer} @Self
+
+  ### End Meteor Shower Block ###
+
+FarBlind:
+  Cooldown: 20
+  Conditions:
+  - offgcd
+  Skills:
+  - message{m="<mob.name>&e blinds those who run."} @PlayersInRing{min=10;max=50}
+  - potion{type=BLINDNESS;duration=160;level=1} @PlayersInRing{min=10;max=50}
+  - sound{s=ambient.cave.cave;volume=2} @PlayersInRing{min=10;max=50}
+  - GCD{ticks=120}
+
+Stealth:
+  Cooldown: 1
+  Conditions:
+  - offgcd
+  - targetwithin 30
+  Skills:
+  - message{m="<mob.name>&e becomes a shadow."} @target
+  - potion{type=INVISIBILITY;duration=180;level=3}  @self
+  - potion{type=INCREASE_DAMAGE;duration=180;level=3}  @self
+  - effect:particles{particle=dripLava;amount=5;hS=1;vS=1;speed=5} @self
+  - GCD{ticks=120}
+
+Bleeding:
+  Cooldown: 1
+  Conditions:
+  - offgcd
+  - targetwithin 5
+  - targetinlineofsight true
+  Skills:
+  - message{m="<target.name> is dying slowly."} @target
+  - sound{s=damage.hit} @target
+  - effect:particles{particle=largesmoke;amount=5;hS=1;vS=1;speed=5} @self
+  - damage{amount=1;ia=false;pk=false;pi=false} @target ~onTimer:20
+  - damage{amount=1;ia=false;pk=false;pi=false} @target ~onTimer:20
+  - effect:particles{particle=dripLava;amount=5;hS=1;vS=1;speed=5} @self
+  - damage{amount=1;ia=false;pk=false;pi=false} @target ~onTimer:20
+  - damage{amount=1;ia=false;pk=false;pi=false} @target ~onTimer:20
+  - effect:particles{particle=dripLava;amount=5;hS=1;vS=1;speed=5} @self
+  - damage{amount=1;ia=false;pk=false;pi=false} @target ~onTimer:20
+  - damage{amount=1;ia=false;pk=false;pi=false} @target ~onTimer:20
+  - GCD{ticks=120}
+
+Charge:
+  Cooldown: 1
+  Conditions:
+  - offgcd
+  - targetwithin 20
+  - targetinlineofsight true
+  Skills:
+  - message{m="<mob.name>&e approaches <target.name>."} @target
+  - effect:sound{s=block.anvil.destroy;v=2;p=0.5} @Self
+  - potion{type=SPEED;duration=20;level=5} @self
+  - GCD{ticks=120}
+
+
+Flurry:
+  Cooldown: 1
+  Conditions:
+  - offgcd
+  - targetwithin 5
+  - targetinlineofsight true
+  Skills:
+  - message{m="<mob.name>&e wishes to kill <target.name>"} @target
+  - potion{type=HARM;duration=1;level=0} @target
+  - GCD{ticks=120}
+
+
+Sharpen:
+  Conditions:
+  - offgcd
+  Cooldown: 1
+  Skills:
+  - message{m="<mob.name>&e upgrades its weapon."} @target
+  - effect:sound{s=block.anvil.destroy;v=2;p=0.5} @Self
+  - potion{type=SLOW;duration=40;level=7}  @self
+  - delay 40
+  - effect:sound{s=block.anvil.destroy;v=2;p=0.5} @Self
+  - potion{type=INCREASE_DAMAGE;duration=180;level=3}  @self
+  - potion{type=SPEED;duration=180;level=3}  @self

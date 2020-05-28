@@ -1,0 +1,41 @@
+RaidSecondBoss:
+    Type: SPIDER
+    Display: '&eAzalea, the Noxious Arachnid'
+    Health: 2500
+    Damage: 25
+    Skills:
+    - message{cooldown=20;m="<mob.name>&f<&co> Fear me fools."} @PlayersInRadius{r=40} ~onCombat >0 0.2
+    - message{m="<mob.name>&f<&co> Hope you brought anti-venom..."} @PlayersInRadius{r=40} ~onKillPlayer >0 1
+    - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
+    - skill{s=PoisonFangChampion} @PIR{r=40} ~onTimer:20 >0 0.2
+    - skill{s=SmashAttackChampion} @PIR{r=40} ~onTimer:20 >0 0.2
+    - skill{s=CrippleChampion} @PIR{r=40} ~onTimer:20 >0 0.2
+    - skill{s=VanishChampion} ~onTimer:20 >0 0.2
+    - skill{s=RegenChampion} ~onTimer:20 >0 0.2
+    - skill{s=RootChampion} ~onTimer:20 >0 0.2
+    - skill{s=BleedingChampion} ~onTimer:20 >0 0.2
+    - skill{s=PoisonFangChampion} ~onTimer:20 >0 0.2
+    - skill{s=LifeLeechChampion} ~onTimer:20 >0 0.01
+    - skill{s=CripplingShotChampion} ~onTimer:20 >0 0.2
+    - skill{s=BurningShotChampion} ~onTimer:20 >0 0.2
+    - skill{s=ShadowstepChampion} ~onTimer:20 >0 0.2
+    - skill{s=ExplosionChampion} ~onTimer:20 >0 0.2
+    - command{c="mm spawners set Raid_MediumTeleport maxmobs 0"} ~onSpawn
+    - command{c="mm spawners set Raid_MediumTeleport maxmobs 1"} ~onDeath
+    - command{c="mm spawners set Raid_MediumTeleport maxmobs 1"} ~onDespawn
+    Options:
+        AlwaysShowName: true
+        MovementSpeed: 0.35
+        MaxCombatDistance: 25
+        FollowRange: 50
+        PreventOtherDrops: false
+    BossBar:
+        Enabled: true
+        Title: '&eAzalea, the Noxious Arachnid'
+        Range: 50
+        Color: YELLOW
+        Style: SEGMENTED_10
+        CreateFog: true
+        DarkenSky: true
+    Modules:
+        ThreatTable: true

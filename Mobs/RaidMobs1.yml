@@ -1,40 +1,41 @@
-RaidUmbra:
-    Type: WITHER_SKELETON
-    Display: '&eUmbra, the Consuming Shadow'
-    Health: 2000
-    Damage: 10
-    Faction: Dungeon1
-    Skills:
-    - command{c="mm spawners set Raid_EasyTeleport maxmobs 0"} ~onSpawn
-    - command{c="mm spawners set Raid_EasyTeleport maxmobs 1"} ~onDeath
-    - command{c="mm spawners set Raid_EasyTeleport maxmobs 1"} ~onDespawn
-    - message{cooldown=20;m="<mob.name>&f<&co> Your light is fading!"} @PlayersInRadius{r=40} ~onCombat >0 0.2
-    - message{m="<mob.name>&f<&co> Welcome to the end, <trigger.name>!"} @PlayersInRadius{r=40} ~onKillPlayer >0 1
-    - skill{s=SmashAttackChampion} @PIR{r=40} ~onTimer:20 >0 0.2
-    - skill{s=SummonSkeletonsChampion} @PIR{r=40} ~onTimer:20 >0 0.2
-    - skill{s=BleedingChampion} @PIR{r=40} ~onAttack 0.25
-    - skill{s=LifeLeechChampion} @PIR{r=40} ~onTimer:20 >0 0.2
-    - skill{s=CrippleChampion} @PIR{r=40} ~onTimer:20 >0 0.2
-    - skill{s=ShadowstepChampion} @PIR{r=40} ~onDamaged 0.2
-    - skill{s=RallyChampion} @PIR{r=40} ~onTimer:20 >0 0.2
-    - skill{s=LevitateChampion} @PIR{r=40} ~onTimer:20 >0 0.2
-    - skill{s=RootChampion} ~onTimer:20 >0 0.2
-    - skill{s=UmbraHorde} ~onTimer:20 >0 0.2
-    Options:
-        AlwaysShowName: true
-        MovementSpeed: 0.35
-        MaxCombatDistance: 25
-        FollowRange: 50
-        PreventOtherDrops: false
-        Despawn: true
-    BossBar:
-        Enabled: true
-        Title: '&eUmbra, the Consuming Shadow'
-        Range: 50
-        Color: YELLOW
-        Style: SEGMENTED_10
-        CreateFog: true
-        DarkenSky: true
-        PlayMusic: false
-    Modules:
-        ThreatTable: true
+RaidFirstBoss:
+  Type: WITHER_SKELETON
+  Display: '&cConleth, the Conjurer of Fire'
+  Health: 1500
+  Damage: 15
+  Faction: Raid
+  Disguise:
+    Type: Player
+    Skin: Fire
+  BossBar:
+    Enabled: true
+    Title: 'Conleth, the Conjurer of Fire'
+    Range: 22
+    Color: RED
+    Style: SOLID
+  Skills:
+  - effect:sound{s=entity.tnt.primed;v=1;p=2} @PlayersInRadius{r=35} ~onDamaged
+  - effect:sound{s=block.fire.extinguish;v=1;p=0} @PlayersInRadius{r=35} ~onDeath
+  - effect:sound{s=entity.blaze.ambient;v=1;p=2} @PlayersInRadius{r=35} ~onTimer:100
+  - effect:particles{p=lava;amount=10;hs=0;vs=1;speed=0} @Self ~onTimer:20
+  - effect:particles{p=lava;amount=10;hs=0;vs=1;speed=0} @Self ~onTimer:25
+  - effect:particles{p=lava;amount=10;hs=0;vs=1;speed=0} @Self ~onTimer:30
+  - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
+  - skill{s=MoltenShower} ~onTimer:300
+  - skill{s=FireFin} ~onAttack .2
+  - skill{s=SingleTargetFire} @target ~onTimer:200
+  - skill{s=DamageImmunity} @self ~onDamaged 0.1
+  - skill{s=Bash} ~onAttack 0.25
+  - skill{s=Kick} ~onAttack 0.25
+  - command{c="mm spawners set Raid_EasyTeleport maxmobs 0"} ~onSpawn
+  - command{c="mm spawners set Raid_EasyTeleport maxmobs 1"} ~onDeath
+  - command{c="mm spawners set Raid_EasyTeleport maxmobs 1"} ~onDespawn
+  Equipment:
+  - MobDiamondSword HAND
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.275
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+  Modules:
+    ThreatTable: true

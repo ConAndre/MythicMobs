@@ -11,7 +11,7 @@ Piranha4:
   MobsPerSpawn: 1
   Cooldown: 0
   CooldownTimer: 0
-  Warmup: 180
+  Warmup: 60
   WarmupTimer: 0
   CheckForPlayers: true
   ActivationRange: 40

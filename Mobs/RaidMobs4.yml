@@ -1,0 +1,42 @@
+RaidFourthBoss:
+    Type: Vindicator
+    Display: '&eMacadam, the Temple Guardian'
+    Health: 6500
+    Damage: 45
+    Skills:
+    - message{cooldown=20;m="<mob.name>&f<&co> You won't stand a chance"} @PlayersInRadius{r=40} ~onCombat >0 0.2
+    - message{m="<mob.name>&f<&co> You die, <trigger.name>!"} @PlayersInRadius{r=40} ~onKillPlayer >0 1
+    - effect:particles{particle=block_crack;m=sand;amount=100;hS=1;vS=1}  @Self ~onTimer:20
+    - effect:particles{particle=block_crack;m=sand;amount=100;hS=1;vS=1}  @Self ~onTimer:25
+    - effect:particles{particle=block_crack;m=sand;amount=100;hS=1;vS=1}  @Self ~onTimer:30
+    - skill{s=SummonRaidFour;cooldown=40} @self ~onDamaged 0.1
+    - skill{s=SummonRaidFour2;cooldown=60} @self ~onDamaged 0.1
+    - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
+    - skill{s=RaidFourEffects} @Self ~onTimer:120
+    - skill{s=SmokeBlastProjectile;cooldown=10} @target ~onAttack 0.5
+    - skill{s=FireballProjectile;cooldown=10} @target ~onAttack 0.35
+    - skill{s=FarBlind} @PIR{r=50} ~onTimer:20 >0 0.2
+    - skill{s=Stealth} ~onTimer:20 >0 0.2
+    - skill{s=Bleeding} ~onTimer:20 >0 0.2
+    - skill{s=Charge} ~onTimer:20 >0 0.2
+    - skill{s=Flurry} ~onTimer:20 >0 0.2
+    - skill{s=Sharpen} ~onTimer:20 >0 0.2
+    - command{c="mm spawners set Raid_NightmareTeleport maxmobs 0"} ~onSpawn
+    - command{c="mm spawners set Raid_NightmareTeleport maxmobs 1"} ~onDeath
+    - command{c="mm spawners set Raid_NightmareTeleport maxmobs 1"} ~onDespawn
+    Options:
+        AlwaysShowName: true
+        MovementSpeed: 0.35
+        MaxCombatDistance: 25
+        FollowRange: 50
+        PreventOtherDrops: true
+    BossBar:
+        Enabled: true
+        Title: '&eMacadam, the Temple Guardian'
+        Range: 50
+        Color: YELLOW
+        Style: SEGMENTED_10
+        CreateFog: true
+        DarkenSky: true
+    Modules:
+        ThreatTable: true

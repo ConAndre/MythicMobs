@@ -7,12 +7,12 @@ Raid_HardTeleport:
   Z: -1342
   Radius: 0
   UseTimer: true
-  MaxMobs: '1'
+  MaxMobs: '0'
   MobLevel: '1'
   MobsPerSpawn: 1
   Cooldown: 50
   CooldownTimer: 0
-  Warmup: 0
+  Warmup: 60
   WarmupTimer: 0
   CheckForPlayers: false
   ActivationRange: 32

@@ -12,7 +12,7 @@ Raid_NightmareTeleport:
   MobsPerSpawn: 1
   Cooldown: 50
   CooldownTimer: 0
-  Warmup: 0
+  Warmup: 60
   WarmupTimer: 0
   CheckForPlayers: false
   ActivationRange: 32

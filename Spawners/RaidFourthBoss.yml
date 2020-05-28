@@ -1,9 +1,9 @@
-RaidUmbra:
-  MobName: RaidUmbra
+RaidFourthBoss:
+  MobName: RaidFourthBoss
   World: world
-  X: 981
-  Y: 4
-  Z: -747
+  X: 2028
+  Y: 3
+  Z: -672
   Radius: 0
   UseTimer: true
   MaxMobs: '1'
@@ -11,7 +11,7 @@ RaidUmbra:
   MobsPerSpawn: 1
   Cooldown: 0
   CooldownTimer: 0
-  Warmup: 0
+  Warmup: 60
   WarmupTimer: 0
   CheckForPlayers: true
   ActivationRange: 40

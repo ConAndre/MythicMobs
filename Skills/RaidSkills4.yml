@@ -1,0 +1,47 @@
+RaidFourEffects:
+  Skills:
+    - throw{velocity=5;velocityY=5} @target
+    - damage{a=14;i=false} @PIR{r=10}
+    - effect:particlering{particle=block_crack;m=sand;a=20;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=1} @Self
+    - delay 2
+    - effect:particlering{particle=block_crack;m=sand;a=20;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=3} @Self
+    - delay 2
+    - effect:particlering{particle=block_crack;m=sand;a=20;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=5} @Self
+    - delay 2
+    - effect:particlering{particle=block_crack;m=sand;a=20;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=7} @Self
+    - delay 2
+    - effect:particlering{particle=block_crack;m=sand;a=20;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=9} @Self
+    - delay 2
+    - effect:particlering{particle=block_crack;m=sand;a=20;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=11} @Self
+    - delay 2
+    - effect:particlering{particle=block_crack;m=sand;a=20;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=13} @Self
+    - delay 2
+    - effect:particlering{particle=block_crack;m=sand;a=20;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=15} @Self
+    - delay 2
+    - effect:particlering{particle=block_crack;m=sand;a=20;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=17} @Self
+    - delay 2
+    - effect:particlering{particle=block_crack;m=sand;a=20;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=19} @Self
+    - delay 2
+    - effect:particlering{particle=block_crack;m=sand;a=20;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=21} @Self
+
+SummonRaidFour:
+  Skills:
+  - summon{mob=Scarab;amount=12;noise=5} @Self
+
+SummonRaidFour2:
+  Skills:
+  - summon{mob=SquidMinion;amount=1;noise=5} @Self
+  - delay 10
+  - summon{mob=SquidMinion;amount=1;noise=5} @Self
+  - delay 10
+  - summon{mob=SquidMinion;amount=1;noise=5} @Self
+  - delay 10
+  - summon{mob=SquidMinion;amount=1;noise=5} @Self
+  - delay 10
+  - summon{mob=SquidMinion;amount=1;noise=5} @Self
+  - delay 10
+  - summon{mob=SquidMinion;amount=1;noise=5} @Self
+  - delay 10
+  - summon{mob=SquidMinion;amount=1;noise=5} @Self
+  - delay 10
+
