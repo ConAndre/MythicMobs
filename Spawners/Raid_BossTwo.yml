@@ -1,7 +1,7 @@
-RaidSecondBoss:
-  MobName: RaidSecondBoss
+Raid_BossTwo:
+  MobName: Raid_BossTwo
   World: world
-  X: 1761
+  X: 1760
   Y: 20
   Z: -1488
   Radius: 0
@@ -16,7 +16,7 @@ RaidSecondBoss:
   CheckForPlayers: true
   ActivationRange: 40
   ScalingRange: 25.0
-  LeashRange: 120
+  LeashRange: 125
   HealOnLeash: false
   ResetThreatOnLeash: false
   ShowFlames: false

@@ -1,4 +1,5 @@
-RaidFourthBoss:
+# ----------------------------------- Boss ----------------------------------- #
+Raid_BossFour:
     Type: Vindicator
     Display: '&eMacadam, the Temple Guardian'
     Health: 6500
@@ -17,13 +18,13 @@ RaidFourthBoss:
     - skill{s=FireballProjectile;cooldown=10} @target ~onAttack 0.35
     - skill{s=FarBlind} @PIR{r=50} ~onTimer:20 >0 0.2
     - skill{s=Stealth} ~onTimer:20 >0 0.2
-    - skill{s=Bleeding} ~onTimer:20 >0 0.2
+    - skill{s=Bleeding} @target ~onTimer:20 >0 0.2
     - skill{s=Charge} ~onTimer:20 >0 0.2
     - skill{s=Flurry} ~onTimer:20 >0 0.2
     - skill{s=Sharpen} ~onTimer:20 >0 0.2
-    - command{c="mm spawners set Raid_NightmareTeleport maxmobs 0"} ~onSpawn
-    - command{c="mm spawners set Raid_NightmareTeleport maxmobs 1"} ~onDeath
-    - command{c="mm spawners set Raid_NightmareTeleport maxmobs 1"} ~onDespawn
+    - command{c="mm spawners set Raid_FourTeleport maxmobs 0"} ~onSpawn
+    - command{c="mm spawners set Raid_FourTeleport maxmobs 1"} ~onDeath
+    - command{c="mm spawners set Raid_FourTeleport maxmobs 1"} ~onDespawn
     Options:
         AlwaysShowName: true
         MovementSpeed: 0.35

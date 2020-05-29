@@ -1,10 +1,9 @@
-Raid_EasyTeleport:
-  SpawnerGroup: RaidTeleport
-  MobName: Raid_EasyTeleport
+Raid_BossFour:
+  MobName: Raid_BossFour
   World: world
-  X: 723
-  Y: 85
-  Z: -1244
+  X: 2028
+  Y: 3
+  Z: -674
   Radius: 0
   UseTimer: true
   MaxMobs: '1'
@@ -13,14 +12,14 @@ Raid_EasyTeleport:
   Cooldown: 0
   CooldownTimer: 0
   Warmup: 60
-  WarmupTimer: 39
-  CheckForPlayers: false
-  ActivationRange: 32
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
   ScalingRange: 25.0
-  LeashRange: 32
+  LeashRange: 125
   HealOnLeash: false
   ResetThreatOnLeash: false
-  ShowFlames: true
+  ShowFlames: false
   Breakable: false
   Conditions: []
   ActiveMobs: 0

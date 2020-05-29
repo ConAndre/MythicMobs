@@ -8,14 +8,14 @@ BleedingChampion:
     - message{m="You begin bleeding."} @target
     - sound{s=damage.hit} @target
     - effect:particles{particle=dripLava;amount=5;hS=1;vS=1;speed=5} @self
-    - damage{amount=3;ia=false;pk=false;pi=false} @target ~onTimer:20
-    - damage{amount=3;ia=false;pk=false;pi=false} @target ~onTimer:20
+    - damage{amount=3;} @target
+    - damage{amount=3;} @target
     - effect:particles{particle=dripLava;amount=5;hS=1;vS=1;speed=5} @self
-    - damage{amount=3;ia=false;pk=false;pi=false} @target ~onTimer:20
-    - damage{amount=3;ia=false;pk=false;pi=false} @target ~onTimer:20
+    - damage{amount=3;} @target
+    - damage{amount=3;} @target
     - effect:particles{particle=dripLava;amount=5;hS=1;vS=1;speed=5} @self
-    - damage{amount=3;ia=false;pk=false;pi=false} @target ~onTimer:20
-    - damage{amount=3;ia=false;pk=false;pi=false} @target ~onTimer:20
+    - damage{amount=3;} @target
+    - damage{amount=3;} @target
     - GCD{ticks=120}
 PoisonFangChampion:
     Cooldown: 30

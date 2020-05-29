@@ -2,7 +2,8 @@
 # http://www.mythicmobs.net
 #
 
-##################################################BOSSES####################################################
+# ----------------------------------- Boss ----------------------------------- #
+
 Pharaoh:
   Type: Skeleton
   Display: '&ePharaoh'
@@ -79,28 +80,8 @@ Illusion:
   - dropitem{i=Loot_Artifact_IllusionStaff} ~onDeath .05
   - randomskill{skills=Loot_Artifact_IllusionStaff,Loot_Artifact_SummonEye} ~onDeath 1
 
-IllusionMob:
-  Type: ZOMBIE
-  Display: '&cEye'
-  Health: 20
-  Damage: 10
-  Armor: 0
-  Faction: Mummy
-  Equipment:
-   - SCP02:4
-  Options:
-    AlwaysShowName: false
-    MovementSpeed: 0.325
-    KnockbackResistance: 1
-    PreventOtherDrops: true
-  Modules:
-    ThreatTable: true
-  AIGoalSelectors:
-  - 0 float
-  Skills:
-   - potion{t=INVISIBILITY;d=630720000;l=0} @self ~onSpawn
-   - effect:sound{s=entity.phantom.hurt;v=1;p=0} @self ~onDamaged
-##################################################REGULARS####################################################
+# ----------------------------------- Mobs ----------------------------------- #
+
 Mummy:
   Type: ZOMBIE
   Display: '&EMummy'
@@ -154,6 +135,7 @@ MummyArcher:
   Modules:
     ThreatTable: true
   AIGoalSelectors:
+  - 0 float
   AITargetSelectors:
   - 0 clear
   - 1 players
@@ -210,6 +192,29 @@ Scarab:
   - 2 attacker
   Skills:
   - skill{s=ScarabAttack} ~onAttack @target
+
+# ---------------------------------- Extra ---------------------------------- #
+IllusionMob:
+  Type: ZOMBIE
+  Display: '&cEye'
+  Health: 20
+  Damage: 10
+  Armor: 0
+  Faction: Mummy
+  Equipment:
+   - SCP02:4
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.325
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  - 0 float
+  Skills:
+   - potion{t=INVISIBILITY;d=630720000;l=0} @self ~onSpawn
+   - effect:sound{s=entity.phantom.hurt;v=1;p=0} @self ~onDamaged
 FriendlyEye:
   Type: BABY_ZOMBIE
   Display: 'mini-eye'

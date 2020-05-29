@@ -1,3 +1,188 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#
+#Junkee
+JunkeeHomer:
+  Cooldown: 12
+  Skills:
+  - message{m="<mob.name><&co> &A *BLEGHHH*"} @target
+  - missile{ot=JunkeeHomer_TICK;oh=JunkeeHomer_HIT;v=16;i=1;hR=1;vR=1;in=0.75;MaxRange=96}
+  - delay 6
+  - missile{ot=JunkeeHomer_TICK;oh=JunkeeHomer_HIT;v=16;i=1;hR=1;vR=1;in=0.75;MaxRange=96}
+  - delay 6
+  - missile{ot=JunkeeHomer_TICK;oh=JunkeeHomer_HIT;v=16;i=1;hR=1;vR=1;in=0.75;MaxRange=96}
+JunkeeHomer_TICK:
+  Skills:
+  - effect:particles{p=slime;a=10} @origin
+  - effect:sound{s=entity.slime.attack;v=1;p=0}
+JunkeeHomer_HIT:
+  Skills:
+  - effect:sound{s=entity.slime.attack;v=.5;p=0}
+  - damage{a=20;i=false}
+
+#Pirates
+SmokeBlastProjectile:
+  Cooldown: 15
+  Skills:
+  - projectile{hp=true;v=12;onTick=SmokeBlast-Ontick;hRadius=2;vRadius=2;onHit=SmokeBlast-onhit;onEnd=SmokeBlast-onhit;StartYOffset=8;Interval=1;MaxRange=64}
+SmokeBlast-Ontick:
+  Skills:
+  - effect:particlesphere{p=blockcrack;material=BEDROCK;amount=75;radius=2} @Origin
+  - effect:particlesphere{particle=smoke_large;amount=75;radius=2} @Origin
+SmokeBlast-onhit:
+  Skills:
+  - effect:blockmask{m=OBSIDIAN;r=5;d=100} @Origin
+  - effect:flames @Origin
+  - potion{type=SLOW;duration=80;level=1} @EntitiesNearOrigin{r=5}
+  - potion{type=BLINDNESS;duration=80;level=20} @EntitiesNearOrigin{r=5}
+  - damage{amount=25;ignoreArmor=false} @EntitiesNearOrigin{r=5}
+
+FireballProjectile:
+  Cooldown: 15
+  Skills:
+  - projectile{hp=true;v=12;onTick=Fireball-Ontick;hRadius=1.5;vRadius=1.5;OnHit=Fireball-Onhit;OnEnd=Fireball-Onhit;StartYOffset=+8;Interval=1;MaxRange=96}
+Fireball-Ontick:
+  Skills:
+  - effect:particlesphere{particle=flame;amount=75;radius=1.5}  @Origin
+  - effect:particlesphere{p=blockcrack;material=NETHERRACK;amount=75;radius=1.5}  @Origin
+Fireball-Onhit:
+  Skills:
+  - effect:explosion
+  - ignite{ticks=60}
+  - damage{amount=25;ignoreArmor=false} @EntitiesNearOrigin{r=5}
+
+SummonJunkees:
+  Skills:
+  - message{m="<mob.name><&co> &cA slow death will be their reward..."} @target
+  - delay 20
+  - summon{mob=PirateJunkee;amount=1;noise=5} @Self
+  - delay 20
+  - summon{mob=PirateJunkee;amount=1;noise=5} @Self
+
+
+ParrotJumpBarrage:
+  Condition:
+  - OnGround
+  Skills:
+  - message{m="<mob.name><&co> &cSquawk squawk!!"} @target
+  - delay 20
+  - jump{velocity=.95}
+  - delay 20
+  - arrowvolley{a=15;s=250;v=150;f=120;rd=80} @EntitiesInRadius{r=25;ignore=monsters}
+
+ParrotJumpLightning:
+  Condition:
+  - OnGround
+  Skills:
+  - message{m="<mob.name><&co> &cSqueek!!"} @target
+  - delay 20
+  - jump{velocity=2}
+  - delay 20
+  - lightning{d=8} @PlayersInRadius{r=25}
+
+ParrotPeck:
+  Condition:
+  - OnGround
+  - targetwithin{d=2}
+  - LineOfSight
+  Skills:
+  - message{m="<mob.name><&co> &c*Peck* x4 "} @target
+  - effect:sound{s=entity.parrot.eat;v=1;p=0}
+  - damage{amount=1;ignoreArmor=true}
+  - delay 12
+  - effect:sound{s=entity.parrot.eat;v=1;p=0}
+  - damage{amount=1;ignoreArmor=true}
+  - delay 12
+  - effect:sound{s=entity.parrot.eat;v=1;p=0}
+  - damage{amount=1;ignoreArmor=true}
+  - delay 12
+  - effect:sound{s=entity.parrot.eat;v=1;p=0}
+  - damage{amount=1;ignoreArmor=true}
+
+ParrotLeapAttack:
+  Condition:
+  - OnGround
+  - targetwithin{d=8}
+  - LineOfSight
+  Skills:
+  - effect:sound{s=entity.parrot.ambient;v=1;p=0}
+  - lunge{velocity=1.2;velocityY=0.3} @self
+
+
+##Golding
+SmashAttackII:
+  Conditions:
+  - targetwithin{d=25}
+  Skills:
+  - effect:particles{cooldown=5;particle=angryVillager;amount=20;vSpread=1;hSpread=2;Speed=0;yoffset=2} @target
+  - message{cooldown=30;m="<mob.name><&co> SAVAGE SMASH!"} @PlayersInRadius{r=40}
+  - teleport @target
+  - effect:sound{s=entity.zombie.attack_iron_door;volume=2.0;pitch=0.5} @target
+  - sendtitle{title="";subtitle="&c<<Hit by Savage Smash!>>";d=40} @PlayersNearOrigin{r=10}
+  - delay 10
+  - damage{amount=2;ignorearmor=true} @PlayersInRadius{r=5}
+  - throw{velocity=4;velocityY=4} @PlayersInRadius{r=5}
+  - effect:explosion @Self
+AngryAura:
+  Cooldown: 0.1
+  Skills:
+  - effect:sound{s=ZOMBIE_HORSE_DEATH;volume=2.0;pitch=0.5}
+  - message{m="<<<mob.name> &cbuffed by Outrage Aura!>>"} @PlayersInRadius{r=40}
+  - potion{type=FIRE_RESISTANCE;lvl=1;duration=1900} @Self
+  - potion{type=SPEED;lvl=1;duration=1900} @Self
+  - potion{type=GLOWING;lvl=0;duration=300} @Self
+  - effect:particles{cooldown=5;particle=angryVillager;amount=75;vSpread=1;hSpread=2;Speed=0;yoffset=2} @self onTimer:0.1
+FireResistanceSpeed:
+  Cooldown: 0.1
+  Skills:
+  - effect:sound{s=ENTITY_ZOMBIE_HORSE_HURT;volume=2.0;pitch=0.5}
+  - message{m="<<<mob.name> &cbuffed by Rage Aura!>>"} @PlayersInRadius{r=40}
+  - potion{type=FIRE_RESISTANCE;lvl=1;duration=1800} @Self
+  - potion{type=SPEED;lvl=0;duration=1800} @Self
+  - potion{type=GLOWING;lvl=0;duration=150} @Self
+  - effect:particles{p=angryVillager;amount=10;hSpread=1;ySpread=1;speed=0;yOFfset=1} @Self
+Death:
+  Skills:
+  - effect:sound{s=entity.endermen.scream;v=.5;p=0.8} @Self ~onDeath
+  - delay 10
+  - effect:sound{s=entity.endermen.scream;v=.5;p=1.5} @Self ~onDeath
+  - delay 7
+  - effect:sound{s=entity.endermen.scream;v=.5;p=1.1} @Self ~onDeath
+  - delay 8
+  - effect:sound{s=entity.endermen.scream;v=.5;p=1.4} @Self ~onDeath
+  - delay 11
+  - effect:sound{s=entity.endermen.scream;v=.5;p=1.2} @Self ~onDeath
+  - delay 10
+  - effect:sound{s=entity.endermen.scream;v=.5;p=1.1} @Self ~onDeath
+CallPirateBoat:
+  Skills:
+  - lightning{d=6} @PlayersInRadius{r=25}
+  - mount{type=PirateCaptainBoat}
+
+CallPirateMount:
+  Skills:
+  - lightning{d=6} @PlayersInRadius{r=25}
+  - mount{type=PirateCaptainMount}
+
+
+#Captain
+CaptainBlastProjectile:
+  Cooldown: 10
+  Skills:
+  - projectile{hp=true;v=12;onTick=Fireball-Ontick;hRadius=1.5;vRadius=1.5;OnHit=Fireball-Onhit;OnEnd=Fireball-Onhit;StartYOffset=+8;Interval=1;MaxRange=96}
+  - projectile{hp=true;v=12;onTick=SmokeBlast-Ontick;hRadius=2;vRadius=2;onHit=SmokeBlast-onhit;onEnd=SmokeBlast-onhit;StartYOffset=8;Interval=1;MaxRange=64}
+
+SummonParrots:
+  Skills:
+  - summon{mob=PirateParrot;amount=3;noise=5} @Self
+  - delay 20
+  - summon{mob=PirateParrot;amount=3;noise=5} @Self
+
+
+
+
+# ---------------------------------- Captain Cache --------------------------------- #
+
 EnableLoot_Captain:
   Skills:
   - summon{mob=Cache_Captain;amount=1;noise=0} @Self
@@ -18,6 +203,9 @@ Loot_Captain:
   - skill{s=Loot_CaptainBoosted} @trigger 1
   - randomskill{skills=Loot_CaptainWeapon_DULLED,Loot_CaptainChestplate_DULLED} @trigger 1
   - randomskill{skills=Loot_CaptainWeapon,Loot_CaptainChestplate} @trigger .12
+  - giveitem{i=CacheReroll} @trigger .08
+  - message{m="&A&LYou looted $1500!"} @trigger
+  - currencygive{amount=1500} @trigger
   - delay 1800
   - remove @self
 
@@ -35,6 +223,9 @@ Loot_CaptainBoosted:
   - sound{s=entity.item.pickup} @trigger
   - randomskill{skills=Loot_GoldingApple_DULLED} @trigger 1
   - randomskill{skills=Loot_GoldingApple} @trigger .12
+  - giveitem{i=CacheReroll} @trigger .08
+  - message{m="&A&LYou looted $1500!"} @trigger
+  - currencygive{amount=1500} @trigger
 
 Loot_CaptainWeapon:
   Skills:
@@ -62,6 +253,8 @@ Loot_CaptainLooted:
   - delay 1800
   - remove @self
 
+# ---------------------------------- Golding Cache --------------------------------- #
+
 EnableLoot_Golding:
   Skills:
   - summon{mob=Cache_Golding;amount=1;noise=0} @Self
@@ -82,13 +275,11 @@ Loot_Golding:
   - skill{s=Loot_GoldingBoosted} @trigger 1
   - randomskill{skills=Loot_GoldingApple_DULLED} @trigger 1
   - randomskill{skills=Loot_GoldingApple} @trigger .12
+  - giveitem{i=CacheReroll} @trigger .08
+  - message{m="&A&LYou looted $1500!"} @trigger
+  - currencygive{amount=1500} @trigger
   - delay 1800
   - remove @self
-
-##
-##
-##
-##
 
 Loot_GoldingBoosted:
   TargetConditions:
@@ -104,6 +295,8 @@ Loot_GoldingBoosted:
   - sound{s=entity.item.pickup} @trigger
   - randomskill{skills=Loot_GoldingApple_DULLED} @trigger 1
   - randomskill{skills=Loot_GoldingApple} @trigger .12
+  - message{m="&A&LYou looted $1500!"} @trigger
+  - currencygive{amount=1500} @trigger
 
 Loot_GoldingApple:
   Skills:
@@ -121,10 +314,7 @@ Loot_GoldingLooted:
   - delay 1800
   - remove @self
 
-##
-##
-##
-##
+# ---------------------------------- Parrot Cache ---------------------------------- #
 
 EnableLoot_Parrot:
   Skills:
@@ -146,6 +336,8 @@ Loot_Parrot:
   - skill{s=Loot_ParrotBoosted} @trigger 1
   - randomskill{skills=Loot_SquawksBeak_DULLED} @trigger 1
   - randomskill{skills=Loot_SquawksBeak,Loot_SquawksCookie} @trigger .12
+  - message{m="&A&LYou looted $1500!"} @trigger
+  - currencygive{amount=1500} @trigger
   - delay 1800
   - remove @self
 
@@ -163,6 +355,8 @@ Loot_ParrotBoosted:
   - sound{s=entity.item.pickup} @trigger
   - randomskill{skills=Loot_SquawksBeak_DULLED} @trigger 1
   - randomskill{skills=Loot_SquawksBeak,Loot_SquawksCookie} @trigger .12
+  - message{m="&A&LYou looted $1500!"} @trigger
+  - currencygive{amount=1500} @trigger
 
 Loot_SquawksBeak:
   Skills:
@@ -185,3 +379,12 @@ Loot_ParrotLooted:
   - message{m="&c&LYou have already looted this cache &A&Lor &c&Lyou did not participate in this battle!"} @trigger
   - delay 1800
   - remove @self
+
+
+
+
+
+
+
+
+

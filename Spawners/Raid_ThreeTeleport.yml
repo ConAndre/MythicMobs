@@ -1,9 +1,9 @@
-RaidFourthBoss:
-  MobName: RaidFourthBoss
+Raid_ThreeTeleport:
+  MobName: Raid_ThreeTeleport
   World: world
-  X: 2028
-  Y: 3
-  Z: -672
+  X: 723
+  Y: 85
+  Z: -1342
   Radius: 0
   UseTimer: true
   MaxMobs: '1'
@@ -13,7 +13,7 @@ RaidFourthBoss:
   CooldownTimer: 0
   Warmup: 60
   WarmupTimer: 0
-  CheckForPlayers: true
+  CheckForPlayers: false
   ActivationRange: 40
   ScalingRange: 25.0
   LeashRange: 32

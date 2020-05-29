@@ -1,3 +1,5 @@
+# --------------------------------- Dungeon 1 -------------------------------- #
+
 Cache_SkeletonKing:
   Type: COW
   Display: '&N&ALoot Cache'
@@ -19,6 +21,8 @@ Cache_SkeletonKing:
   Skills:
   - skill{s=Loot_SkeletonKing} ~onInteract
 
+# --------------------------------- Dungeon 2 -------------------------------- #
+
 Cache_Pharaoh:
   Type: SHEEP
   Display: '&N&ALoot Cache'
@@ -39,6 +43,8 @@ Cache_Pharaoh:
     Silent: true
   Skills:
   - skill{s=Loot_Pharaoh} ~onInteract
+
+# --------------------------------- Dungeon 3 -------------------------------- #
 
 Cache_Captain:
   Type: SHEEP
@@ -101,6 +107,8 @@ Cache_Parrot:
     Silent: true
   Skills:
   - skill{s=Loot_Parrot} ~onInteract
+
+# --------------------------------- Dungeon 4 -------------------------------- #
 
 Cache_PiranhaBoss:
   Type: SHEEP
@@ -206,3 +214,4 @@ Cache_Azure:
   Skills:
   - skill{s=Loot_Azure} ~onInteract
 
+# --------------------------------- Dungeon 5 -------------------------------- #

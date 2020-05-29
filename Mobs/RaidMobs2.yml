@@ -1,4 +1,5 @@
-RaidSecondBoss:
+# ----------------------------------- Boss ----------------------------------- #
+Raid_BossTwo:
     Type: SPIDER
     Display: '&eAzalea, the Noxious Arachnid'
     Health: 2500
@@ -10,19 +11,19 @@ RaidSecondBoss:
     - skill{s=PoisonFangChampion} @PIR{r=40} ~onTimer:20 >0 0.2
     - skill{s=SmashAttackChampion} @PIR{r=40} ~onTimer:20 >0 0.2
     - skill{s=CrippleChampion} @PIR{r=40} ~onTimer:20 >0 0.2
+    - skill{s=BleedingChampion} @target ~onTimer:20 >0 0.2
     - skill{s=VanishChampion} ~onTimer:20 >0 0.2
     - skill{s=RegenChampion} ~onTimer:20 >0 0.2
     - skill{s=RootChampion} ~onTimer:20 >0 0.2
-    - skill{s=BleedingChampion} ~onTimer:20 >0 0.2
     - skill{s=PoisonFangChampion} ~onTimer:20 >0 0.2
     - skill{s=LifeLeechChampion} ~onTimer:20 >0 0.01
     - skill{s=CripplingShotChampion} ~onTimer:20 >0 0.2
     - skill{s=BurningShotChampion} ~onTimer:20 >0 0.2
     - skill{s=ShadowstepChampion} ~onTimer:20 >0 0.2
     - skill{s=ExplosionChampion} ~onTimer:20 >0 0.2
-    - command{c="mm spawners set Raid_MediumTeleport maxmobs 0"} ~onSpawn
-    - command{c="mm spawners set Raid_MediumTeleport maxmobs 1"} ~onDeath
-    - command{c="mm spawners set Raid_MediumTeleport maxmobs 1"} ~onDespawn
+    - command{c="mm spawners set Raid_TwoTeleport maxmobs 0"} ~onSpawn
+    - command{c="mm spawners set Raid_TwoTeleport maxmobs 1"} ~onDeath
+    - command{c="mm spawners set Raid_TwoTeleport maxmobs 1"} ~onDespawn
     Options:
         AlwaysShowName: true
         MovementSpeed: 0.35

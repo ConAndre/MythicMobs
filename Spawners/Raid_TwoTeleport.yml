@@ -1,26 +1,25 @@
-Raid_HardTeleport:
-  SpawnerGroup: RaidTeleport
-  MobName: Raid_HardTeleport
+Raid_TwoTeleport:
+  MobName: Raid_TwoTeleport
   World: world
-  X: 723
+  X: 674
   Y: 85
-  Z: -1342
+  Z: -1293
   Radius: 0
   UseTimer: true
-  MaxMobs: '0'
+  MaxMobs: '1'
   MobLevel: '1'
   MobsPerSpawn: 1
-  Cooldown: 50
+  Cooldown: 0
   CooldownTimer: 0
   Warmup: 60
   WarmupTimer: 0
   CheckForPlayers: false
-  ActivationRange: 32
+  ActivationRange: 40
   ScalingRange: 25.0
   LeashRange: 32
   HealOnLeash: false
   ResetThreatOnLeash: false
-  ShowFlames: true
+  ShowFlames: false
   Breakable: false
   Conditions: []
   ActiveMobs: 0

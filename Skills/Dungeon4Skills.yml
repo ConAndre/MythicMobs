@@ -1,0 +1,666 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#
+
+NexusChainLightning:
+  Skills:
+  - message{m="<mob.name><&co> &cFear me."} @PlayersInRadius{r=20}
+  - chain{
+      bounces=10;
+      bounceRadius=20;
+      bounceDelay=10;
+      hitSelf=false;
+      hitPlayers=true;
+      hitNonPlayers=false;
+      hitTarget=false;
+      onBounce=[
+        - effect:particleline{p=flame;fromOrigin=true}
+        - effect:sound{s=entity.generic.explode;v=1;p=0.5}
+        - lightning{d=8}
+      ];
+      bounceConditions=[
+        - inlineofsight
+      ];
+    }
+
+
+SummonCarmineMinions:
+  Skills:
+  - message{m="<mob.name><&co> &cYour window to run away... is closing."} @target
+  - delay 20
+  - summon{mob=CarmineMinion;amount=1;noise=5} @Self
+  - delay 40
+  - summon{mob=CarmineMinion;amount=1;noise=5} @Self
+  - delay 40
+  - summon{mob=CarmineMinion;amount=1;noise=5} @Self
+  - delay 40
+  - summon{mob=CarmineMinion;amount=1;noise=5} @Self
+  - delay 40
+  - summon{mob=CarmineMinion;amount=1;noise=5} @Self
+  - delay 40
+  - summon{mob=CarmineMinion;amount=1;noise=5} @Self
+CarmineSplash:
+  Conditions:
+  - targetwithin{d=8}
+  - targetinlineofsight true
+  - incombat
+  Skills:
+  - sound{s=block.campfire.crackle} @self
+  - effect:particles{p=lava;amount=50;hSpread=16;ySpread=1;speed=0;yOffset=0.5} @Self
+  - effect:particles{p=squid_ink;amount=50;hSpread=16;ySpread=1;speed=0;yOffset=0.5} @Self
+  - delay 5
+  - potion{type=HARM;lvl=0;duration=1} @PlayersInRadius{r=16}
+  - potion{type=SLOW;lvl=3;duration=40} @PlayersInRadius{r=16}
+  - sound{s=block.campfire.crackle} @self
+CarmineFin:
+    Skills:
+    - effect:particles{p=lava;a=5;vs=5.5;hs=5.5;s=0;y=1} @Self
+    - effect:sound{s=block.fire.ambient;v=2;p=0.5} @Self
+    - damage{amount=8} @PlayersInRadius{r=5}
+    - throw{velocity=15;velocityY=5} @PlayersInRadius{r=5}
+    - delay 10
+    - teleport @target
+    - delay 30
+    - throw{velocity=5;velocityY=5} @PIR{r=10}
+    - damage{a=12;i=false} @PIR{r=10}
+    - effect:particles{p=lava;a=5;vs=0.5;hs=3.5;s=0;y=1} @Self
+    - effect:sound{s=block.fire.ambient;v=2;p=0.5} @Self
+    - effect:sound{s=block.fire.ambient;v=2;p=1;repeat=7;repeatInterval=2} @Self
+    - effect:particlering{p=lava;a=3;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=1} @Self
+    - delay 2
+    - effect:particlering{p=lava;a=3;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=3} @Self
+    - delay 2
+    - effect:particlering{p=lava;a=3;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=5} @Self
+    - delay 2
+    - effect:particlering{p=lava;a=3;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=7} @Self
+    - delay 2
+    - effect:particlering{p=lava;a=3;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=9} @Self
+    - delay 2
+    - effect:particlering{p=lava;a=3;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=11} @Self
+CarmineHomer:
+  Skills:
+  - effect:sound{s=block.fire.ambient;v=1;p=0}
+  - delay 10
+  - missile{ot=CarmineHomer_TICK;oh=CarmineHomer_HIT;v=8;i=1;hR=1;vR=1;in=0.75;syo=1;MaxRange=96}
+  - delay 5
+  - missile{ot=CarmineHomer_TICK;oh=CarmineHomer_HIT;v=8;i=1;hR=1;vR=1;in=0.75;syo=2;MaxRange=96}
+
+CarmineHomer_TICK:
+  Skills:
+  - effect:particles{p=end_rod;a=1} @origin
+CarmineHomer_HIT:
+  Skills:
+  - effect:particles{p=lava;a=200;hS=2;vS=2}
+  - effect:sound{s=block.campfire.crackle;v=1;p=0}
+  - damage{a=6;i=false}
+CarmineJumpLightning:
+  Condition:
+  - OnGround
+  Skills:
+  - message{m="<mob.name><&co> &cDIE."} @target
+  - delay 20
+  - jump{velocity=2}
+  - delay 20
+  - lightning{d=8} @PlayersInRadius{r=25}
+
+CarmineBlastProjectile:
+  Cooldown: 25
+  Skills:
+  - projectile{hp=true;v=12;onTick=CarmineBlast-Ontick;hRadius=2;vRadius=2;onHit=CarmineBlast-onhit;onEnd=CarmineBlast-onhit;StartYOffset=8;Interval=1;MaxRange=64}
+CarmineBlast-Ontick:
+  Skills:
+  - effect:particlesphere{p=blockcrack;material=REDSTONE_BLOCK;amount=50;radius=2} @Origin
+  - effect:particlesphere{particle=lava;amount=50;radius=2} @Origin
+CarmineBlast-onhit:
+  Skills:
+  - effect:blockmask{m=REDSTONE_BLOCK;r=5;d=100} @Origin
+  - potion{type=SLOW;duration=80;level=1} @EntitiesNearOrigin{r=5}
+  - potion{type=BLINDNESS;duration=80;level=20} @EntitiesNearOrigin{r=5}
+  - damage{amount=6;ignoreArmor=false}
+
+NexusJumpLightning:
+  Condition:
+  - OnGround
+  Skills:
+  - message{m="<mob.name><&co> &cAHAHAHA."} @PlayersInRadius{r=25}
+  - delay 20
+  - jump{velocity=2}
+  - delay 20
+  - lightning{d=10} @PlayersInRadius{r=25}
+
+PiranhaExpunge:
+  Conditions:
+  - targetwithin{d=10}
+  - targetinlineofsight true
+  - incombat
+  Skills:
+  - sound{s=entity.wither.death} @self
+  - damage{a=4;i=false} @PIR{r=5}
+  - effect:particles{p=hugeexplode;a=5;vs=0.5;hs=0.5;s=0;y=1} @Self
+  - effect:sound{s=entity.generic.explode;v=2;p=0.5} @Self
+  - effect:sound{s=entity.generic.explode;v=2;p=1;repeat=7;repeatInterval=2} @Self
+  - effect:particlering{p=largeexplode;a=40;vs=0.5;hs=0.5;s=0;y=0.3;points=20;radius=1} @Self
+  - damage{a=1;i=false} @PIR{r=10}
+  - delay 2
+  - effect:particlering{p=largeexplode;a=40;vs=0.5;hs=0.5;s=0;y=0.3;points=20;radius=3} @Self
+  - damage{a=1;i=false} @PIR{r=10}
+  - delay 2
+  - effect:particlering{p=largeexplode;a=40;vs=0.5;hs=0.5;s=0;y=0.3;points=20;radius=5} @Self
+  - damage{a=1;i=false} @PIR{r=10}
+  - delay 2
+  - effect:particlering{p=largeexplode;a=40;vs=0.5;hs=0.5;s=0;y=0.3;points=20;radius=7} @Self
+  - damage{a=1;i=false} @PIR{r=10}
+  - delay 2
+  - effect:particlering{p=largeexplode;a=40;vs=0.5;hs=0.5;s=0;y=0.3;points=20;radius=9} @Self
+  - damage{a=1;i=false} @PIR{r=10}
+  - delay 2
+  - effect:particlering{p=largeexplode;a=40;vs=0.5;hs=0.5;s=0;y=0.3;points=20;radius=11} @Self
+  - damage{a=1;i=false} @PIR{r=10}
+
+PiranhaEffects:
+  Conditions:
+  - targetwithin{d=10}
+  - targetinlineofsight true
+  - incombat
+  Skills:
+  - potion{type=POISON;lvl=0;duration=60} @PlayersInRadius{r=10}
+  - potion{type=Wither;lvl=0;duration=60} @PlayersInRadius{r=10}
+  - effect:particles{p=happyVillager;amount=50;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @Self
+
+AzureSplash:
+  Conditions:
+  - targetwithin{d=10}
+  - targetinlineofsight true
+  - incombat
+  Skills:
+  - sound{s=entity.dolphin.splash} @self
+  - effect:particles{p=drip_water;amount=50;hSpread=16;ySpread=1;speed=0;yOffset=0.5} @Self
+  - effect:particles{p=squid_ink;amount=50;hSpread=16;ySpread=1;speed=0;yOffset=0.5} @Self
+  - delay 5
+  - potion{type=HARM;lvl=0;duration=1} @PlayersInRadius{r=16}
+  - potion{type=SLOW;lvl=3;duration=40} @PlayersInRadius{r=16}
+  - sound{s=entity.dolphin.splash} @self
+AzureFin:
+    Skills:
+    - effect:particles{p=current_down;a=5;vs=5.5;hs=5.5;s=0;y=1} @Self
+    - effect:sound{s=entity.generic.splash;v=2;p=0.5} @Self
+    - damage{amount=8} @PlayersInRadius{r=5}
+    - throw{velocity=15;velocityY=5} @PlayersInRadius{r=5}
+    - delay 10
+    - teleport @target
+    - delay 30
+    - throw{velocity=5;velocityY=5} @PIR{r=10}
+    - damage{a=12;i=false} @PIR{r=10}
+    - effect:particles{p=current_down;a=5;vs=0.5;hs=3.5;s=0;y=1} @Self
+    - effect:sound{s=entity.generic.splash;v=2;p=0.5} @Self
+    - effect:sound{s=entity.generic.splash;v=2;p=1;repeat=7;repeatInterval=2} @Self
+    - effect:particlering{p=current_down;a=40;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=1} @Self
+    - delay 2
+    - effect:particlering{p=current_down;a=40;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=3} @Self
+    - delay 2
+    - effect:particlering{p=current_down;a=40;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=5} @Self
+    - delay 2
+    - effect:particlering{p=current_down;a=40;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=7} @Self
+    - delay 2
+    - effect:particlering{p=current_down;a=40;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=9} @Self
+    - delay 2
+    - effect:particlering{p=current_down;a=40;vs=0.5;hs=1.5;s=0;y=0.3;points=20;radius=11} @Self
+AzureHomer:
+  Skills:
+  - effect:sound{s=entity.dolphin.splash;v=1;p=0}
+  - delay 10
+  - missile{ot=AzureHomer_TICK;oh=AzureHomer_HIT;v=8;i=1;hR=1;vR=1;in=0.75;syo=1;MaxRange=96}
+  - delay 5
+  - missile{ot=AzureHomer_TICK;oh=AzureHomer_HIT;v=8;i=1;hR=1;vR=1;in=0.75;syo=2;MaxRange=96}
+
+AzureHomer_TICK:
+  Skills:
+  - effect:particles{p=end_rod;a=1} @origin
+AzureHomer_HIT:
+  Skills:
+  - effect:particles{p=cloud;a=200;hS=2;vS=2}
+  - effect:sound{s=entity.generic.splash;v=1;p=0}
+  - damage{a=20;i=false}
+AzureJumpLightning:
+  Condition:
+  - OnGround
+  Skills:
+  - message{m="<mob.name><&co> &cRun from this fool!!"} @target
+  - delay 20
+  - jump{velocity=2}
+  - delay 20
+  - lightning{d=8} @PlayersInRadius{r=25}
+
+AzureBlastProjectile:
+  Cooldown: 25
+  Skills:
+  - projectile{hp=true;v=12;onTick=AzureBlast-Ontick;hRadius=2;vRadius=2;onHit=AzureBlast-onhit;onEnd=AzureBlast-onhit;StartYOffset=8;Interval=1;MaxRange=64}
+AzureBlast-Ontick:
+  Skills:
+  - effect:particlesphere{p=blockcrack;material=lapis_block;amount=50;radius=2} @Origin
+  - effect:particlesphere{particle=nautilus;amount=50;radius=2} @Origin
+AzureBlast-onhit:
+  Skills:
+  - effect:blockmask{m=ICE;r=5;d=100} @Origin
+  - potion{type=SLOW;duration=80;level=1} @EntitiesNearOrigin{r=5}
+  - potion{type=BLINDNESS;duration=80;level=20} @EntitiesNearOrigin{r=5}
+  - damage{amount=6;ignoreArmor=false}
+
+SquidHomer:
+  Skills:
+  - effect:sound{s=entity.ghast.scream;v=1;p=0}
+  - delay 10
+  - missile{ot=SquidHomer_TICK;oh=SquidHomer_HIT;v=8;i=1;hR=1;vR=1;in=0.75;syo=1;MaxRange=96}
+SquidHomer_TICK:
+  Skills:
+  - effect:particles{p=end_rod;a=1} @origin
+SquidHomer_HIT:
+  Skills:
+  - effect:particles{p=squid_ink;a=200;hS=2;vS=2}
+  - effect:sound{s=entity.generic.splash;v=1;p=0}
+  - damage{a=2;i=false}
+  - potion{type=Blindness;lvl=0;duration=100}
+
+SummonSquids:
+  Skills:
+  - message{m="<mob.name><&co> &cYour window to run away... is closing."} @target
+  - delay 20
+  - summon{mob=SquidMinion;amount=1;noise=5} @Self
+  - delay 40
+  - summon{mob=SquidMinion;amount=1;noise=5} @Self
+  - delay 40
+  - summon{mob=SquidMinion;amount=1;noise=5} @Self
+  - delay 40
+  - summon{mob=SquidMinion;amount=1;noise=5} @Self
+  - delay 40
+  - summon{mob=SquidMinion;amount=1;noise=5} @Self
+  - delay 40
+  - summon{mob=SquidMinion;amount=1;noise=5} @Self
+
+SummonPetsMinions:
+  Skills:
+  - effect:sound{s=entity.wolf.whine;v=1;p=0}
+  - delay 10
+  - summon{mob=PetsMinion;amount=1;noise=5} @Self
+  - delay 40
+  - summon{mob=PetsMinion;amount=1;noise=5} @Self
+  - delay 40
+  - summon{mob=PetsMinion;amount=1;noise=5} @Self
+  - delay 40
+  - summon{mob=PetsMinion;amount=1;noise=5} @Self
+  - delay 40
+  - summon{mob=PetsMinion;amount=1;noise=5} @Self
+  - delay 40
+  - summon{mob=PetsMinion;amount=1;noise=5} @Self
+
+QuickChomp:
+  Condition:
+  - OnGround
+  - targetwithin{d=2}
+  - LineOfSight
+  Skills:
+  - effect:sound{s=entity.wolf.growl;v=1;p=0}
+  - damage{amount=6;ignoreArmor=false}
+  - delay 12
+  - damage{amount=6;ignoreArmor=false}
+  - delay 12
+  - damage{amount=6;ignoreArmor=false}
+  - delay 12
+  - damage{amount=6;ignoreArmor=false}
+
+HarshHowl:
+  Condition:
+  - OnGround
+  - targetwithin{d=2}
+  - LineOfSight
+  Skills:
+  - effect:sound{s=entity.wolf.howl;v=1;p=0}
+  - delay 80
+  - effect:explosion @Self
+  - damage{amount=5} @PlayersInRadius{r=8}
+  - throw{velocity=65;velocityY=3} @PlayersInRadius{r=8}
+
+
+
+
+
+
+
+
+# ---------------------------- Carmine Cache --------------------------- #
+
+EnableLoot_Carmine:
+  Skills:
+  - summon{mob=Cache_Carmine;amount=1;noise=0} @Self
+  - setvariable{var=target.AllowedToLoot-Carmine;t=STRING;value="true"}
+  - skill{s=Death} @Self
+  - sendtoast{icon=DIAMOND; iconnbt={CustomModelData:1};message="&A&LKill <mob.name>!";frame=challenge} @PlayersInRadius{r=35}
+Loot_Carmine:
+  TargetConditions:
+  - variableisset target.AllowedToLoot-Carmine true
+  - varEquals{var=target.AllowedToLoot-Carmine;value="false"} castinstead Loot_CarmineLooted
+  - varEquals{var=target.AllowedToLoot-Carmine;value="true"}
+  Skills:
+  - setvariable{var=target.AllowedToLoot-Carmine;t=STRING;value="false"}
+  - message{m="&A&LYou loot the cache!"} @trigger
+  - sound{s=block.ender_chest.open} @trigger
+  - delay 40
+  - sound{s=entity.item.pickup} @trigger
+  - skill{s=Loot_CarmineBoosted} @trigger 1
+  - randomskill{skills=Loot_CarmineBoots_DULLED} @trigger 1
+  - randomskill{skills=Loot_CarmineEssence,Loot_CarmineBoots} @trigger .12
+  - giveitem{i=CacheReroll} @trigger .15
+  - message{m="&A&LYou looted $2500!"} @trigger
+  - currencygive{amount=2500} @trigger
+  - delay 1800
+  - remove @self
+
+Loot_CarmineBoosted:
+  TargetConditions:
+  - variableisset target.boosted true
+  - varEquals{var=target.boosted;value="true"}
+  Skills:
+  - setvariable{var=target.boosted;t=STRING;value="false"}
+  - message{m="&A&L<target.name> used a &6&N&LLoot Reroller!"} @PlayersInRadius{r=25}
+  - delay 30
+  - message{m="&A&LYou managed to loot the cache again!"} @trigger
+  - sound{s=block.ender_chest.open} @trigger
+  - delay 40
+  - sound{s=entity.item.pickup} @trigger
+  - randomskill{skills=Loot_CarmineBoots_DULLED} @trigger 1
+  - randomskill{skills=Loot_CarmineEssence,Loot_CarmineBoots} @trigger .12
+  - giveitem{i=CacheReroll} @trigger .15
+  - message{m="&A&LYou looted $2500!"} @trigger
+  - currencygive{amount=2500} @trigger
+
+Loot_CarmineBoots:
+  Skills:
+  - sound{s=entity.zombie_villager.converted} @trigger
+  - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
+  - giveitem{i=Loot_CarmineBoots} @trigger 1
+  - message{m="&A&L<target.name> has looted the &E&LCarmine<&sq>s Boots"} @PlayersInWorld 1
+Loot_CarmineBoots_DULLED:
+  Skills:
+  - giveitem{i=Loot_CarmineBoots_DULLED} @trigger 1
+  - message{m="&A&LYou looted a &8&Ldulled &E&LCarmine<&sq>s Boots"} @trigger 1
+Loot_CarmineEssence:
+  Skills:
+  - sound{s=entity.zombie_villager.converted} @trigger
+  - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
+  - giveitem{i=Loot_CarmineEssence} @trigger 1
+  - message{m="&A&L<target.name> has looted &E&LEssence of Fire"} @PlayersInWorld 1
+Loot_CarmineLooted:
+  Skills:
+  - message{m="&c&LYou have already looted this cache &A&Lor &c&Lyou did not participate in this battle!"} @trigger
+  - delay 1800
+  - remove @self
+
+
+# ----------------------------- Azure Cache ---------------------------- #
+
+EnableLoot_Azure:
+  Skills:
+  - summon{mob=Cache_Azure;amount=1;noise=0} @Self
+  - setvariable{var=target.AllowedToLoot-Azure;t=STRING;value="true"}
+  - skill{s=Death} @Self
+  - sendtoast{icon=DIAMOND; iconnbt={CustomModelData:1};message="&A&LKill <mob.name>!";frame=challenge} @PlayersInRadius{r=35}
+Loot_Azure:
+  TargetConditions:
+  - variableisset target.AllowedToLoot-Azure true
+  - varEquals{var=target.AllowedToLoot-Azure;value="false"} castinstead Loot_AzureLooted
+  - varEquals{var=target.AllowedToLoot-Azure;value="true"}
+  Skills:
+  - setvariable{var=target.AllowedToLoot-Azure;t=STRING;value="false"}
+  - message{m="&A&LYou loot the cache!"} @trigger
+  - sound{s=block.ender_chest.open} @trigger
+  - delay 40
+  - sound{s=entity.item.pickup} @trigger
+  - skill{s=Loot_AzureBoosted} @trigger 1
+  - randomskill{skills=Loot_AzureBoots_DULLED} @trigger 1
+  - randomskill{skills=Loot_AzureRod,Loot_AzuredBoots} @trigger .12
+  - giveitem{i=CacheReroll} @trigger .15
+  - message{m="&A&LYou looted $2500!"} @trigger
+  - currencygive{amount=2500} @trigger
+  - delay 1800
+  - remove @self
+
+Loot_AzureBoosted:
+  TargetConditions:
+  - variableisset target.boosted true
+  - varEquals{var=target.boosted;value="true"}
+  Skills:
+  - setvariable{var=target.boosted;t=STRING;value="false"}
+  - message{m="&A&L<target.name> used a &6&N&LLoot Reroller!"} @PlayersInRadius{r=25}
+  - delay 30
+  - message{m="&A&LYou managed to loot the cache again!"} @trigger
+  - sound{s=block.ender_chest.open} @trigger
+  - delay 40
+  - sound{s=entity.item.pickup} @trigger
+  - randomskill{skills=Loot_AzureBoots_DULLED} @trigger 1
+  - randomskill{skills=Loot_AzureRod,Loot_AzuredBoots} @trigger .12
+  - giveitem{i=CacheReroll} @trigger .15
+  - message{m="&A&LYou looted $2500!"} @trigger
+  - currencygive{amount=2500} @trigger
+
+Loot_AzureBoots:
+  Skills:
+  - sound{s=entity.zombie_villager.converted} @trigger
+  - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
+  - giveitem{i=Loot_AzureBoots} @trigger 1
+  - message{m="&A&L<target.name> has looted the &E&LAzure<&sq>s Boots"} @PlayersInWorld 1
+Loot_AzureBoots_DULLED:
+  Skills:
+  - giveitem{i=Loot_AzureBoots_DULLED} @trigger 1
+  - message{m="&A&LYou looted a &8&Ldulled &E&LAzure<&sq>s Boots"} @trigger 1
+Loot_AzureRod:
+  Skills:
+  - sound{s=entity.zombie_villager.converted} @trigger
+  - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
+  - giveitem{i=Loot_AzureRod} @trigger 1
+  - message{m="&A&L<target.name> has looted &E&LAzure<&sq>s Rod"} @PlayersInWorld 1
+Loot_AzureLooted:
+  Skills:
+  - message{m="&c&LYou have already looted this cache &A&Lor &c&Lyou did not participate in this battle!"} @trigger
+  - delay 1800
+  - remove @self
+
+
+# -------------------------- PiranhaBoss Cache ------------------------- #
+
+EnableLoot_PiranhaBoss:
+  Skills:
+  - summon{mob=Cache_PiranhaBoss;amount=1;noise=0} @Self
+  - setvariable{var=target.AllowedToLoot-PiranhaBoss;t=STRING;value="true"}
+  - skill{s=Death} @Self
+  - sendtoast{icon=DIAMOND; iconnbt={CustomModelData:1};message="&A&LKill <mob.name>!";frame=challenge} @PlayersInRadius{r=35}
+Loot_PiranhaBoss:
+  TargetConditions:
+  - variableisset target.AllowedToLoot-PiranhaBoss true
+  - varEquals{var=target.AllowedToLoot-PiranhaBoss;value="false"} castinstead Loot_PiranhaBossLooted
+  - varEquals{var=target.AllowedToLoot-PiranhaBoss;value="true"}
+  Skills:
+  - setvariable{var=target.AllowedToLoot-PiranhaBoss;t=STRING;value="false"}
+  - message{m="&A&LYou loot the cache!"} @trigger
+  - sound{s=block.ender_chest.open} @trigger
+  - delay 40
+  - sound{s=entity.item.pickup} @trigger
+  - skill{s=Loot_PiranhaBossBoosted} @trigger 1
+  - randomskill{skills=Loot_PiranhaLeggings_DULLED} @trigger 1
+  - randomskill{skills=Loot_PiranhaLeggings} @trigger .12
+  - giveitem{i=CacheReroll} @trigger .15
+  - message{m="&A&LYou looted $2500!"} @trigger
+  - currencygive{amount=2500} @trigger
+  - delay 1800
+  - remove @self
+Loot_PiranhaBossBoosted:
+  TargetConditions:
+  - variableisset target.boosted true
+  - varEquals{var=target.boosted;value="true"}
+  Skills:
+  - setvariable{var=target.boosted;t=STRING;value="false"}
+  - message{m="&A&L<target.name> used a &6&N&LLoot Reroller!"} @PlayersInRadius{r=25}
+  - delay 30
+  - message{m="&A&LYou managed to loot the cache again!"} @trigger
+  - sound{s=block.ender_chest.open} @trigger
+  - delay 40
+  - sound{s=entity.item.pickup} @trigger
+  - randomskill{skills=Loot_PiranhaLeggings_DULLED} @trigger 1
+  - randomskill{skills=Loot_PiranhaLeggings} @trigger .12
+  - giveitem{i=CacheReroll} @trigger .15
+  - message{m="&A&LYou looted $2500!"} @trigger
+  - currencygive{amount=2500} @trigger
+Loot_PiranhaLeggings:
+  Skills:
+  - sound{s=entity.zombie_villager.converted} @trigger
+  - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
+  - giveitem{i=Loot_PiranhaLeggings} @trigger 1
+  - message{m="&A&L<target.name> has looted the &E&LBig Bite<&sq>s Leggings"} @PlayersInWorld 1
+Loot_PiranhaLeggings_DULLED:
+  Skills:
+  - giveitem{i=Loot_PiranhaLeggings_DULLED} @trigger 1
+  - message{m="&A&LYou looted a &8&Ldulled &E&LBig Bite<&sq>s Leggings"} @trigger 1
+Loot_PiranhaBossLooted:
+  Skills:
+  - message{m="&c&LYou have already looted this cache &A&Lor &c&Lyou did not participate in this battle!"} @trigger
+  - delay 1800
+  - remove @self
+
+# --------------------------- NexusPet Cache --------------------------- #
+
+EnableLoot_NexusPet:
+  Skills:
+  - summon{mob=Cache_NexusPet;amount=1;noise=0} @Self
+  - setvariable{var=target.AllowedToLoot-NexusPet;t=STRING;value="true"}
+  - skill{s=Death} @Self
+  - sendtoast{icon=DIAMOND; iconnbt={CustomModelData:1};message="&A&LKill <mob.name>!";frame=challenge} @PlayersInRadius{r=35}
+Loot_NexusPet:
+  TargetConditions:
+  - variableisset target.AllowedToLoot-NexusPet true
+  - varEquals{var=target.AllowedToLoot-NexusPet;value="false"} castinstead Loot_NexusPetLooted
+  - varEquals{var=target.AllowedToLoot-NexusPet;value="true"}
+  Skills:
+  - setvariable{var=target.AllowedToLoot-NexusPet;t=STRING;value="false"}
+  - message{m="&A&LYou loot the cache!"} @trigger
+  - sound{s=block.ender_chest.open} @trigger
+  - delay 40
+  - sound{s=entity.item.pickup} @trigger
+  - skill{s=Loot_NexusPetBoosted} @trigger 1
+  - randomskill{skills=Loot_NexusPetHelmet_DULLED,Loot_NexusPetWeapon_DULLED} @trigger 1
+  - randomskill{skills=Loot_NexusPetHelmet,Loot_NexusPetWeapon} @trigger .12
+  - giveitem{i=CacheReroll} @trigger .15
+  - message{m="&A&LYou looted $2500!"} @trigger
+  - currencygive{amount=2500} @trigger
+  - delay 1800
+  - remove @self
+Loot_NexusPetBoosted:
+  TargetConditions:
+  - variableisset target.boosted true
+  - varEquals{var=target.boosted;value="true"}
+  Skills:
+  - setvariable{var=target.boosted;t=STRING;value="false"}
+  - message{m="&A&L<target.name> used a &6&N&LLoot Reroller!"} @PlayersInRadius{r=25}
+  - delay 30
+  - message{m="&A&LYou managed to loot the cache again!"} @trigger
+  - sound{s=block.ender_chest.open} @trigger
+  - delay 40
+  - sound{s=entity.item.pickup} @trigger
+  - randomskill{skills=Loot_NexusPetHelmet_DULLED,Loot_NexusPetWeapon_DULLED} @trigger 1
+  - randomskill{skills=Loot_NexusPetHelmet,Loot_NexusPetWeapon} @trigger .12
+  - giveitem{i=CacheReroll} @trigger .15
+  - message{m="&A&LYou looted $2500!"} @trigger
+  - currencygive{amount=2500} @trigger
+
+Loot_NexusPetHelmet:
+  Skills:
+  - sound{s=entity.zombie_villager.converted} @trigger
+  - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
+  - giveitem{i=Loot_NexusPetHelmet} @trigger 1
+  - message{m="&A&L<target.name> has looted &E&LNexus<&sq> Pet Boots"} @PlayersInWorld 1
+Loot_NexusPetHelmet_DULLED:
+  Skills:
+  - giveitem{i=Loot_NexusPetHelmet_DULLED} @trigger 1
+  - message{m="&A&LYou looted &8&Ldulled &E&LNexus<&sq> Pet Boots"} @trigger 1
+Loot_NexusPetWeapon:
+  Skills:
+  - sound{s=entity.zombie_villager.converted} @trigger
+  - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
+  - giveitem{i=Loot_NexusPetWeapon} @trigger 1
+  - message{m="&A&LYou looted &8&Ldulled &E&LFerocious Teeth"} @trigger 1
+Loot_NexusPetWeapon_DULLED:
+  Skills:
+  - sound{s=entity.zombie_villager.converted} @trigger
+  - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
+  - giveitem{i=Loot_NexusPetWeapon_DULLED} @trigger 1
+  - message{m="&A&L<target.name> has looted &E&LFerocious Teeth"} @PlayersInWorld 1
+Loot_NexusPetLooted:
+  Skills:
+  - message{m="&c&LYou have already looted this cache &A&Lor &c&Lyou did not participate in this battle!"} @trigger
+  - delay 1800
+  - remove @self
+
+# --------------------------- NexusBoss Cache -------------------------- #
+
+EnableLoot_NexusBoss:
+  Skills:
+  - summon{mob=Cache_NexusBoss;amount=1;noise=0} @Self
+  - setvariable{var=target.AllowedToLoot-NexusBoss;t=STRING;value="true"}
+  - skill{s=Death} @Self
+  - sendtoast{icon=DIAMOND; iconnbt={CustomModelData:1};message="&A&LKill <mob.name>!";frame=challenge} @PlayersInRadius{r=35}
+Loot_NexusBoss:
+  TargetConditions:
+  - variableisset target.AllowedToLoot-NexusBoss true
+  - varEquals{var=target.AllowedToLoot-NexusBoss;value="false"} castinstead Loot_NexusBossLooted
+  - varEquals{var=target.AllowedToLoot-NexusBoss;value="true"}
+  Skills:
+  - setvariable{var=target.AllowedToLoot-NexusBoss;t=STRING;value="false"}
+  - message{m="&A&LYou loot the cache!"} @trigger
+  - sound{s=block.ender_chest.open} @trigger
+  - delay 40
+  - sound{s=entity.item.pickup} @trigger
+  - skill{s=Loot_NexusBossBoosted} @trigger 1
+  - randomskill{skills=Loot_NexusBossChestplate_DULLED} @trigger 1
+  - randomskill{skills=Loot_NexusBossChestplate,Loot_NexusShard} @trigger .12
+  - giveitem{i=CacheReroll} @trigger .15
+  - message{m="&A&LYou looted $2500!"} @trigger
+  - currencygive{amount=2500} @trigger
+  - delay 1800
+  - remove @self
+Loot_NexusBossBoosted:
+  TargetConditions:
+  - variableisset target.boosted true
+  - varEquals{var=target.boosted;value="true"}
+  Skills:
+  - setvariable{var=target.boosted;t=STRING;value="false"}
+  - message{m="&A&L<target.name> used a &6&N&LLoot Reroller!"} @PlayersInRadius{r=25}
+  - delay 30
+  - message{m="&A&LYou managed to loot the cache again!"} @trigger
+  - sound{s=block.ender_chest.open} @trigger
+  - delay 40
+  - sound{s=entity.item.pickup} @trigger
+  - randomskill{skills=Loot_NexusBossChestplate_DULLED} @trigger 1
+  - randomskill{skills=Loot_NexusBossChestplate,Loot_NexusShard} @trigger .12
+  - giveitem{i=CacheReroll} @trigger .15
+  - message{m="&A&LYou looted $2500!"} @trigger
+  - currencygive{amount=2500} @trigger
+
+Loot_NexusBossChestplate:
+  Skills:
+  - sound{s=entity.zombie_villager.converted} @trigger
+  - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
+  - giveitem{i=Loot_NexusBossChestplate} @trigger 1
+  - message{m="&A&L<target.name> has looted &E&LNexus<&sq> Chestplate"} @PlayersInWorld 1
+Loot_NexusBossChestplate_DULLED:
+  Skills:
+  - giveitem{i=Loot_NexusBossChestplate_DULLED} @trigger 1
+  - message{m="&A&LYou looted a &8&Ldulled &E&LNexus<&sq> Chestplate"} @trigger 1
+Loot_NexusShard:
+  Skills:
+  - sound{s=entity.zombie_villager.converted} @trigger
+  - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
+  - giveitem{i=Loot_NexusShard} @trigger 1
+  - message{m="&A&L<target.name> has looted &E&LNexus<&sq> Shard"} @PlayersInWorld 1
+Loot_NexusBossLooted:
+  Skills:
+  - message{m="&c&LYou have already looted this cache &A&Lor &c&Lyou did not participate in this battle!"} @trigger
+  - delay 1800
+  - remove @self

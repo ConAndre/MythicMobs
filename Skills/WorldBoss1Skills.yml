@@ -1,0 +1,103 @@
+World_BossOneAreaPull:
+  Skills:
+    - message{m="<mob.name>&c is channeling void pull"} @PIR{r=128}
+    - delay 40
+    - effect:particlering{particle=block_crack;m=coal_block;a=5;vs=.25;hs=3;s=0;y=0.3;points=20;radius=31} @Self
+    - sound{s=entity.ender_eye.death;p=.01} @PlayersInRadius{r=31}
+    - delay 1
+    - effect:particlering{particle=block_crack;m=coal_block;a=5;vs=.25;hs=3;s=0;y=0.3;points=20;radius=29} @Self
+    - sound{s=entity.ender_eye.death;p=.01} @PlayersInRadius{r=31}
+    - delay 1
+    - effect:particlering{particle=block_crack;m=coal_block;a=5;vs=.25;hs=3;s=0;y=0.3;points=20;radius=27} @Self
+    - sound{s=entity.ender_eye.death;p=.01} @PlayersInRadius{r=31}
+    - delay 1
+    - effect:particlering{particle=block_crack;m=coal_block;a=5;vs=.25;hs=3;s=0;y=0.3;points=20;radius=25} @Self
+    - sound{s=entity.ender_eye.death;p=.01} @PlayersInRadius{r=31}
+    - delay 1
+    - effect:particlering{particle=block_crack;m=coal_block;a=5;vs=.25;hs=3;s=0;y=0.3;points=20;radius=23} @Self
+    - sound{s=entity.ender_eye.death;p=.01} @PlayersInRadius{r=35}
+    - delay 1
+    - effect:particlering{particle=block_crack;m=coal_block;a=5;vs=.25;hs=3;s=0;y=0.3;points=20;radius=21} @Self
+    - sound{s=entity.ender_eye.death;p=.01} @PlayersInRadius{r=35}
+    - delay 1
+    - effect:particlering{particle=block_crack;m=coal_block;a=5;vs=.25;hs=3;s=0;y=0.3;points=20;radius=19} @Self
+    - sound{s=entity.ender_eye.death;p=.01} @PlayersInRadius{r=35}
+    - delay 1
+    - effect:particlering{particle=block_crack;m=coal_block;a=5;vs=.25;hs=3;s=0;y=0.3;points=20;radius=17} @Self
+    - sound{s=entity.ender_eye.death;p=.01} @PlayersInRadius{r=35}
+    - delay 1
+    - effect:particlering{particle=block_crack;m=coal_block;a=5;vs=.25;hs=3;s=0;y=0.3;points=20;radius=15} @Self
+    - sound{s=entity.ender_eye.death;p=.01} @PlayersInRadius{r=35}
+    - delay 1
+    - effect:particlering{particle=block_crack;m=coal_block;a=5;vs=.25;hs=3;s=0;y=0.3;points=20;radius=13} @Self
+    - sound{s=entity.ender_eye.death;p=.01} @PlayersInRadius{r=35}
+    - delay 1
+    - effect:particlering{particle=block_crack;m=coal_block;a=5;vs=.25;hs=3;s=0;y=0.3;points=20;radius=11} @Self
+    - sound{s=entity.ender_eye.death;p=.01} @PlayersInRadius{r=35}
+    - delay 1
+    - effect:particlering{particle=block_crack;m=coal_block;a=5;vs=.25;hs=3;s=0;y=0.3;points=20;radius=9} @Self
+    - sound{s=entity.ender_eye.death;p=.01} @PlayersInRadius{r=35}
+    - delay 1
+    - effect:particlering{particle=block_crack;m=coal_block;a=5;vs=.25;hs=3;s=0;y=0.3;points=20;radius=7} @Self
+    - sound{s=entity.ender_eye.death;p=.01} @PlayersInRadius{r=35}
+    - delay 1
+    - effect:particlering{particle=block_crack;m=coal_block;a=5;vs=.25;hs=3;s=0;y=0.3;points=20;radius=5} @Self
+    - sound{s=entity.ender_eye.death;p=.01} @PlayersInRadius{r=35}
+    - delay 1
+    - effect:particlering{particle=block_crack;m=coal_block;a=5;vs=.25;hs=3;s=0;y=0.3;points=20;radius=3} @Self
+    - sound{s=entity.ender_eye.death;p=.01} @PlayersInRadius{r=35}
+    - delay 1
+    - effect:particlering{particle=block_crack;m=coal_block;a=5;vs=.25;hs=3;s=0;y=0.3;points=20;radius=1} @Self
+    - sound{s=entity.ender_eye.death;p=.01} @PlayersInRadius{r=35}
+    - potion{type=LEVITATION;duration=6;level=3} @PlayersInRadius{r=29}
+    - delay 7
+    - pull{velocity=10000} @PlayersInRadius{r=29}
+    - jump{velocity=1.3} @self
+    - delay 10
+    - jump{velocity=-200} @self
+    - delay 6
+    - effect:particlering{particle=explosion_large;a=1;vs=.1;hs=3;s=0;y=0.3;points=20;radius=1} @Self
+    - sound{s=entity.generic.explode;p=.01} @self
+    - effect:particlering{particle=explosion_large;a=1;vs=.1;hs=3;s=0;y=0.3;points=20;radius=3} @Self
+    - sound{s=entity.generic.explode;p=.01} @self
+    - effect:particlering{particle=explosion_large;a=1;vs=.1;hs=3;s=0;y=0.3;points=20;radius=5} @Self
+    - sound{s=entity.generic.explode;p=.01} @self
+    - effect:particlering{particle=explosion_large;a=1;vs=.1;hs=3;s=0;y=0.3;points=20;radius=9} @Self
+    - effect:itemspray{item=wither_skeleton_skull;amount=40;velocity=5;d=20;} @self
+    - sound{s=entity.generic.explode;p=.01} @self
+    - damage{amount=50} @PlayersInRadius{r=10}
+    - sound{s=entity.wither.ambient;p=.01} @PlayersInRadius{r=29}
+    - delay 1
+    - sound{s=block.ender_chest.open;p=2} @PlayersInRadius{r=29}
+
+World_BossOneRunAway:
+  Skills:
+  - message{m="<mob.name>&c is channeling void pull"} @PIR{r=128}
+  - delay 40
+  - effect:particletornado{p=reddust;c=#000000;cp=largeexplode;mr=1;h=3;i=4;d=100;rs=1;sh=1;cs=1;ca=1;chs=1;cvs=0.1;cps=1;cyo=2} @self
+
+World_BossOneWitherBlast:
+  Skills:
+  - projectile{hp=true;v=14;onTick=World_BossOneWitherBlast-Ontick;hRadius=2;vRadius=2;onHit=World_BossOneWitherBlast-onhit;onEnd=World_BossOneWitherBlast-onhit;StartYOffset=8;Interval=1;MaxRange=64} @target
+World_BossOneWitherBlast-Ontick:
+  Skills:
+  - effect:itemspray{item=coal;amount=2;velocity=5;d=20;} @target
+  - effect:particlesphere{particle=smoke_large;amount=25;radius=1} @Origin
+World_BossOneWitherBlast-onhit:
+  Skills:
+  - effect:blockmask{m=Coal_block;r=5;d=100} @Origin
+  - effect:flames @Origin
+  - potion{type=SLOW;duration=80;level=1} @EntitiesNearOrigin{r=5}
+  - potion{type=BLINDNESS;duration=80;level=20} @EntitiesNearOrigin{r=5}
+  - damage{amount=80;ignoreArmor=false} @EntitiesNearOrigin{r=5}
+
+
+World_BossOneTargetLockon:
+  TargetCondition:
+  - variableisset target.LockedOn false
+  Skills:
+  - sendtitle{title="&cImpending Doom Approaches!";subtitle="&cRun for cover!";d=60} @target
+  - setvariable{var=target.LockedOn;t=STRING;value="true";d=100}
+  - effect:particleline{p=reddust;c=#000000;amount=1;fromOrigin=false;repeat=20;repeatInterval=2;syo=12} @target
+  - delay 40
+  - skill{s=World_BossOneWitherBlast} @target

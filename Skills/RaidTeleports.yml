@@ -1,34 +1,38 @@
-Raid_EasyCheck:
+
+# ------------------------------ Raid_OneCheck: ------------------------------ #
+
+Raid_OneCheck:
   TargetConditions:
   - hascurrency{a=5000} true
   Skills:
-  - summon{type=Raid_EasyInit;amount=1;radius=0} @self
+  - summon{type=Raid_OneInit;amount=1;radius=0} @self
+  - message{m="&6The Vex accepts your payment. (&c-$5000&6)"} @trigger
   - currencytake{amount=5000} @trigger
   - suicide @self
 
-Raid_EasyInit:
+Raid_OneInit:
   Skills:
   - effect:sound{s=entity.ender_eye.death;v=1;p=1;repeat=7;repeatInterval=2} @Self
   - effect:sound{s=entity.ender_eye.death;v=1;p=1;repeat=7;repeatInterval=25} @Self
-  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to Easy Raid in &A10 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A10 &cseconds!";d=25} @PlayersInRadius{r=12}
   - delay 20
-  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to Easy Raid in &A9 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A9 &cseconds!";d=25} @PlayersInRadius{r=12}
   - delay 20
-  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to Easy Raid in &A8 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A8 &cseconds!";d=25} @PlayersInRadius{r=12}
   - delay 20
-  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to Easy Raid in &A7 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A7 &cseconds!";d=25} @PlayersInRadius{r=12}
   - delay 20
-  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to Easy Raid in &A6 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A6 &cseconds!";d=25} @PlayersInRadius{r=12}
   - delay 20
-  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to Easy Raid in &A5 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A5 &cseconds!";d=25} @PlayersInRadius{r=12}
   - delay 20
-  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to Easy Raid in &A4 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A4 &cseconds!";d=25} @PlayersInRadius{r=12}
   - delay 20
-  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to Easy Raid in &A3 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A3 &cseconds!";d=25} @PlayersInRadius{r=12}
   - delay 20
-  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to Easy Raid in &A2 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A2 &cseconds!";d=25} @PlayersInRadius{r=12}
   - delay 20
-  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to Easy Raid in &A1 &csecond!";d=25} @PlayersInRadius{r=12}
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A1 &csecond!";d=25} @PlayersInRadius{r=12}
   - delay 20
   - effect:explosion @self
   - delay 20
@@ -86,7 +90,276 @@ Raid_EasyInit:
   - teleportto{location=952,5,-749} @PlayersInRadius{r=12}
   - remove @self
 
+# ------------------------------ Raid_TwoCheck: ------------------------------ #
 
+Raid_TwoCheck:
+  TargetConditions:
+  - hascurrency{a=10000} true
+  Skills:
+  - summon{type=Raid_TwoInit;amount=1;radius=0} @self
+  - message{m="&6The Vex accepts your payment. (&c-$10000&6)"} @trigger
+  - currencytake{amount=10000} @trigger
+  - suicide @self
 
+Raid_TwoInit:
+  Skills:
+  - effect:sound{s=entity.ender_eye.death;v=1;p=1;repeat=7;repeatInterval=2} @Self
+  - effect:sound{s=entity.ender_eye.death;v=1;p=1;repeat=7;repeatInterval=25} @Self
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A10 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A9 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A8 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A7 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A6 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A5 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A4 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A3 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A2 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A1 &csecond!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - effect:explosion @self
+  - delay 20
+  - effect:explosion @self
+  - delay 15
+  - effect:explosion @self
+  - delay 10
+  - effect:explosion @self
+  - delay 3
+  - effect:explosion @self
+  - delay 2
+  - effect:explosion @self
+  - delay 2
+  - effect:explosion @self
+  - delay 2
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - teleportto{location=1735.5,21,-1487.5} @PlayersInRadius{r=12}
+  - remove @self
 
+# ------------------------------ Raid_ThreeCheck: ------------------------------ #
 
+Raid_ThreeCheck:
+  TargetConditions:
+  - hascurrency{a=15000} true
+  Skills:
+  - summon{type=Raid_ThreeInit;amount=1;radius=0} @self
+  - message{m="&6The Vex accepts your payment. (&c-$15000&6)"} @trigger
+  - currencytake{amount=15000} @trigger
+  - suicide @self
+
+Raid_ThreeInit:
+  Skills:
+  - effect:sound{s=entity.ender_eye.death;v=1;p=1;repeat=7;repeatInterval=2} @Self
+  - effect:sound{s=entity.ender_eye.death;v=1;p=1;repeat=7;repeatInterval=25} @Self
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A10 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A9 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A8 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A7 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A6 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A5 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A4 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A3 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A2 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A1 &csecond!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - effect:explosion @self
+  - delay 20
+  - effect:explosion @self
+  - delay 15
+  - effect:explosion @self
+  - delay 10
+  - effect:explosion @self
+  - delay 3
+  - effect:explosion @self
+  - delay 2
+  - effect:explosion @self
+  - delay 2
+  - effect:explosion @self
+  - delay 2
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - teleportto{location=1735.5,21,-1487.5} @PlayersInRadius{r=12}
+  - remove @self
+
+# ------------------------------ Raid_FourCheck: ------------------------------ #
+Raid_FourCheck:
+  TargetConditions:
+  - hascurrency{a=20000} true
+  Skills:
+  - summon{type=Raid_FourInit;amount=1;radius=0} @self
+  - message{m="&6The Vex accepts your payment. (&c-$20000&6)"} @trigger
+  - currencytake{amount=20000} @trigger
+  - suicide @self
+
+Raid_FourInit:
+  Skills:
+  - effect:sound{s=entity.ender_eye.death;v=1;p=1;repeat=7;repeatInterval=2} @Self
+  - effect:sound{s=entity.ender_eye.death;v=1;p=1;repeat=7;repeatInterval=25} @Self
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A10 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A9 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A8 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A7 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A6 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A5 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A4 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A3 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A2 &cseconds!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - sendtitle{title="&cRaid Teleport!";subtitle="&cTeleporting to battle in &A1 &csecond!";d=25} @PlayersInRadius{r=12}
+  - delay 20
+  - effect:explosion @self
+  - delay 20
+  - effect:explosion @self
+  - delay 15
+  - effect:explosion @self
+  - delay 10
+  - effect:explosion @self
+  - delay 3
+  - effect:explosion @self
+  - delay 2
+  - effect:explosion @self
+  - delay 2
+  - effect:explosion @self
+  - delay 2
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - delay 1
+  - effect:explosion @self
+  - teleportto{location=2028.5,5,-690.5} @PlayersInRadius{r=12}
+  - remove @self
+
+# ------------------------------ Raid_FiveCheck: ------------------------------ #

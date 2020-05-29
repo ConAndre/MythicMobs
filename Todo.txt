@@ -1,20 +1,12 @@
-Add more content to dungeon2 items/drop table
-Add items for golding drop
-Add drop tables/items for dungeon4
-Lets make an invasion type event
-Add guaranteed drops to bosses
 Wipe Boss bar on death
 Degrade armor on death
 ActionHealth Plugin throws an error near removed caches/mobs
 Could make a capture the monument and mobs try and kill players on the monument.
 
 Goblin that steals money > rare spawn > use long cooldown
-Boss that disguises as a random player
 Grapple weapon
 Lift weapon
 Boss with healers with healing staff drop
-NexusPet Weapon MultiChomp/Chestplate pelt
-Add nexus pet summon drop to Nexus
 Nexus spawn 2 healing totems at 50% hp/healing mobs drop healing staff
 
 Hall of fame:
@@ -30,10 +22,15 @@ Squire<Jester<Knight<Lord<Baron>Count/Earl<Prince/Princess<Duke<Grand Prince<Gra
   - message{m="&A&L<target.name> has looted the &E&LGolding<&sq>s Shield"}
 try for player fix
 
-For raids:
 
-Have boss set a variable true if players near when it spawns
-Boss despawns/dies set false
-easypz
+# ------------------------------- Raid 1 Items ------------------------------- #
 
-Tier 4 Raid Make boss a cake
+Fire resistance spell
+Fire shots spell
+
+# ---------------------------------- Raid 2 ---------------------------------- #
+
+Hunger Heal spell
+
+
+

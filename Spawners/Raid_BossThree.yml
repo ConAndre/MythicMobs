@@ -1,7 +1,7 @@
-RaidThirdBoss:
-  MobName: RaidThirdBoss
+Raid_BossThree:
+  MobName: Raid_BossThree
   World: world
-  X: 218
+  X: 222
   Y: 3
   Z: -1910
   Radius: 0
@@ -16,7 +16,7 @@ RaidThirdBoss:
   CheckForPlayers: true
   ActivationRange: 40
   ScalingRange: 25.0
-  LeashRange: 32
+  LeashRange: 125
   HealOnLeash: false
   ResetThreatOnLeash: false
   ShowFlames: false

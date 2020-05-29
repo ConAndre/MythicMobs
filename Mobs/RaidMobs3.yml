@@ -1,4 +1,5 @@
-RaidThirdBoss:
+# ----------------------------------- Boss ----------------------------------- #
+Raid_BossThree:
     Type: Wither_skeleton
     Display: '&eCraze, the Sharpened'
     Health: 4500
@@ -10,13 +11,13 @@ RaidThirdBoss:
     - skill{s=MeteorShower} @PIR{r=40} ~onTimer:20 >0 0.2
     - skill{s=FarBlind} @PIR{r=50} ~onTimer:20 >0 0.2
     - skill{s=Stealth} ~onTimer:20 >0 0.2
-    - skill{s=Bleeding} ~onTimer:20 >0 0.2
+    - skill{s=Bleeding} @target ~onTimer:20 >0 0.2
     - skill{s=Charge} ~onTimer:20 >0 0.2
     - skill{s=Flurry} ~onTimer:20 >0 0.2
     - skill{s=Sharpen} ~onTimer:20 >0 0.2
-    - command{c="mm spawners set Raid_HardTeleport maxmobs 0"} ~onSpawn
-    - command{c="mm spawners set Raid_HardTeleport maxmobs 1"} ~onDeath
-    - command{c="mm spawners set Raid_HardTeleport maxmobs 1"} ~onDespawn
+    - command{c="mm spawners set Raid_ThreeTeleport maxmobs 0"} ~onSpawn
+    - command{c="mm spawners set Raid_ThreeTeleport maxmobs 1"} ~onDeath
+    - command{c="mm spawners set Raid_ThreeTeleport maxmobs 1"} ~onDespawn
     Options:
         AlwaysShowName: true
         MovementSpeed: 0.35
@@ -33,6 +34,8 @@ RaidThirdBoss:
         DarkenSky: true
     Modules:
         ThreatTable: true
+
+# ---------------------------------- Meteors --------------------------------- #
 
 MeteorPointer:
   Type: bat

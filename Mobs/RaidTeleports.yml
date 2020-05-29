@@ -1,4 +1,6 @@
-Raid_EasyInit:
+# ---------------------------------- Raid 1 ---------------------------------- #
+
+Raid_OneInit:
   Type: SHEEP
   Disguise:
     Type: ender_signal
@@ -13,10 +15,10 @@ Raid_EasyInit:
     NoAI: true
     Silent: true
   Skills:
-  - skill{s=Raid_EasyInit} ~onSpawn
-Raid_EasyTeleport:
+  - skill{s=Raid_OneInit} ~onSpawn
+Raid_OneTeleport:
   Type: SHEEP
-  Display: '&N&AEasy Raid Teleport ($5000)'
+  Display: '&N&ARaid One Teleport ($5000)'
   Disguise:
     Type: VEX
     ShowName: true
@@ -35,12 +37,30 @@ Raid_EasyTeleport:
     NoAI: true
     Silent: true
   Skills:
-  - skill{s=Raid_EasyCheck} @trigger ~onInteract
+  - skill{s=Raid_OneCheck} @trigger ~onInteract
   - setrotation{relative=false;yaw=180} @self ~onSpawn
 
-Raid_MediumTeleport:
+# ---------------------------------- Raid 2 ---------------------------------- #
+
+Raid_TwoInit:
   Type: SHEEP
-  Display: '&N&AMedium Raid Teleport ($10000)'
+  Disguise:
+    Type: ender_signal
+  Health: 2000
+  Options:
+    MovementSpeed: 0.0
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+    Collidable: true
+    Invincible: true
+    Interactable: true
+    NoAI: true
+    Silent: true
+  Skills:
+  - skill{s=Raid_TwoInit} ~onSpawn
+Raid_TwoTeleport:
+  Type: SHEEP
+  Display: '&N&A Raid Two Teleport ($10000)'
   Disguise:
     Type: VEX
     ShowName: true
@@ -59,11 +79,30 @@ Raid_MediumTeleport:
     NoAI: true
     Silent: true
   Skills:
-  - skill{s=Raid_MediumTeleport} ~onInteract
+  - skill{s=Raid_TwoCheck} ~onInteract
   - setrotation{relative=false;yaw=-90} @self ~onSpawn
-Raid_HardTeleport:
+
+# ---------------------------------- Raid 3 ---------------------------------- #
+
+Raid_ThreeInit:
   Type: SHEEP
-  Display: '&N&AHard Raid Teleport ($15000)'
+  Disguise:
+    Type: ender_signal
+  Health: 2000
+  Options:
+    MovementSpeed: 0.0
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+    Collidable: true
+    Invincible: true
+    Interactable: true
+    NoAI: true
+    Silent: true
+  Skills:
+  - skill{s=Raid_ThreeInit} ~onSpawn
+Raid_ThreeTeleport:
+  Type: SHEEP
+  Display: '&N&ARaid Three Teleport ($15000)'
   Disguise:
     Type: VEX
     ShowName: true
@@ -82,12 +121,30 @@ Raid_HardTeleport:
     NoAI: true
     Silent: true
   Skills:
-  - skill{s=Raid_HardTeleport} ~onInteract
+  - skill{s=Raid_ThreeCheck} ~onInteract
   - setrotation{relative=false;yaw=0} @self ~onSpawn
 
-Raid_NightmareTeleport:
+# ---------------------------------- Raid 4 ---------------------------------- #
+
+Raid_FourInit:
   Type: SHEEP
-  Display: '&N&ANightmare Raid Teleport ($20000)'
+  Disguise:
+    Type: ender_signal
+  Health: 2000
+  Options:
+    MovementSpeed: 0.0
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+    Collidable: true
+    Invincible: true
+    Interactable: true
+    NoAI: true
+    Silent: true
+  Skills:
+  - skill{s=Raid_FourInit} ~onSpawn
+Raid_FourTeleport:
+  Type: SHEEP
+  Display: '&N&ARaid Four Teleport ($20000)'
   Disguise:
     Type: VEX
     ShowName: true
@@ -106,5 +163,5 @@ Raid_NightmareTeleport:
     NoAI: true
     Silent: true
   Skills:
-  - skill{s=Raid_NightmareTeleport} ~onInteract
+  - skill{s=Raid_FourCheck} ~onInteract
   - setrotation{relative=false;yaw=90} @self ~onSpawn

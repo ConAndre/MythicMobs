@@ -2,7 +2,8 @@
 # http://www.mythicmobs.net
 #
 
-##################################################BOSSES####################################################
+# ----------------------------------- Boss ----------------------------------- #
+
 SkeletonKing:
   Type: WITHER_SKELETON
   Display: '&L&cSkeleton King'
@@ -26,8 +27,6 @@ SkeletonKing:
   Equipment:
   - MobGoldHelmet HEAD
   - MobIronAxe HAND
-  Drops:
-  # - SkeletonKingLootTable
   Options:
     AlwaysShowName: false
     MovementSpeed: 0.225
@@ -100,8 +99,8 @@ LostArcher:
   - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
   - randomskill{skills=Loot_LostArcherHelmet,Loot_LostArcherBoots,Loot_LostArcherBow} ~onDeath 1
 
+# ----------------------------------- Mobs ----------------------------------- #
 
-##################################################REGULARS####################################################
 SkeletalMinion:
   Type: SKELETON
   Display: '&L&2Skeletal Minion'

@@ -2,7 +2,8 @@
 # http://www.mythicmobs.net
 #
 
-##################################################BOSSES####################################################
+# ----------------------------------- Boss ----------------------------------- #
+
 PiranhaBoss:
   Type: GUARDIAN
   Display: '&9Big Bite'
@@ -54,7 +55,6 @@ NexusPetBoss:
   - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
   - skill{s=SummonPetsMinions;cooldown=85} @self ~onDamaged .05
   - skill{s=EnableLoot_NexusPet} @PlayersInRadius{r=35} ~onDeath
-
   AIGoalSelectors:
   - 0 clear
   - 1 meleeattack
@@ -134,7 +134,6 @@ AzureBoss:
   - skill{s=SmashAttack;cooldown=10} @target ~onDamaged .05
   - skill{s=AzureFin} @self =15%
   - skill{s=EnableLoot_Azure} @PlayersInRadius{r=35} ~onDeath
-
   Equipment:
   - MobIronHelmet HEAD
   - MobIronChestplate CHEST
@@ -195,7 +194,41 @@ CarmineBoss:
   - skill{s=CarmineFin} @self =15%
   - skill{s=EnableLoot_Carmine} @PlayersInRadius{r=35} ~onDeath
 
-##################################################REGULARS####################################################
+# ---------------------------------- Extras ---------------------------------- #
+FriendlyNexusPet:
+  Type: Skeleton
+  Display: 'Ghost'
+  Disguise:
+    Type: Wolf
+  Faction: Friendly
+  Health: 200
+  Damage: 15
+  Armor: 50
+  Equipment:
+  - MobIronHelmet HEAD
+  - MobIronChestplate CHEST
+  - MobIronLeggings LEGS
+  - MobIronBoots FEET
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.255
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+  DamageModifiers:
+  - Fall -1
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 float
+  - 3 gotoowner
+  - 4 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 monsters
+  Skills:
+  - skill{s=RemoveSelf180s} ~onSpawn
+  - skill{s=LeapAttack;cooldown=5} ~onCombat
+
 AirBubble:
   Type: TROPICAL_FISH
   Display: '&N&AOxygen'
@@ -314,6 +347,8 @@ Piranha:
   Drops:
   - Fourth_DungeonLootTable
 
+# ----------------------------------- Mobs ----------------------------------- #
+
 NexusArcher:
   Type: SKELETON
   Display: '&cNexus<&sq> Archer'
@@ -367,37 +402,5 @@ NexusGuard:
   - skill{s=SmokeBlastProjectile;cooldown=20} @target ~onAttack 0.35
   Drops:
   - Fourth_DungeonLootTable
-FriendlyNexusPet:
-  Type: Skeleton
-  Display: 'Ghost'
-  Disguise:
-    Type: Wolf
-  Faction: Friendly
-  Health: 200
-  Damage: 15
-  Armor: 50
-  Equipment:
-  - MobIronHelmet HEAD
-  - MobIronChestplate CHEST
-  - MobIronLeggings LEGS
-  - MobIronBoots FEET
-  Options:
-    AlwaysShowName: false
-    MovementSpeed: 0.255
-    KnockbackResistance: 1
-    PreventOtherDrops: true
-  DamageModifiers:
-  - Fall -1
-  AIGoalSelectors:
-  - 0 clear
-  - 1 meleeattack
-  - 2 float
-  - 3 gotoowner
-  - 4 randomstroll
-  AITargetSelectors:
-  - 0 clear
-  - 1 monsters
-  Skills:
-  - skill{s=RemoveSelf180s} ~onSpawn
-  - skill{s=LeapAttack;cooldown=5} ~onCombat
+
 

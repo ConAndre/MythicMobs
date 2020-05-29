@@ -1,9 +1,9 @@
-RaidFirstBoss:
-  MobName: RaidFirstBoss
+Raid_OneTeleport:
+  MobName: Raid_OneTeleport
   World: world
-  X: 967
-  Y: 4
-  Z: -751
+  X: 723
+  Y: 85
+  Z: -1244
   Radius: 0
   UseTimer: true
   MaxMobs: '1'
@@ -13,10 +13,10 @@ RaidFirstBoss:
   CooldownTimer: 0
   Warmup: 60
   WarmupTimer: 0
-  CheckForPlayers: true
+  CheckForPlayers: false
   ActivationRange: 40
   ScalingRange: 25.0
-  LeashRange: 120
+  LeashRange: 32
   HealOnLeash: false
   ResetThreatOnLeash: false
   ShowFlames: false

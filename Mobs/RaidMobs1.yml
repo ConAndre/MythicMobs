@@ -1,4 +1,5 @@
-RaidFirstBoss:
+# ----------------------------------- Boss ----------------------------------- #
+Raid_BossOne:
   Type: WITHER_SKELETON
   Display: '&cConleth, the Conjurer of Fire'
   Health: 1500
@@ -27,9 +28,9 @@ RaidFirstBoss:
   - skill{s=DamageImmunity} @self ~onDamaged 0.1
   - skill{s=Bash} ~onAttack 0.25
   - skill{s=Kick} ~onAttack 0.25
-  - command{c="mm spawners set Raid_EasyTeleport maxmobs 0"} ~onSpawn
-  - command{c="mm spawners set Raid_EasyTeleport maxmobs 1"} ~onDeath
-  - command{c="mm spawners set Raid_EasyTeleport maxmobs 1"} ~onDespawn
+  - command{c="mm spawners set Raid_OneTeleport maxmobs 0"} ~onSpawn
+  - command{c="mm spawners set Raid_OneTeleport maxmobs 1"} ~onDeath
+  - command{c="mm spawners set Raid_OneTeleport maxmobs 1"} ~onDespawn
   Equipment:
   - MobDiamondSword HAND
   Options:

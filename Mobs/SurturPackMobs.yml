@@ -1,0 +1,38 @@
+World_BossOne:
+  Type: GIANT
+  Display: '&0&l&kBIGGUS'
+  Health: 20000
+  Damage: 50
+  KnockbackResistance: 1
+  BossBar:
+    Enabled: true
+    Title: '&0&l&kBIGGUS'
+    Range: 128
+    Style: SOLID
+    Color: RED
+  Options:
+    MovementSpeed: 0.19
+    FollowRange: 128
+    MaxCombatRange: 128
+    UseThreatTable: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 movetowardstarget
+  - 3 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  - 2 players
+  Equipment:
+  - air HEAD
+  - air Chest
+  - air Legs
+  - air Feet
+  Skills:
+  - randomskill{
+    skills=
+    World_BossOneAreaPull,
+    } @target ~onTimer:50000
+  - skill{s=World_BossOneTargetLockon} @RTT ~onTimer:120
+

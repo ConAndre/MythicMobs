@@ -62,14 +62,14 @@ Bleeding:
   - message{m="<target.name> is dying slowly."} @target
   - sound{s=damage.hit} @target
   - effect:particles{particle=largesmoke;amount=5;hS=1;vS=1;speed=5} @self
-  - damage{amount=1;ia=false;pk=false;pi=false} @target ~onTimer:20
-  - damage{amount=1;ia=false;pk=false;pi=false} @target ~onTimer:20
+  - damage{amount=1;ia=false;pk=false;pi=false} @target
+  - damage{amount=1;ia=false;pk=false;pi=false} @target
   - effect:particles{particle=dripLava;amount=5;hS=1;vS=1;speed=5} @self
-  - damage{amount=1;ia=false;pk=false;pi=false} @target ~onTimer:20
-  - damage{amount=1;ia=false;pk=false;pi=false} @target ~onTimer:20
+  - damage{amount=1;ia=false;pk=false;pi=false} @target
+  - damage{amount=1;ia=false;pk=false;pi=false} @target
   - effect:particles{particle=dripLava;amount=5;hS=1;vS=1;speed=5} @self
-  - damage{amount=1;ia=false;pk=false;pi=false} @target ~onTimer:20
-  - damage{amount=1;ia=false;pk=false;pi=false} @target ~onTimer:20
+  - damage{amount=1;ia=false;pk=false;pi=false} @target
+  - damage{amount=1;ia=false;pk=false;pi=false} @target
   - GCD{ticks=120}
 
 Charge:
@@ -79,8 +79,7 @@ Charge:
   - targetwithin 20
   - targetinlineofsight true
   Skills:
-  - message{m="<mob.name>&e approaches <target.name>."} @target
-  - effect:sound{s=block.anvil.destroy;v=2;p=0.5} @Self
+  - message{m="<mob.name>&e hunts <target.name>."} @target
   - potion{type=SPEED;duration=20;level=5} @self
   - GCD{ticks=120}
 
@@ -106,6 +105,5 @@ Sharpen:
   - effect:sound{s=block.anvil.destroy;v=2;p=0.5} @Self
   - potion{type=SLOW;duration=40;level=7}  @self
   - delay 40
-  - effect:sound{s=block.anvil.destroy;v=2;p=0.5} @Self
   - potion{type=INCREASE_DAMAGE;duration=180;level=3}  @self
   - potion{type=SPEED;duration=180;level=3}  @self

@@ -1,6 +1,5 @@
-Raid_NightmareTeleport:
-  SpawnerGroup: RaidTeleport
-  MobName: Raid_NightmareTeleport
+Raid_FourTeleport:
+  MobName: Raid_FourTeleport
   World: world
   X: 772
   Y: 85
@@ -10,17 +9,17 @@ Raid_NightmareTeleport:
   MaxMobs: '1'
   MobLevel: '1'
   MobsPerSpawn: 1
-  Cooldown: 50
+  Cooldown: 0
   CooldownTimer: 0
   Warmup: 60
   WarmupTimer: 0
   CheckForPlayers: false
-  ActivationRange: 32
+  ActivationRange: 40
   ScalingRange: 25.0
   LeashRange: 32
   HealOnLeash: false
   ResetThreatOnLeash: false
-  ShowFlames: true
+  ShowFlames: false
   Breakable: false
   Conditions: []
   ActiveMobs: 0

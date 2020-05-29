@@ -2,7 +2,8 @@
 # http://www.mythicmobs.net
 #
 
-##################################################BOSSES####################################################
+# ----------------------------------- Boss ----------------------------------- #
+
 PirateCaptain:
   Type: Skeleton
   Display: '&cPirate Captain'
@@ -138,7 +139,9 @@ PirateParrotBoss:
   - skill{s=SummonParrots} @self ~onDamaged =35%
   - skill{s=ParrotLeapAttack} @self ~onTimer:120
   - skill{s=EnableLoot_Parrot} @PlayersInRadius{r=35} ~onDeath
-##################################################REGULARS####################################################
+
+# ----------------------------------- Extra ---------------------------------- #
+
 PirateJunkee:
   Type: BABY_ZOMBIE
   Display: '&cJunkee'
@@ -230,8 +233,70 @@ FriendlyParrot:
   Skills:
   - skill{s=RemoveSelf180s} ~onSpawn
   - skill{s=LeapAttack;cooldown=5} ~onCombat
+PirateCaptainBoat:
+  Type: Skeleton
+  Display: '&cBetsy'
+  Health: 500
+  Damage: 20
+  Disguise:
+    Type: boat
+  Faction: Pirate
+  Equipment:
+  - MobIronHelmet HEAD
+  - MobIronChestplate CHEST
+  - MobIronLeggings LEGS
+  - MobIronBoots FEET
+  - MobIronSword HAND
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.355
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  - 3 float
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  Skills:
+PirateCaptainMount:
+  Type: Skeleton
+  Display: '&cBetsy'
+  Health: 500
+  Damage: 20
+  Disguise:
+    Type: skeleton_horse
+  Faction: Pirate
+  Equipment:
+  - MobIronHelmet HEAD
+  - MobIronChestplate CHEST
+  - MobIronLeggings LEGS
+  - MobIronBoots FEET
+  - MobIronSword HAND
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.355
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  - 3 float
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  Skills:
 
-
+# ----------------------------------- Mobs ----------------------------------- #
 
 Pirate:
   Type: Skeleton
@@ -295,68 +360,4 @@ PirateArcher:
   - skill{s=SmokeBlastProjectile;cooldown=10} @target ~onAttack 0.35
   Drops:
   - Third_DungeonLootTable
-
-PirateCaptainBoat:
-  Type: Skeleton
-  Display: '&cBetsy'
-  Health: 500
-  Damage: 20
-  Disguise:
-    Type: boat
-  Faction: Pirate
-  Equipment:
-  - MobIronHelmet HEAD
-  - MobIronChestplate CHEST
-  - MobIronLeggings LEGS
-  - MobIronBoots FEET
-  - MobIronSword HAND
-  Options:
-    AlwaysShowName: false
-    MovementSpeed: 0.355
-    PreventOtherDrops: true
-    KnockbackResistance: 1
-  Modules:
-    ThreatTable: true
-  AIGoalSelectors:
-  - 0 clear
-  - 1 meleeattack
-  - 2 randomstroll
-  - 3 float
-  AITargetSelectors:
-  - 0 clear
-  - 1 players
-  - 2 attacker
-  Skills:
-
-PirateCaptainMount:
-  Type: Skeleton
-  Display: '&cBetsy'
-  Health: 500
-  Damage: 20
-  Disguise:
-    Type: skeleton_horse
-  Faction: Pirate
-  Equipment:
-  - MobIronHelmet HEAD
-  - MobIronChestplate CHEST
-  - MobIronLeggings LEGS
-  - MobIronBoots FEET
-  - MobIronSword HAND
-  Options:
-    AlwaysShowName: false
-    MovementSpeed: 0.355
-    PreventOtherDrops: true
-    KnockbackResistance: 1
-  Modules:
-    ThreatTable: true
-  AIGoalSelectors:
-  - 0 clear
-  - 1 meleeattack
-  - 2 randomstroll
-  - 3 float
-  AITargetSelectors:
-  - 0 clear
-  - 1 players
-  - 2 attacker
-  Skills:
 

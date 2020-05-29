@@ -1,0 +1,22 @@
+BlackHole:
+  Mobtype: Sheep
+  Health: 50
+  Display: 'Black Hole'
+  Disguise.Type: villager
+  Skills:
+   - potion{t=INVISIBILITY;d=2147483647;l=1} @self ~onSpawn
+   - skill{s=BlackHoleEffect} @Self ~onTimer:20
+   - skill{s=BlackHoleDamage} @Self ~onTimer:10
+  AITargetSelectors:
+  - 0 clear
+  AIGoalSelectors:
+  - 0 clear
+  Options:
+    NoAI: true
+    Collidable: false
+    Invincible: false
+    KnockbackResistance: 1.0
+    MovementSpeed: 0.000
+    PreventRandomEquipment: true
+    PreventOtherDrops: true
+    Silent: true
