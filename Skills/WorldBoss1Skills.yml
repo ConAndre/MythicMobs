@@ -69,6 +69,8 @@ World_BossOneAreaPull:
     - sound{s=entity.wither.ambient;p=.01} @PlayersInRadius{r=29}
     - delay 1
     - sound{s=block.ender_chest.open;p=2} @PlayersInRadius{r=29}
+    - gcd{ticks=80}
+
 
 World_BossOneRunAway:
   Skills:
@@ -78,26 +80,30 @@ World_BossOneRunAway:
 
 World_BossOneWitherBlast:
   Skills:
-  - projectile{hp=true;v=14;onTick=World_BossOneWitherBlast-Ontick;hRadius=2;vRadius=2;onHit=World_BossOneWitherBlast-onhit;onEnd=World_BossOneWitherBlast-onhit;StartYOffset=8;Interval=1;MaxRange=64} @target
+  - projectile{hp=true;v=37;onTick=World_BossOneWitherBlast-Ontick;hRadius=2;vRadius=2;onHit=World_BossOneWitherBlast-onhit;onEnd=World_BossOneWitherBlast-onhit;StartYOffset=8;Interval=1;MaxRange=64} @target
 World_BossOneWitherBlast-Ontick:
   Skills:
-  - effect:itemspray{item=coal;amount=2;velocity=5;d=20;} @target
   - effect:particlesphere{particle=smoke_large;amount=25;radius=1} @Origin
 World_BossOneWitherBlast-onhit:
   Skills:
   - effect:blockmask{m=Coal_block;r=5;d=100} @Origin
   - effect:flames @Origin
-  - potion{type=SLOW;duration=80;level=1} @EntitiesNearOrigin{r=5}
+  - sound{s=entity.generic.explode;p=2} @Origin
+  - sound{s=entity.wither.ambient;p=2} @Origin
   - potion{type=BLINDNESS;duration=80;level=20} @EntitiesNearOrigin{r=5}
   - damage{amount=80;ignoreArmor=false} @EntitiesNearOrigin{r=5}
 
-
 World_BossOneTargetLockon:
+  Conditions:
+  - offgcd
   TargetCondition:
   - variableisset target.LockedOn false
   Skills:
   - sendtitle{title="&cImpending Doom Approaches!";subtitle="&cRun for cover!";d=60} @target
   - setvariable{var=target.LockedOn;t=STRING;value="true";d=100}
-  - effect:particleline{p=reddust;c=#000000;amount=1;fromOrigin=false;repeat=20;repeatInterval=2;syo=12} @target
-  - delay 40
+  - effect:particleline{p=reddust;c=#000000;amount=1;fromOrigin=false;repeat=14;repeatInterval=4;syo=11} @target
+  - effect:itemspray{item=coal;amount=5;velocity=2;d=20;repeat=14;repeatInterval=4} @target
+  - sound{s=block.note_block.cow_bell;repeat=14;repeatInterval=4} @target
+  - delay 56
   - skill{s=World_BossOneWitherBlast} @target
+

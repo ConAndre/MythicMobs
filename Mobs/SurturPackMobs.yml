@@ -33,6 +33,11 @@ World_BossOne:
   - randomskill{
     skills=
     World_BossOneAreaPull,
-    } @target ~onTimer:50000
-  - skill{s=World_BossOneTargetLockon} @RTT ~onTimer:120
+    } @target ~onTimer:500
+  - skill{s=World_BossOneTargetLockon} @RTT ~onTimer:601
+  - skill{s=World_BossOneTargetLockon} @RTT ~onTimer:602
+  - skill{s=World_BossOneTargetLockon} @RTT ~onTimer:603
+  - skill{s=World_BossOneTargetLockon} @RTT ~onTimer:604
+  - skill{s=World_BossOneTargetLockon} @RTT ~onTimer:605
+  - skill{s=World_BossOneTargetLockon} @RTT ~onTimer:606
 
