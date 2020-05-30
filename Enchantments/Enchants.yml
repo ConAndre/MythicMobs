@@ -1,0 +1,125 @@
+# ---------------------------------------------------------------------------- #
+#                                   Vampiric                                   #
+# ---------------------------------------------------------------------------- #
+
+VAMPIRIC:
+  Display: 'Vampiric'
+  MinLevel: 1
+  MaxLevel: 6
+  ItemType: WEAPON
+  Options:
+    Cursed: FALSE
+    Treasure: FALSE
+    ShowInLore: FALSE
+    LevelAsPower: FALSE
+  EnchantableItems:
+  - DIAMOND_SWORD
+  - IRON_SWORD
+  - GOLDEN_SWORD
+  - STONE_SWORD
+  - WOODEN_SWORD
+  - DIAMOND_AXE
+  - IRON_AXE
+  - GOLDEN_AXE
+  - STONE_AXE
+  - WOODEN_AXE
+  ConflictingEnchants:
+  Skills:
+  - heal{amount=1;overheal=false} ?enchantlevel{level=1} @self ~onAttack .10
+  - heal{amount=1;overheal=false} ?enchantlevel{level=2} @self ~onAttack .13
+  - heal{amount=1;overheal=false} ?enchantlevel{level=3} @self ~onAttack .16
+  - heal{amount=1;overheal=false} ?enchantlevel{level=4} @self ~onAttack .19
+  - heal{amount=1;overheal=false} ?enchantlevel{level=5} @self ~onAttack .22
+  - heal{amount=1;overheal=false} ?enchantlevel{level=6} @self ~onAttack .30
+
+# ---------------------------------------------------------------------------- #
+#                                    Sweeper                                   #
+# ---------------------------------------------------------------------------- #
+
+SWEEPER:
+  Display: 'Sweeper'
+  MinLevel: 1
+  MaxLevel: 6
+  ItemType: WEAPON
+  Options:
+    Cursed: FALSE
+    Treasure: FALSE
+    ShowInLore: FALSE
+    LevelAsPower: FALSE
+  EnchantableItems:
+  - DIAMOND_SWORD
+  - IRON_SWORD
+  - GOLDEN_SWORD
+  - STONE_SWORD
+  - WOODEN_SWORD
+  - DIAMOND_AXE
+  - IRON_AXE
+  - GOLDEN_AXE
+  - STONE_AXE
+  - WOODEN_AXE
+  ConflictingEnchants:
+  Skills:
+  - damage{amount=3} ?enchantlevel{level=1} @EIC{a=30.0;r=4.2;rot=0.0} ~onAttack
+  - damage{amount=4} ?enchantlevel{level=2} @EIC{a=30.0;r=4.2;rot=0.0} ~onAttack
+  - damage{amount=5} ?enchantlevel{level=3} @EIC{a=30.0;r=4.2;rot=0.0} ~onAttack
+  - damage{amount=6} ?enchantlevel{level=4} @EIC{a=30.0;r=4.2;rot=0.0} ~onAttack
+  - damage{amount=7} ?enchantlevel{level=5} @EIC{a=30.0;r=4.2;rot=0.0} ~onAttack
+  - damage{amount=8} ?enchantlevel{level=6} @EIC{a=30.0;r=4.2;rot=0.0} ~onAttack
+
+# ---------------------------------------------------------------------------- #
+#                                  Blight                                      #
+# ---------------------------------------------------------------------------- #
+
+TRUEDAMAGE:
+  Display: 'Blight'
+  MinLevel: 1
+  MaxLevel: 6
+  ItemType: WEAPON
+  Options:
+    Cursed: FALSE
+    Treasure: FALSE
+    ShowInLore: FALSE
+    LevelAsPower: FALSE
+  EnchantableItems:
+  - DIAMOND_SWORD
+  - IRON_SWORD
+  - GOLDEN_SWORD
+  - STONE_SWORD
+  - WOODEN_SWORD
+  - DIAMOND_AXE
+  - IRON_AXE
+  - GOLDEN_AXE
+  - STONE_AXE
+  - WOODEN_AXE
+  ConflictingEnchants:
+  Skills:
+  - damage{amount=1;ia=true} ?enchantlevel{level=1} @trigger ~onAttack 0.50
+  - damage{amount=1;ia=true} ?enchantlevel{level=2} @trigger ~onAttack 0.60
+  - damage{amount=1;ia=true} ?enchantlevel{level=3} @trigger ~onAttack 0.70
+  - damage{amount=1;ia=true} ?enchantlevel{level=4} @trigger ~onAttack 0.80
+  - damage{amount=1;ia=true} ?enchantlevel{level=5} @trigger ~onAttack 0.90
+  - damage{amount=1;ia=true} ?enchantlevel{level=6} @trigger ~onAttack 1.00
+
+# ---------------------------------------------------------------------------- #
+#                                  Fulfilling                                  #
+# ---------------------------------------------------------------------------- #
+
+FULFILLING:
+  Display: 'Fulfilling'
+  MinLevel: 1
+  MaxLevel: 6
+  ItemType: Armor
+  Options:
+    Cursed: FALSE
+    Treasure: FALSE
+    ShowInLore: FALSE
+    LevelAsPower: FALSE
+  EnchantableItems:
+  ConflictingEnchants:
+  Skills:
+  - damage{amount=1;ia=true} ?enchantlevel{level=1} @trigger ~onAttack 0.50
+  - damage{amount=1;ia=true} ?enchantlevel{level=2} @trigger ~onAttack 0.60
+  - damage{amount=1;ia=true} ?enchantlevel{level=3} @trigger ~onAttack 0.70
+  - damage{amount=1;ia=true} ?enchantlevel{level=4} @trigger ~onAttack 0.80
+  - damage{amount=1;ia=true} ?enchantlevel{level=5} @trigger ~onAttack 0.90
+  - damage{amount=1;ia=true} ?enchantlevel{level=6} @trigger ~onAttack 1.00

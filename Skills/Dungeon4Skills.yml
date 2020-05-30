@@ -378,7 +378,8 @@ Loot_CarmineBoots:
   - sound{s=entity.zombie_villager.converted} @trigger
   - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
   - giveitem{i=Loot_CarmineBoots} @trigger 1
-  - message{m="&A&L<target.name> has looted the &E&LCarmine<&sq>s Boots"} @PlayersInWorld 1
+  - command{c="mm utilities broadcast &A&L<target.name> has looted &E&LCarmine<&sq>s Boots"}
+
 Loot_CarmineBoots_DULLED:
   Skills:
   - giveitem{i=Loot_CarmineBoots_DULLED} @trigger 1
@@ -388,7 +389,8 @@ Loot_CarmineEssence:
   - sound{s=entity.zombie_villager.converted} @trigger
   - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
   - giveitem{i=Loot_CarmineEssence} @trigger 1
-  - message{m="&A&L<target.name> has looted &E&LEssence of Fire"} @PlayersInWorld 1
+  - command{c="mm utilities broadcast &A&L<target.name> has looted &E&LEssence of Fire"}
+
 Loot_CarmineLooted:
   Skills:
   - message{m="&c&LYou have already looted this cache &A&Lor &c&Lyou did not participate in this battle!"} @trigger
@@ -447,7 +449,8 @@ Loot_AzureBoots:
   - sound{s=entity.zombie_villager.converted} @trigger
   - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
   - giveitem{i=Loot_AzureBoots} @trigger 1
-  - message{m="&A&L<target.name> has looted the &E&LAzure<&sq>s Boots"} @PlayersInWorld 1
+  - command{c="mm utilities broadcast &A&L<target.name> has looted &E&LAzure<&sq>s Boots"}
+
 Loot_AzureBoots_DULLED:
   Skills:
   - giveitem{i=Loot_AzureBoots_DULLED} @trigger 1
@@ -457,7 +460,8 @@ Loot_AzureRod:
   - sound{s=entity.zombie_villager.converted} @trigger
   - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
   - giveitem{i=Loot_AzureRod} @trigger 1
-  - message{m="&A&L<target.name> has looted &E&LAzure<&sq>s Rod"} @PlayersInWorld 1
+  - command{c="mm utilities broadcast &A&L<target.name> has looted &E&LAzure<&sq>s Rod"}
+
 Loot_AzureLooted:
   Skills:
   - message{m="&c&LYou have already looted this cache &A&Lor &c&Lyou did not participate in this battle!"} @trigger
@@ -514,7 +518,7 @@ Loot_PiranhaLeggings:
   - sound{s=entity.zombie_villager.converted} @trigger
   - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
   - giveitem{i=Loot_PiranhaLeggings} @trigger 1
-  - message{m="&A&L<target.name> has looted the &E&LBig Bite<&sq>s Leggings"} @PlayersInWorld 1
+  - command{c="mm utilities broadcast &A&L<target.name> has looted the &E&LBig Bite<&sq>s Leggings"}
 Loot_PiranhaLeggings_DULLED:
   Skills:
   - giveitem{i=Loot_PiranhaLeggings_DULLED} @trigger 1
@@ -575,7 +579,8 @@ Loot_NexusPetHelmet:
   - sound{s=entity.zombie_villager.converted} @trigger
   - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
   - giveitem{i=Loot_NexusPetHelmet} @trigger 1
-  - message{m="&A&L<target.name> has looted &E&LNexus<&sq> Pet Boots"} @PlayersInWorld 1
+  - command{c="mm utilities broadcast &A&L<target.name> has looted &E&LNexus<&sq> Pet Boots"}
+
 Loot_NexusPetHelmet_DULLED:
   Skills:
   - giveitem{i=Loot_NexusPetHelmet_DULLED} @trigger 1
@@ -585,7 +590,8 @@ Loot_NexusPetWeapon:
   - sound{s=entity.zombie_villager.converted} @trigger
   - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
   - giveitem{i=Loot_NexusPetWeapon} @trigger 1
-  - message{m="&A&LYou looted &8&Ldulled &E&LFerocious Teeth"} @trigger 1
+  - command{c="mm utilities broadcast &A&LYou looted &8&Ldulled &E&LFerocious Teeth"}
+
 Loot_NexusPetWeapon_DULLED:
   Skills:
   - sound{s=entity.zombie_villager.converted} @trigger
@@ -648,7 +654,8 @@ Loot_NexusBossChestplate:
   - sound{s=entity.zombie_villager.converted} @trigger
   - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
   - giveitem{i=Loot_NexusBossChestplate} @trigger 1
-  - message{m="&A&L<target.name> has looted &E&LNexus<&sq> Chestplate"} @PlayersInWorld 1
+  - command{c="mm utilities broadcast &A&L<target.name> has looted &E&LNexus<&sq> Chestplate"}
+
 Loot_NexusBossChestplate_DULLED:
   Skills:
   - giveitem{i=Loot_NexusBossChestplate_DULLED} @trigger 1
@@ -658,7 +665,8 @@ Loot_NexusShard:
   - sound{s=entity.zombie_villager.converted} @trigger
   - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
   - giveitem{i=Loot_NexusShard} @trigger 1
-  - message{m="&A&L<target.name> has looted &E&LNexus<&sq> Shard"} @PlayersInWorld 1
+  - command{c="mm utilities broadcast &A&L<target.name> has looted &E&LNexus<&sq> Shard"}
+
 Loot_NexusBossLooted:
   Skills:
   - message{m="&c&LYou have already looted this cache &A&Lor &c&Lyou did not participate in this battle!"} @trigger

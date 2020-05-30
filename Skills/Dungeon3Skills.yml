@@ -232,7 +232,8 @@ Loot_CaptainWeapon:
   - sound{s=entity.zombie_villager.converted} @trigger
   - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
   - giveitem{i=Loot_CaptainWeapon} @trigger 1
-  - message{m="&A&L<target.name> has looted the &E&LCaptain<&sq>s Hook"} @PlayersInWorld 1
+  - command{c="mm utilities broadcast &A&L<target.name> has looted the &E&LCaptain<&sq>s Hook"}
+
 Loot_CaptainWeapon_DULLED:
   Skills:
   - giveitem{i=Loot_CaptainWeapon_DULLED} @trigger 1
@@ -242,7 +243,8 @@ Loot_CaptainChestplate:
   - sound{s=entity.zombie_villager.converted} @trigger
   - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
   - giveitem{i=Loot_CaptainChestplate} @trigger 1
-  - message{m="&A&L<target.name> has looted the &E&LCaptain<&sq>s Chestplate"} @PlayersInWorld 1
+  - command{c="mm utilities broadcast &A&L<target.name> has looted the &E&LCaptain<&sq>s Chestplate"}
+
 Loot_CaptainChestplate_DULLED:
   Skills:
   - giveitem{i=Loot_CaptainChestplate_DULLED} @trigger 1
@@ -303,7 +305,8 @@ Loot_GoldingApple:
   - sound{s=entity.zombie_villager.converted} @trigger
   - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
   - giveitem{i=Loot_GoldingApple} @trigger 1
-  - message{m="&A&L<target.name> has looted the &E&LGolding<&sq>s Apple"}
+  - command{c="mm utilities broadcast &A&L<target.name> has looted the &E&LGolding<&sq>s Apple"}
+
 Loot_GoldingApple_DULLED:
   Skills:
   - giveitem{i=Loot_GoldingApple_DULLED} @trigger 1
@@ -363,13 +366,15 @@ Loot_SquawksBeak:
   - sound{s=entity.zombie_villager.converted} @trigger
   - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
   - giveitem{i=Loot_SquawksBeak} @trigger 1
-  - message{m="&A&L<target.name> has looted the &E&LSquawk<&sq>s Beak"} @PlayersInWorld 1
+  - command{c="mm utilities broadcast &A&L<target.name> has looted the &E&LSquawk<&sq>s Beak"}
+
 Loot_SquawksCookie:
   Skills:
   - sound{s=entity.zombie_villager.converted} @trigger
   - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
   - giveitem{i=Loot_SquawksCookie} @trigger 1
-  - message{m="&A&L<target.name> has looted the &E&LSquawk<&sq>s Cookie"} @PlayersInWorld 1
+  - command{c="mm utilities broadcast &A&L<target.name> has looted the &E&LSquawk<&sq>s Cookie"}
+
 Loot_SquawksBeak_DULLED:
   Skills:
   - giveitem{i=Loot_SquawksBeak_DULLED} @trigger 1

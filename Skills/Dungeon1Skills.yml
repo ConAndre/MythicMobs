@@ -105,14 +105,15 @@ Loot_KingsCrown:
   - sound{s=entity.zombie_villager.converted} @trigger
   - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
   - giveitem{i=Loot_KingsCrown} @trigger 1
-  - message{m="&A&L<target.name> has looted the &E&LKing<&sq>s Crown"} @PlayersInWorld 1
+  - command{c="mm utilities broadcast &A&L<target.name> has looted the &E&LKing<&sq>s Crown"}
 
 Loot_KingsAxe:
   Skills:
   - sound{s=entity.zombie_villager.converted} @trigger
   - effect:particles{p=happyVillager;amount=200;hSpread=8;ySpread=1;speed=0;yOffset=0.5} @trigger
   - giveitem{i=Loot_KingsAxe} @trigger 1
-  - message{m="&A&L<target.name> has looted the &E&LKing<&sq>s Axe"} @PlayersInWorld 1
+  - command{c="mm utilities broadcast &A&L<target.name> has looted the &E&LKing<&sq>s Axe"}
+
 
 Loot_KingsCrown_DULLED:
   Skills:

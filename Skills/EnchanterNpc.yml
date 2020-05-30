@@ -1,0 +1,5 @@
+RandomSwordEnchants:
+  Skills:
+  - command{c="mm i enchant Blight <random.1-6>";ac=true;op=true} @self
+  - command{c="mm i enchant Vampiric <random.1-6>";ac=true;op=true} @self
+  - command{c="mm i enchant Sweeper <random.1-6>";ac=true;op=true} @self

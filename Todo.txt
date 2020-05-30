@@ -21,7 +21,16 @@ Squire<Jester<Knight<Lord<Baron>Count/Earl<Prince/Princess<Duke<Grand Prince<Gra
 
   - message{m="&A&L<target.name> has looted the &E&LGolding<&sq>s Shield"}
 try for player fix
+Get rid of flat damage
+Add variety enchants for diversity/Reroll possibility
 
+
+Reroll concept:
+Have player hold 6 reroll essence in offhand.
+~onUse > Check if player has 6 > Remove 6 > and reroll main hand using skill
+You can do conditions for certain reroll essence.
+- holding{m=diamond_sword} true
+That way you can make armor essence, sword essence, axe essence, bow essence. Cool content
 
 # ------------------------------- Raid 1 Items ------------------------------- #
 

@@ -359,9 +359,8 @@ DevSword:
     MainHand:
       Damage: 10000
   Enchantments:
-  - ARROW_DAMAGE:3
-  Hide:
-  - ENCHANTS
+  Skills:
+  - skill{s=RandomSwordEnchants} ~onUse
 
 CacheReroll:
   Id: blaze_rod

@@ -91,6 +91,8 @@ Loot_NexusSword:
   Attributes:
     MainHand:
       Damage: 13
+  Enchantments:
+  - VAMPIRIC:3
 Loot_AzureBoots:
   Id: Diamond_BOOTS
   Display: '&cAzure Boots'
