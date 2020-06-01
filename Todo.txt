@@ -32,6 +32,27 @@ You can do conditions for certain reroll essence.
 - holding{m=diamond_sword} true
 That way you can make armor essence, sword essence, axe essence, bow essence. Cool content
 
+Reroll concept again:
+Player farms for fragments
+6 + Armor shard = Armor Reroll
+6 + Axe shard = Axe Reroll
+6 + Sword shard = Sword Reroll
+6 + Bow shard = Bow Reroll
+6 + Crossbow shard = Crossbow Reroll
+
+AGain again :
+If player uses item with name Armor token
+
+Make a logging system for consumables (dupe checker)
+THru java ofc not mythic mobs log on item use
+
+Bossshoppro fucking sucks:
+try using %item_in_hand% to give/take player item (simulates a reroll)
+
+
+Shields:
+itemrecharging/blocking mechanic in mythic mobs
+
 # ------------------------------- Raid 1 Items ------------------------------- #
 
 Fire resistance spell

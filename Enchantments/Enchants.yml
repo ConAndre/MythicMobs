@@ -70,7 +70,7 @@ SWEEPER:
 #                                  Blight                                      #
 # ---------------------------------------------------------------------------- #
 
-TRUEDAMAGE:
+BLIGHT:
   Display: 'Blight'
   MinLevel: 1
   MaxLevel: 6
@@ -117,9 +117,9 @@ FULFILLING:
   EnchantableItems:
   ConflictingEnchants:
   Skills:
-  - damage{amount=1;ia=true} ?enchantlevel{level=1} @trigger ~onAttack 0.50
-  - damage{amount=1;ia=true} ?enchantlevel{level=2} @trigger ~onAttack 0.60
-  - damage{amount=1;ia=true} ?enchantlevel{level=3} @trigger ~onAttack 0.70
-  - damage{amount=1;ia=true} ?enchantlevel{level=4} @trigger ~onAttack 0.80
-  - damage{amount=1;ia=true} ?enchantlevel{level=5} @trigger ~onAttack 0.90
-  - damage{amount=1;ia=true} ?enchantlevel{level=6} @trigger ~onAttack 1.00
+  - feed{amount=1;o=true} ?enchantlevel{level=1} @trigger ~oonDamaged 0.12
+  - feed{amount=1;o=true} ?enchantlevel{level=2} @trigger ~oonDamaged 0.15
+  - feed{amount=1;o=true} ?enchantlevel{level=3} @trigger ~oonDamaged 0.18
+  - feed{amount=1;o=true} ?enchantlevel{level=4} @trigger ~oonDamaged 0.21
+  - feed{amount=1;o=true} ?enchantlevel{level=5} @trigger ~oonDamaged 0.24
+  - feed{amount=1;o=true} ?enchantlevel{level=6} @trigger ~oonDamaged 0.27

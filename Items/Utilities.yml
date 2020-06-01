@@ -363,7 +363,7 @@ DevSword:
   - skill{s=RandomSwordEnchants} ~onUse
 
 CacheReroll:
-  Id: blaze_rod
+  Id: Enchanted_book
   Display: '&6&N&LLoot Reroller'
   Lore:
   - '&6Use this to get another chance at'
@@ -380,9 +380,6 @@ CacheReroll:
   Hide:
   - ENCHANTS
 
-
-
-
 ArmourToken:
   Id: Arrow
   Data: 0
@@ -396,8 +393,3 @@ ArmourToken:
   - equip{item=diamond_boots:1} @Self ~onUse
   - equip{item=diamond_axe:0} @Self ~onUse
   - consumeUsedItem ~onUse
-
-
-
-
-

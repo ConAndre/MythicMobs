@@ -245,8 +245,8 @@ Loot_SquawksBeak_DULLED:
   Id: bow
   Display: '&8&LDulled &e&LSquawk<&sq>s Beak'
   Lore:
-  - '&1 Squawk<&sq>s flaming beak that he has used'
-  - 'to peck down thousands of warriors.'
+  - '&6 Squawk<&sq>s flaming beak that he has used'
+  - '&6to peck down thousands of warriors.'
   - ''
   - '&L&cSquawk'
   - ''
@@ -260,8 +260,8 @@ Loot_GoldingApple_DULLED:
   Id: golden_apple
   Display: '&8&LDulled &e&LGolding<&sq>s Apple'
   Lore:
-  - '&1Golding used this apple to'
-  - 'deflect the many arrows of invading pirates.'
+  - '&6Golding used this apple to'
+  - '&6deflect the many arrows of invading pirates.'
   - ''
   - '&L&cGolding'
   - ''

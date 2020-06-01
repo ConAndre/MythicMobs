@@ -1,0 +1,181 @@
+# ---------------------------------------------------------------------------- #
+#                              Craftable                                       #
+# ---------------------------------------------------------------------------- #
+
+Orb_Miscellaneous:
+  Id: sunflower
+  Display: "&3&LMiscellaneous Orb"
+  Lore:
+  - '&6An orb used in crafting'
+  - '&8Collect miscellaneous orbs to craft items'
+  - '&8at the shop keeper'
+  - ''
+  - '&L&F&KO&R&L&DCrafting&F&KO'
+  Enchantments:
+  - DEPTH_STRIDER:3
+  Hide:
+  - ENCHANTS
+
+
+
+# ---------------------------------------------------------------------------- #
+#                                                                              #
+# ---------------------------------------------------------------------------- #
+# ---------------------------------------------------------------------------- #
+#                                     Weapons                                  #
+# ---------------------------------------------------------------------------- #
+# ---------------------------------------------------------------------------- #
+#                                                                              #
+# ---------------------------------------------------------------------------- #
+
+
+# ---------------------------------------------------------------------------- #
+#                                   VAMPIRIC                                   #
+# ---------------------------------------------------------------------------- #
+
+Uncharged_VAMPIRIC:
+  Id: book
+  Display: "&3&LUncharged Vampiric Enchantment"
+  Lore:
+  - '&6A uncharged enchantment'
+  - '&6Perhaps it can be charged?'
+  - '&8Collect 6 Miscellaneous Orbs'
+  - '&8to craft an empowered tome'
+  - ''
+  - '&L&F&KO&R&L&DCrafting&F&KO'
+  Enchantments:
+  - DEPTH_STRIDER:3
+  Hide:
+  - ENCHANTS
+
+Charged_VAMPIRIC:
+  Id: enchanted_book
+  Display: "&3&LVampiric Enchantment"
+  Lore:
+  - '&6A tome that empowers'
+  - '&6any melee weapon with the vampiric enchantment'
+  - '&8Hold the desired target gear'
+  - '&8in your main hand prior purchase'
+  - ''
+  - '&c&L&nCost:'
+  - '&3&L 6 Miscellaneous Orb'
+  - '&3&L 1 Uncharged Vampiric Enchantment'
+  Hide:
+  - ENCHANTS
+
+# ---------------------------------------------------------------------------- #
+#                                    SWEEPER                                   #
+# ---------------------------------------------------------------------------- #
+Uncharged_SWEEPER:
+  Id: book
+  Display: "&3&LUncharged Sweeper Enchantment"
+  Lore:
+  - '&6A uncharged enchantment'
+  - '&6Perhaps it can be charged?'
+  - '&8Collect 6 Miscellaneous Orbs'
+  - '&8to craft an empowered tome'
+  - ''
+  - '&L&F&KO&R&L&DCrafting&F&KO'
+  Enchantments:
+  - DEPTH_STRIDER:3
+  Hide:
+  - ENCHANTS
+
+Charged_SWEEPER:
+  Id: enchanted_book
+  Display: "&3&LSweeper Enchantment"
+  Lore:
+  - '&6A tome that empowers'
+  - '&6any melee weapon with the sweeper enchantment'
+  - '&8Hold the desired target gear'
+  - '&8in your main hand prior purchase'
+  - ''
+  - '&c&L&nCost:'
+  - '&3&L 6 Miscellaneous Orb'
+  - '&3&L 1 Uncharged Sweeper Enchantment'
+  Hide:
+  - ENCHANTS
+
+# ---------------------------------------------------------------------------- #
+#                                    BLIGHT                                    #
+# ---------------------------------------------------------------------------- #
+
+Uncharged_BLIGHT:
+  Id: book
+  Display: "&3&LUncharged Blight Enchantment"
+  Lore:
+  - '&6A uncharged enchantment'
+  - '&6Perhaps it can be charged?'
+  - '&8Collect 6 Miscellaneous Orbs'
+  - '&8to craft an empowered tome'
+  - ''
+  - '&L&F&KO&R&L&DCrafting&F&KO'
+  Enchantments:
+  - DEPTH_STRIDER:3
+  Hide:
+  - ENCHANTS
+
+Charged_BLIGHT:
+  Id: enchanted_book
+  Display: "&3&LBlight Enchantment"
+  Lore:
+  - '&6A tome that empowers'
+  - '&6any melee weapon with the blight enchantment'
+  - '&8Hold the desired target gear'
+  - '&8in your main hand prior purchase'
+  - ''
+  - '&c&L&nCost:'
+  - '&3&L 6 Miscellaneous Orb'
+  - '&3&L 1 Uncharged Blight Enchantment'
+  Hide:
+  - ENCHANTS
+
+
+
+
+# ---------------------------------------------------------------------------- #
+#                                                                              #
+# ---------------------------------------------------------------------------- #
+# ---------------------------------------------------------------------------- #
+#                                     ARMOR                                    #
+# ---------------------------------------------------------------------------- #
+# ---------------------------------------------------------------------------- #
+#                                                                              #
+# ---------------------------------------------------------------------------- #
+
+
+
+
+# ---------------------------------------------------------------------------- #
+#                                  FULFILLING                                  #
+# ---------------------------------------------------------------------------- #
+
+Uncharged_FULFILLING:
+  Id: book
+  Display: "&3&LUncharged Fulfilling Enchantment"
+  Lore:
+  - '&6A uncharged enchantment'
+  - '&6Perhaps it can be charged?'
+  - '&8Collect 6 Miscellaneous Orbs'
+  - '&8to craft an empowered tome'
+  - ''
+  - '&L&F&KO&R&L&DCrafting&F&KO'
+  Enchantments:
+  - DEPTH_STRIDER:3
+  Hide:
+  - ENCHANTS
+
+Charged_FULFILLING:
+  Id: enchanted_book
+  Display: "&3&LFulfilling Enchantment"
+  Lore:
+  - '&6A tome that empowers'
+  - '&6any melee weapon with the fulfilling enchantment'
+  - '&8Hold the desired target gear'
+  - '&8in your main hand prior purchase'
+  - ''
+  - '&c&L&nCost:'
+  - '&3&L 6 Miscellaneous Orb'
+  - '&3&L 1 Uncharged Fulfilling Enchantment'
+  Hide:
+  - ENCHANTS
