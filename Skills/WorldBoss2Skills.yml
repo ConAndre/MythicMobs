@@ -1,0 +1,21 @@
+World_BossTwoSummon:
+  Skills:
+  - summon{mob=World_BossTwoMinion;amount=1;noise=10;r=5} @Self
+  - delay 15
+  - summon{mob=World_BossTwoMinion;amount=1;noise=10;r=5} @Self
+  - delay 15
+  - summon{mob=World_BossTwoMinion;amount=1;noise=10;r=5} @Self
+  - delay 15
+  - summon{mob=World_BossTwoMinion;amount=1;noise=10;r=5} @Self
+
+World_BossTwoLaserShot:
+  Skills:
+  - projectile{hp=true;v=100;onTick=World_BossTwoLaserShot-Ontick;hRadius=2;vRadius=2;onHit=World_BossTwoLaserShot-onhit;onEnd=World_BossTwoLaserShot-onhit;StartYOffset=8;Interval=1;MaxRange=64} @target
+World_BossTwoLaserShot-Ontick:
+  Skills:
+World_BossTwoLaserShot-onhit:
+  Skills:
+  - effect:particleline{p=reddust;c=#a1203a;amount=1;syo=1} @target
+  - effect:flames @Origin
+  - sound{s=entity.vex.charge;p=0.01} @Origin
+  - damage{amount=40;ignoreArmor=false} @EntitiesNearOrigin{r=2}

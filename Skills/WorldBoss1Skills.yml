@@ -1,6 +1,8 @@
 World_BossOneAreaPull:
   Skills:
     - message{m="<mob.name>&c is channeling void pull"} @PIR{r=128}
+    - effect:spin{duration=70;velocity=200} @self
+    - sound{s=entity.ender_dragon.flap;repeat=20;repeatInterval=2}
     - delay 40
     - effect:particlering{particle=block_crack;m=coal_block;a=5;vs=.25;hs=3;s=0;y=0.3;points=20;radius=31} @Self
     - sound{s=entity.ender_eye.death;p=.01} @PlayersInRadius{r=31}
@@ -100,7 +102,7 @@ World_BossOneTargetLockon:
   - variableisset target.LockedOn false
   Skills:
   - sendtitle{title="&cImpending Doom Approaches!";subtitle="&cRun for cover!";d=60} @target
-  - setvariable{var=target.LockedOn;t=STRING;value="true";d=100}
+  - setvariable{var=target.LockedOn;t=STRING;value="true"}
   - effect:particleline{p=reddust;c=#000000;amount=1;fromOrigin=false;repeat=14;repeatInterval=4;syo=11} @target
   - effect:itemspray{item=coal;amount=5;velocity=2;d=20;repeat=14;repeatInterval=4} @target
   - sound{s=block.note_block.cow_bell;repeat=14;repeatInterval=4} @target

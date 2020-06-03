@@ -30,12 +30,12 @@ Orb_Miscellaneous:
 
 
 # ---------------------------------------------------------------------------- #
-#                                   VAMPIRIC                                   #
+#                                   Exhaust                                    #
 # ---------------------------------------------------------------------------- #
 
-Uncharged_VAMPIRIC:
+Uncharged_Exhaust:
   Id: book
-  Display: "&3&LUncharged Vampiric Enchantment"
+  Display: "&3&LUncharged Exhaust Enchantment"
   Lore:
   - '&6A uncharged enchantment'
   - '&6Perhaps it can be charged?'
@@ -48,27 +48,27 @@ Uncharged_VAMPIRIC:
   Hide:
   - ENCHANTS
 
-Charged_VAMPIRIC:
+Charged_Exhaust:
   Id: enchanted_book
-  Display: "&3&LVampiric Enchantment"
+  Display: "&3&LExhaust Enchantment"
   Lore:
   - '&6A tome that empowers'
-  - '&6any melee weapon with the vampiric enchantment'
+  - '&6any melee weapon with the Exhaust enchantment'
   - '&8Hold the desired target gear'
   - '&8in your main hand prior purchase'
   - ''
   - '&c&L&nCost:'
   - '&3&L 6 Miscellaneous Orb'
-  - '&3&L 1 Uncharged Vampiric Enchantment'
+  - '&3&L 1 Uncharged Exhaust Enchantment'
   Hide:
   - ENCHANTS
 
 # ---------------------------------------------------------------------------- #
-#                                    SWEEPER                                   #
+#                                    Ice Aspect                                #
 # ---------------------------------------------------------------------------- #
-Uncharged_SWEEPER:
+Uncharged_Ice_Aspect:
   Id: book
-  Display: "&3&LUncharged Sweeper Enchantment"
+  Display: "&3&LUncharged Ice Aspect Enchantment"
   Lore:
   - '&6A uncharged enchantment'
   - '&6Perhaps it can be charged?'
@@ -81,28 +81,28 @@ Uncharged_SWEEPER:
   Hide:
   - ENCHANTS
 
-Charged_SWEEPER:
+Charged_Ice_Aspect:
   Id: enchanted_book
-  Display: "&3&LSweeper Enchantment"
+  Display: "&3&LIce Aspect Enchantment"
   Lore:
   - '&6A tome that empowers'
-  - '&6any melee weapon with the sweeper enchantment'
+  - '&6any melee weapon with the Ice Aspect enchantment'
   - '&8Hold the desired target gear'
   - '&8in your main hand prior purchase'
   - ''
   - '&c&L&nCost:'
   - '&3&L 6 Miscellaneous Orb'
-  - '&3&L 1 Uncharged Sweeper Enchantment'
+  - '&3&L 1 Uncharged Ice Aspect Enchantment'
   Hide:
   - ENCHANTS
 
 # ---------------------------------------------------------------------------- #
-#                                    BLIGHT                                    #
+#                                    Confusion                                    #
 # ---------------------------------------------------------------------------- #
 
-Uncharged_BLIGHT:
+Uncharged_Confusion:
   Id: book
-  Display: "&3&LUncharged Blight Enchantment"
+  Display: "&3&LUncharged Confusion Enchantment"
   Lore:
   - '&6A uncharged enchantment'
   - '&6Perhaps it can be charged?'
@@ -115,23 +115,222 @@ Uncharged_BLIGHT:
   Hide:
   - ENCHANTS
 
-Charged_BLIGHT:
+Charged_Confusion:
   Id: enchanted_book
-  Display: "&3&LBlight Enchantment"
+  Display: "&3&LConfusion Enchantment"
   Lore:
   - '&6A tome that empowers'
-  - '&6any melee weapon with the blight enchantment'
+  - '&6any melee weapon with the Confusion enchantment'
   - '&8Hold the desired target gear'
   - '&8in your main hand prior purchase'
   - ''
   - '&c&L&nCost:'
   - '&3&L 6 Miscellaneous Orb'
-  - '&3&L 1 Uncharged Blight Enchantment'
+  - '&3&L 1 Uncharged Confusion Enchantment'
   Hide:
   - ENCHANTS
 
 
+# ---------------------------------------------------------------------------- #
+#                                    Blindness                                     #
+# ---------------------------------------------------------------------------- #
 
+Uncharged_Blindness:
+  Id: book
+  Display: "&3&LUncharged Blindness Enchantment"
+  Lore:
+  - '&6A uncharged enchantment'
+  - '&6Perhaps it can be charged?'
+  - '&8Collect 6 Miscellaneous Orbs'
+  - '&8to craft an empowered tome'
+  - ''
+  - '&L&F&KO&R&L&DCrafting&F&KO'
+  Enchantments:
+  - DEPTH_STRIDER:3
+  Hide:
+  - ENCHANTS
+
+Charged_Blindness:
+  Id: enchanted_book
+  Display: "&3&LBlindness Enchantment"
+  Lore:
+  - '&6A tome that empowers'
+  - '&6any melee weapon with the Blindness enchantment'
+  - '&8Hold the desired target gear'
+  - '&8in your main hand prior purchase'
+  - ''
+  - '&c&L&nCost:'
+  - '&3&L 6 Miscellaneous Orb'
+  - '&3&L 1 Uncharged Blindness Enchantment'
+  Hide:
+  - ENCHANTS
+
+# ---------------------------------------------------------------------------- #
+#                                    Venom                                     #
+# ---------------------------------------------------------------------------- #
+
+Uncharged_Venom:
+  Id: book
+  Display: "&3&LUncharged Venom Enchantment"
+  Lore:
+  - '&6A uncharged enchantment'
+  - '&6Perhaps it can be charged?'
+  - '&8Collect 6 Miscellaneous Orbs'
+  - '&8to craft an empowered tome'
+  - ''
+  - '&L&F&KO&R&L&DCrafting&F&KO'
+  Enchantments:
+  - DEPTH_STRIDER:3
+  Hide:
+  - ENCHANTS
+
+Charged_Venom:
+  Id: enchanted_book
+  Display: "&3&LVenom Enchantment"
+  Lore:
+  - '&6A tome that empowers'
+  - '&6any melee weapon with the Venom enchantment'
+  - '&8Hold the desired target gear'
+  - '&8in your main hand prior purchase'
+  - ''
+  - '&c&L&nCost:'
+  - '&3&L 6 Miscellaneous Orb'
+  - '&3&L 1 Uncharged Venom Enchantment'
+  Hide:
+  - ENCHANTS
+
+# ---------------------------------------------------------------------------- #
+#                                    Wither                                     #
+# ---------------------------------------------------------------------------- #
+
+Uncharged_Wither:
+  Id: book
+  Display: "&3&LUncharged Wither Enchantment"
+  Lore:
+  - '&6A uncharged enchantment'
+  - '&6Perhaps it can be charged?'
+  - '&8Collect 6 Miscellaneous Orbs'
+  - '&8to craft an empowered tome'
+  - ''
+  - '&L&F&KO&R&L&DCrafting&F&KO'
+  Enchantments:
+  - DEPTH_STRIDER:3
+  Hide:
+  - ENCHANTS
+
+Charged_Wither:
+  Id: enchanted_book
+  Display: "&3&LWither Enchantment"
+  Lore:
+  - '&6A tome that empowers'
+  - '&6any melee weapon with the Wither enchantment'
+  - '&8Hold the desired target gear'
+  - '&8in your main hand prior purchase'
+  - ''
+  - '&c&L&nCost:'
+  - '&3&L 6 Miscellaneous Orb'
+  - '&3&L 1 Uncharged Wither Enchantment'
+  Hide:
+  - ENCHANTS
+# ---------------------------------------------------------------------------- #
+#                                    Rage                                     #
+# ---------------------------------------------------------------------------- #
+
+Uncharged_Rage:
+  Id: book
+  Display: "&3&LUncharged Rage Enchantment"
+  Lore:
+  - '&6A uncharged enchantment'
+  - '&6Perhaps it can be charged?'
+  - '&8Collect 6 Miscellaneous Orbs'
+  - '&8to craft an empowered tome'
+  - ''
+  - '&L&F&KO&R&L&DCrafting&F&KO'
+  Enchantments:
+  - DEPTH_STRIDER:3
+  Hide:
+  - ENCHANTS
+
+Charged_Rage:
+  Id: enchanted_book
+  Display: "&3&LRage Enchantment"
+  Lore:
+  - '&6A tome that empowers'
+  - '&6any melee weapon with the Rage enchantment'
+  - '&8Hold the desired target gear'
+  - '&8in your main hand prior purchase'
+  - ''
+  - '&c&L&nCost:'
+  - '&3&L 6 Miscellaneous Orb'
+  - '&3&L 1 Uncharged Rage Enchantment'
+  Hide:
+  - ENCHANTS
+# ---------------------------------------------------------------------------- #
+#                                    Vampire                                   #
+# ---------------------------------------------------------------------------- #
+
+Uncharged_Vampire:
+  Id: book
+  Display: "&3&LUncharged Vampire Enchantment"
+  Lore:
+  - '&6A uncharged enchantment'
+  - '&6Perhaps it can be charged?'
+  - '&8Collect 6 Miscellaneous Orbs'
+  - '&8to craft an empowered tome'
+  - ''
+  - '&L&F&KO&R&L&DCrafting&F&KO'
+  Enchantments:
+  - DEPTH_STRIDER:3
+  Hide:
+  - ENCHANTS
+
+Charged_Vampire:
+  Id: enchanted_book
+  Display: "&3&LVampire Enchantment"
+  Lore:
+  - '&6A tome that empowers'
+  - '&6any melee weapon with the Vampire enchantment'
+  - '&8Hold the desired target gear'
+  - '&8in your main hand prior purchase'
+  - ''
+  - '&c&L&nCost:'
+  - '&3&L 6 Miscellaneous Orb'
+  - '&3&L 1 Uncharged Vampire Enchantment'
+  Hide:
+  - ENCHANTS
+# ---------------------------------------------------------------------------- #
+#                                    Double Strike                                   #
+# ---------------------------------------------------------------------------- #
+
+Uncharged_Double_Strike:
+  Id: book
+  Display: "&3&LUncharged Double Strike Enchantment"
+  Lore:
+  - '&6A uncharged enchantment'
+  - '&6Perhaps it can be charged?'
+  - '&8Collect 6 Miscellaneous Orbs'
+  - '&8to craft an empowered tome'
+  - ''
+  - '&L&F&KO&R&L&DCrafting&F&KO'
+  Enchantments:
+  - DEPTH_STRIDER:3
+  Hide:
+  - ENCHANTS
+
+Charged_Double_Strike:
+  Id: enchanted_book
+  Display: "&3&LDouble Strike Enchantment"
+  Lore:
+  - '&6A tome that empowers'
+  - '&6any melee weapon with the Double Strike enchantment'
+  - '&8Hold the desired target gear'
+  - '&8in your main hand prior purchase'
+  - ''
+  - '&c&L&nCost:'
+  - '&3&L 6 Miscellaneous Orb'
+  - '&3&L 1 Uncharged Double Strike Enchantment'
+  Hide:
+  - ENCHANTS
 
 # ---------------------------------------------------------------------------- #
 #                                                                              #
@@ -147,12 +346,12 @@ Charged_BLIGHT:
 
 
 # ---------------------------------------------------------------------------- #
-#                                  FULFILLING                                  #
+#                                  Saturation                                  #
 # ---------------------------------------------------------------------------- #
 
-Uncharged_FULFILLING:
+Uncharged_Saturation:
   Id: book
-  Display: "&3&LUncharged Fulfilling Enchantment"
+  Display: "&3&LUncharged Saturation Enchantment"
   Lore:
   - '&6A uncharged enchantment'
   - '&6Perhaps it can be charged?'
@@ -165,17 +364,87 @@ Uncharged_FULFILLING:
   Hide:
   - ENCHANTS
 
-Charged_FULFILLING:
+Charged_Saturation:
   Id: enchanted_book
-  Display: "&3&LFulfilling Enchantment"
+  Display: "&3&LSaturation Enchantment"
   Lore:
   - '&6A tome that empowers'
-  - '&6any melee weapon with the fulfilling enchantment'
+  - '&6any melee weapon with the Saturation enchantment'
   - '&8Hold the desired target gear'
   - '&8in your main hand prior purchase'
   - ''
   - '&c&L&nCost:'
   - '&3&L 6 Miscellaneous Orb'
-  - '&3&L 1 Uncharged Fulfilling Enchantment'
+  - '&3&L 1 Uncharged Saturation Enchantment'
+  Hide:
+  - ENCHANTS
+
+# ---------------------------------------------------------------------------- #
+#                                Bows/Crossbows                                #
+# ---------------------------------------------------------------------------- #
+# ---------------------------------------------------------------------------- #
+#                                  Poisoned Arrows                                  #
+# ---------------------------------------------------------------------------- #
+
+Uncharged_Poisoned_Arrows:
+  Id: book
+  Display: "&3&LUncharged Poisoned Arrows Enchantment"
+  Lore:
+  - '&6A uncharged enchantment'
+  - '&6Perhaps it can be charged?'
+  - '&8Collect 6 Miscellaneous Orbs'
+  - '&8to craft an empowered tome'
+  - ''
+  - '&L&F&KO&R&L&DCrafting&F&KO'
+  Enchantments:
+  - DEPTH_STRIDER:3
+  Hide:
+  - ENCHANTS
+
+Charged_Poisoned_Arrows:
+  Id: enchanted_book
+  Display: "&3&LPoisoned Arrows Enchantment"
+  Lore:
+  - '&6A tome that empowers'
+  - '&6any melee weapon with the Poisoned Arrows enchantment'
+  - '&8Hold the desired target gear'
+  - '&8in your main hand prior purchase'
+  - ''
+  - '&c&L&nCost:'
+  - '&3&L 6 Miscellaneous Orb'
+  - '&3&L 1 Uncharged Poisoned Arrows Enchantment'
+  Hide:
+  - ENCHANTS
+# ---------------------------------------------------------------------------- #
+#                                  Withered Arrows                                  #
+# ---------------------------------------------------------------------------- #
+
+Uncharged_Withered_Arrows:
+  Id: book
+  Display: "&3&LUncharged Withered Arrows Enchantment"
+  Lore:
+  - '&6A uncharged enchantment'
+  - '&6Perhaps it can be charged?'
+  - '&8Collect 6 Miscellaneous Orbs'
+  - '&8to craft an empowered tome'
+  - ''
+  - '&L&F&KO&R&L&DCrafting&F&KO'
+  Enchantments:
+  - DEPTH_STRIDER:3
+  Hide:
+  - ENCHANTS
+
+Charged_Withered_Arrows:
+  Id: enchanted_book
+  Display: "&3&LWithered Arrows Enchantment"
+  Lore:
+  - '&6A tome that empowers'
+  - '&6any melee weapon with the Withered Arrows enchantment'
+  - '&8Hold the desired target gear'
+  - '&8in your main hand prior purchase'
+  - ''
+  - '&c&L&nCost:'
+  - '&3&L 6 Miscellaneous Orb'
+  - '&3&L 1 Uncharged Withered Arrows Enchantment'
   Hide:
   - ENCHANTS

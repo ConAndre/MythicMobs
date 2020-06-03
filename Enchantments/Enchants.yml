@@ -99,6 +99,104 @@ BLIGHT:
   - damage{amount=1;ia=true} ?enchantlevel{level=4} @trigger ~onAttack 0.80
   - damage{amount=1;ia=true} ?enchantlevel{level=5} @trigger ~onAttack 0.90
   - damage{amount=1;ia=true} ?enchantlevel{level=6} @trigger ~onAttack 1.00
+# ---------------------------------------------------------------------------- #
+#                                  DASH                                      #
+# ---------------------------------------------------------------------------- #
+
+DASH:
+  Display: 'Dash'
+  MinLevel: 1
+  MaxLevel: 6
+  ItemType: WEAPON
+  Options:
+    Cursed: FALSE
+    Treasure: FALSE
+    ShowInLore: FALSE
+    LevelAsPower: FALSE
+  EnchantableItems:
+  - DIAMOND_SWORD
+  - IRON_SWORD
+  - GOLDEN_SWORD
+  - STONE_SWORD
+  - WOODEN_SWORD
+  - DIAMOND_AXE
+  - IRON_AXE
+  - GOLDEN_AXE
+  - STONE_AXE
+  - WOODEN_AXE
+  ConflictingEnchants:
+  Skills:
+  - lunge{velocity=2;velocityY=1} ?enchantlevel{level=1} @self  ~onUse 1
+  - lunge{velocity=3;velocityY=1} ?enchantlevel{level=2} @self  ~onUse 1
+  - lunge{velocity=4;velocityY=1} ?enchantlevel{level=3} @self  ~onUse 1
+  - lunge{velocity=5;velocityY=1} ?enchantlevel{level=4} @self  ~onUse 1
+  - lunge{velocity=6;velocityY=1} ?enchantlevel{level=5} @self  ~onUse 1
+  - lunge{velocity=7;velocityY=1} ?enchantlevel{level=6} @self  ~onUse 1
+
+# ---------------------------------------------------------------------------- #
+#                                  STRENGTH                                    #
+# ---------------------------------------------------------------------------- #
+
+STRENGTH:
+  Display: 'Strength'
+  MinLevel: 1
+  MaxLevel: 6
+  ItemType: WEAPON
+  Options:
+    Cursed: FALSE
+    Treasure: FALSE
+    ShowInLore: FALSE
+    LevelAsPower: FALSE
+  EnchantableItems:
+  - DIAMOND_SWORD
+  - IRON_SWORD
+  - GOLDEN_SWORD
+  - STONE_SWORD
+  - WOODEN_SWORD
+  - DIAMOND_AXE
+  - IRON_AXE
+  - GOLDEN_AXE
+  - STONE_AXE
+  - WOODEN_AXE
+  ConflictingEnchants:
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=140;level=0} ?enchantlevel{level=1} @self  ~onTimer:120 1
+  - potion{type=INCREASE_DAMAGE;duration=140;level=0} ?enchantlevel{level=2} @self  ~onTimer:120 1
+  - potion{type=INCREASE_DAMAGE;duration=140;level=1} ?enchantlevel{level=3} @self  ~onTimer:120 1
+  - potion{type=INCREASE_DAMAGE;duration=140;level=1} ?enchantlevel{level=4} @self  ~onTimer:120 1
+  - potion{type=INCREASE_DAMAGE;duration=140;level=2} ?enchantlevel{level=5} @self  ~onTimer:120 1
+  - potion{type=INCREASE_DAMAGE;duration=140;level=3} ?enchantlevel{level=6} @self  ~onTimer:120 1
+
+
+
+# ---------------------------------------------------------------------------- #
+#                                  REPAIR                                      #
+# ---------------------------------------------------------------------------- #
+
+REPAIR:
+  Display: 'Repair'
+  MinLevel: 1
+  MaxLevel: 1
+  ItemType: WEAPON
+  Options:
+    Cursed: FALSE
+    Treasure: FALSE
+    ShowInLore: FALSE
+    LevelAsPower: FALSE
+  EnchantableItems:
+  - DIAMOND_SWORD
+  - IRON_SWORD
+  - GOLDEN_SWORD
+  - STONE_SWORD
+  - WOODEN_SWORD
+  - DIAMOND_AXE
+  - IRON_AXE
+  - GOLDEN_AXE
+  - STONE_AXE
+  - WOODEN_AXE
+  ConflictingEnchants:
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=140;level=0} ?enchantlevel{level=1} @self  ~onTimer:120 1
 
 # ---------------------------------------------------------------------------- #
 #                                  Fulfilling                                  #

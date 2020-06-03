@@ -1,0 +1,45 @@
+
+# ---------------------------------------------------------------------------- #
+#                                Combat enchants:                                #
+# ---------------------------------------------------------------------------- #
+
+# • Executioner - Drops the enemy's head. [Swords, Axes]
+# • Rocket - Launches victim into the space. [Swords, Axes]
+# • Exp Hunter - Drops more exp from mobs. [Swords, Axes]
+# • Cutter - Throws away victim's armor and reduces its durability. [Swords, Axes]
+# • Surprise - Applies Random potion effect. [Swords, Axes]
+# • Paralyze - Applies Mining Fatigue effect. [Swords, Axes]
+# • Scavenger - Can drop an additional item(s) based on a mob type killed. [Swords, Axes]
+# • Thrifty - A percent chance that a mob can drop a spawn egg of that creature type. [Swords, Axes]
+
+# ---------------------------------------------------------------------------- #
+#                                Tool enchants:                                #
+# ---------------------------------------------------------------------------- #
+
+# • Divine Touch - Drops Spawners and saves it entity type. [Pickaxes]
+# • Smelter - Smelt blocks like furnace. [Pickaxes, Shovels, Axes]
+# • Treasures - Drop custom treasures on breaking certain blocks. [Pickaxes, Shovels, Axes]
+# • Tunnel - An enchantment that increases the radius you can break blocks. [Pickaxes, Shovels]
+
+
+# ---------------------------------------------------------------------------- #
+#                                Armor Enchants:                               #
+# ---------------------------------------------------------------------------- #
+
+# • Cold Steel - Applies Mining Fatigue effect to attacker. [Chestplates]
+# • Hardened - Applies Resistance effect to yourself when got damage. [Chestplates]
+# • Aquaman - Gives Water Breath effect. [Helmet]
+# • Night Vision - Gives Night Vision effect. [Helmet]
+# • Bunny Hop - Gives Jump effect. [Boots]
+# • Sonic - Gives Speed effect. [Boots]
+# • Self-Destruction - Creates an explosion on death. [Chestplate]
+
+
+# ---------------------------------------------------------------------------- #
+#                                 Bow Enchants                                 #
+# ---------------------------------------------------------------------------- #
+
+#  • Explosive Arrows - Creates an explosion on hit. [Bows, Crossbows]
+# • Ghast - Launches fireballs instead of arrows. [Bows, Crossbows]
+# • Bomber - Launches TNT instead of arrow. [Bows, Crossbows]
+# • Ender Bow - Launches Ender Pearls instead of arrows. [Bows, Crossbows]

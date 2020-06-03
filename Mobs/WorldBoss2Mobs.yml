@@ -1,0 +1,70 @@
+World_BossTwo:
+  Type: WITHER
+  Display: '&8&lSkeletron'
+  Health: 20000
+  Damage: 50
+  Options:
+    KnockbackResistance: 1
+    MovementSpeed: 0.25
+    FollowRange: 128
+    MaxCombatRange: 128
+    Collidable: true
+    UseThreatTable: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 randomstroll
+  - 2 meleeattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  - 2 players
+  Equipment:
+  - air HEAD
+  - air Chest
+  - air Legs
+  - air Feet
+  Skills:
+  - skill{s=World_BossTwoSummon} @Self ~onSpawn
+  - forcepull{spread=3;vs=1} @EntitiesInRadius{r=30;ignore=players} ~onTimer:40
+  - pull{velocity=5} @EntitiesInRadius{r=30;ignore=players} ~onTimer:20
+
+
+
+World_BossTwoMinion:
+  Type: VEX
+  Display: 'Dinnerbone'
+  Health: 190
+  Damage: 40
+  Disguise:
+    Type: GIANT
+  Equipment:
+  - Air HEAD
+  - Air CHEST
+  - Air LEGS
+  - Air FEET
+  - World_BossTwoMinion HAND
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.0
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+    Collidable: false
+    Invincible: true
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  - 0 clear
+  - 2 float
+  - 3 gotoowner
+  - 4 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Skills:
+  - potion{type=LEVITATION;duration=99999999;level=0} @self ~onSpawn
+  - effect:particleorbital{p=reddust;color=#000000;a=10;points=64;an=1;hs=0;vs=0;s=0;y=2;ticks=130;in=1;rx=0;ry=0;r=2;yOffset=0.7} @self ~onTimer:130
+  - potion{type=INVISIBILITY;duration=99999999;level=0} @self ~onSpawn
+  - effect:spin{duration=9999999;velocity=15} @self ~onSpawn
+  - effect:ender @self ~onTimer:80
+  - effect:itemspray{item=WITHER_SKELETON_SKULL;amount=1;velocity=.01;d=20;} @self ~onTimer:20
+  - skill{s=World_BossTwoLaserShot} @RTT ~onTimer:120

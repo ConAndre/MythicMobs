@@ -19,8 +19,6 @@ https://i.pinimg.com/originals/7f/ac/09/7fac0926dd3d9d2e262db43a52a0b563.jpg Ran
 Squire<Jester<Knight<Lord<Baron>Count/Earl<Prince/Princess<Duke<Grand Prince<Grand Duke<King<Empreror
 10$ increment
 
-  - message{m="&A&L<target.name> has looted the &E&LGolding<&sq>s Shield"}
-try for player fix
 Get rid of flat damage
 Add variety enchants for diversity/Reroll possibility
 
@@ -32,23 +30,12 @@ You can do conditions for certain reroll essence.
 - holding{m=diamond_sword} true
 That way you can make armor essence, sword essence, axe essence, bow essence. Cool content
 
-Reroll concept again:
-Player farms for fragments
-6 + Armor shard = Armor Reroll
-6 + Axe shard = Axe Reroll
-6 + Sword shard = Sword Reroll
-6 + Bow shard = Bow Reroll
-6 + Crossbow shard = Crossbow Reroll
-
-AGain again :
-If player uses item with name Armor token
-
 Make a logging system for consumables (dupe checker)
 THru java ofc not mythic mobs log on item use
 
-Bossshoppro fucking sucks:
-try using %item_in_hand% to give/take player item (simulates a reroll)
 
+
+Test if
 
 Shields:
 itemrecharging/blocking mechanic in mythic mobs
@@ -61,6 +48,6 @@ Fire shots spell
 # ---------------------------------- Raid 2 ---------------------------------- #
 
 Hunger Heal spell
-
+Disable repairing so people cannot enchant their weapons through anvil.
 
 
